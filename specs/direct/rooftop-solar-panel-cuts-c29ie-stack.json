@@ -1,0 +1,1455 @@
+{
+  "id": "rooftop-solar-panel-cuts-c29ie-stack",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#110f17",
+    "ink": "#F5F2E9",
+    "accent": "#e1ea29",
+    "accent2": "#8745d8",
+    "muted": "rgba(245,242,233,0.66)",
+    "paper": "#EDE6D8"
+  },
+  "faces": {
+    "display": "Manrope",
+    "body": "Manrope",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.055,
+    "amount": 0.45,
+    "seed": 58,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#1a1918",
+          "bottom": "#0e0c13"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#e1ea29",
+              "x": 760.9377276934683,
+              "y": 1304.1159757375717,
+              "r": 474.9832778577693,
+              "blur": 131.38698030263186,
+              "opacity": 0.17360495153348893,
+              "float": 10.29493091488257,
+              "period": 9.043576779775321
+            },
+            {
+              "color": "#8745d8",
+              "x": 753.4105929024518,
+              "y": 1376.7045460939407,
+              "r": 329.6518643726595,
+              "blur": 86.74522595945746,
+              "opacity": 0.10393382899928838,
+              "float": 14.848752059973776,
+              "period": 14.357131379190832
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": 1.1928359884768724,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 12.705383689142764,
+              "period": 15.07196809654124,
+              "phase": 2.9962057918310165
+            }
+          },
+          "children": [
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 320,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 640,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 960,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1280,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1600,
+              "w": 1080,
+              "h": 1,
+              "fill": "#F5F2E9",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#F5F2E9",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 270,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#F5F2E9",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 540,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#F5F2E9",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 810,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#F5F2E9",
+              "opacity": 0.045
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 3.264359247754328,
+          "x": 788.4498634088785,
+          "y": 625.6777151852846,
+          "fill": "accent",
+          "opacity": 0.38772048987681046,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.2
+            },
+            "out": false,
+            "loop": {
+              "type": "sway",
+              "amp": 15.676751885563135,
+              "period": 12.83484336361289,
+              "phase": 2.212027742061764
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "r": 3.593500220333226,
+          "x": 980.2395771749318,
+          "y": 638.4077454417944,
+          "fill": "ink",
+          "opacity": 0.42101896691601726,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.2
+            },
+            "out": false,
+            "loop": {
+              "type": "sway",
+              "amp": 18.687232438474894,
+              "period": 8.949432892724872,
+              "phase": 3.6478031664155424
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "r": 2.694996401318349,
+          "x": 322.14174051582813,
+          "y": 1029.1888755708933,
+          "fill": "accent",
+          "opacity": 0.30325514618307353,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.2
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 9.575095240026712,
+              "period": 7.52183585986495,
+              "phase": 4.0915637500584126
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "r": 3.798967110691592,
+          "x": 368.0566254783422,
+          "y": 392.05176046192645,
+          "fill": "ink",
+          "opacity": 0.2925547731597908,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.2
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 16.446594711393118,
+              "period": 9.086298517882824,
+              "phase": 0.615177302621305
+            }
+          }
+        },
+        {
+          "type": "rule",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1,
+          "fill": "accent",
+          "opacity": 0.22,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1
+            },
+            "out": false,
+            "loop": {
+              "type": "drift",
+              "dx": 0,
+              "dy": 1382.3999999999999,
+              "period": 1
+            }
+          }
+        },
+        {
+          "type": "group",
+          "x": 950.4,
+          "y": 230.39999999999998,
+          "opacity": 0.5,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1
+            },
+            "out": false,
+            "loop": {
+              "type": "spin",
+              "period": 18.983415060676634,
+              "phase": 0
+            }
+          },
+          "children": [
+            {
+              "type": "rule",
+              "x": -18,
+              "y": 0,
+              "w": 36,
+              "h": 1,
+              "fill": "accent",
+              "opacity": 0.7
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": -18,
+              "w": 1,
+              "h": 36,
+              "fill": "accent",
+              "opacity": 0.7
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "LIVE",
+          "x": 907.1999999999999,
+          "y": 297.6,
+          "w": 108,
+          "size": 9,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.65,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.2,
+              "dur": 0.6
+            },
+            "out": false,
+            "loop": {
+              "type": "pulse",
+              "amp": 18,
+              "period": 1.8,
+              "phase": 0
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "EDITORIAL",
+          "x": 64.8,
+          "y": 1785.6000000000001,
+          "w": 432,
+          "size": 9,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.4,
+          "opacity": 0.5,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.1,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "sway",
+              "amp": 8,
+              "period": 11,
+              "phase": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 4,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.02,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 44
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 7,
+              "period": 12,
+              "phase": 1
+            }
+          },
+          "children": [
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 422.4,
+              "r": 367.20000000000005,
+              "fill": "accent",
+              "opacity": 0.08,
+              "blur": 30
+            },
+            {
+              "type": "rrect",
+              "x": 21.6,
+              "y": 1267.2,
+              "w": 1036.8,
+              "h": 7.68,
+              "radius": 0,
+              "fill": "ink",
+              "opacity": 0.14
+            },
+            {
+              "type": "circle",
+              "x": 129.6,
+              "y": 1574.3999999999999,
+              "r": 129.6,
+              "fill": "accent2",
+              "opacity": 0.06,
+              "blur": 20
+            },
+            {
+              "type": "rrect",
+              "x": 683.424,
+              "y": 870.6,
+              "w": 361.152,
+              "h": 24.624,
+              "radius": 4,
+              "fill": "ink",
+              "opacity": 0.35,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 710.34624,
+              "y": 686.98704,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 817.0502399999999,
+              "y": 686.98704,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 923.75424,
+              "y": 686.98704,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 710.34624,
+              "y": 773.17104,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 817.0502399999999,
+              "y": 773.17104,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "rrect",
+              "x": 923.75424,
+              "y": 773.17104,
+              "w": 93.89952,
+              "h": 75.84192,
+              "radius": 3,
+              "fill": "accent2",
+              "opacity": 0.35,
+              "stroke": "ink",
+              "strokeWidth": 2,
+              "rotation": -8
+            },
+            {
+              "type": "circle",
+              "x": 1008.0504,
+              "y": 690.4344,
+              "r": 49.248,
+              "fill": "accent",
+              "opacity": 0.6
+            }
+          ]
+        },
+        {
+          "type": "circle",
+          "r": 7,
+          "x": 160,
+          "y": 176.6,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "a manifesto with no slogans",
+          "x": 182,
+          "y": 170.6,
+          "size": 18,
+          "letterSpacing": 2,
+          "fill": "muted",
+          "rule": false,
+          "ruleColor": "muted",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.08,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 34
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NOBODY TALKS\nABOUT ROOFTOP\nSOLAR PANEL\nCUTS",
+          "x": 160,
+          "y": 362.6,
+          "w": 760,
+          "size": 89.79783792947377,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "weight": 700,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 107.75740551536852
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "rooftop solar panel cuts a family\npower bill in half",
+          "x": 160,
+          "y": 1471,
+          "w": 592.8000000000001,
+          "size": 37,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.35,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 160,
+          "y": 1394.1999999999998,
+          "w": 114,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 3.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.02,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 44
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 7,
+              "period": 12,
+              "phase": 1
+            }
+          },
+          "children": [
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 422.4,
+              "r": 367.20000000000005,
+              "fill": "accent",
+              "opacity": 0.08,
+              "blur": 30
+            },
+            {
+              "type": "rrect",
+              "x": 21.6,
+              "y": 1267.2,
+              "w": 1036.8,
+              "h": 7.68,
+              "radius": 0,
+              "fill": "ink",
+              "opacity": 0.14
+            },
+            {
+              "type": "circle",
+              "x": 129.6,
+              "y": 1574.3999999999999,
+              "r": 129.6,
+              "fill": "accent2",
+              "opacity": 0.06,
+              "blur": 20
+            },
+            {
+              "type": "circle",
+              "x": 777.6,
+              "y": 1228.8,
+              "r": 226.79999999999998,
+              "fill": "paper",
+              "opacity": 0.94
+            },
+            {
+              "type": "circle",
+              "x": 777.6,
+              "y": 1228.8,
+              "r": 172.368,
+              "fill": "bg",
+              "opacity": 0.85
+            },
+            {
+              "type": "rrect",
+              "x": 960.336,
+              "y": 1212.6,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 90
+            },
+            {
+              "type": "rrect",
+              "x": 935.4199404942148,
+              "y": 1305.588,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 120
+            },
+            {
+              "type": "rrect",
+              "x": 867.3480000000001,
+              "y": 1373.6599404942147,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 150
+            },
+            {
+              "type": "rrect",
+              "x": 774.36,
+              "y": 1398.5759999999998,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 180
+            },
+            {
+              "type": "rrect",
+              "x": 681.3720000000001,
+              "y": 1373.6599404942147,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 210
+            },
+            {
+              "type": "rrect",
+              "x": 613.3000595057853,
+              "y": 1305.588,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 240.00000000000003
+            },
+            {
+              "type": "rrect",
+              "x": 588.384,
+              "y": 1212.6,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 270
+            },
+            {
+              "type": "rrect",
+              "x": 613.3000595057853,
+              "y": 1119.6119999999999,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 300
+            },
+            {
+              "type": "rrect",
+              "x": 681.372,
+              "y": 1051.5400595057852,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 330
+            },
+            {
+              "type": "rrect",
+              "x": 774.36,
+              "y": 1026.624,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 360
+            },
+            {
+              "type": "rrect",
+              "x": 867.3480000000001,
+              "y": 1051.5400595057852,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 390.00000000000006
+            },
+            {
+              "type": "rrect",
+              "x": 935.4199404942146,
+              "y": 1119.6119999999999,
+              "w": 6.48,
+              "h": 32.4,
+              "radius": 3.24,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 419.99999999999994
+            },
+            {
+              "type": "rrect",
+              "x": 771.12,
+              "y": 1088.184,
+              "w": 12.96,
+              "h": 154.224,
+              "radius": 6.48,
+              "fill": "accent",
+              "opacity": 1,
+              "rotation": 28
+            },
+            {
+              "type": "circle",
+              "x": 777.6,
+              "y": 1228.8,
+              "r": 24.3,
+              "fill": "ink",
+              "opacity": 0.9
+            }
+          ]
+        },
+        {
+          "type": "circle",
+          "r": 164.57378774955868,
+          "x": 185.33528647993427,
+          "y": 1591.78676543748,
+          "fill": "accent",
+          "opacity": 0.19978918163105847,
+          "blur": 24.895465665031224,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.84927045693621,
+              "period": 13.383121924009174,
+              "phase": 0.3965017094742507
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "BEFORE / AFTER",
+          "x": 65,
+          "y": 170.6,
+          "size": 18,
+          "letterSpacing": 2,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "THE OLD\nWAY",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 182,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "weight": 700,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "rooftop solar panel cuts a family power bill in\nhalf",
+          "x": 65,
+          "y": 643.22,
+          "w": 760,
+          "size": 37,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 621.22,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Manrope",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 7.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.02,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 44
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 7,
+              "period": 12,
+              "phase": 1
+            }
+          },
+          "children": [
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 422.4,
+              "r": 367.20000000000005,
+              "fill": "accent",
+              "opacity": 0.08,
+              "blur": 30
+            },
+            {
+              "type": "rrect",
+              "x": 21.6,
+              "y": 1267.2,
+              "w": 1036.8,
+              "h": 7.68,
+              "radius": 0,
+              "fill": "ink",
+              "opacity": 0.14
+            },
+            {
+              "type": "circle",
+              "x": 129.6,
+              "y": 1574.3999999999999,
+              "r": 129.6,
+              "fill": "accent2",
+              "opacity": 0.06,
+              "blur": 20
+            },
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 384,
+              "r": 136.07999999999998,
+              "fill": "paper",
+              "opacity": 0.94
+            },
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 384,
+              "r": 103.42079999999999,
+              "fill": "bg",
+              "opacity": 0.85
+            },
+            {
+              "type": "rrect",
+              "x": 952.0416,
+              "y": 374.28,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 90
+            },
+            {
+              "type": "rrect",
+              "x": 937.0919642965289,
+              "y": 430.07280000000003,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 120
+            },
+            {
+              "type": "rrect",
+              "x": 896.2488000000001,
+              "y": 470.91596429652884,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 150
+            },
+            {
+              "type": "rrect",
+              "x": 840.456,
+              "y": 485.8656,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 180
+            },
+            {
+              "type": "rrect",
+              "x": 784.6632000000001,
+              "y": 470.91596429652884,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 210
+            },
+            {
+              "type": "rrect",
+              "x": 743.8200357034711,
+              "y": 430.07280000000003,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 240.00000000000003
+            },
+            {
+              "type": "rrect",
+              "x": 728.8704,
+              "y": 374.28,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 270
+            },
+            {
+              "type": "rrect",
+              "x": 743.8200357034711,
+              "y": 318.48720000000003,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 300
+            },
+            {
+              "type": "rrect",
+              "x": 784.6632,
+              "y": 277.6440357034712,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 330
+            },
+            {
+              "type": "rrect",
+              "x": 840.456,
+              "y": 262.6944,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 360
+            },
+            {
+              "type": "rrect",
+              "x": 896.2488000000001,
+              "y": 277.6440357034711,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 390.00000000000006
+            },
+            {
+              "type": "rrect",
+              "x": 937.0919642965289,
+              "y": 318.4871999999999,
+              "w": 3.888,
+              "h": 19.439999999999998,
+              "radius": 1.944,
+              "fill": "ink",
+              "opacity": 0.45,
+              "rotation": 419.99999999999994
+            },
+            {
+              "type": "rrect",
+              "x": 838.512,
+              "y": 299.6304,
+              "w": 7.776,
+              "h": 92.53439999999999,
+              "radius": 3.888,
+              "fill": "accent",
+              "opacity": 1,
+              "rotation": 28
+            },
+            {
+              "type": "circle",
+              "x": 842.4,
+              "y": 384,
+              "r": 14.58,
+              "fill": "ink",
+              "opacity": 0.9
+            }
+          ]
+        },
+        {
+          "type": "circle",
+          "r": 110.52718023732305,
+          "x": 162.15757975705796,
+          "y": 745.4010479253717,
+          "fill": "accent",
+          "opacity": 0.12553049698472024,
+          "blur": 15.207502094563097,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 6.9109682915732265,
+              "period": 8.508852654136717,
+              "phase": 2.1248882706277072
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "NEXT",
+          "x": 65,
+          "y": 170.6,
+          "size": 18,
+          "letterSpacing": 2,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SEE IT\nNOW",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "weight": 700,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "rooftop solar panel cuts a family power\nbill in half",
+          "x": 65,
+          "y": 756.048,
+          "w": 703,
+          "size": 37,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "WATCH",
+          "x": 65,
+          "y": 1586.1999999999998,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "face": "Inter",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "EDITORIAL",
+          "x": 730,
+          "y": 1594.1999999999998,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    },
+    {
+      "id": "anchor",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "blocks": [
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "motion": {
+            "in": false,
+            "out": false,
+            "keyframes": [
+              {
+                "at": 2,
+                "x": 151.20000000000002,
+                "y": 345.59999999999997,
+                "opacity": 0.9,
+                "scale": 1
+              },
+              {
+                "at": 5.5600000000000005,
+                "x": 885.5999999999999,
+                "y": 921.5999999999999,
+                "opacity": 0.9,
+                "scale": 1
+              },
+              {
+                "at": 9.56,
+                "x": 151.20000000000002,
+                "y": 1497.6,
+                "opacity": 0.9,
+                "scale": 1
+              }
+            ]
+          },
+          "children": [
+            {
+              "type": "circle",
+              "r": 9,
+              "x": 0,
+              "y": 0,
+              "fill": "accent",
+              "opacity": 0.9
+            },
+            {
+              "type": "circle",
+              "r": 22,
+              "x": 0,
+              "y": 0,
+              "fill": "transparent",
+              "stroke": "accent",
+              "strokeWidth": 1,
+              "opacity": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "dip",
+      "at": 4,
+      "duration": 0.5724011679925024,
+      "color": "accent"
+    },
+    {
+      "type": "wipe",
+      "at": 8,
+      "duration": 0.4677228582836687,
+      "color": "accent2",
+      "skew": -7.0878436379134655,
+      "edge": false
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "progress",
+        "h": 4,
+        "fill": "accent"
+      }
+    ]
+  }
+}

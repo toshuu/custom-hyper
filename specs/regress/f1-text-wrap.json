@@ -1,0 +1,45 @@
+{
+  "id": "f1-text-wrap",
+  "canvas": { "w": 540, "h": 960, "fps": 30 },
+  "duration": 3,
+  "palette": {
+    "bg": "#0B0D12",
+    "ink": "#F2F3F7",
+    "accent": "#FF4D2E"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono" },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 3,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        { "type": "bg", "fill": "#0B0D12" }
+      ]
+    },
+    {
+      "id": "copy",
+      "from": 0,
+      "duration": 3,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "THE QUICK BROWN FOX JUMPS OVER",
+          "x": 40,
+          "y": 300,
+          "w": 300,
+          "size": 96,
+          "face": "Bebas Neue",
+          "lineHeight": 0.9,
+          "fill": "ink",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0, "dur": 0.5, "ease": "power3.out" }, "out": false }
+        }
+      ]
+    }
+  ]
+}

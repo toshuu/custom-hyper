@@ -1,0 +1,928 @@
+{
+  "id": "a-10-second-film-b0xdnq-brutal",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 10,
+  "palette": {
+    "bg": "#0e110c",
+    "ink": "#F4F1EA",
+    "accent": "#ed30b9",
+    "accent2": "#56e796",
+    "muted": "rgba(244,241,234,0.56)",
+    "paper": "#EFE6D5"
+  },
+  "faces": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.05,
+    "amount": 0.45,
+    "seed": 18,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 10,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#1d1317",
+          "bottom": "#0b0e0a"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#ed30b9",
+              "x": 675.4672281034291,
+              "y": 1446.3926171064377,
+              "r": 333.1791025833227,
+              "blur": 97.13307281024754,
+              "opacity": 0.14821499288082124,
+              "float": 8.9704455784522,
+              "period": 14.31540591828525
+            },
+            {
+              "color": "#56e796",
+              "x": 329.13625885359943,
+              "y": 661.6873744726181,
+              "r": 247.4878343255259,
+              "blur": 87.06220571417361,
+              "opacity": 0.14588950095232578,
+              "float": 19.094539479352534,
+              "period": 16.416554185096174
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": -0.5908364108763635,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "sway",
+              "amp": 12.951723960693926,
+              "period": 11.280511657474563,
+              "phase": 5.933931447565556
+            }
+          },
+          "children": [
+            {
+              "type": "circle",
+              "r": 737.7108792881481,
+              "x": -57.536672352813184,
+              "y": 1296.3851405829191,
+              "fill": "#ed30b9",
+              "opacity": 0.06309426773805171,
+              "blur": 60
+            },
+            {
+              "type": "circle",
+              "r": 278.64520075684413,
+              "x": 644.2005203445442,
+              "y": 5.096905544400215,
+              "fill": "#56e796",
+              "opacity": 0.1506334615498781,
+              "blur": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2,
+      "fadeIn": 0.18,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 119.47981643937528,
+          "x": 739.1711586887027,
+          "y": 1328.897902415786,
+          "fill": "accent",
+          "opacity": 0.12265655847266317,
+          "blur": 19.67449778225273,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 14.120138947851956,
+              "period": 11.93833785224706,
+              "phase": 4.354623088147491
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "a lab report",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A 10\nsecond\nfilm",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 182,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A 10 second film about the last quiet street in a city",
+          "x": 65,
+          "y": 821.5799999999999,
+          "w": 760,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 799.5799999999999,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 1.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "THE READ",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "ONE IDEA.\nNO NOISE.",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A 10 second film about the last quiet street in a city",
+          "x": 65,
+          "y": 633.76,
+          "w": 741,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 3.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 170.6509589508176,
+          "x": 595.9459818610153,
+          "y": 668.1698234306649,
+          "fill": "accent2",
+          "opacity": 0.1733289211988449,
+          "blur": 14.540599677711725,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 9.392766024917364,
+              "period": 12.357474298682064,
+              "phase": 2.850628236774355
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE SHAPE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "THREE\nMOVES",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 65,
+          "y": 633.76,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NAME THE TENSION",
+          "x": 119,
+          "y": 630.76,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.4,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 679.76,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 65,
+          "y": 691.76,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.49,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SHOW THE PROOF",
+          "x": 119,
+          "y": 688.76,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.51,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 737.76,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 65,
+          "y": 749.76,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.6,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "MAKE THE TURN",
+          "x": 119,
+          "y": 746.76,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.62,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 795.76,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 5.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 155.5463988751173,
+          "x": 491.56145235885646,
+          "y": 1337.8591440272517,
+          "fill": "accent2",
+          "opacity": 0.1923687797319144,
+          "blur": 0.043866620399057865,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 9.442160342819989,
+              "period": 13.860336773097515,
+              "phase": 0.27390349423512816
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE MEASURE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "ONE\nTAKE",
+          "x": 65,
+          "y": 247.04,
+          "w": 551,
+          "size": 182,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 664.5,
+          "y": 178.6,
+          "w": 2,
+          "h": 1567.6000000000001,
+          "fill": "accent",
+          "opacity": 0.7,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.2,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 682.5,
+          "y": 192.6,
+          "w": 332.5,
+          "size": 84,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.9,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.3,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NO RETAKES",
+          "x": 682.5,
+          "y": 272.4,
+          "w": 332.5,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "transform": "uppercase"
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 820.6,
+          "y": 1605.4,
+          "w": 237.6,
+          "size": 134.4,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.24,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 7.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 174.08787573426963,
+          "x": 446.40599195726077,
+          "y": 1378.283567054849,
+          "fill": "accent",
+          "opacity": 0.17207538014277818,
+          "blur": 16.5341350925155,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 6.197550691664219,
+              "period": 13.67506184708327,
+              "phase": 3.31216266611591
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE TURN",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SEE IT\nMOVE",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A 10 second film about the last quiet street in a city",
+          "x": 65,
+          "y": 1221.4,
+          "w": 703,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "WATCH",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.8,
+              "ease": "expo.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BRUTAL",
+          "x": 730,
+          "y": 1555.8000000000002,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "wipe",
+      "at": 6,
+      "duration": 0.611667207959108,
+      "color": "accent",
+      "skew": 6.243045365437865,
+      "edge": false
+    },
+    {
+      "type": "dip",
+      "at": 8,
+      "duration": 0.5170384567044675,
+      "color": "accent2"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A 10 SECOND FILM",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "05 FRAMES",
+        "x": 799,
+        "y": 40.3,
+        "w": 216,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.6
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1866.24,
+        "w": 1080,
+        "h": 53.76,
+        "fill": "ink",
+        "textFill": "bg",
+        "size": 13,
+        "speed": 54.88709004363045,
+        "items": [
+          "CUSTOM HYPER",
+          "JSON IN",
+          "MP4 OUT",
+          "NO CHROME",
+          "NO RETAKES"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

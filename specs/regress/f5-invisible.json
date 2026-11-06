@@ -1,0 +1,22 @@
+{
+  "id": "f5-invisible",
+  "canvas": { "w": 540, "h": 960, "fps": 30 },
+  "duration": 2,
+  "palette": {
+    "bg": "#FFFFFF",
+    "ink": "#FFFFFF",
+    "accent": "#FF4D2E"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono" },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 2,
+      "blocks": [
+        { "type": "bg", "fill": "#FFFFFF" },
+        { "type": "text", "text": "INVISIBLE TEXT", "x": 40, "y": 400, "w": 460, "size": 80, "lineHeight": 0.9, "fill": "#FFFFFF" }
+      ]
+    }
+  ]
+}

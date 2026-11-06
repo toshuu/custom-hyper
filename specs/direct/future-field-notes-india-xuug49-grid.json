@@ -1,0 +1,1044 @@
+{
+  "id": "future-field-notes-india-xuug49-grid",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 20,
+  "palette": {
+    "bg": "#0d110f",
+    "ink": "#ffffff",
+    "accent": "#ffb338",
+    "accent2": "#138808",
+    "muted": "rgba(255,255,255,0.56)",
+    "paper": "#ffffff"
+  },
+  "faces": {
+    "display": "Rozha One",
+    "body": "Manrope",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.075,
+    "amount": 0.45,
+    "seed": 0,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 20,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#191911",
+          "bottom": "#0b0e0c"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#ffb338",
+              "x": 537.1030216729268,
+              "y": 803.0273541212082,
+              "r": 361.51201676018536,
+              "blur": 103.6530711920932,
+              "opacity": 0.23217388616874812,
+              "float": 19.887273920699954,
+              "period": 12.976688018068671
+            },
+            {
+              "color": "#138808",
+              "x": 133.4261674080044,
+              "y": 998.1382076740265,
+              "r": 257.578290683683,
+              "blur": 109.15932358242571,
+              "opacity": 0.1464341507013887,
+              "float": 19.976998957805336,
+              "period": 9.460021736565977
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": -2.7674527298659086,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 17.053946854546666,
+              "period": 13.313902413472533,
+              "phase": 2.528226978611201
+            }
+          },
+          "children": [
+            {
+              "type": "rect",
+              "w": 938.334685167298,
+              "h": 6.21058801189065,
+              "x": 69.61806223914027,
+              "y": 1445.048894584179,
+              "fill": "#ffb338",
+              "opacity": 0.0952036311244592
+            },
+            {
+              "type": "rect",
+              "w": 13.805838443338871,
+              "h": 1631.6472955942154,
+              "x": 290.9033929556608,
+              "y": 282.9810567498207,
+              "fill": "#138808",
+              "opacity": 0.11723404946736993
+            },
+            {
+              "type": "rect",
+              "w": 17.212930522859097,
+              "h": 2102.3875991106033,
+              "x": 1001.8639832083136,
+              "y": -133.20048040151596,
+              "fill": "#138808",
+              "opacity": 0.06372794980183244
+            },
+            {
+              "type": "rect",
+              "w": 3.7676036581397057,
+              "h": 883.7315154075623,
+              "x": 804.1364957951009,
+              "y": 350.02233208715916,
+              "fill": "#ffb338",
+              "opacity": 0.053072468875907365
+            },
+            {
+              "type": "rect",
+              "w": 17.837657880038023,
+              "h": 984.7743909358978,
+              "x": 785.3127794992179,
+              "y": 57.75689475238323,
+              "fill": "#138808",
+              "opacity": 0.10610393396113069
+            },
+            {
+              "type": "rect",
+              "w": 13.479041460901499,
+              "h": 592.0565518140793,
+              "x": 798.2954711001366,
+              "y": -89.58490473031998,
+              "fill": "#138808",
+              "opacity": 0.11358097261749209
+            },
+            {
+              "type": "rect",
+              "w": 8.275988221168518,
+              "h": 619.202957868576,
+              "x": 831.8799052108079,
+              "y": 167.44599026441574,
+              "fill": "#ffb338",
+              "opacity": 0.051460685473866764
+            },
+            {
+              "type": "rect",
+              "w": 12.381295207887888,
+              "h": 1307.1643706560135,
+              "x": 779.9456827808172,
+              "y": 204.4035380780697,
+              "fill": "#138808",
+              "opacity": 0.0950938745494932
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 4,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "01 / 05",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Delhi dust\nmeets\ndigital rain.",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 146.39297400000004,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 175.67156880000005
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Before the algorithm rewrote the subcontinent, hands\ndipped in turmeric and indigo. We watched tradition\ndissolve into glass screens.",
+          "x": 65,
+          "y": 716.8953435600001,
+          "w": 760,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 694.8953435600001,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Rozha One",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 3.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 155.15590684711935,
+          "x": 593.6560478766871,
+          "y": 1592.5692327409051,
+          "fill": "accent",
+          "opacity": 0.14625990672037006,
+          "blur": 0.26737868785858154,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 13.926339555997401,
+              "period": 13.725274223368615,
+              "phase": 3.5161195416003466
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "BEFORE / AFTER",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "The sudden\nrupture of noise.",
+          "x": 65,
+          "y": 247.04,
+          "w": 855,
+          "size": 103.891788,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 124.6701456
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 65,
+          "y": 492.66790448,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "paper",
+          "opacity": 0.05,
+          "stroke": "muted",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Then the frequency flipped. The\ngrand trunk road became a\nfiber-optic pulse. Ancient temples\ncast neon shadows on concrete\nfloors.",
+          "x": 81,
+          "y": 510.66790448,
+          "w": 424,
+          "size": 26,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 81,
+          "y": 1117.46790448,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        },
+        {
+          "type": "rrect",
+          "x": 559,
+          "y": 492.66790448,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "accent",
+          "opacity": 0.9,
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NEW WAY",
+          "x": 575,
+          "y": 510.66790448,
+          "w": 424,
+          "size": 26,
+          "face": "Manrope",
+          "fill": "bg",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.44000000000000006,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 575,
+          "y": 1117.46790448,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "bg",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 7.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "FIELD NOTE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "The\nTricolor\nendures.",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Saffron, white, and green still anchor the chaos. A living\nrelic surviving through every tectonic shift in identity.",
+          "x": 65,
+          "y": 812.1199999999999,
+          "w": 741,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 11.12,
+      "duration": 4.880000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 107.8755824290216,
+          "x": 921.7147224405414,
+          "y": 1415.8529673113487,
+          "fill": "accent2",
+          "opacity": 0.20912518865428864,
+          "blur": 11.780061658937484,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.244614425580949,
+              "period": 13.001580623909831,
+              "phase": 2.720766788115725
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "FIELD NOTE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Surviving\nartifacts.",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "What remains after the future arrives in Mumbai?",
+          "x": 65,
+          "y": 633.76,
+          "w": 741,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 65,
+          "y": 698.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Brass tea cups",
+          "x": 119,
+          "y": 695.4,
+          "w": 684,
+          "size": 22,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.4,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 744.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 65,
+          "y": 756.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.425,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Fiberoptic looms",
+          "x": 119,
+          "y": 753.4,
+          "w": 684,
+          "size": 22,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.445,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 802.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 65,
+          "y": 814.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.47,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Sacred rivers",
+          "x": 119,
+          "y": 811.4,
+          "w": 684,
+          "size": 22,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.49,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 860.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 65,
+          "y": 872.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.515,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Saffron flag",
+          "x": 119,
+          "y": 869.4,
+          "w": 684,
+          "size": 22,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.535,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 918.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 15.12,
+      "duration": 4.880000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "THE TURN",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Record\nyour\ncoordinates.",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Upload your local street sound to the national archive\nbefore midnight.",
+          "x": 65,
+          "y": 1221.4,
+          "w": 703,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "Upload street sound",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "VIBRANT KINETIC",
+          "x": 730,
+          "y": 1555.8000000000002,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 4,
+      "duration": 0.37259160045534373,
+      "color": "accent"
+    },
+    {
+      "type": "band",
+      "at": 8,
+      "duration": 0.6973226443212479,
+      "color": "accent",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "FUTURE FIELD NOTES INDIA",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "05 FRAMES",
+        "x": 799,
+        "y": 40.3,
+        "w": 216,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.6
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1866.24,
+        "w": 1080,
+        "h": 53.76,
+        "fill": "ink",
+        "textFill": "bg",
+        "size": 13,
+        "speed": 40.977378454990685,
+        "items": [
+          "Saffron",
+          "White",
+          "Green",
+          "Future"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

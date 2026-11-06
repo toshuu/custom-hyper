@@ -1,0 +1,489 @@
+{
+  "id": "signal-16s",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "duration": 16,
+  "palette": {
+    "bg": "#0B0D12",
+    "ink": "#F2F3F7",
+    "accent": "#FF4D2E",
+    "accent2": "#4C7DFF",
+    "muted": "rgba(242,243,247,0.58)",
+    "paper": "#EFE6D5"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "assets": {
+    "hero": "../assets/hero.webp",
+    "panel": "../assets/panel.png"
+  },
+  "grain": { "opacity": 0.08, "amount": 0.5, "seed": 7, "cell": 2, "drift": 3 },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 16,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              { "offset": 0, "color": "#121722" },
+              { "offset": 0.55, "color": "#0B0D12" },
+              { "offset": 1, "color": "#07080C" }
+            ]
+          }
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            { "color": "accent2", "x": 820, "y": 420, "r": 300, "blur": 120, "opacity": 0.30, "float": 16, "period": 11 },
+            { "color": "accent", "x": 180, "y": 1320, "r": 320, "blur": 140, "opacity": 0.24, "float": 20, "period": 9 },
+            { "color": "ink", "x": 540, "y": 980, "r": 260, "blur": 150, "opacity": 0.07, "float": 12, "period": 13 }
+          ]
+        },
+        { "type": "rule", "x": 64, "y": 96, "w": 952, "h": 2, "fill": "rgba(242,243,247,0.20)" },
+        { "type": "rule", "x": 64, "y": 1698, "w": 952, "h": 1, "fill": "rgba(242,243,247,0.16)" },
+        { "type": "rule", "x": 64, "y": 240, "w": 214, "h": 2, "fill": "accent" }
+      ]
+    },
+    {
+      "id": "hero",
+      "from": 0,
+      "duration": 4.8,
+      "fadeIn": 0,
+      "fadeOut": 0.5,
+      "blocks": [
+        {
+          "type": "photo",
+          "src": "hero",
+          "x": 540,
+          "y": 760,
+          "w": 480,
+          "h": 600,
+          "radius": 6,
+          "rotation": -3.5,
+          "grayscale": 1,
+          "contrast": 1.25,
+          "brightness": 0.98,
+          "border": "ink",
+          "borderWidth": 2,
+          "kenBurns": { "from": 1.0, "to": 1.09 },
+          "tint": { "color": "accent2", "opacity": 0.16, "blend": "screen" },
+          "motion": {
+            "in": { "type": "slideRight", "at": 0.35, "dur": 0.9, "distance": 90, "ease": "power3.out" },
+            "out": { "type": "fade", "dur": 0.5 }
+          }
+        },
+        {
+          "type": "text",
+          "text": "FIG. 01 — SIGNAL SOURCE",
+          "x": 560,
+          "y": 1390,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "weight": 400,
+          "letterSpacing": 2.4,
+          "fill": "muted",
+          "motion": { "in": { "type": "fade", "at": 0.8, "dur": 0.6 }, "out": false }
+        }
+      ]
+    },
+    {
+      "id": "act-1",
+      "from": 0.2,
+      "duration": 5.4,
+      "fadeIn": 0.2,
+      "fadeOut": 0.7,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Custom Hyper / 001",
+          "x": 64,
+          "y": 150,
+          "size": 18,
+          "letterSpacing": 3.2,
+          "fill": "accent",
+          "motion": { "in": { "type": "fade", "at": 0.15, "dur": 0.5 }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "MOTION",
+          "x": 56,
+          "y": 300,
+          "w": 980,
+          "size": 176,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.84,
+          "fill": "ink",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.30, "dur": 0.8, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "WITHOUT",
+          "x": 56,
+          "y": 448,
+          "w": 980,
+          "size": 176,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.84,
+          "fill": "accent",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.40, "dur": 0.8, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "A BROWSER",
+          "x": 56,
+          "y": 596,
+          "w": 980,
+          "size": 176,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.84,
+          "fill": "ink",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.50, "dur": 0.8, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "Deterministic scene graph. Zero Chrome.\nZero LLM calls. One JSON file in, one MP4 out.",
+          "x": 64,
+          "y": 820,
+          "w": 452,
+          "size": 29,
+          "face": "Inter",
+          "weight": 400,
+          "lineHeight": 1.32,
+          "fill": "muted",
+          "motion": { "in": { "type": "rise", "at": 0.72, "dur": 0.7, "distance": 26, "ease": "power2.out" }, "out": false }
+        },
+        {
+          "type": "stamp",
+          "text": "NO CHROME\nNO AGENT",
+          "x": 64,
+          "y": 1040,
+          "w": 250,
+          "h": 132,
+          "size": 25,
+          "rotation": -7,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeWidth": 3,
+          "motion": {
+            "in": { "type": "scale", "at": 0.95, "dur": 0.55, "ease": "back.out" },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "act-2",
+      "from": 4.4,
+      "duration": 6.2,
+      "fadeIn": 0.5,
+      "fadeOut": 0.7,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "The Engine / 002",
+          "x": 64,
+          "y": 150,
+          "size": 18,
+          "letterSpacing": 3.2,
+          "fill": "accent2",
+          "motion": { "in": { "type": "fade", "at": 0.1, "dur": 0.5 }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "16 MS",
+          "x": 56,
+          "y": 250,
+          "w": 960,
+          "size": 150,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.84,
+          "fill": "ink",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.25, "dur": 0.75, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "PER FRAME",
+          "x": 56,
+          "y": 380,
+          "w": 960,
+          "size": 150,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.84,
+          "fill": "accent2",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.34, "dur": 0.75, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "One JSON file compiles to a frame-pure scene graph. The same pixels come out every run.",
+          "x": 64,
+          "y": 590,
+          "w": 470,
+          "size": 28,
+          "face": "Inter",
+          "lineHeight": 1.34,
+          "fill": "muted",
+          "motion": { "in": { "type": "rise", "at": 0.55, "dur": 0.7, "distance": 24 }, "out": false }
+        },
+        {
+          "type": "photo",
+          "src": "panel",
+          "x": 620,
+          "y": 560,
+          "w": 396,
+          "h": 300,
+          "radius": 8,
+          "grayscale": 1,
+          "contrast": 1.3,
+          "brightness": 0.95,
+          "border": "rgba(242,243,247,0.25)",
+          "borderWidth": 1,
+          "kenBurns": { "from": 1.04, "to": 1.12 },
+          "tint": { "color": "accent2", "opacity": 0.22, "blend": "screen" },
+          "motion": { "in": { "type": "scale", "at": 0.6, "dur": 0.8, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "bars",
+          "x": 64,
+          "y": 900,
+          "w": 520,
+          "h": 230,
+          "values": [18, 34, 58, 82, 100],
+          "colors": ["accent2", "accent2", "accent", "accent", "accent"],
+          "gap": 14,
+          "barW": 88,
+          "at": 0.75,
+          "step": 0.08,
+          "ease": "back.out"
+        },
+        {
+          "type": "text",
+          "text": "FRAME 0        150        300        450        600",
+          "x": 64,
+          "y": 1160,
+          "w": 520,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "letterSpacing": 1.4,
+          "fill": "muted",
+          "motion": { "in": { "type": "fade", "at": 1.0, "dur": 0.5 }, "out": false }
+        },
+        {
+          "type": "ledger",
+          "x": 640,
+          "y": 945,
+          "w": 350,
+          "header": "At a glance",
+          "rowH": 62,
+          "valueSize": 40,
+          "labelSize": 11,
+          "at": 0.6,
+          "step": 0.08,
+          "rows": [
+            { "value": "0", "label": "BROWSERS" },
+            { "value": "0", "label": "API CALLS" },
+            { "value": "0", "label": "LLM REQUESTS" },
+            { "value": "1", "label": "JSON SPEC" }
+          ]
+        },
+        {
+          "type": "timeline",
+          "x": 64,
+          "y": 1430,
+          "w": 950,
+          "draw": 1.3,
+          "at": 1.0,
+          "step": 0.16,
+          "nodes": [
+            { "at": 0.04, "label": "'24", "sub": "REMOTION" },
+            { "at": 0.42, "label": "'25", "sub": "X80 ENGINE" },
+            { "at": 0.92, "label": "'26", "sub": "CUSTOM HYPER", "color": "accent" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "act-3",
+      "from": 9.8,
+      "duration": 6.2,
+      "fadeIn": 0.5,
+      "fadeOut": 0.5,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "The Output / 003",
+          "x": 64,
+          "y": 150,
+          "size": 18,
+          "letterSpacing": 3.2,
+          "fill": "accent",
+          "motion": { "in": { "type": "fade", "at": 0.05, "dur": 0.5 }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "SAME JSON.",
+          "x": 56,
+          "y": 250,
+          "w": 980,
+          "size": 150,
+          "face": "Bebas Neue",
+          "lineHeight": 0.84,
+          "fill": "ink",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.2, "dur": 0.75, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "text",
+          "text": "SAME FRAMES.",
+          "x": 56,
+          "y": 380,
+          "w": 980,
+          "size": 150,
+          "face": "Bebas Neue",
+          "lineHeight": 0.84,
+          "fill": "accent",
+          "mask": true,
+          "motion": { "in": { "type": "maskUp", "at": 0.3, "dur": 0.75, "ease": "power3.out" }, "out": false }
+        },
+        {
+          "type": "rrect",
+          "x": 64,
+          "y": 700,
+          "w": 300,
+          "h": 360,
+          "radius": 12,
+          "fill": "rgba(242,243,247,0.045)",
+          "stroke": "rgba(242,243,247,0.16)",
+          "strokeWidth": 1,
+          "motion": { "in": { "type": "rise", "at": 0.45, "dur": 0.7, "distance": 34, "ease": "power3.out" }, "out": false },
+          "children": [
+            { "type": "text", "text": "01", "x": 26, "y": 24, "size": 76, "face": "Bebas Neue", "fill": "accent" },
+            { "type": "text", "text": "COMPILE", "x": 26, "y": 132, "size": 15, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.2, "fill": "ink" },
+            { "type": "text", "text": "JSON to scene graph. No agentic retries.", "x": 26, "y": 196, "w": 248, "size": 21, "face": "Inter", "lineHeight": 1.3, "fill": "muted" }
+          ]
+        },
+        {
+          "type": "rrect",
+          "x": 390,
+          "y": 700,
+          "w": 300,
+          "h": 360,
+          "radius": 12,
+          "fill": "rgba(76,125,255,0.10)",
+          "stroke": "rgba(76,125,255,0.45)",
+          "strokeWidth": 1,
+          "motion": { "in": { "type": "rise", "at": 0.53, "dur": 0.7, "distance": 34, "ease": "power3.out" }, "out": false },
+          "children": [
+            { "type": "text", "text": "02", "x": 26, "y": 24, "size": 76, "face": "Bebas Neue", "fill": "accent2" },
+            { "type": "text", "text": "RENDER", "x": 26, "y": 132, "size": 15, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.2, "fill": "ink" },
+            { "type": "text", "text": "Skia pixels. In-process H.264. No browser.", "x": 26, "y": 196, "w": 248, "size": 21, "face": "Inter", "lineHeight": 1.3, "fill": "muted" }
+          ]
+        },
+        {
+          "type": "rrect",
+          "x": 716,
+          "y": 700,
+          "w": 300,
+          "h": 360,
+          "radius": 12,
+          "fill": "rgba(242,243,247,0.045)",
+          "stroke": "rgba(242,243,247,0.16)",
+          "strokeWidth": 1,
+          "motion": { "in": { "type": "rise", "at": 0.61, "dur": 0.7, "distance": 34, "ease": "power3.out" }, "out": false },
+          "children": [
+            { "type": "text", "text": "03", "x": 26, "y": 24, "size": 76, "face": "Bebas Neue", "fill": "accent" },
+            { "type": "text", "text": "REPEAT", "x": 26, "y": 132, "size": 15, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.2, "fill": "ink" },
+            { "type": "text", "text": "Same input, same frame, same pixels.", "x": 26, "y": 196, "w": 248, "size": 21, "face": "Inter", "lineHeight": 1.3, "fill": "muted" }
+          ]
+        },
+        {
+          "type": "cta",
+          "x": 64,
+          "y": 1160,
+          "w": 338,
+          "h": 78,
+          "text": "Render the spec",
+          "size": 19,
+          "letterSpacing": 1.8,
+          "fill": "ink",
+          "textFill": "bg",
+          "motion": { "in": { "type": "rise", "at": 0.85, "dur": 0.6, "distance": 22, "ease": "back.out" }, "out": false }
+        },
+        {
+          "type": "stamp",
+          "text": "DETERMINISTIC",
+          "x": 760,
+          "y": 1175,
+          "w": 258,
+          "h": 96,
+          "size": 21,
+          "rotation": 6,
+          "stroke": "accent2",
+          "fill": "accent2",
+          "motion": { "in": { "type": "scale", "at": 1.0, "dur": 0.6, "ease": "back.out" }, "out": false }
+        }
+      ]
+    },
+    {
+      "id": "ticker",
+      "from": 0.6,
+      "duration": 15.4,
+      "fadeIn": 0.5,
+      "fadeOut": 0.4,
+      "blocks": [
+        {
+          "type": "ticker",
+          "x": 0,
+          "y": 1770,
+          "w": 1080,
+          "h": 82,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "speed": 92,
+          "items": [
+            "CUSTOM HYPER",
+            "NO CHROME",
+            "NO VISION LLM",
+            "JSON IN / MP4 OUT",
+            "FRAME-PURE",
+            "SAME FRAMES"
+          ]
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    { "type": "flash", "at": 0.12, "duration": 0.35, "color": "accent", "edge": false },
+    { "type": "wipe", "at": 4.9, "duration": 0.85, "color": "accent", "skew": -12 },
+    { "type": "wipe", "at": 10.0, "duration": 0.85, "color": "accent2", "skew": -12 }
+  ],
+  "chrome": {
+    "blocks": [
+      { "type": "text", "text": "CUSTOM HYPER", "x": 64, "y": 54, "size": 14, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 3.0, "fill": "ink" },
+      { "type": "text", "text": "001 / 016", "x": 840, "y": 54, "w": 176, "size": 14, "face": "IBM Plex Mono", "weight": 400, "letterSpacing": 2.4, "align": "right", "fill": "muted" },
+      { "type": "text", "text": "A DETERMINISTIC FILM", "x": 64, "y": 1734, "size": 12, "face": "IBM Plex Mono", "weight": 400, "letterSpacing": 2.2, "fill": "muted" },
+      { "type": "text", "text": "SKIA / 30 FPS", "x": 840, "y": 1734, "w": 176, "size": 12, "face": "IBM Plex Mono", "weight": 400, "letterSpacing": 2.2, "align": "right", "fill": "muted" },
+      { "type": "progress", "h": 8, "fill": "accent" }
+    ]
+  }
+}

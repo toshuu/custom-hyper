@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Hyper / Main Direct</title>
+<style>
+  :root {
+    --bg: #09090b;
+    --panel: #101014;
+    --line: rgba(244, 241, 234, 0.14);
+    --ink: #f4f1ea;
+    --muted: rgba(244, 241, 234, 0.56);
+    --accent: #ff4d2e;
+    --accent2: #4c7dff;
+    --paper: #efe6d5;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font-family: var(--sans); }
+  body {
+    background:
+      radial-gradient(900px 600px at 85% -10%, rgba(76, 125, 255, 0.16), transparent 60%),
+      radial-gradient(700px 500px at -10% 100%, rgba(255, 77, 46, 0.12), transparent 60%),
+      var(--bg);
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1380px; margin: 0 auto; padding: 28px 28px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+  .brand { font-family: var(--mono); font-size: 12px; letter-spacing: 2.4px; font-weight: 700; }
+  .brand span { color: var(--muted); }
+  .head-note { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1.4px; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: end; padding: 34px 0 26px; }
+  h1 { font-size: clamp(42px, 6vw, 86px); line-height: 0.9; letter-spacing: -0.04em; margin: 0; font-weight: 800; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero p { color: var(--muted); font-size: 15px; line-height: 1.5; max-width: 46ch; margin: 0 0 6px auto; }
+  .grid { display: grid; grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr); gap: 28px; align-items: start; }
+  .panel { background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012)); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .label { font-family: var(--mono); font-size: 10px; letter-spacing: 2.2px; color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 8px; }
+  textarea, input, select {
+    width: 100%; background: #0b0b0e; color: var(--ink); border: 1px solid var(--line);
+    border-radius: 8px; padding: 12px 12px; font-family: var(--sans); font-size: 14px; outline: none;
+  }
+  textarea { min-height: 132px; resize: vertical; line-height: 1.5; }
+  textarea:focus, input:focus, select:focus { border-color: rgba(255, 77, 46, 0.7); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .row.three { grid-template-columns: 1.2fr 1fr 1fr; }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0 4px; }
+  .chip { font-family: var(--mono); font-size: 10px; letter-spacing: 0.6px; border: 1px solid var(--line); color: var(--muted); background: transparent; border-radius: 999px; padding: 7px 10px; cursor: pointer; }
+  .chip:hover { color: var(--ink); border-color: rgba(244,241,234,0.35); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  button { border: 0; border-radius: 999px; padding: 13px 18px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; }
+  button:disabled { opacity: 0.45; cursor: wait; }
+  .primary { background: var(--accent); color: #0a0a0b; }
+  .ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .ghost:hover { border-color: rgba(244,241,234,0.4); }
+  .hint { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 12px 0 0; }
+  .hint b { color: var(--ink); font-weight: 600; }
+  .status { font-family: var(--mono); font-size: 11px; color: var(--muted); min-height: 18px; margin-top: 14px; line-height: 1.5; }
+  .status.err { color: #ff8c7a; }
+  .status.ok { color: #9fe6b0; }
+  .out { min-height: 500px; }
+  .empty { border: 1px dashed var(--line); border-radius: 14px; min-height: 500px; display: grid; place-items: center; color: var(--muted); font-family: var(--mono); font-size: 12px; letter-spacing: 1.2px; text-align: center; padding: 30px; }
+  .result { display: none; }
+  .result.on { display: block; }
+  .sig { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+  .sig span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.8px; color: var(--ink); background: rgba(255,255,255,0.05); border: 1px solid var(--line); border-radius: 999px; padding: 6px 9px; }
+  .sig span b { color: var(--accent); font-weight: 700; }
+  .stills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .stills a { position: relative; display: block; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #000; aspect-ratio: 9 / 16; }
+  .stills.square a { aspect-ratio: 1 / 1; }
+  .stills.landscape a { aspect-ratio: 16 / 9; }
+  .stills img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .stills .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px 7px 6px; background: linear-gradient(180deg, transparent, rgba(8,8,9,0.88)); color: #f4f1ea; font-family: var(--mono); font-size: 8px; letter-spacing: 0.9px; line-height: 1.5; }
+  .stills .cap b { display: block; color: #fff; font-weight: 600; font-size: 8px; letter-spacing: 0.7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .stills .cap i { font-style: normal; color: var(--accent); }
+  .meta { display: flex; flex-wrap: wrap; gap: 14px; margin: 14px 0; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.8px; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .renderbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; }
+  .progress { height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; flex: 1; min-width: 160px; }
+  .progress i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.25s; }
+  video { width: 100%; border-radius: 10px; border: 1px solid var(--line); margin-top: 14px; background: #000; display: none; }
+  video.on { display: block; }
+  details { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+  summary { font-family: var(--mono); font-size: 10px; letter-spacing: 1.6px; color: var(--muted); cursor: pointer; text-transform: uppercase; }
+  pre { max-height: 320px; overflow: auto; background: #070709; border: 1px solid var(--line); border-radius: 8px; padding: 14px; font-size: 11px; line-height: 1.5; color: #cfcac1; }
+  .colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .colors .sub { display: block; font-family: var(--mono); font-size: 9px; letter-spacing: 1.6px; color: var(--muted); margin-bottom: 6px; }
+  .colors input[type=color] { width: 100%; height: 44px; padding: 3px; background: #0b0b0e; cursor: pointer; }
+  .beats { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .beat { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 8px; padding: 8px 0; border-bottom: 1px solid rgba(244,241,234,0.07); }
+  .beat span { font-family: var(--mono); font-size: 9px; color: var(--accent); letter-spacing: 1px; padding-top: 3px; }
+  .beat b { font-size: 13px; letter-spacing: 0.02em; line-height: 1.25; }
+  .beat i { grid-column: 2; font-style: normal; font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .foot { margin-top: 26px; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 1px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 720px) { .stills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 980px) { .hero, .grid { grid-template-columns: 1fr; } .hero p { margin: 0; } .out { min-height: 0; } .empty { min-height: 240px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">CUSTOM HYPER <span>/ MAIN DIRECT</span></div>
+    <div class="head-note">ONE BRIEF / ONE CALL / ONE FILM</div>
+  </header>
+
+  <section class="hero">
+    <h1>MAKE THE<br><em>FEELING.</em></h1>
+    <p>Write a brief. The director turns it into a beat plan, then the engine composes a one-off film. No template. No chat loop. No per-frame model.</p>
+  </section>
+
+  <main class="grid">
+    <section class="panel">
+      <form id="form">
+        <label class="label" for="brief">The brief</label>
+        <textarea id="brief" placeholder="A 12 second film about why small teams ship faster than big ones. Cold, confident, not corporate."></textarea>
+        <div class="chips" id="samples">
+          <button class="chip" type="button" data-brief="A 10 second film about the last quiet street in a city that never sleeps. Warm, grainy, intimate.">last quiet street</button>
+          <button class="chip" type="button" data-brief="A 12 second film about why small teams ship faster than big ones. Cold, confident, not corporate.">small teams</button>
+          <button class="chip" type="button" data-brief="A 8 second film about a machine that learns to forget. Dark, elegant, strange.">machine that forgets</button>
+          <button class="chip" type="button" data-brief="A 12 second film about the cost of cheap clothes. Direct, human, angry but controlled.">cheap clothes</button>
+        </div>
+
+        <label class="label" style="margin-top:16px">Brand colors</label>
+        <div class="colors">
+          <div><span class="sub">ACCENT</span><input id="accent" type="color" value="#c8371e"></div>
+          <div><span class="sub">PAPER</span><input id="bg" type="color" value="#ede6d8"></div>
+          <div><span class="sub">INK</span><input id="ink" type="color" value="#111111"></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <label class="label" for="look">Look</label>
+          <select id="look">
+            <option value="print" selected>Editorial print / HyperFrames</option>
+            <option value="cinema">Cinema</option>
+          </select>
+        </div>
+
+        <div class="row three">
+          <div>
+            <label class="label" for="seconds">Length</label>
+            <select id="seconds">
+              <option value="6">6 s</option>
+              <option value="8">8 s</option>
+              <option value="10">10 s</option>
+              <option value="12" selected>12 s</option>
+              <option value="16">16 s</option>
+              <option value="20">20 s</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="format">Format</label>
+            <select id="format">
+              <option value="vertical" selected>9:16</option>
+              <option value="square">1:1</option>
+              <option value="landscape">16:9</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="scale">Render</label>
+            <select id="scale">
+              <option value="0.5" selected>540p fast</option>
+              <option value="1">1080p full</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label class="label" for="provider">Provider</label>
+            <select id="provider">
+              <option value="gemini" selected>Gemini</option>
+              <option value="openai">OpenAI</option>
+              <option value="compatible">Compatible</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="model">Model</label>
+            <input id="model" placeholder="gemini-2.0-flash" autocomplete="off">
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <label class="label" for="key">API key</label>
+          <input id="key" type="password" placeholder="Saved locally. Reused after restart." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="go" type="submit">GENERATE FILM</button>
+          <button class="ghost" id="demo" type="button">LOCAL PREVIEW / NO KEY</button>
+        </div>
+        <p class="hint"><b>Main</b> uses one compact LLM call. The local preview uses the same director and renderer without a key. Every run gets a new style seed.</p>
+        <div class="status" id="status"></div>
+      </form>
+    </section>
+
+    <section class="out">
+      <div class="empty" id="empty">NO FILM YET<br><br>WRITE A BRIEF OR RUN THE LOCAL PREVIEW</div>
+      <div class="result" id="result">
+        <div class="sig" id="sig"></div>
+        <div class="stills" id="stills"></div>
+        <div class="meta" id="meta"></div>
+        <div class="beats" id="beats"></div>
+        <div class="renderbar">
+          <button class="primary" id="render" type="button">RENDER MP4</button>
+          <button class="ghost" id="download" type="button">DOWNLOAD SPEC</button>
+          <div class="progress"><i id="bar"></i></div>
+          <span class="status" id="renderStatus" style="margin:0;min-width:110px"></span>
+        </div>
+        <video id="video" controls playsinline></video>
+        <details>
+          <summary>Compiled spec</summary>
+          <pre id="spec"></pre>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div class="foot">
+    <span>SKIA / H.264 / NO BROWSER AT RENDER</span>
+    <span id="health">LOCAL ENGINE</span>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const state = { preview: null, timer: null };
+const status = (text, kind = '') => { $('status').className = 'status ' + kind; $('status').textContent = text; };
+const setBusy = (busy) => { $('go').disabled = busy; $('demo').disabled = busy; };
+
+$('samples').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-brief]');
+  if (b) { $('brief').value = b.dataset.brief; $('brief').focus(); }
+});
+
+const defaults = { gemini: 'gemini-2.0-flash', openai: 'gpt-4o-mini', compatible: 'gpt-4o-mini' };
+$('provider').addEventListener('change', () => { $('model').placeholder = defaults[$('provider').value] || ''; });
+
+const settingsBody = () => ({
+  provider: $('provider').value, model: $('model').value.trim(), apiKey: $('key').value.trim(),
+  seconds: Number($('seconds').value), format: $('format').value,
+});
+const persistSettings = async () => {
+  try {
+    await fetch('/api/settings', { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(settingsBody()) });
+  } catch { /* local save is best effort */ }
+};
+let settingsTimer = null;
+const queueSettings = () => { clearTimeout(settingsTimer); settingsTimer = setTimeout(persistSettings, 350); };
+const applySettings = (s = {}) => {
+  if (s.provider) $('provider').value = s.provider;
+  if (s.model) $('model').value = s.model;
+  if (s.apiKey) $('key').value = s.apiKey;
+  if (s.seconds) $('seconds').value = String(s.seconds);
+  if (s.format) $('format').value = s.format;
+  $('model').placeholder = defaults[$('provider').value] || '';
+};
+['provider', 'model', 'key', 'seconds', 'format'].forEach((id) => {
+  $(id).addEventListener('change', queueSettings);
+  $(id).addEventListener('input', queueSettings);
+});
+fetch('/api/settings').then((r) => r.json()).then((d) => applySettings(d.settings || {})).catch(() => {});
+
+const paletteIds = ['accent', 'bg', 'ink'];
+const saveBrand = () => {
+  try {
+    localStorage.setItem('ch-brand', JSON.stringify({
+      accent: $('accent').value, bg: $('bg').value, ink: $('ink').value, look: $('look').value,
+    }));
+  } catch {}
+};
+try {
+  const saved = JSON.parse(localStorage.getItem('ch-brand') || '{}');
+  paletteIds.forEach((id) => { if (saved[id]) $(id).value = saved[id]; });
+  if (saved.look) $('look').value = saved.look;
+} catch {}
+paletteIds.forEach((id) => $(id).addEventListener('input', saveBrand));
+$('look').addEventListener('change', saveBrand);
+
+const esc = (v) => String(v ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const tc = (v) => {
+  const t = Math.max(0, Number(v) || 0);
+  const f = Math.round((t % 1) * 30);
+  return '00:' + String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(Math.floor(t % 60)).padStart(2, '0') + '.' + String(f).padStart(2, '0');
+};
+
+const jsonFetch = async (url, body) => {
+  const res = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || data.ok === false) throw new Error(data.error || ('request failed: ' + res.status));
+  return data;
+};
+
+const showPreview = (p) => {
+  state.preview = p;
+  $('empty').style.display = 'none';
+  $('result').classList.add('on');
+  $('video').classList.remove('on');
+  $('video').removeAttribute('src');
+  $('bar').style.width = '0%';
+  $('renderStatus').textContent = '';
+  $('render').disabled = false;
+  const s = p.style;
+  $('sig').innerHTML = [
+    ['STYLE', s.layout],
+    ['MOTION', s.motion],
+    ['GROUND', s.background],
+    ['CHROME', s.chrome],
+    ['TYPE', s.display + ' / ' + s.body],
+    ['ART', p.look || 'print'],
+    ['SEED', String(p.seed)],
+  ].map(([k, v]) => '<span>' + k + ' <b>' + String(v).toUpperCase() + '</b></span>').join('')
+    + '<span>INK <b style="color:' + s.palette.ink + '">■</b></span>'
+    + '<span>BG <b style="color:' + s.palette.bg + '">■</b></span>'
+    + '<span>ACCENT <b style="color:' + s.palette.accent + '">■</b></span>';
+  $('stills').className = 'stills ' + ($('format').value === 'square' ? 'square' : $('format').value === 'landscape' ? 'landscape' : '');
+  $('stills').innerHTML = p.stills.map((x, i) => '<a href="' + x.url + '" target="_blank" rel="noreferrer" title="' + esc(x.headline || '') + '">'
+    + '<img src="' + x.url + '" alt="still ' + (i + 1) + '" loading="lazy">'
+    + '<span class="cap"><i>' + String(x.index || i + 1).padStart(2, '0') + '</i> ' + tc(x.time)
+    + '<b>' + esc(x.headline || '') + '</b></span></a>').join('');
+  const tokens = p.usage.input + p.usage.output;
+  $('meta').innerHTML = [
+    ['PROVIDER', p.provider],
+    ['MODEL', p.model],
+    ['TOKENS', p.demo ? '0 / local' : (p.usage.input + ' in + ' + p.usage.output + ' out = ' + tokens)],
+    ['SPEC', p.id],
+  ].map(([k, v]) => '<span>' + k + ' <b>' + v + '</b></span>').join('');
+  $('beats').innerHTML = (p.plan.beats || []).map((b, i) => {
+    const meta = [String(i + 1).padStart(2, '0'), b.kicker || b.kind || ''].join(' / ');
+    return '<div class="beat"><span>' + esc(meta) + '</span><b>' + esc(b.headline) + '</b>'
+      + (b.body ? '<i>' + esc(b.body) + '</i>' : '') + '</div>';
+  }).join('');
+  $('spec').textContent = JSON.stringify(p.spec, null, 2);
+  $('download').onclick = () => {
+    const blob = new Blob([JSON.stringify(p.spec, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = p.id + '.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+};
+
+const generate = async (demo) => {
+  const brief = $('brief').value.trim();
+  if (brief.length < 8) return status('Write a longer brief. At least one sentence.', 'err');
+  if (!demo && !$('key').value.trim()) return status('Add an API key, or use the local preview.', 'err');
+  await persistSettings();
+  setBusy(true);
+  status(demo ? 'Directing locally. Same engine, no key...' : 'One LLM call. Directing beats...');
+  try {
+    const p = await jsonFetch('/api/generate', {
+      brief,
+      seconds: Number($('seconds').value),
+      format: $('format').value,
+      provider: $('provider').value,
+      model: $('model').value.trim() || undefined,
+      apiKey: demo ? undefined : $('key').value.trim(),
+      brand: { accent: $('accent').value, bg: $('bg').value, ink: $('ink').value },
+      look: $('look').value,
+      demo,
+    });
+    showPreview(p);
+    status(demo ? 'Preview ready. Local director, zero tokens.' : 'Preview ready. One call, ' + (p.usage.input + p.usage.output) + ' tokens.', 'ok');
+  } catch (err) {
+    status(err.message, 'err');
+  } finally {
+    setBusy(false);
+  }
+};
+
+$('form').addEventListener('submit', (e) => { e.preventDefault(); generate(false); });
+$('demo').addEventListener('click', () => generate(true));
+
+const poll = async (job) => {
+  try {
+    const j = await fetch('/api/job/' + job).then((r) => r.json());
+    $('bar').style.width = (j.progress || 0) + '%';
+    $('renderStatus').textContent = j.status === 'rendering' ? (j.frame || 0) + '/' + (j.frames || '') : j.status.toUpperCase();
+    if (j.status === 'done') {
+      $('renderStatus').textContent = 'DONE';
+      $('video').src = j.url;
+      $('video').classList.add('on');
+      $('video').play().catch(() => {});
+      status('Film ready: ' + j.width + 'x' + j.height + ', ' + j.frames + ' frames.', 'ok');
+      return;
+    }
+    if (j.status === 'error') { status(j.error || 'render failed', 'err'); $('render').disabled = false; return; }
+    state.timer = setTimeout(() => poll(job), 650);
+  } catch (err) {
+    status(err.message, 'err');
+  }
+};
+
+$('render').addEventListener('click', async () => {
+  if (!state.preview) return;
+  $('render').disabled = true;
+  $('bar').style.width = '0%';
+  $('renderStatus').textContent = 'QUEUED';
+  status('Rendering MP4...');
+  try {
+    const r = await jsonFetch('/api/render', { id: state.preview.id, scale: Number($('scale').value) });
+    poll(r.job);
+  } catch (err) {
+    status(err.message, 'err');
+    $('render').disabled = false;
+  }
+});
+
+fetch('/api/health').then((r) => r.json()).then((h) => {
+  $('health').textContent = h.ok ? 'DIRECT READY / PORT 8098' : 'ENGINE OFFLINE';
+}).catch(() => { $('health').textContent = 'ENGINE OFFLINE'; });
+</script>
+</body>
+</html>

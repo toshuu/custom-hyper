@@ -1,0 +1,1496 @@
+{
+  "id": "rooftop-solar-panels-7-brutal",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 10,
+  "palette": {
+    "bg": "#EDE6D8",
+    "ink": "#111111",
+    "accent": "#B2331C",
+    "accent2": "#1D3FBF",
+    "muted": "rgba(17,17,17,0.62)",
+    "paper": "#F4EFE4"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Space Grotesk",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.085,
+    "amount": 0.45,
+    "seed": 7,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 10,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": "#EDE6D8"
+        },
+        {
+          "type": "grain",
+          "opacity": 0.03,
+          "amount": 0.42,
+          "seed": 7,
+          "cell": 2
+        },
+        {
+          "type": "rect",
+          "x": 7,
+          "y": 7,
+          "w": 1066,
+          "h": 1906,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 3,
+          "opacity": 0.92
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1796.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 123.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.18
+        },
+        {
+          "type": "rule",
+          "x": 270,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 540,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 810,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "from": 0,
+      "duration": 10,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "progress",
+          "h": 4,
+          "fill": "accent"
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2,
+      "fadeIn": 0.18,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "01",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE SUBJECT",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01 / 05",
+          "x": 730,
+          "y": 170.6,
+          "w": 285,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 314.6,
+          "opacity": 1,
+          "h": 489,
+          "size": 164.15253307440005,
+          "lines": 3,
+          "text": "ROOFTOP\nSOLAR\nPANELS",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "ROOFTOP",
+              "x": 65,
+              "y": 0,
+              "w": 912,
+              "size": 164.15253307440005,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 207,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 196.98303968928005
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SOLAR",
+              "x": 65,
+              "y": 141.17117844398405,
+              "w": 912,
+              "size": 164.15253307440005,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 207,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 196.98303968928005
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "PANELS",
+              "x": 65,
+              "y": 282.3423568879681,
+              "w": 912,
+              "size": 164.15253307440005,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 207,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 196.98303968928005
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 829.6,
+          "w": 95,
+          "h": 6,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "rooftop solar panels in Pune",
+          "x": 65,
+          "y": 863.6,
+          "w": 684,
+          "size": 34,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "rooftop solar panels",
+          "x": 673,
+          "y": 1130.6,
+          "w": 342,
+          "h": 111.36,
+          "stroke": "accent",
+          "fill": "accent",
+          "size": 12,
+          "rotation": -5,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.45,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1429.8,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "SUBJECT",
+          "x": 65,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "ROOFTOP SOLAR PANELS",
+          "x": 65,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "CUT",
+          "x": 381.6666666666667,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "01 OF 05",
+          "x": 381.6666666666667,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "RECORD",
+          "x": 698.3333333333334,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "ROOFTOP SOLAR PANELS",
+          "x": 698.3333333333334,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "rect",
+          "x": 65,
+          "y": 1605.4,
+          "w": 285,
+          "h": 80.64,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "opacity": 0.75
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 75,
+          "y": 1632.2800000000002,
+          "w": 266,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 1.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "02",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE RECORD",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 295.4,
+          "opacity": 1,
+          "h": 346,
+          "size": 90.2232557309031,
+          "lines": 4,
+          "text": "ROOFTOP\nSOLAR\nPANELS IN\nPUNE",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "ROOFTOP",
+              "x": 65,
+              "y": 0,
+              "w": 513,
+              "size": 90.2232557309031,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 114,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 108.26790687708372
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SOLAR",
+              "x": 65,
+              "y": 77.59199992857667,
+              "w": 513,
+              "size": 90.2232557309031,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 114,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 108.26790687708372
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "PANELS IN",
+              "x": 65,
+              "y": 155.18399985715334,
+              "w": 513,
+              "size": 90.2232557309031,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 114,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 108.26790687708372
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "PUNE",
+              "x": 65,
+              "y": 232.77599978573,
+              "w": 513,
+              "size": 90.2232557309031,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 114,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.42,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 108.26790687708372
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 624,
+          "y": 182.6,
+          "w": 2,
+          "h": 1583.6000000000001,
+          "fill": "ink",
+          "opacity": 0.45
+        },
+        {
+          "type": "text",
+          "text": "A family cuts its power bill\nfrom 4,200 rupees to 600",
+          "x": 650,
+          "y": 196.6,
+          "w": 323,
+          "size": 25.947000000000003,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.26,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 3.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "bars",
+          "x": 65,
+          "y": 1404.2,
+          "w": 950,
+          "h": 300,
+          "values": [
+            0.3,
+            0.38,
+            0.45,
+            0.52,
+            0.58,
+            0.63,
+            0.7,
+            0.76,
+            0.84,
+            0.9,
+            0.96,
+            1
+          ],
+          "colors": [
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "ink",
+            "accent",
+            "accent",
+            "accent"
+          ],
+          "gap": 6,
+          "at": 0.1,
+          "step": 0.03,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "4200",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 338,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE MEASURE",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "4,200",
+          "x": 65,
+          "y": 266.6,
+          "w": 418,
+          "size": 144.29113422704705,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "motion": {
+            "in": {
+              "type": "slideUp",
+              "at": 0.12,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "RUPEES",
+          "x": 65,
+          "y": 393.57619811980146,
+          "w": 418,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 525.75,
+          "y": 180.6,
+          "w": 2,
+          "h": 1577.6000000000001,
+          "fill": "ink",
+          "opacity": 0.4
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 266.6,
+          "opacity": 1,
+          "h": 196,
+          "size": 65.8840431063425,
+          "lines": 3,
+          "text": "A FAMILY\nCUTS ITS\nPOWER BILL",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "A FAMILY",
+              "x": 549.5,
+              "y": 0,
+              "w": 446.5,
+              "size": 65.8840431063425,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 83,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 79.060851727611
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "CUTS ITS",
+              "x": 549.5,
+              "y": 56.66027707145455,
+              "w": 446.5,
+              "size": 65.8840431063425,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 83,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 79.060851727611
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "POWER BILL",
+              "x": 549.5,
+              "y": 113.3205541429091,
+              "w": 446.5,
+              "size": 65.8840431063425,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 83,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 79.060851727611
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A family cuts its power bill from\n4,200 rupees to 600",
+          "x": 549.5,
+          "y": 488.6,
+          "w": 446.5,
+          "size": 28,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1752.2,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.24
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 5.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "bars",
+          "x": 65,
+          "y": 1428.2,
+          "w": 437,
+          "h": 280,
+          "values": [
+            0.45,
+            0.63,
+            0.81
+          ],
+          "colors": [
+            "ink",
+            "ink",
+            "accent"
+          ],
+          "gap": 12,
+          "at": 0.1,
+          "step": 0.05,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE BREAKDOWN",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 295.4,
+          "opacity": 1,
+          "h": 401,
+          "size": 104.31640158504231,
+          "lines": 4,
+          "text": "A FAMILY\nCUTS ITS\nPOWER\nBILL",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "A FAMILY",
+              "x": 65,
+              "y": 0,
+              "w": 513,
+              "size": 104.31640158504231,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 131,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 125.17968190205077
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "CUTS ITS",
+              "x": 65,
+              "y": 89.71210536313639,
+              "w": 513,
+              "size": 104.31640158504231,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 131,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 125.17968190205077
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "POWER",
+              "x": 65,
+              "y": 179.42421072627278,
+              "w": 513,
+              "size": 104.31640158504231,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 131,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 125.17968190205077
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "BILL",
+              "x": 65,
+              "y": 269.13631608940915,
+              "w": 513,
+              "size": 104.31640158504231,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 131,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.42,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 125.17968190205077
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 624,
+          "y": 182.6,
+          "w": 2,
+          "h": 1583.6000000000001,
+          "fill": "ink",
+          "opacity": 0.45
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 7.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "05",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "NEXT STEP",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 362.6,
+          "opacity": 1,
+          "h": 216,
+          "size": 102.12026681483093,
+          "lines": 2,
+          "text": "SEE ROOFTOP\nSOLAR PANELS",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "SEE ROOFTOP",
+              "x": 65,
+              "y": 0,
+              "w": 893,
+              "size": 102.12026681483093,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 129,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 122.5443201777971
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SOLAR PANELS",
+              "x": 65,
+              "y": 87.8234294607546,
+              "w": 893,
+              "size": 102.12026681483093,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 129,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 122.5443201777971
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "rooftop solar panels in Pune",
+          "x": 65,
+          "y": 612.6,
+          "w": 646,
+          "size": 33,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1279,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "ROOFTOP SOLAR PANELS / 05 OF 05",
+          "x": 65,
+          "y": 1293,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.65
+        },
+        {
+          "type": "cta",
+          "text": "SEE ROOFTOP SOLAR PANELS",
+          "x": 65,
+          "y": 1509.4,
+          "w": 589,
+          "h": 76.8,
+          "fill": "accent",
+          "textFill": "bg",
+          "face": "IBM Plex Mono",
+          "size": 16,
+          "arrow": true,
+          "letterSpacing": 2,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.4,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 635,
+          "y": 1529.4,
+          "w": 380,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "band",
+      "at": 2,
+      "duration": 0.6175248808041215,
+      "color": "accent",
+      "color2": "ink"
+    },
+    {
+      "type": "band",
+      "at": 6,
+      "duration": 0.5007876643259078,
+      "color": "accent2",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A FILM BY CUSTOM HYPER",
+        "x": 65,
+        "y": 43,
+        "w": 323,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.4,
+        "opacity": 0.72,
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "text": "ROOFTOP SOLAR PANELS",
+        "x": 350,
+        "y": 43,
+        "w": 380,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "center",
+        "letterSpacing": 2.4,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "EDITORIAL / 05",
+        "x": 730,
+        "y": 43,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 2,
+        "opacity": 0.66
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 83,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.32
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 1854,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.34
+      },
+      {
+        "type": "text",
+        "text": "PUNE • FAMILY • CUTS • ROOFTOP SOLAR PANELS",
+        "x": 65,
+        "y": 1867,
+        "w": 589,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.8,
+        "opacity": 0.62
+      },
+      {
+        "type": "text",
+        "text": "05 CUTS / 30 FPS",
+        "x": 730,
+        "y": 1867,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.8,
+        "opacity": 0.7
+      },
+      {
+        "type": "rect",
+        "x": 65,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent"
+      },
+      {
+        "type": "rect",
+        "x": 749,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent",
+        "opacity": 0.55
+      },
+      {
+        "type": "progress",
+        "h": 3,
+        "fill": "#B2331C"
+      }
+    ]
+  }
+}

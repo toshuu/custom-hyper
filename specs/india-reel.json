@@ -1,0 +1,42 @@
+{
+  "id": "india-reel",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "duration": 12,
+  "palette": {
+    "bg": "#FFFFFF",
+    "ink": "#138808",
+    "accent": "#FF9933",
+    "accent2": "#FF9933",
+    "muted": "rgba(19,136,8,0.35)",
+    "paper": "#FFFFFF"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono", "serif": "Rozha One" },
+  "grain": { "opacity": 0.03, "amount": 0.4, "seed": 7, "cell": 2, "drift": 1 },
+  "layers": [
+    { "id": "ground", "from": 0, "duration": 12, "fadeIn": 0, "fadeOut": 0, "blocks": [ { "type": "bg", "fill": "bg" }, { "type": "atmosphere", "blobs": [ { "color": "accent", "x": 860, "y": 420, "r": 220, "blur": 110, "opacity": 0.14, "float": 10, "period": 7 }, { "color": "ink", "x": 220, "y": 1520, "r": 300, "blur": 150, "opacity": 0.1, "float": 8, "period": 9 } ] } ] },
+    { "id": "hook", "from": 0.5, "duration": 3.5, "fadeIn": 0.3, "fadeOut": 0.4, "blocks": [
+      { "type": "kicker", "text": "Desi Culture", "x": 64, "y": 260, "size": 15, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Namaste India", "x": 64, "y": 340, "w": 952, "size": 110, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 0.35, "dur": 0.8, "ease": "power3.out" }, "out": false } },
+      { "type": "text", "text": "Jai Hind", "x": 64, "y": 520, "w": 952, "size": 64, "face": "IBM Plex Mono", "letterSpacing": 2.4, "fill": "accent", "motion": { "in": { "type": "rise", "at": 0.7, "dur": 0.6, "ease": "power2.out", "distance": 24 }, "out": false } }
+    ] },
+    { "id": "flag", "from": 3.0, "duration": 3.5, "fadeIn": 0.3, "fadeOut": 0.4, "blocks": [
+      { "type": "text", "text": "Tiranga", "x": 240, "y": 630, "w": 600, "size": 34, "face": "IBM Plex Mono", "letterSpacing": 2, "fill": "ink", "align": "center", "motion": { "in": { "type": "fade", "at": 3.1, "dur": 0.5, "ease": "power2.out" }, "out": false } },
+      { "type": "rect", "x": 240, "y": 700, "w": 600, "h": 160, "fill": "accent" },
+      { "type": "rect", "x": 240, "y": 860, "w": 600, "h": 160, "fill": "bg" },
+      { "type": "rect", "x": 240, "y": 1020, "w": 600, "h": 160, "fill": "ink" }
+    ] },
+    { "id": "food", "from": 5.5, "duration": 3.5, "fadeIn": 0.3, "fadeOut": 0.4, "blocks": [
+      { "type": "kicker", "text": "Street Food", "x": 64, "y": 1250, "size": 15, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Chai, samosa, jalebi", "x": 64, "y": 1330, "w": 952, "size": 80, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 5.7, "dur": 0.8, "ease": "power3.out" }, "out": false } }
+    ] },
+    { "id": "close", "from": 8.0, "duration": 4.0, "fadeIn": 0.3, "fadeOut": 0.5, "blocks": [
+      { "type": "text", "text": "Incredible India", "x": 64, "y": 1420, "w": 952, "size": 100, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "accent", "motion": { "in": { "type": "maskUp", "at": 8.2, "dur": 0.8, "ease": "power3.out" }, "out": false } },
+      { "type": "cta", "text": "EXPLORE", "x": 64, "y": 1680, "w": 360, "h": 72, "fill": "ink", "textFill": "bg", "size": 22, "arrow": true, "motion": { "in": { "type": "scale", "at": 8.4, "dur": 0.6, "ease": "back.out", "distance": 0 }, "out": false } }
+    ] }
+  ],
+  "chrome": { "blocks": [
+    { "type": "text", "text": "INDIA REEL", "x": 64, "y": 52, "size": 13, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.4, "fill": "ink" },
+    { "type": "rule", "x": 64, "y": 96, "w": 952, "h": 1, "fill": "accent" },
+    { "type": "progress", "h": 6, "fill": "accent" }
+  ] }
+}

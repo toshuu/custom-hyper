@@ -1,0 +1,951 @@
+{
+  "id": "india-culture-autopsy-l10qtq-minimal",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 20,
+  "palette": {
+    "bg": "#120b0e",
+    "ink": "#fff7f0",
+    "accent": "#ff3c6c",
+    "accent2": "#ffb800",
+    "muted": "rgba(255,247,240,0.56)",
+    "paper": "#3d1424"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Manrope",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.075,
+    "amount": 0.45,
+    "seed": 45,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 20,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#200e14",
+          "bottom": "#0f090b"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#ff3c6c",
+              "x": 276.1129018412903,
+              "y": 1708.8101184368134,
+              "r": 394.40830005705357,
+              "blur": 73.28366985078901,
+              "opacity": 0.1640648459503427,
+              "float": 17.29991859383881,
+              "period": 9.059765813406557
+            },
+            {
+              "color": "#ffb800",
+              "x": 149.81653776951134,
+              "y": 568.4873020648956,
+              "r": 434.1090427748859,
+              "blur": 108.70458877645433,
+              "opacity": 0.20220061583910137,
+              "float": 17.21314966864884,
+              "period": 9.10847798641771
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": -2.6579164071008563,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 16.134233811870217,
+              "period": 9.682652804302052,
+              "phase": 4.013356621842831
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 3.3333333333333335,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 147.50678898207843,
+          "x": 93.15533093443484,
+          "y": 1106.8935435102321,
+          "fill": "accent2",
+          "opacity": 0.11496633570641279,
+          "blur": 0.4478630446828902,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 14.744261597748846,
+              "period": 9.270682327449322,
+              "phase": 1.4677956677041948
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "r": 7,
+          "x": 160,
+          "y": 176.6,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "AUTOPSY",
+          "x": 182,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "muted",
+          "rule": false,
+          "ruleColor": "muted",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.08,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 58
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A billion\ntraditions\npackaged for\ntourist brochures.",
+          "x": 160,
+          "y": 362.6,
+          "w": 760,
+          "size": 120.04223868,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 144.050686416
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "We dissect the living pulse of India to see\nwhat survives the souvenir shop.",
+          "x": 160,
+          "y": 1432.6000000000001,
+          "w": 592.8000000000001,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.35,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 160,
+          "y": 1355.8000000000002,
+          "w": 114,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 2.6,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "THE READ",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Heritage\nreduced to\nfestival\nprops.",
+          "x": 65,
+          "y": 247.04,
+          "w": 551,
+          "size": 146.39297400000004,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 175.67156880000005
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 664.5,
+          "y": 178.6,
+          "w": 2,
+          "h": 1567.6000000000001,
+          "fill": "accent",
+          "opacity": 0.7,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Diarized rituals and\nmass-produced brass idols\nstrip the soul from ancient\ncraft in Varanasi workshops.",
+          "x": 682.5,
+          "y": 192.6,
+          "w": 332.5,
+          "size": 25.2,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 820.6,
+          "y": 1605.4,
+          "w": 237.6,
+          "size": 134.4,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.24,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 5.933333333333334,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "BEFORE / AFTER",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "The synthetic versus\nthe sacred.",
+          "x": 65,
+          "y": 247.04,
+          "w": 855,
+          "size": 120.12,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 144.144
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 65,
+          "y": 495.64639999999997,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "paper",
+          "opacity": 0.05,
+          "stroke": "muted",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Plastic marigolds line temple\ngates while master weavers in\nKanchipuram starve for authentic\nsilk demand.",
+          "x": 81,
+          "y": 513.6464,
+          "w": 424,
+          "size": 26,
+          "face": "Manrope",
+          "fill": "ink",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 81,
+          "y": 1120.4464,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        },
+        {
+          "type": "rrect",
+          "x": 559,
+          "y": 495.64639999999997,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "accent",
+          "opacity": 0.9,
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NEW WAY",
+          "x": 575,
+          "y": 513.6464,
+          "w": 424,
+          "size": 26,
+          "face": "Manrope",
+          "fill": "bg",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.44000000000000006,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 575,
+          "y": 1120.4464,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "bg",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 9.266666666666666,
+      "duration": 4.066666666666668,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "THE READ",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "4,000 active\nweaving clusters\nfighting\nextinction.",
+          "x": 65,
+          "y": 247.04,
+          "w": 551,
+          "size": 94.71481710390475,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 113.65778052468569
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 664.5,
+          "y": 178.6,
+          "w": 2,
+          "h": 1567.6000000000001,
+          "fill": "accent",
+          "opacity": 0.7,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Handloom output drops\nannually as fast-fashion\ncopies flood local markets\nfrom Delhi to Chennai.",
+          "x": 682.5,
+          "y": 192.6,
+          "w": 332.5,
+          "size": 25.2,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "-42%",
+          "x": 682.5,
+          "y": 192.6,
+          "w": 332.5,
+          "size": 84,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.9,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AT A GLANCE",
+          "x": 682.5,
+          "y": 272.4,
+          "w": 332.5,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "transform": "uppercase"
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 820.6,
+          "y": 1605.4,
+          "w": 237.6,
+          "size": 134.4,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.24,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 12.600000000000001,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 88.45096696838738,
+          "x": 818.5181000956317,
+          "y": 1129.619873045478,
+          "fill": "accent2",
+          "opacity": 0.17100990474224093,
+          "blur": 15.138657772913575,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.01001200824976,
+              "period": 10.676291419193149,
+              "phase": 4.446847937069833
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "FIELD NOTE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Culture is not\na museum\nexhibit.",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "It breathes in chaotic street corners, midnight chai stalls,\nand unscripted monsoon downpours across Mumbai.",
+          "x": 65,
+          "y": 746.6,
+          "w": 741,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-06",
+      "from": 15.933333333333334,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 143.17035028226672,
+          "x": 275.4758416541216,
+          "y": 737.9850233062172,
+          "fill": "accent",
+          "opacity": 0.13980822185054423,
+          "blur": 25.470419568009675,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 14.668699553236365,
+              "period": 10.96523881983012,
+              "phase": 4.138590166112408
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "ACT NOW",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Buy direct\nfrom an\nartisan.",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Bypass the middlemen and fund the hands keeping\ntrue heritage alive today.",
+          "x": 65,
+          "y": 1221.4,
+          "w": 703,
+          "size": 28,
+          "face": "Manrope",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "Support local artisans",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "VIBRANT INTENSE",
+          "x": 730,
+          "y": 1555.8000000000002,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 3.3333333333333335,
+      "duration": 0.2704070440679789,
+      "color": "accent"
+    },
+    {
+      "type": "band",
+      "at": 6.666666666666667,
+      "duration": 0.49232508002780373,
+      "color": "accent",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "INDIA CULTURE AUTOPSY",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1866.24,
+        "w": 1080,
+        "h": 53.76,
+        "fill": "accent",
+        "textFill": "bg",
+        "size": 13,
+        "speed": 59.9372697272338,
+        "items": [
+          "Varanasi",
+          "Kanchipuram",
+          "Handloom",
+          "Tradition"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

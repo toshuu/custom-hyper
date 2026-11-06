@@ -1,0 +1,805 @@
+{
+  "id": "electric-scooter-for-city-iw57fo-poster",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 8,
+  "palette": {
+    "bg": "#EDE6D8",
+    "ink": "#111111",
+    "accent": "#B2331C",
+    "accent2": "#1D3FBF",
+    "muted": "rgba(17,17,17,0.62)",
+    "paper": "#F4EFE4"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Space Grotesk",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.085,
+    "amount": 0.45,
+    "seed": 89,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 8,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": "#EDE6D8"
+        },
+        {
+          "type": "grain",
+          "opacity": 0.03,
+          "amount": 0.42,
+          "seed": 46,
+          "cell": 2
+        },
+        {
+          "type": "rect",
+          "x": 7,
+          "y": 7,
+          "w": 1066,
+          "h": 1906,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 3,
+          "opacity": 0.92
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1796.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 123.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.18
+        },
+        {
+          "type": "rule",
+          "x": 270,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 540,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 810,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "from": 0,
+      "duration": 8,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "progress",
+          "h": 4,
+          "fill": "accent"
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2.6666666666666665,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "01",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE SUBJECT",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 439.4,
+          "opacity": 1,
+          "h": 555,
+          "size": 186.14377800000003,
+          "lines": 3,
+          "text": "ELECTRIC\nSCOOTER FOR\nCITY",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "ELECTRIC",
+              "x": 65,
+              "y": 0,
+              "w": 855,
+              "size": 186.14377800000003,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 235,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 223.37253360000003
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SCOOTER FOR",
+              "x": 65,
+              "y": 160.08364908000001,
+              "w": 855,
+              "size": 186.14377800000003,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 235,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 223.37253360000003
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "CITY",
+              "x": 65,
+              "y": 320.16729816000003,
+              "w": 855,
+              "size": 186.14377800000003,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 235,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 223.37253360000003
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1024.4,
+          "w": 95,
+          "h": 5,
+          "fill": "accent",
+          "opacity": 1
+        },
+        {
+          "type": "text",
+          "text": "a quiet electric scooter for city\nriders",
+          "x": 65,
+          "y": 1060.4,
+          "w": 589,
+          "size": 33,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "END / 01",
+          "x": 65,
+          "y": 1636.1200000000001,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 2.08,
+      "duration": 3.253333333333333,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "02",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "IN ONE LINE",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "“",
+          "x": 57,
+          "y": 209,
+          "w": 285,
+          "size": 345.59999999999997,
+          "face": "Rozha One",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "opacity": 0.22
+        },
+        {
+          "type": "text",
+          "text": "a quiet\nelectric\nscooter for\ncity riders",
+          "x": 65,
+          "y": 516.1999999999999,
+          "w": 893,
+          "size": 138.23999999999998,
+          "face": "Rozha One",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "italic": true,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.2,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 26
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1471,
+          "w": 95,
+          "h": 4,
+          "fill": "accent",
+          "opacity": 1
+        },
+        {
+          "type": "text",
+          "text": "ELECTRIC SCOOTER FOR CITY",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 665,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 4.746666666666666,
+      "duration": 3.253333333333334,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "03",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "NEXT STEP",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 362.6,
+          "opacity": 1,
+          "h": 585,
+          "size": 196.23000000000002,
+          "lines": 3,
+          "text": "SEE ELECTRIC\nSCOOTER FOR\nCITY",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "SEE ELECTRIC",
+              "x": 65,
+              "y": 0,
+              "w": 893,
+              "size": 196.23000000000002,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 247,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 235.476
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SCOOTER FOR",
+              "x": 65,
+              "y": 168.7578,
+              "w": 893,
+              "size": 196.23000000000002,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 247,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 235.476
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "CITY",
+              "x": 65,
+              "y": 337.5156,
+              "w": 893,
+              "size": 196.23000000000002,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 247,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 235.476
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "a quiet electric scooter for city riders",
+          "x": 65,
+          "y": 981.6,
+          "w": 646,
+          "size": 30.69,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1279,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "ELECTRIC SCOOTER FOR CITY / 03 OF 03",
+          "x": 65,
+          "y": 1293,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.65
+        },
+        {
+          "type": "cta",
+          "text": "SEE ELECTRIC SCOOTER FOR CIT",
+          "x": 65,
+          "y": 1509.4,
+          "w": 589,
+          "h": 76.8,
+          "fill": "accent",
+          "textFill": "bg",
+          "face": "IBM Plex Mono",
+          "size": 16,
+          "arrow": true,
+          "letterSpacing": 2,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.4,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 635,
+          "y": 1529.4,
+          "w": 380,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "band",
+      "at": 2.6666666666666665,
+      "duration": 0.6928288477985188,
+      "color": "accent2",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A FILM BY CUSTOM HYPER",
+        "x": 65,
+        "y": 43,
+        "w": 323,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.4,
+        "opacity": 0.72,
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "text": "ELECTRIC SCOOTER FOR CITY",
+        "x": 350,
+        "y": 43,
+        "w": 380,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "center",
+        "letterSpacing": 2.4,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "EDITORIAL / 03",
+        "x": 730,
+        "y": 43,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 2,
+        "opacity": 0.66
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 83,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.32
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 1854,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.34
+      },
+      {
+        "type": "text",
+        "text": "RIDERS • ELECTRIC SCOOTER FOR CITY",
+        "x": 65,
+        "y": 1867,
+        "w": 589,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.8,
+        "opacity": 0.62
+      },
+      {
+        "type": "text",
+        "text": "03 CUTS / 30 FPS",
+        "x": 730,
+        "y": 1867,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.8,
+        "opacity": 0.7
+      },
+      {
+        "type": "rect",
+        "x": 65,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent"
+      },
+      {
+        "type": "rect",
+        "x": 749,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent",
+        "opacity": 0.55
+      },
+      {
+        "type": "progress",
+        "h": 3,
+        "fill": "#B2331C"
+      }
+    ]
+  }
+}

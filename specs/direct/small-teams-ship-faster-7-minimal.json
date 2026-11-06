@@ -1,0 +1,1062 @@
+{
+  "id": "small-teams-ship-faster-7-minimal",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#EDE6D8",
+    "ink": "#111111",
+    "accent": "#B2331C",
+    "accent2": "#1D3FBF",
+    "muted": "rgba(17,17,17,0.62)",
+    "paper": "#F4EFE4"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Space Grotesk",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.085,
+    "amount": 0.45,
+    "seed": 7,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": "#EDE6D8"
+        },
+        {
+          "type": "grain",
+          "opacity": 0.03,
+          "amount": 0.42,
+          "seed": 7,
+          "cell": 2
+        },
+        {
+          "type": "rect",
+          "x": 7,
+          "y": 7,
+          "w": 1066,
+          "h": 1906,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 3,
+          "opacity": 0.92
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1796.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 123.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.18
+        },
+        {
+          "type": "rule",
+          "x": 270,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 540,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 810,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "progress",
+          "h": 4,
+          "fill": "accent"
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 4,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "01",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE SUBJECT",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01 / 03",
+          "x": 730,
+          "y": 170.6,
+          "w": 285,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 314.6,
+          "opacity": 1,
+          "h": 784,
+          "size": 204.07920000000001,
+          "lines": 4,
+          "text": "SMALL\nTEAMS\nSHIP\nFASTER",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "SMALL",
+              "x": 65,
+              "y": 0,
+              "w": 912,
+              "size": 204.07920000000001,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 257,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 244.89504
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "TEAMS",
+              "x": 65,
+              "y": 175.508112,
+              "w": 912,
+              "size": 204.07920000000001,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 257,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 244.89504
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SHIP",
+              "x": 65,
+              "y": 351.016224,
+              "w": 912,
+              "size": 204.07920000000001,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 257,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 244.89504
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "FASTER",
+              "x": 65,
+              "y": 526.5243360000001,
+              "w": 912,
+              "size": 204.07920000000001,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 257,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.42,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 244.89504
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1124.6,
+          "w": 95,
+          "h": 6,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "why small teams ship faster than big ones",
+          "x": 65,
+          "y": 1158.6,
+          "w": 684,
+          "size": 31.62,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1429.8,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "SUBJECT",
+          "x": 65,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "SMALL TEAMS SHIP",
+          "x": 65,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "CUT",
+          "x": 381.6666666666667,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "01 OF 03",
+          "x": 381.6666666666667,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "RECORD",
+          "x": 698.3333333333334,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "WHY SMALL TEAMS",
+          "x": 698.3333333333334,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "rect",
+          "x": 65,
+          "y": 1605.4,
+          "w": 285,
+          "h": 80.64,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "opacity": 0.75
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 75,
+          "y": 1632.2800000000002,
+          "w": 266,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 3.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "02",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "IN ONE LINE",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 439.4,
+          "opacity": 1,
+          "h": 769,
+          "size": 200.15460000000002,
+          "lines": 4,
+          "text": "SMALL\nTEAMS\nSHIP\nFASTER",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "SMALL",
+              "x": 65,
+              "y": 0,
+              "w": 855,
+              "size": 200.15460000000002,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 252,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 240.18552
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "TEAMS",
+              "x": 65,
+              "y": 172.132956,
+              "w": 855,
+              "size": 200.15460000000002,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 252,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 240.18552
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "SHIP",
+              "x": 65,
+              "y": 344.265912,
+              "w": 855,
+              "size": 200.15460000000002,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 252,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 240.18552
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "FASTER",
+              "x": 65,
+              "y": 516.398868,
+              "w": 855,
+              "size": 200.15460000000002,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 252,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.42,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 240.18552
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1238.4,
+          "w": 95,
+          "h": 5,
+          "fill": "accent",
+          "opacity": 1
+        },
+        {
+          "type": "text",
+          "text": "why small teams ship faster than big\nones",
+          "x": 65,
+          "y": 1274.4,
+          "w": 589,
+          "size": 33,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "END / 02",
+          "x": 65,
+          "y": 1636.1200000000001,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 7.12,
+      "duration": 4.88,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "03",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "NEXT STEP",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 362.6,
+          "opacity": 1,
+          "h": 378,
+          "size": 126.95888369819733,
+          "lines": 3,
+          "text": "SEE SMALL\nTEAMS SHIP\nFASTER",
+          "fit": true,
+          "children": [
+            {
+              "type": "text",
+              "text": "SEE SMALL",
+              "x": 65,
+              "y": 0,
+              "w": 893,
+              "size": 126.95888369819733,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 160,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.18,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 152.35066043783678
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "TEAMS SHIP",
+              "x": 65,
+              "y": 109.1846399804497,
+              "w": 893,
+              "size": 126.95888369819733,
+              "face": "Bebas Neue",
+              "fill": "ink",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 160,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.26,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 152.35066043783678
+                },
+                "out": false
+              }
+            },
+            {
+              "type": "text",
+              "text": "FASTER",
+              "x": 65,
+              "y": 218.3692799608994,
+              "w": 893,
+              "size": 126.95888369819733,
+              "face": "Bebas Neue",
+              "fill": "accent",
+              "lineHeight": 0.86,
+              "weight": 700,
+              "letterSpacing": -1,
+              "transform": "uppercase",
+              "mask": true,
+              "h": 160,
+              "motion": {
+                "in": {
+                  "type": "maskUp",
+                  "at": 0.33999999999999997,
+                  "dur": 0.36,
+                  "ease": "power2.out",
+                  "distance": 152.35066043783678
+                },
+                "out": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "why small teams ship faster than big ones",
+          "x": 65,
+          "y": 774.6,
+          "w": 646,
+          "size": 30.69,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1279,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "SMALL TEAMS SHIP FASTER / 03 OF 03",
+          "x": 65,
+          "y": 1293,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.65
+        },
+        {
+          "type": "cta",
+          "text": "SEE SMALL TEAMS SHIP FASTER",
+          "x": 65,
+          "y": 1509.4,
+          "w": 589,
+          "h": 76.8,
+          "fill": "accent",
+          "textFill": "bg",
+          "face": "IBM Plex Mono",
+          "size": 16,
+          "arrow": true,
+          "letterSpacing": 2,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.4,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 635,
+          "y": 1529.4,
+          "w": 380,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "band",
+      "at": 4,
+      "duration": 0.6319181503308937,
+      "color": "accent2",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A FILM BY CUSTOM HYPER",
+        "x": 65,
+        "y": 43,
+        "w": 323,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.4,
+        "opacity": 0.72,
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "text": "SMALL TEAMS SHIP FASTER",
+        "x": 350,
+        "y": 43,
+        "w": 380,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "center",
+        "letterSpacing": 2.4,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "EDITORIAL / 03",
+        "x": 730,
+        "y": 43,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 2,
+        "opacity": 0.66
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 83,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.32
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 1854,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.34
+      },
+      {
+        "type": "text",
+        "text": "SMALL TEAMS SHIP FASTER",
+        "x": 65,
+        "y": 1867,
+        "w": 589,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.8,
+        "opacity": 0.62
+      },
+      {
+        "type": "text",
+        "text": "03 CUTS / 30 FPS",
+        "x": 730,
+        "y": 1867,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.8,
+        "opacity": 0.7
+      },
+      {
+        "type": "rect",
+        "x": 65,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent"
+      },
+      {
+        "type": "rect",
+        "x": 749,
+        "y": 1890.1,
+        "w": 266,
+        "h": 4,
+        "fill": "accent",
+        "opacity": 0.55
+      },
+      {
+        "type": "progress",
+        "h": 3,
+        "fill": "#B2331C"
+      }
+    ]
+  }
+}

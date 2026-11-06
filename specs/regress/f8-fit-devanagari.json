@@ -1,0 +1,20 @@
+{
+  "id": "f8-fit-devanagari",
+  "canvas": { "w": 540, "h": 960, "fps": 30 },
+  "duration": 3,
+  "palette": { "bg": "#0B0D12", "ink": "#F2F3F7", "accent": "#FF4D2E" },
+  "faces": { "display": "Rozha One", "body": "Rozha One", "mono": "IBM Plex Mono" },
+  "layers": [
+    { "id": "ground", "from": 0, "duration": 3, "fadeIn": 0, "fadeOut": 0, "blocks": [{ "type": "bg", "fill": "#0B0D12" }] },
+    {
+      "id": "copy", "from": 0, "duration": 3, "fadeIn": 0, "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "text", "text": "सुबह की पहली चाय, धीमी और गर्म", "x": 40, "y": 300, "w": 300, "h": 300,
+          "size": 70, "face": "Rozha One", "lineHeight": 1.15, "fill": "ink",
+          "fit": { "maxLines": 2, "minSize": 30 }
+        }
+      ]
+    }
+  ]
+}

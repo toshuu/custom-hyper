@@ -1,0 +1,9 @@
+node_modules/
+out/
+data/
+user-special-files/
+.claude/
+.opencode/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,1172 @@
+{
+  "id": "ek-saans-ka-safar-47gaf1-split",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 20,
+  "palette": {
+    "bg": "#132210",
+    "ink": "#ffffff",
+    "accent": "#ff6926",
+    "accent2": "#138808",
+    "muted": "rgba(255,255,255,0.56)",
+    "paper": "#ffffff"
+  },
+  "faces": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.075,
+    "amount": 0.45,
+    "seed": 95,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 20,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#1f2611",
+          "bottom": "#101c0d"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#ff6926",
+              "x": 288.43595328647643,
+              "y": 984.6808133125305,
+              "r": 442.39652617508546,
+              "blur": 123.29276614123955,
+              "opacity": 0.13294316695537417,
+              "float": 11.654208041727543,
+              "period": 10.936633410863578
+            },
+            {
+              "color": "#138808",
+              "x": 271.95233380794525,
+              "y": 486.740274310112,
+              "r": 267.4994639880024,
+              "blur": 111.95600546197966,
+              "opacity": 0.12708094234578313,
+              "float": 10.50890993932262,
+              "period": 8.524350232444704
+            },
+            {
+              "color": "#ff6926",
+              "x": 428.57897784467787,
+              "y": 1232.861139535904,
+              "r": 284.43980435980484,
+              "blur": 98.42182432999834,
+              "opacity": 0.2168493920378387,
+              "float": 8.882087470032275,
+              "period": 16.675235740374774
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": 1.2341909799724817,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.838413166347891,
+              "period": 15.764291791478172,
+              "phase": 5.663386122789234
+            }
+          },
+          "children": [
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 320,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 640,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 960,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1280,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1600,
+              "w": 1080,
+              "h": 1,
+              "fill": "#ffffff",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#ffffff",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 270,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#ffffff",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 540,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#ffffff",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 810,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#ffffff",
+              "opacity": 0.045
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 3.3333333333333335,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 200.68935757800938,
+          "x": 297.0033368324255,
+          "y": 1105.1365524934604,
+          "fill": "accent",
+          "opacity": 0.17517327981069686,
+          "blur": 29.597273950930685,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 12.737116719596088,
+              "period": 10.316352345515043,
+              "phase": 1.382322828285396
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "r": 7,
+          "x": 160,
+          "y": 176.6,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "Kahaani",
+          "x": 182,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "muted",
+          "rule": false,
+          "ruleColor": "muted",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.08,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 58
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Ek saans\nmein kya\naata hai?",
+          "x": 160,
+          "y": 362.6,
+          "w": 760,
+          "size": 149.23999999999998,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 179.08799999999997
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Pura itihaas, ek tiranga, aur ek kahani jo rukti\nnahi.",
+          "x": 160,
+          "y": 1471,
+          "w": 592.8000000000001,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.35,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 160,
+          "y": 1394.1999999999998,
+          "w": 114,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 2.6,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 146.3896541543305,
+          "x": 729.1455342169178,
+          "y": 1459.4491513072512,
+          "fill": "accent2",
+          "opacity": 0.10779522356577217,
+          "blur": 28.711114721372724,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 10.54128063749522,
+              "period": 11.86212130729109,
+              "phase": 0.699089098488912
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "MEASURE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "1",
+          "x": 61,
+          "y": 285.79999999999995,
+          "w": 522.5,
+          "size": 367.20000000000005,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "opacity": 0.95,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Teen\nRang",
+          "x": 521,
+          "y": 285.79999999999995,
+          "w": 494,
+          "size": 105.55999999999999,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 126.67199999999998
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Saffron, white, and green. Ek dhwaj jo\nbillion logon ko jodta hai.",
+          "x": 521,
+          "y": 516.6976,
+          "w": 475,
+          "size": 23.8,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1790.6,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.3
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 5.933333333333334,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Itihaas",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Hazaaron\nsaal ka\npurana safar",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 136.14546582000006,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 163.37455898400006
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "From Varanasi ghats to Silicon valleys, purana aur naya\nsaath chalte hain.",
+          "x": 65,
+          "y": 677.3076695108001,
+          "w": 741,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 9.266666666666666,
+      "duration": 4.066666666666668,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 112.11539084427059,
+          "x": 795.7664527254607,
+          "y": 544.3969592637383,
+          "fill": "accent",
+          "opacity": 0.10532583068124951,
+          "blur": 8.107589562423527,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 9.918031435459852,
+              "period": 13.632752591278404,
+              "phase": 4.455519439652562
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "FIELD NOTE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Khaas\nBatein",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Har gali mein ek naya rang aur nayi zubaan.",
+          "x": 65,
+          "y": 633.76,
+          "w": 741,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 65,
+          "y": 698.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Chai aur Cutting",
+          "x": 119,
+          "y": 695.4,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.4,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 744.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 65,
+          "y": 756.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.425,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Gali ke nukkad",
+          "x": 119,
+          "y": 753.4,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.445,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 802.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 65,
+          "y": 814.4,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.47,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Sapno ki udaan",
+          "x": 119,
+          "y": 811.4,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.49,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 860.4,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 12.600000000000001,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Badlaav",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Puraane raste,\nnaye kadam",
+          "x": 65,
+          "y": 247.04,
+          "w": 855,
+          "size": 120.12,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 144.144
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 65,
+          "y": 524.4752,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "paper",
+          "opacity": 0.05,
+          "stroke": "muted",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Limit sirf soch ki hai. Yeh desh\nrukta nahi, bas badalta hai.",
+          "x": 81,
+          "y": 542.4752,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 81,
+          "y": 1149.2752,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        },
+        {
+          "type": "rrect",
+          "x": 559,
+          "y": 524.4752,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "accent",
+          "opacity": 0.9,
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NEW WAY",
+          "x": 575,
+          "y": 542.4752,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "bg",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.44000000000000006,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 575,
+          "y": 1149.2752,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "bg",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        }
+      ]
+    },
+    {
+      "id": "beat-06",
+      "from": 15.933333333333334,
+      "duration": 4.066666666666666,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 86.77873551361263,
+          "x": 181.13803829340702,
+          "y": 1378.3019536416045,
+          "fill": "accent",
+          "opacity": 0.1872262057568878,
+          "blur": 21.51913532288745,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 13.82796531682834,
+              "period": 10.004625760950148,
+              "phase": 1.6064933175221086
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "Khatam",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Apni\nkahani\nsunao",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Comment section mein likho apna favourite shehar.",
+          "x": 65,
+          "y": 1259.8,
+          "w": 703,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "Apni kahani likho",
+          "x": 65,
+          "y": 1586.1999999999998,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "VIBRANT MYSTICAL",
+          "x": 730,
+          "y": 1594.1999999999998,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 3.3333333333333335,
+      "duration": 0.33296747688204054,
+      "color": "accent2"
+    },
+    {
+      "type": "band",
+      "at": 6.666666666666667,
+      "duration": 0.6898489976814016,
+      "color": "accent",
+      "color2": "ink"
+    },
+    {
+      "type": "wipe",
+      "at": 10,
+      "duration": 0.47347302588634194,
+      "color": "accent2",
+      "skew": 2.6084663467481732,
+      "edge": false
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "EK SAANS KA SAFAR",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "06 FRAMES",
+        "x": 799,
+        "y": 40.3,
+        "w": 216,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.6
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "text",
+        "text": "SKIA / 30 FPS",
+        "x": 65,
+        "y": 1881,
+        "w": 432,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.4
+      },
+      {
+        "type": "text",
+        "text": "VIBRANT MYSTICAL",
+        "x": 65,
+        "y": 1869.3,
+        "w": 540,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.4
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

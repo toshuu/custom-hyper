@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Hyper / Studio</title>
+<style>
+  :root {
+    --bg: #ececea;
+    --panel: #f7f7f5;
+    --card: #ffffff;
+    --ink: #141414;
+    --muted: #6d6d68;
+    --line: #deded9;
+    --accent: #ff5a2e;
+    --pink: #ffd7e6;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    --sans: Inter, ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: var(--sans); }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  .app { display: grid; grid-template-columns: 232px minmax(0, 1fr); min-height: 100%; }
+  .side { background: #111110; color: #f4f1ea; padding: 18px 14px; display: flex; flex-direction: column; gap: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.02em; font-size: 18px; }
+  .mark { width: 26px; height: 26px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: #111; font-size: 15px; }
+  .nav { display: grid; gap: 4px; }
+  .nav button { background: transparent; border: 0; color: #b9b5ad; text-align: left; padding: 9px 10px; border-radius: 8px; font-size: 13px; cursor: pointer; display: flex; justify-content: space-between; }
+  .nav button.on, .nav button:hover { background: #242421; color: #fff; }
+  .side .label { color: #86837b; }
+  .client-card { margin-top: auto; background: #1c1c19; border: 1px solid #2e2e2a; border-radius: 12px; padding: 12px; }
+  .client-card b { display: block; font-size: 13px; }
+  .client-card span { color: #9b978e; font-size: 11px; line-height: 1.45; display: block; margin-top: 4px; }
+  .main { padding: 18px 22px 60px; min-width: 0; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .top h1 { font-size: 26px; letter-spacing: -0.04em; margin: 0; }
+  .top .sub { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .pill { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 7px 11px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.8px; }
+  .label { font-family: var(--mono); font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 7px; }
+  .grid { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .card + .card { margin-top: 14px; }
+  .card h2 { font-size: 13px; margin: 0 0 12px; letter-spacing: -0.01em; }
+  input, textarea, select { width: 100%; background: #fbfbf9; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font-size: 13px; outline: none; }
+  textarea { min-height: 78px; resize: vertical; line-height: 1.45; }
+  input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .row.three { grid-template-columns: 1.1fr 1fr 0.8fr; }
+  .row.four { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .field + .field { margin-top: 10px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .chip { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 9px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.8px; cursor: pointer; color: var(--muted); }
+  .chip:hover, .chip.on { border-color: var(--accent); color: var(--ink); background: #fff7f3; }
+  .btn { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 10px 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; cursor: pointer; text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px; }
+  .btn:hover { border-color: #b9b9b2; }
+  .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.small { padding: 6px 9px; font-size: 9px; }
+  .btn:disabled { opacity: 0.45; cursor: wait; }
+  .hint { color: var(--muted); font-size: 11px; line-height: 1.5; margin: 10px 0 0; }
+  .status { font-family: var(--mono); font-size: 10px; line-height: 1.5; color: var(--muted); margin-top: 10px; min-height: 14px; }
+  .status.err { color: #b3261e; }
+  .status.ok { color: #1d6b3a; }
+  .drop { border: 1px dashed #c9c9c2; border-radius: 10px; padding: 14px; text-align: center; color: var(--muted); font-size: 11px; cursor: pointer; }
+  .drop.on { border-color: var(--accent); background: #fff7f3; }
+  .assets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; }
+  .assets img, .assets video { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 7px; border: 1px solid var(--line); background: #eee; cursor: grab; }
+  .assets video { position: relative; }
+  .urlrow { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; margin-top: 8px; }
+  .urlrow input { min-width: 0; font-size: 11px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .urlrow .btn { padding: 8px 10px; font-size: 10px; }
+  .asset-cell { position: relative; }
+  .asset-del { position: absolute; top: 4px; right: 4px; width: 20px; height: 20px; line-height: 1; border-radius: 50%; border: 1px solid var(--line); background: rgba(20,20,18,0.82); color: #fff; font-size: 14px; cursor: pointer; opacity: 0; transition: opacity 0.12s ease; padding: 0; }
+  .asset-cell:hover .asset-del { opacity: 1; }
+  .asset-del:hover { background: #e5484d; border-color: #e5484d; }
+  .boards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .board { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .board.on { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .board .shot { aspect-ratio: 9/16; background: #111; position: relative; cursor: pointer; max-height: 430px; }
+  .board.square .shot { aspect-ratio: 1; }
+  .board.landscape .shot { aspect-ratio: 16/9; }
+  .board .shot img { width: 100%; height: 100%; object-fit: contain; display: block; background: #111; }
+  .board .tag { position: absolute; left: 8px; top: 8px; background: rgba(0,0,0,0.66); color: #fff; font-family: var(--mono); font-size: 9px; letter-spacing: 1px; padding: 4px 6px; border-radius: 5px; }
+  .board .meta { padding: 10px; }
+  .board .meta b { font-size: 12px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .board .meta span { font-family: var(--mono); font-size: 9px; color: var(--muted); display: block; margin-top: 3px; }
+  .board .meta .actions { margin-top: 8px; }
+  .empty { border: 1px dashed #cfcfc8; border-radius: 12px; padding: 40px 20px; text-align: center; color: var(--muted); font-size: 12px; }
+  .film { display: none; margin-top: 12px; }
+  .film.on { display: block; }
+  .film video { width: 100%; border-radius: 10px; border: 1px solid var(--line); background: #111; }
+  .bar { height: 5px; background: #e5e5df; border-radius: 999px; overflow: hidden; flex: 1; min-width: 120px; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.2s; }
+  .renderbar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 10px; }
+  .image-item { border: 1px solid var(--line); border-radius: 8px; padding: 8px; font-family: var(--mono); font-size: 9px; color: var(--muted); }
+  .image-item b { display: block; color: var(--ink); font-size: 10px; }
+  .sheet-preview { width: 100%; border: 1px solid var(--line); border-radius: 8px; margin-top: 10px; background: repeating-conic-gradient(#eee 0% 25%, #fff 0% 50%) 50% / 16px 16px; }
+
+
+</style>
+<link rel="stylesheet" href="/public/editor.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><span class="mark">◆</span> custom hyper</div>
+    <nav class="nav">
+      <button class="on">Studio</button>
+      <button>Assets</button>
+      <button>Projects</button>
+    </nav>
+    <div class="client-card">
+      <span class="label">Client</span>
+      <b id="sideName">Acme</b>
+      <span id="sideDesc">No description yet.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div>
+        <h1>Studio</h1>
+        <div class="sub">One client. One brief. One editable film.</div>
+      </div>
+      <span class="pill">PROTOTYPE / LOCAL</span>
+    </header>
+
+    <div class="grid">
+      <section>
+        <div class="card">
+          <h2>Client</h2>
+          <div class="chips" id="presets">
+            <button class="chip" type="button" data-preset="solar">SOLAR</button>
+            <button class="chip" type="button" data-preset="travels">TRAVEL</button>
+            <button class="chip" type="button" data-preset="devtools">DEVTOOLS</button>
+            <button class="chip" type="button" data-preset="tourism">TOURISM</button>
+            <button class="chip" type="button" data-preset="scooter">SCOOTER</button>
+          </div>
+          <div class="field"><label class="label" for="cname">Name</label><input id="cname" placeholder="Acme"></div>
+          <div class="field"><label class="label" for="cdesc">Description</label><textarea id="cdesc" placeholder="Who they are, what they sell, how they sound."></textarea></div>
+          <div class="field"><label class="label" for="cgoals">Goals</label><textarea id="cgoals" placeholder="What they need right now. What is not working."></textarea></div>
+          <div class="row">
+            <div><label class="label" for="cbg">bg</label><input id="cbg" type="color" value="#101014"></div>
+            <div><label class="label" for="cink">ink</label><input id="cink" type="color" value="#f4f1ea"></div>
+          </div>
+          <div class="row" style="margin-top:8px">
+            <div><label class="label" for="caccent">accent</label><input id="caccent" type="color" value="#ff5a2e"></div>
+            <div><label class="label" for="cdisplay">display face</label><input id="cdisplay" placeholder="Bebas Neue"></div>
+          </div>
+          <div class="actions"><button class="btn" id="saveClient">SAVE CLIENT</button></div>
+          <div class="status" id="clientStatus"></div>
+        </div>
+
+        <div class="card">
+          <h2>Assets</h2>
+          <div class="drop" id="drop">DROP IMAGES OR CLIPS HERE<br><span style="font-size:10px">PNG / JPG / WEBP / AVIF / MP4 / MOV / WEBM</span></div>
+          <input id="files" type="file" accept="image/*,video/*" multiple hidden>
+          <div class="urlrow">
+            <input id="assetUrl" placeholder="https://... clip or image" autocomplete="off">
+            <button class="btn" id="addUrlLib">ADD TO LIBRARY</button>
+            <button class="btn" id="addUrlTemp">USE ONCE</button>
+          </div>
+          <div class="assets" id="assets"></div>
+          <div class="actions"><button class="btn" id="indexAssets">INDEX ASSETS (VISION)</button></div>
+          <div class="image-grid" id="assetIndex"></div>
+          <p class="hint" id="assetIndexHint">Index once with a key. The LLM writes <code>data/assets.index.json</code> and <code>data/assets.md</code>. Missing files are flagged.</p>
+          <p class="hint">Drag an asset onto a selected photo in the editor to swap it. Files stay in <code>data/assets/</code>.</p>
+        </div>
+
+        <div class="card">
+          <h2>Image plan (per frame)</h2>
+          <div class="row three">
+            <div><label class="label" for="imgCount">Frames</label><input id="imgCount" type="number" min="1" max="12" value="5"></div>
+            <div><label class="label" for="imgW">W</label><input id="imgW" type="number" min="100" max="2000" value="1080"></div>
+            <div><label class="label" for="imgH">H</label><input id="imgH" type="number" min="100" max="2000" value="1920"></div>
+          </div>
+          <div class="actions">
+            <button class="btn" id="dlImgMd">PLAN MD</button>
+            <button class="btn" id="dlImgManifest">MANIFEST JSON</button>
+            <button class="btn primary" id="dlImgPack">DOWNLOAD BOTH</button>
+          </div>
+          <div class="actions">
+            <button class="btn" id="pickImages">UPLOAD MANIFEST + PNGs</button>
+            <input id="imageFiles" type="file" accept=".png,.json,image/png,application/json" multiple hidden>
+          </div>
+          <div class="image-grid" id="imageList"></div>
+          <div id="imagePreview"></div>
+          <p class="hint">Give the MD + manifest JSON to ChatGPT. It returns one PNG per frame plus a filled manifest. Upload both here.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>New film</h2>
+          <div class="field"><label class="label" for="brief">Brief</label><textarea id="brief" placeholder="A 12 second reel about the last quiet street in a city that never sleeps. Warm, grainy, intimate."></textarea></div>
+          <div class="row four" style="margin-top:10px">
+            <div><label class="label" for="seconds">Seconds</label><select id="seconds"><option>6</option><option>8</option><option>10</option><option selected>12</option><option>16</option><option>20</option></select></div>
+            <div><label class="label" for="format">Format</label><select id="format"><option value="vertical">9:16</option><option value="square">1:1</option><option value="landscape">16:9</option></select></div>
+            <div><label class="label" for="language">Language</label><select id="language"><option value="en">EN</option><option value="hi">HI</option><option value="mr">MR</option></select></div>
+            <div><label class="label" for="provider">Provider</label><select id="provider"><option value="gemini">Gemini</option><option value="openai">OpenAI</option><option value="compatible">Compatible</option></select></div>
+          </div>
+          <div class="row" style="margin-top:10px">
+            <div><label class="label" for="model">Model</label><input id="model" placeholder="gemini-2.0-flash"></div>
+            <div><label class="label" for="key">API key</label><input id="key" type="password" placeholder="Saved locally. Optional for preview." autocomplete="off" spellcheck="false"></div>
+          </div>
+          <div class="actions">
+            <button class="btn primary" id="generate">GENERATE BOARDS</button>
+            <button class="btn" id="demo">LOCAL PREVIEW / NO KEY</button>
+            <button class="btn accent" id="fixContrast" style="display:none">FIX CONTRAST</button>
+          </div>
+          <div class="status" id="status"></div>
+          <p class="hint"><b>PLAN</b> rewrites one board with one LLM call. It uses the previous and next board as context. It does not touch the other boards. <b>PLAN ALL</b> rebuilds every board from the saved plan.</p>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+            <h2 style="margin:0">Storyboards</h2>
+            <div class="actions" style="margin:0">
+              <button class="btn small" id="planAll">PLAN ALL</button>
+              <a class="btn small" id="exportSpec" target="_blank">SPEC</a>
+              <a class="btn small" id="exportCrack" target="_blank">CRACKDOWN</a>
+            </div>
+          </div>
+          <div id="boardWrap" style="margin-top:12px"><div class="empty">No boards yet. Write a brief, then generate.</div></div>
+          <div class="film" id="film">
+            <div class="renderbar">
+              <button class="btn accent" id="render">RENDER MP4</button>
+              <select id="scale" style="width:auto"><option value="0.5">540p fast</option><option value="1">1080p full</option></select>
+              <div class="bar"><i id="bar"></i></div>
+              <span class="status" id="renderStatus" style="margin:0"></span>
+              <a class="btn small" id="download" style="display:none">DOWNLOAD MP4</a>
+            </div>
+            <video id="video" controls playsinline></video>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+import { openEditor } from '/public/editor.js';
+const $ = (id) => document.getElementById(id);
+const state = { client: null, assets: [], images: [], project: null, spec: null, boards: [], stills: [], elements: [], scene: null, palette: {}, selected: null, editor: null, timer: null };
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const setStatus = (id, text, kind = '') => { const el = $(id); if (!el) return; el.className = 'status ' + kind; el.textContent = text; };
+const showError = (text) => {
+  setStatus('status', text, 'err');
+  const fix = $('fixContrast');
+  if (fix) fix.style.display = /contrast|invisible/i.test(String(text)) ? 'inline-flex' : 'none';
+};
+const clearError = () => { const fix = $('fixContrast'); if (fix) fix.style.display = 'none'; };
+const boardId = (i) => `beat-${String(i + 1).padStart(2, '0')}`;
+const dims = { vertical: { w: 1080, h: 1920 }, square: { w: 1080, h: 1080 }, landscape: { w: 1920, h: 1080 } };
+const PRESETS = {
+  solar: {
+    name: 'Suryodaya Solar',
+    description: 'Pune rooftop solar installer. Plain-spoken, local, proud of real bills.',
+    goals: 'Fill the December install calendar. Make the math feel obvious.',
+    palette: { bg: '#0b0d12', ink: '#f4f1ea', accent: '#ff5a2e' },
+    display: 'Bebas Neue',
+    brief: 'A 12 second reel about rooftop solar panels that cut a Pune family power bill in half. Direct, local, proof-first.',
+    seconds: '12', format: 'vertical', language: 'en',
+  },
+  travels: {
+    name: 'Sai Travels',
+    description: 'Family-run travel agency in Pune. Warm, dependable, no hard sell.',
+    goals: 'Get more enquiries for monsoon weekend trips.',
+    palette: { bg: '#ede6d8', ink: '#111111', accent: '#b33a1a' },
+    display: 'Bebas Neue',
+    brief: 'A 10 second reel for Sai Travels about a weekend trip that costs less than a dinner out. Warm, human, specific.',
+    seconds: '10', format: 'vertical', language: 'en',
+  },
+  devtools: {
+    name: 'Northwind DevTools',
+    description: 'Small team building REST API tooling for developers. Dry humor, clear docs.',
+    goals: 'Drive trial signups from a technical audience.',
+    palette: { bg: '#0b0d12', ink: '#e8f1ff', accent: '#4c7dff' },
+    display: 'Space Grotesk',
+    brief: 'A 12 second reel explaining REST API architecture with one clean diagram and no jargon. Calm, precise, technical.',
+    seconds: '12', format: 'vertical', language: 'en',
+  },
+  tourism: {
+    name: 'Incredible Routes',
+    description: 'India travel studio. Rich color, real places, no stock clichés.',
+    goals: 'Show the range of Indian culture in one reel.',
+    palette: { bg: '#101014', ink: '#f4f1ea', accent: '#e0452a' },
+    display: 'Rozha One',
+    brief: 'A 12 second reel about the richness of Indian culture, from street food to temple stone. Cinematic, respectful, no clichés.',
+    seconds: '12', format: 'vertical', language: 'en',
+  },
+  scooter: {
+    name: 'Volt Motors',
+    description: 'Quiet electric scooter startup. Calm, modern, understated.',
+    goals: 'Launch the new scooter to city riders.',
+    palette: { bg: '#e9e7e2', ink: '#141414', accent: '#1f7a5a' },
+    display: 'Bebas Neue',
+    brief: 'A 10 second reel launching a quiet electric scooter for city riders. Modern, calm, one clear benefit.',
+    seconds: '10', format: 'vertical', language: 'en',
+  },
+};
+
+const call = async (url, opts = {}) => {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 180000);
+  let res;
+  try {
+    res = await fetch(url, { ...opts, signal: ctrl.signal });
+  } catch (e) {
+    throw new Error(e.name === 'AbortError' ? 'server did not answer in 180 s (it may have crashed; check out/server.log)' : 'server unreachable: ' + e.message);
+  } finally {
+    clearTimeout(timer);
+  }
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || data.ok === false) throw new Error(data.error || `request failed: ${res.status}`);
+  return data;
+};
+
+let settingsTimer = null;
+const settingsBody = () => ({
+  provider: $('provider').value, model: $('model').value.trim(), apiKey: $('key').value.trim(),
+  language: $('language').value, seconds: Number($('seconds').value), format: $('format').value,
+});
+const persistSettings = async () => {
+  try { await call('/api/settings', { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(settingsBody()) }); }
+  catch { /* local save is best effort; never block a run */ }
+};
+const queueSettings = () => { clearTimeout(settingsTimer); settingsTimer = setTimeout(persistSettings, 350); };
+const applySettings = (s = {}) => {
+  if (s.provider) $('provider').value = s.provider;
+  if (s.model) $('model').value = s.model;
+  if (s.apiKey) $('key').value = s.apiKey;
+  if (s.language) $('language').value = s.language;
+  if (s.seconds) $('seconds').value = String(s.seconds);
+  if (s.format) $('format').value = s.format;
+};
+['provider', 'model', 'key', 'language', 'seconds', 'format'].forEach((id) => {
+  $(id).addEventListener('change', queueSettings);
+  $(id).addEventListener('input', queueSettings);
+});
+
+const VIDEO_EXT = ['mp4', 'mov', 'webm', 'm4v', 'mkv', 'avi'];
+const assetCell = (a) =>
+  `<div class="asset-cell" data-cell="${esc(a.name)}">
+    ${VIDEO_EXT.includes(String(a.ext).toLowerCase())
+    ? `<video src="${a.url}" muted playsinline preload="metadata" title="${esc(a.name)}" draggable="true" data-asset="${esc(a.name)}"></video>`
+    : `<img src="${a.url}" alt="${esc(a.name)}" title="${esc(a.name)}" draggable="true" data-asset="${esc(a.name)}" loading="lazy">`}
+    <button class="asset-del" data-del-asset="${esc(a.name)}" title="Delete ${esc(a.name)}" aria-label="Delete ${esc(a.name)}">×</button>
+  </div>`;
+
+const drawAssets = () => {
+  $('assets').innerHTML = state.assets.map(assetCell).join('');
+};
+
+const drawAssetIndex = (idx) => {
+  if (!idx) return;
+  const items = idx.items || [];
+  const live = items.filter((a) => !a.missing);
+  $('assetIndex').innerHTML = items.slice(0, 6).map((a) =>
+    `<div class="image-item"><b>${esc(a.name)}${a.missing ? ' / MISSING' : ''}</b>${esc(a.desc || (a.indexed ? 'indexed' : 'not indexed'))}<br>${(a.tags || []).map(esc).join(', ')}</div>`).join('')
+    || '<div class="hint">No image assets yet.</div>';
+  $('assetIndexHint').textContent = `${idx.indexed || 0} indexed / ${live.length} file(s)${idx.missing?.length ? ` / ${idx.missing.length} missing` : ''}${idx.unindexed?.length ? ` / ${idx.unindexed.length} new` : ''}`;
+};
+
+const drawImages = () => {
+  $('imageList').innerHTML = (state.images || []).map((p) =>
+    `<div class="image-item"><b>${esc(p.name)}</b>${p.frames.length} frames<br>${p.frames.map((f) => esc(f.id)).slice(0, 4).join(', ')}</div>`).join('') || '<div class="hint">No image plans yet.</div>';
+};
+
+const drawClient = () => {
+  const c = state.client || {};
+  $('cname').value = c.name || '';
+  $('cdesc').value = c.description || '';
+  $('cgoals').value = c.goals || '';
+  $('sideName').textContent = c.name || 'Acme';
+  $('sideDesc').textContent = c.description || 'No description yet.';
+  if (c.palette?.bg) $('cbg').value = c.palette.bg;
+  if (c.palette?.ink) $('cink').value = c.palette.ink;
+  if (c.palette?.accent) $('caccent').value = c.palette.accent;
+  if (c.faces?.display) $('cdisplay').value = c.faces.display;
+};
+
+const boardCard = (b, i) => {
+  const still = state.stills.find((s) => s.board === boardId(i));
+  const on = state.selected === i ? ' on' : '';
+  const ratio = $('format').value;
+  return `<div class="board ${ratio}${on}" data-i="${i}" data-board="${boardId(i)}">
+    <div class="shot" data-edit="${i}" data-board="${boardId(i)}">${still ? `<img src="${still.url}?t=${Date.now()}" alt="board ${i + 1}">` : ''}<span class="tag">${String(i + 1).padStart(2, '0')}</span></div>
+    <div class="meta"><b>${esc(b.headline || b.idea || 'Board')}</b><span>${esc(b.mode || b.kind || '')} / ${Number(b.duration || 0).toFixed(1)}s</span>
+    <div class="actions"><button class="btn small" data-edit="${i}">EDIT</button><button class="btn small" data-plan="${i}">PLAN</button></div></div>
+  </div>`;
+};
+
+const drawBoards = () => {
+  if (!state.boards.length) { $('boardWrap').innerHTML = '<div class="empty">No boards yet. Write a brief, then generate.</div>'; return; }
+  $('boardWrap').innerHTML = `<div class="boards">${state.boards.map(boardCard).join('')}</div>`;
+  $('film').classList.add('on');
+  if (state.project) {
+    $('exportSpec').href = `/api/p/project/${state.project.id}/export/spec`;
+    $('exportCrack').href = `/api/p/project/${state.project.id}/export/crackdown`;
+  }
+};
+
+const setProject = (data) => {
+  state.project = data.project;
+  if (data.project?.format) $('format').value = data.project.format;
+  if (data.project?.language) $('language').value = data.project.language;
+  state.spec = data.spec || state.spec;
+  state.boards = data.boards || [];
+  state.stills = data.stills || state.stills;
+  state.elements = data.elements || state.elements;
+  state.palette = data.palette || state.spec?.palette || {};
+  state.scene = data.scene || null;
+  state.selected = null;
+  drawBoards();
+};
+
+const CHUNK = 8 * 1024 * 1024;
+const uploadFile = async (f) => {
+  if (f.size <= 40 * 1024 * 1024) {
+    return call(`/api/p/assets?name=${encodeURIComponent(f.name)}`, { method: 'POST', body: f });
+  }
+  const id = `u${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+  const total = Math.ceil(f.size / CHUNK);
+  let data = null;
+  for (let i = 0; i < total; i += 1) {
+    const blob = f.slice(i * CHUNK, Math.min(f.size, (i + 1) * CHUNK));
+    data = await call(`/api/p/assets/chunk?id=${id}&index=${i}&total=${total}&name=${encodeURIComponent(f.name)}&mode=library`, { method: 'POST', body: blob });
+    setStatus('clientStatus', `Uploading ${f.name}: ${Math.round(((i + 1) / total) * 100)}%`);
+  }
+  return data;
+};
+
+const upload = async (files) => {
+  if (!files.length) return;
+  setStatus('clientStatus', `Uploading ${files.length} file(s)...`);
+  try {
+    for (const f of files) {
+      const data = await uploadFile(f);
+      state.assets = data.assets ?? state.assets;
+      const cell = document.querySelector(`[data-cell="${CSS.escape(data.asset.name)}"]`);
+      if (!cell) $('assets').insertAdjacentHTML('beforeend', assetCell(data.asset));
+    }
+    $('assetIndexHint').textContent = 'New asset added. Run INDEX ASSETS to describe it.';
+    const clips = state.assets.filter((a) => VIDEO_EXT.includes(String(a.ext).toLowerCase())).length;
+    setStatus('clientStatus', `${state.assets.length} asset(s) ready${clips ? `, ${clips} clip` : ''}.`, 'ok');
+  } catch (e) { setStatus('clientStatus', e.message, 'err'); }
+};
+
+const addUrl = async (mode) => {
+  const url = $('assetUrl').value.trim();
+  if (!url) return setStatus('clientStatus', 'Paste a URL first.', 'err');
+  setStatus('clientStatus', mode === 'temp' ? 'Fetching clip for one use...' : 'Fetching into library...');
+  try {
+    const data = await call('/api/p/assets/url', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ url, mode }),
+    });
+    state.assets = data.assets ?? state.assets;
+    drawAssets();
+    $('assetIndexHint').textContent = data.video
+      ? `Fetched ${data.asset.name}: ${data.video.duration}s, ${data.video.count} frames. Run INDEX ASSETS to describe it.`
+      : `Fetched ${data.asset.name}. Run INDEX ASSETS to describe it.`;
+    setStatus('clientStatus', mode === 'temp' ? 'Clip ready for this build only.' : 'Clip added to the library.', 'ok');
+    $('assetUrl').value = '';
+  } catch (e) { setStatus('clientStatus', e.message, 'err'); }
+};
+
+$('addUrlLib').onclick = () => addUrl('library');
+$('addUrlTemp').onclick = () => addUrl('temp');
+
+$('saveClient').onclick = async () => {
+  setStatus('clientStatus', 'Saving...');
+  try {
+    const data = await call('/api/p/client', {
+      method: 'PUT', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        name: $('cname').value, description: $('cdesc').value, goals: $('cgoals').value,
+        palette: { bg: $('cbg').value, ink: $('cink').value, accent: $('caccent').value },
+        faces: $('cdisplay').value.trim() ? { display: $('cdisplay').value.trim() } : {},
+      }),
+    });
+    state.client = data.client; drawClient(); setStatus('clientStatus', 'Saved.', 'ok');
+  } catch (e) { setStatus('clientStatus', e.message, 'err'); }
+};
+
+$('presets').onclick = async (e) => {
+  const btn = e.target.closest('button[data-preset]');
+  if (!btn) return;
+  const p = PRESETS[btn.dataset.preset];
+  if (!p) return;
+  document.querySelectorAll('#presets .chip').forEach((c) => c.classList.toggle('on', c === btn));
+  $('cname').value = p.name;
+  $('cdesc').value = p.description;
+  $('cgoals').value = p.goals;
+  $('cbg').value = p.palette.bg;
+  $('cink').value = p.palette.ink;
+  $('caccent').value = p.palette.accent;
+  $('cdisplay').value = p.display;
+  $('brief').value = p.brief;
+  $('seconds').value = p.seconds;
+  $('format').value = p.format;
+  $('language').value = p.language;
+  setStatus('clientStatus', `Loading ${p.name}...`);
+  try {
+    const data = await call('/api/p/client', {
+      method: 'PUT', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        name: p.name, description: p.description, goals: p.goals,
+        palette: p.palette, faces: { display: p.display },
+      }),
+    });
+    state.client = data.client; drawClient(); queueSettings();
+    setStatus('clientStatus', `${p.name} loaded. Client and brief are ready.`, 'ok');
+  } catch (err) { setStatus('clientStatus', err.message, 'err'); }
+};
+
+$('indexAssets').onclick = async () => {
+  $('indexAssets').disabled = true;
+  setStatus('clientStatus', 'Indexing assets with vision...');
+  try {
+    await persistSettings();
+    const data = await call('/api/p/assets/index', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(settingsBody()),
+    });
+    state.assetIndex = data; drawAssetIndex(data);
+    setStatus('clientStatus', data.processed ? `Indexed ${data.processed} asset(s).` : 'All assets are current.', 'ok');
+  } catch (e) { setStatus('clientStatus', e.message, 'err'); }
+  finally { $('indexAssets').disabled = false; }
+};
+
+$('drop').onclick = () => $('files').click();
+$('drop').ondragover = (e) => { e.preventDefault(); $('drop').classList.add('on'); };
+$('drop').ondragleave = () => $('drop').classList.remove('on');
+$('drop').ondrop = async (e) => { e.preventDefault(); $('drop').classList.remove('on'); await upload([...e.dataTransfer.files]); };
+$('files').onchange = async () => { await upload([...$('files').files]); $('files').value = ''; };
+
+const generate = async (demo) => {
+  const brief = $('brief').value.trim();
+  if (brief.length < 8) return setStatus('status', 'Brief is too short.', 'err');
+  if (!demo && !$('key').value.trim()) return setStatus('status', 'Add a key, or use local preview.', 'err');
+  await persistSettings();
+  $('generate').disabled = true; $('demo').disabled = true;
+  setStatus('status', demo ? 'Directing locally...' : 'One LLM call...');
+  try {
+    const data = await call('/api/p/generate', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        brief, seconds: Number($('seconds').value), format: $('format').value,
+        language: $('language').value,
+        provider: $('provider').value, model: $('model').value.trim() || undefined,
+        apiKey: demo ? undefined : $('key').value.trim(), demo,
+      }),
+    });
+    setProject(data);
+    $('video').classList.remove('on'); $('video').removeAttribute('src');
+    $('download').style.display = 'none';
+    clearError();
+    const fixed = data.autoFixes?.length ? ` Auto-fixed ${data.autoFixes.length} contrast color(s).` : '';
+    setStatus('status', `${data.boards.length} boards. ${data.project.provider} / ${data.project.model} / ${data.project.language || 'en'}.${fixed}`, 'ok');
+  } catch (e) { showError(e.message); }
+  finally { $('generate').disabled = false; $('demo').disabled = false; }
+};
+
+$('generate').onclick = () => generate(false);
+$('demo').onclick = () => generate(true);
+
+$('boardWrap').onclick = (e) => {
+  const edit = e.target.closest('[data-edit]');
+  if (edit) {
+    const i = Number(edit.dataset.edit);
+    return openEditor(boardId(i), state.project.id, state.assets, {
+      scene: state.scene, palette: state.palette, refreshThumb,
+      onClose: () => { state.editor = null; },
+    }).catch((err) => setStatus('status', err.message, 'err'));
+  }
+  const plan = e.target.closest('[data-plan]');
+  if (plan) return planBoard(Number(plan.dataset.plan));
+};
+
+const planBoard = async (i) => {
+  if (!state.project) return;
+  await persistSettings();
+  if (!$('key').value.trim()) return setStatus('status', 'Plan needs an API key.', 'err');
+  const id = boardId(i);
+  setStatus('status', `Planning ${id}...`);
+  try {
+    const data = await call(`/api/p/project/${state.project.id}/board/${id}/plan`, {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ provider: $('provider').value, model: $('model').value.trim() || undefined, apiKey: $('key').value.trim() }),
+    });
+    state.boards = data.boards; state.elements = data.elements; state.stills = data.stills;
+    state.scene = data.scene || state.scene; state.palette = data.palette || state.palette;
+    drawBoards();
+    setStatus('status', data.cached ? `${id} loaded from cache.` : `${id} planned.${data.autoFixes?.length ? ` Auto-fixed ${data.autoFixes.length} contrast color(s).` : ''}`, 'ok');
+  } catch (e) { showError(e.message); }
+};
+
+$('fixContrast').onclick = async () => {
+  if (!state.project) return;
+  $('fixContrast').disabled = true;
+  setStatus('status', 'Fixing contrast...');
+  try {
+    const data = await call(`/api/p/project/${state.project.id}/fix-contrast`, {
+      method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}',
+    });
+    state.spec = data.spec || state.spec;
+    state.stills = data.stills || state.stills;
+    state.elements = data.elements || state.elements;
+    state.scene = data.scene || state.scene;
+    state.palette = data.palette || state.palette;
+    drawBoards(); clearError();
+    setStatus('status', data.changed.length ? `Fixed ${data.changed.length} color(s).` : 'No low-contrast text found.', 'ok');
+  } catch (e) { showError(e.message); }
+  finally { $('fixContrast').disabled = false; }
+};
+
+$('planAll').onclick = async () => {
+  if (!state.project) return;
+  $('planAll').disabled = true;
+  setStatus('status', 'Planning all boards...');
+  try {
+    const data = await call(`/api/p/project/${state.project.id}/plan-all`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
+    state.boards = data.boards; state.elements = data.elements; state.stills = data.stills;
+    state.scene = data.scene || state.scene; state.palette = data.palette || state.palette;
+    drawBoards(); setStatus('status', 'All boards planned.', 'ok');
+  } catch (e) { showError(e.message); }
+  finally { $('planAll').disabled = false; }
+};
+
+$('render').onclick = async () => {
+  if (!state.project) return;
+  $('render').disabled = true; $('bar').style.width = '0%';
+  setStatus('renderStatus', 'QUEUED');
+  try {
+    const r = await call('/api/p/render', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ id: state.project.id, scale: Number($('scale').value) }),
+    });
+    poll(r.job);
+  } catch (e) { setStatus('renderStatus', e.message, 'err'); $('render').disabled = false; }
+};
+
+const poll = async (job) => {
+  try {
+    const j = await fetch('/api/job/' + job).then((r) => r.json());
+    $('bar').style.width = (j.progress || 0) + '%';
+    $('renderStatus').textContent = j.status === 'rendering' ? `${j.frame || 0}/${j.frames || ''}` : String(j.status).toUpperCase();
+    if (j.status === 'done') {
+      $('video').src = j.url; $('video').classList.add('on');
+      $('download').href = j.url; $('download').style.display = 'inline-flex';
+      $('render').disabled = false;
+      setStatus('renderStatus', `${j.width}x${j.height} / ${j.frames}f`, 'ok');
+      return;
+    }
+    if (j.status === 'error') { setStatus('renderStatus', j.error || 'render failed', 'err'); $('render').disabled = false; return; }
+    state.timer = setTimeout(() => poll(job), 600);
+  } catch (e) { setStatus('renderStatus', e.message, 'err'); $('render').disabled = false; }
+};
+
+/* image plan kit */
+const imgQuery = () => `brief=${encodeURIComponent($('brief').value || '')}&count=${$('imgCount').value}&w=${$('imgW').value}&h=${$('imgH').value}`;
+$('dlImgMd').onclick = () => { window.location = `/api/p/image/template?${imgQuery()}`; };
+$('dlImgManifest').onclick = () => { window.location = `/api/p/image/manifest?${imgQuery()}`; };
+$('dlImgPack').onclick = () => { window.location = `/api/p/image/pack?${imgQuery()}`; };
+$('pickImages').onclick = () => $('imageFiles').click();
+$('imageFiles').onchange = async () => {
+  const files = [...$('imageFiles').files];
+  $('imageFiles').value = '';
+  const json = files.find((f) => /\.json$/i.test(f.name));
+  const pngs = files.filter((f) => f.type === 'image/png' || /\.png$/i.test(f.name));
+  if (!json || !pngs.length) return setStatus('clientStatus', 'Pick one manifest JSON and at least one PNG.', 'err');
+  try {
+    const manifest = JSON.parse(await json.text());
+    const frames = [];
+    for (const f of manifest.frames) {
+      const pngFile = pngs.find((p) => p.name.replace(/\.png$/i, '') === f.id || p.name === `${f.id}.png`);
+      if (!pngFile) throw new Error(`PNG missing for frame "${f.id}"`);
+      const base64 = await new Promise((resolve, reject) => {
+        const r = new FileReader();
+        r.onload = () => resolve(String(r.result).split(',')[1]);
+        r.onerror = reject;
+        r.readAsDataURL(pngFile);
+      });
+      frames.push({ ...f, png: base64 });
+    }
+    const data = await call('/api/p/images', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name: manifest.name || 'image-plan', frames }),
+    });
+    state.images = data.imagePlans; drawImages();
+    $('imagePreview').innerHTML = `<div class="hint">${data.imagePlans.frames.length} frame(s) uploaded.</div>`;
+    setStatus('clientStatus', `Image plan "${data.imagePlans.name}" uploaded (${data.imagePlans.frames.length} frames).`, 'ok');
+  } catch (e) { setStatus('clientStatus', e.message, 'err'); }
+};
+
+// editor wiring (boardWrap handler opens the editor; no duplicate listener)
+const refreshThumb = async (boardIdValue) => {
+  const card = document.querySelector(`.board[data-board="${boardIdValue}"]`);
+  if (!card) return;
+  try {
+    const data = await call(`/api/p/project/${state.project.id}/board/${boardIdValue}/still`, {
+      method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}',
+    });
+    const shot = card.querySelector('.shot');
+    let img = shot?.querySelector('img');
+    if (shot && !img) {
+      img = document.createElement('img');
+      shot.prepend(img);
+    }
+    if (img && data.url) img.src = data.url + '?t=' + Date.now();
+  } catch { /* keep old thumb */ }
+};
+
+
+
+
+
+$('assets').addEventListener('dragstart', (e) => {
+  const img = e.target.closest('[data-asset]');
+  if (img) e.dataTransfer.setData('text/asset', img.dataset.asset);
+});
+
+$('assets').addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-del-asset]');
+  if (!btn) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const name = btn.dataset.delAsset;
+  if (!confirm(`Delete asset "${name}"?`)) return;
+  try {
+    const data = await call(`/api/p/assets?name=${encodeURIComponent(name)}`, { method: 'DELETE' });
+    state.assets = data.assets || state.assets.filter((a) => a.name !== name);
+    drawAssets();
+    setStatus('clientStatus', `Deleted ${name}.`, 'ok');
+  } catch (err) { setStatus('clientStatus', err.message, 'err'); }
+});
+
+call('/api/p/bootstrap').then((data) => {
+  state.client = data.client; state.assets = data.assets; state.images = data.imagePlans || []; state.assetIndex = data.assetIndex;
+  applySettings(data.settings || {});
+  drawClient(); drawAssets(); drawImages(); drawAssetIndex(data.assetIndex);
+}).catch((e) => setStatus('clientStatus', e.message, 'err'));
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+  "id": "diwali-reel",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "duration": 20,
+  "palette": {
+    "bg": "#0A0A0F",
+    "ink": "#F5F3EE",
+    "accent": "#FF9933",
+    "accent2": "#FFD700",
+    "muted": "rgba(245,243,238,0.45)",
+    "paper": "#FFFFFF"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono", "serif": "Rozha One" },
+  "grain": { "opacity": 0.05, "amount": 0.5, "seed": 21, "cell": 2, "drift": 2 },
+  "layers": [
+    { "id": "ground", "from": 0, "duration": 20, "fadeIn": 0, "fadeOut": 0, "blocks": [
+      { "type": "bg", "top": "#141018", "bottom": "#0A0A0F" },
+      { "type": "atmosphere", "blobs": [
+        { "color": "accent", "x": 940, "y": 560, "r": 300, "blur": 160, "opacity": 0.14, "float": 11, "period": 9 },
+        { "color": "accent2", "x": 140, "y": 1620, "r": 380, "blur": 190, "opacity": 0.11, "float": 8, "period": 11 }
+      ] }
+    ] },
+    { "id": "hook", "from": 0.5, "duration": 3.3, "fadeIn": 0.2, "fadeOut": 0.35, "blocks": [
+      { "type": "kicker", "text": "DIWALI KI RAAT", "x": 64, "y": 260, "size": 14, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Roshni ka tyohar", "x": 64, "y": 340, "w": 952, "size": 96, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 0.35, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "text", "text": "Har ghar ujala", "x": 64, "y": 500, "w": 952, "size": 46, "face": "IBM Plex Mono", "letterSpacing": 1.4, "fill": "accent2", "motion": { "in": { "type": "rise", "at": 0.75, "dur": 0.6, "ease": "power2.out", "distance": 22 }, "out": false } }
+    ] },
+    { "id": "lamps", "from": 3.4, "duration": 3.3, "fadeIn": 0.3, "fadeOut": 0.35, "blocks": [
+      { "type": "kicker", "text": "AANGAN JAL UTHA", "x": 64, "y": 720, "size": 14, "fill": "accent2", "rule": true },
+      { "type": "text", "text": "Diye jale hain", "x": 64, "y": 800, "w": 952, "size": 84, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 3.55, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "group", "x": 0, "y": 1200, "children": [
+        { "type": "rrect", "w": 44, "h": 90, "radius": 10, "x": 120, "y": 0, "fill": "muted" },
+        { "type": "circle", "r": 24, "x": 142, "y": -18, "fill": "accent", "opacity": 0.9 },
+        { "type": "circle", "r": 14, "x": 142, "y": -30, "fill": "accent2", "blur": 8, "opacity": 0.9 },
+        { "type": "rrect", "w": 44, "h": 90, "radius": 10, "x": 340, "y": 0, "fill": "muted" },
+        { "type": "circle", "r": 24, "x": 362, "y": -18, "fill": "accent2", "opacity": 0.85 },
+        { "type": "circle", "r": 14, "x": 362, "y": -30, "fill": "accent", "blur": 8, "opacity": 0.85 },
+        { "type": "rrect", "w": 44, "h": 90, "radius": 10, "x": 560, "y": 0, "fill": "muted" },
+        { "type": "circle", "r": 24, "x": 582, "y": -18, "fill": "accent", "opacity": 0.9 },
+        { "type": "circle", "r": 14, "x": 582, "y": -30, "fill": "accent2", "blur": 8, "opacity": 0.9 },
+        { "type": "rrect", "w": 44, "h": 90, "radius": 10, "x": 780, "y": 0, "fill": "muted" },
+        { "type": "circle", "r": 24, "x": 802, "y": -18, "fill": "accent2", "opacity": 0.85 },
+        { "type": "circle", "r": 14, "x": 802, "y": -30, "fill": "accent", "blur": 8, "opacity": 0.85 },
+        { "type": "rrect", "w": 44, "h": 90, "radius": 10, "x": 990, "y": 0, "fill": "muted" },
+        { "type": "circle", "r": 24, "x": 1012, "y": -18, "fill": "accent", "opacity": 0.9 },
+        { "type": "circle", "r": 14, "x": 1012, "y": -30, "fill": "accent2", "blur": 8, "opacity": 0.85 }
+      ] }
+    ] },
+    { "id": "rangoli", "from": 6.2, "duration": 3.3, "fadeIn": 0.3, "fadeOut": 0.35, "blocks": [
+      { "type": "kicker", "text": "RANGOLI RANG BHARA", "x": 64, "y": 260, "size": 14, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Rangoli se rang", "x": 64, "y": 340, "w": 952, "size": 84, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 6.35, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "group", "x": 0, "y": 1250, "children": [
+        { "type": "circle", "r": 34, "x": 540, "y": 0, "fill": "accent", "opacity": 0.35 },
+        { "type": "circle", "r": 22, "x": 420, "y": -60, "fill": "accent2", "opacity": 0.3 },
+        { "type": "circle", "r": 22, "x": 660, "y": -60, "fill": "accent2", "opacity": 0.3 },
+        { "type": "circle", "r": 16, "x": 540, "y": -110, "fill": "accent", "opacity": 0.25 },
+        { "type": "circle", "r": 26, "x": 420, "y": 60, "fill": "accent2", "opacity": 0.3 },
+        { "type": "circle", "r": 26, "x": 660, "y": 60, "fill": "accent2", "opacity": 0.3 },
+        { "type": "circle", "r": 18, "x": 540, "y": 110, "fill": "accent", "opacity": 0.25 }
+      ] }
+    ] },
+    { "id": "sweets", "from": 9.0, "duration": 3.2, "fadeIn": 0.3, "fadeOut": 0.35, "blocks": [
+      { "type": "kicker", "text": "MITHAI KI BAHAR", "x": 64, "y": 720, "size": 14, "fill": "accent2", "rule": true },
+      { "type": "ledger", "x": 64, "y": 800, "w": 952, "rowH": 92, "rows": [
+        { "value": "5×", "label": "LADDU" },
+        { "value": "4×", "label": "JALEBI" },
+        { "value": "5×", "label": "KAJU KATLI" }
+      ], "valueSize": 44, "labelSize": 16, "valueFill": "accent2", "header": false, "ruleColor": "rgba(245,243,238,0.18)" }
+    ] },
+    { "id": "fireworks", "from": 11.8, "duration": 3.2, "fadeIn": 0.3, "fadeOut": 0.35, "blocks": [
+      { "type": "kicker", "text": "AATISHBAZI", "x": 64, "y": 260, "size": 14, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Chhodi aatishbazi", "x": 64, "y": 340, "w": 952, "size": 84, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 11.95, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "group", "x": 0, "y": 800, "children": [
+        { "type": "circle", "r": 120, "x": 540, "y": 150, "fill": "accent", "opacity": 0.18, "blur": 40 },
+        { "type": "circle", "r": 80, "x": 540, "y": 150, "fill": "accent2", "opacity": 0.28, "blur": 25 },
+        { "type": "circle", "r": 44, "x": 540, "y": 150, "fill": "accent", "opacity": 0.45 },
+        { "type": "circle", "r": 26, "x": 540, "y": 150, "fill": "paper", "opacity": 0.85 }
+      ] }
+    ] },
+    { "id": "close", "from": 14.6, "duration": 5.4, "fadeIn": 0.3, "fadeOut": 0.45, "blocks": [
+      { "type": "text", "text": "Shubh Deepawali", "x": 64, "y": 340, "w": 952, "size": 92, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "accent", "motion": { "in": { "type": "maskUp", "at": 14.8, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "text", "text": "Dipavali ki shubhkamnayein", "x": 64, "y": 500, "w": 952, "size": 42, "face": "IBM Plex Mono", "letterSpacing": 1.2, "fill": "muted", "motion": { "in": { "type": "fade", "at": 15.2, "dur": 0.6, "ease": "power2.out" }, "out": false } },
+      { "type": "cta", "text": "CELEBRATE", "x": 64, "y": 1680, "w": 340, "h": 70, "fill": "ink", "textFill": "bg", "size": 20, "face": "Inter", "arrow": true, "motion": { "in": { "type": "scale", "at": 15.5, "dur": 0.5, "ease": "back.out", "distance": 0 }, "out": false } }
+    ] }
+  ],
+  "transitions": [
+    { "type": "wipe", "at": 6.8, "duration": 0.55, "color": "accent", "skew": -10 },
+    { "type": "flash", "at": 12.4, "duration": 0.3, "color": "accent2" },
+    { "type": "dip", "at": 15.2, "duration": 0.4, "color": "bg" }
+  ],
+  "chrome": { "blocks": [
+    { "type": "text", "text": "DIWALI REEL", "x": 64, "y": 52, "size": 12, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.4, "fill": "ink" },
+    { "type": "rule", "x": 64, "y": 94, "w": 952, "h": 1, "fill": "accent" },
+    { "type": "ticker", "x": 0, "y": 1864, "w": 1080, "h": 56, "fill": "accent", "textFill": "bg", "size": 16, "speed": 55, "items": ["SHUBH DEEPAWALI", "ROSHNI", "KHUSHI", "MITHAI", "DIWALI"] },
+    { "type": "progress", "h": 5, "fill": "accent2" }
+  ] }
+}

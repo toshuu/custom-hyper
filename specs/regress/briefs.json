@@ -1,0 +1,46 @@
+{
+  "briefs": [
+    {
+      "id": "scooter",
+      "brief": "15 second reel, launch of a quiet electric scooter in Mumbai. Show the noise problem, then the silence. End with a test ride.",
+      "seconds": 15,
+      "language": "en",
+      "seed": 11
+    },
+    {
+      "id": "coffee",
+      "brief": "10 second reel for a small coffee roaster. One farmer, one roast, one honest price. No lifestyle montage.",
+      "seconds": 10,
+      "language": "en",
+      "seed": 23
+    },
+    {
+      "id": "clinic",
+      "brief": "12 second reel for a dental clinic. People fear the drill. Show the calm room and the 20 minute checkup.",
+      "seconds": 12,
+      "language": "en",
+      "seed": 37
+    },
+    {
+      "id": "hindi-scooter",
+      "brief": "मुंबई में एक शांत इलेक्ट्रिक स्कूटर का लॉन्च। शोर की समस्या दिखाओ, फिर खामोशी। अंत में टेस्ट राइड।",
+      "seconds": 12,
+      "language": "hi",
+      "seed": 41
+    },
+    {
+      "id": "marathi-farm",
+      "brief": "पुण्याजवळील एका शेतकऱ्यासाठी थेट विक्रीचे 12 सेकंदाचे रील. एकच पीक, एकच किंमत, मध्यस्थ नाही.",
+      "seconds": 12,
+      "language": "mr",
+      "seed": 53
+    },
+    {
+      "id": "studio",
+      "brief": "8 second reel for a two person design studio. Show the messy desk, the clean grid, and the shipped poster.",
+      "seconds": 8,
+      "language": "en",
+      "seed": 67
+    }
+  ]
+}

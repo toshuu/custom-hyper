@@ -1,0 +1,930 @@
+{
+  "id": "rest-api-explained-a2ebf3-minimal",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#000000",
+    "ink": "#ffffff",
+    "accent": "#efe8e7",
+    "accent2": "#000000",
+    "muted": "rgba(255,255,255,0.56)",
+    "paper": "#1a1a1a"
+  },
+  "faces": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.055,
+    "amount": 0.45,
+    "seed": 7,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#121212",
+          "bottom": "#000000"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#efe8e7",
+              "x": 693.0226657725871,
+              "y": 655.9595074653625,
+              "r": 458.47194963041693,
+              "blur": 128.20236959960312,
+              "opacity": 0.12469681643880903,
+              "float": 9.304489836562425,
+              "period": 14.959712589159608
+            },
+            {
+              "color": "#000000",
+              "x": 217.82687112595886,
+              "y": 1397.4436758756638,
+              "r": 396.5371639248915,
+              "blur": 74.47684539714828,
+              "opacity": 0.18006961833219975,
+              "float": 21.833152782637626,
+              "period": 11.528314142022282
+            },
+            {
+              "color": "#efe8e7",
+              "x": 955.8180391648784,
+              "y": 1197.8013560771942,
+              "r": 424.0081572337076,
+              "blur": 92.6655133953318,
+              "opacity": 0.11697978961281479,
+              "float": 8.5068054725416,
+              "period": 16.625463268253952
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": 2.6987459789961576,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 16.720435206778347,
+              "period": 12.901607595849782,
+              "phase": 2.687672020867467
+            }
+          },
+          "children": [
+            {
+              "type": "rect",
+              "w": 8.428435742855072,
+              "h": 818.2702764272689,
+              "x": 193.99335055612028,
+              "y": -119.43688966333866,
+              "fill": "#efe8e7",
+              "opacity": 0.07447746941819787
+            },
+            {
+              "type": "rect",
+              "w": 9.571714270859957,
+              "h": 1405.2875690460205,
+              "x": 245.7225172687322,
+              "y": 275.9748081564903,
+              "fill": "#000000",
+              "opacity": 0.11868647864088416
+            },
+            {
+              "type": "rect",
+              "w": 9.228994868695736,
+              "h": 1828.58860373497,
+              "x": 817.1606488991529,
+              "y": -77.75768771767616,
+              "fill": "#000000",
+              "opacity": 0.10259007465559988
+            },
+            {
+              "type": "rect",
+              "w": 17.129356525838375,
+              "h": 1066.78218126297,
+              "x": 860.2195845264941,
+              "y": 311.3264974504709,
+              "fill": "#efe8e7",
+              "opacity": 0.12261044947430491
+            },
+            {
+              "type": "rect",
+              "w": 14.478051029145718,
+              "h": 1394.8762879371643,
+              "x": 472.52156998962164,
+              "y": -41.38576886057854,
+              "fill": "#000000",
+              "opacity": 0.04257610818371177
+            },
+            {
+              "type": "rect",
+              "w": 577.4902766849846,
+              "h": 16.177268132567406,
+              "x": -96.24619672447443,
+              "y": 36.68869838118553,
+              "fill": "#000000",
+              "opacity": 0.12296774064656349
+            },
+            {
+              "type": "rect",
+              "w": 866.3711212165654,
+              "h": 7.393375441431999,
+              "x": -173.82753954827785,
+              "y": 1765.598370730877,
+              "fill": "#efe8e7",
+              "opacity": 0.0981007516477257
+            },
+            {
+              "type": "rect",
+              "w": 7.872498754411936,
+              "h": 1150.5866174697876,
+              "x": 364.6671695820987,
+              "y": -108.3071981370449,
+              "fill": "#000000",
+              "opacity": 0.0841522409906611
+            },
+            {
+              "type": "rect",
+              "w": 6.78171930462122,
+              "h": 1932.8390418291094,
+              "x": 703.234635880217,
+              "y": 151.24055103957653,
+              "fill": "#000000",
+              "opacity": 0.10034046346321703
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2.4,
+      "fadeIn": 0.18,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Request Response",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Client bole toh\nbrowser, server\nbole toh backend.",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 94.71481710390475,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 113.65778052468569
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socho ek restaurant waiter ki tarah.",
+          "x": 65,
+          "y": 564.96156228548,
+          "w": 760,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 542.96156228548,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 1.8719999999999999,
+      "duration": 2.928,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Methods",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Menu card\ndekho aur\norder bhejo.",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 136.14546582000006,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 163.37455898400006
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "GET method se data mangaao, POST se naya data daalo.",
+          "x": 65,
+          "y": 686.7676695108001,
+          "w": 760,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 664.7676695108001,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 4.272,
+      "duration": 2.927999999999999,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 186.22820348739623,
+          "x": 374.52152975575814,
+          "y": 1344.6012878571637,
+          "fill": "accent2",
+          "opacity": 0.114475891944021,
+          "blur": 13.566550046671182,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 11.385831526946276,
+              "period": 11.776596604380757,
+              "phase": 4.110381135251373
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "MEASURE",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "200 OK",
+          "x": 61,
+          "y": 285.79999999999995,
+          "w": 522.5,
+          "size": 367.20000000000005,
+          "face": "Space Grotesk",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "opacity": 0.95,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "HTTP\nprotocols par\nchalta hai\npura system.",
+          "x": 521,
+          "y": 285.79999999999995,
+          "w": 494,
+          "size": 73.43686426330801,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 88.1242371159696
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Stateless communication. Har request\nindependent hoti hai bina purani yaad ke.",
+          "x": 521,
+          "y": 597.6725079121674,
+          "w": 475,
+          "size": 23.8,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1752.2,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.3
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 6.671999999999999,
+      "duration": 2.928000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Payload",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "JSON format mein\nbaat hoti hai.",
+          "x": 65,
+          "y": 247.04,
+          "w": 855,
+          "size": 96.61936284000001,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 115.943235408
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 65,
+          "y": 478.4139511664,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "paper",
+          "opacity": 0.05,
+          "stroke": "muted",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Lightweight",
+          "x": 81,
+          "y": 496.4139511664,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 81,
+          "y": 1103.2139511664,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        },
+        {
+          "type": "rrect",
+          "x": 559,
+          "y": 478.4139511664,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "accent",
+          "opacity": 0.9,
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Fast parsing",
+          "x": 575,
+          "y": 496.4139511664,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "bg",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.44000000000000006,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 575,
+          "y": 1103.2139511664,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "bg",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 9.072,
+      "duration": 2.928000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 132.80839984752237,
+          "x": 76.49443428077984,
+          "y": 380.99524331409486,
+          "fill": "accent",
+          "opacity": 0.1982848111446947,
+          "blur": 0.3323988779447973,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 12.117755065206438,
+              "period": 13.435004306491464,
+              "phase": 1.6998945025261492
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "Start building",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Apna pehla\nendpoint code\nkaro aaj hi.",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 113.95375489134004,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 136.74450586960805
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Postman kholo aur test karo request.",
+          "x": 65,
+          "y": 1221.4,
+          "w": 703,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "Test API now",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.85,
+              "ease": "power3.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "MINIMALISTIC RAW",
+          "x": 730,
+          "y": 1555.8000000000002,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "dip",
+      "at": 2.4,
+      "duration": 0.6967873438540846,
+      "color": "accent"
+    },
+    {
+      "type": "wipe",
+      "at": 4.8,
+      "duration": 0.6164459370821714,
+      "color": "accent",
+      "skew": 9.662136503495276,
+      "edge": true
+    },
+    {
+      "type": "dip",
+      "at": 7.199999999999999,
+      "duration": 0.6927073272457346,
+      "color": "accent"
+    },
+    {
+      "type": "wipe",
+      "at": 9.6,
+      "duration": 0.6266230290569365,
+      "color": "accent2",
+      "skew": -8.557317546568811,
+      "edge": true
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "REST API EXPLAINED",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1866.24,
+        "w": 1080,
+        "h": 53.76,
+        "fill": "accent",
+        "textFill": "bg",
+        "size": 13,
+        "speed": 49.67641017166898,
+        "items": [
+          "GET",
+          "POST",
+          "JSON",
+          "200 OK"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

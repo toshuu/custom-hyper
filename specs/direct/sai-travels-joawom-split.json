@@ -1,0 +1,975 @@
+{
+  "id": "sai-travels-joawom-split",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#ede6d8",
+    "ink": "#111111",
+    "accent": "#983b1f",
+    "accent2": "#6d6a65",
+    "muted": "rgba(17,17,17,0.62)",
+    "paper": "#f1ece1"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Space Grotesk",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.085,
+    "amount": 0.45,
+    "seed": 79,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": "#ede6d8"
+        },
+        {
+          "type": "grain",
+          "opacity": 0.03,
+          "amount": 0.42,
+          "seed": 73,
+          "cell": 2
+        },
+        {
+          "type": "rect",
+          "x": 7,
+          "y": 7,
+          "w": 1066,
+          "h": 1906,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 3,
+          "opacity": 0.92
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1796.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 123.5,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.18
+        },
+        {
+          "type": "rule",
+          "x": 270,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 540,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 810,
+          "y": 123.5,
+          "w": 1,
+          "h": 19.8,
+          "fill": "ink",
+          "opacity": 0.32
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 27.3,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 32.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        },
+        {
+          "type": "rule",
+          "x": 1014.5,
+          "y": 1890.7,
+          "w": 33,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "progress",
+          "h": 4,
+          "fill": "accent"
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 3,
+      "fadeIn": 0.18,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "01",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE SUBJECT",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SAI TRAVELS",
+          "x": 65,
+          "y": 439.4,
+          "w": 855,
+          "size": 200.15460000000002,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "weight": 700,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "h": 252,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 240.18552
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 721.4,
+          "w": 95,
+          "h": 5,
+          "fill": "accent",
+          "opacity": 1
+        },
+        {
+          "type": "text",
+          "text": "They do indian tourism",
+          "x": 65,
+          "y": 757.4,
+          "w": 589,
+          "size": 33,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "END / 01",
+          "x": 65,
+          "y": 1639.96,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 2.34,
+      "duration": 3.66,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "02",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE RECORD",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "THEY DO\nINDIAN\nTOURISM",
+          "x": 65,
+          "y": 295.4,
+          "w": 513,
+          "size": 173.369205,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "weight": 700,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "h": 517,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 208.04304599999998
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 624,
+          "y": 182.6,
+          "w": 2,
+          "h": 1583.6000000000001,
+          "fill": "ink",
+          "opacity": 0.45
+        },
+        {
+          "type": "text",
+          "text": "Promote India as\nculture rich",
+          "x": 650,
+          "y": 196.6,
+          "w": 323,
+          "size": 30,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.26,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 5.34,
+      "duration": 3.66,
+      "fadeIn": 0.45,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "03",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "IN ONE LINE",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "03 / 04",
+          "x": 730,
+          "y": 170.6,
+          "w": 285,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "PROMOTE\nINDIA AS\nCULTURE RICH",
+          "x": 65,
+          "y": 314.6,
+          "w": 912,
+          "size": 204.07920000000001,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "weight": 700,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "h": 608,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 244.89504
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 948.6,
+          "w": 95,
+          "h": 6,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "They do indian tourism",
+          "x": 65,
+          "y": 982.6,
+          "w": 684,
+          "size": 34,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1429.8,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "SUBJECT",
+          "x": 65,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "SAI TRAVELS",
+          "x": 65,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "CUT",
+          "x": 381.6666666666667,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "03 OF 04",
+          "x": 381.6666666666667,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "text",
+          "text": "RECORD",
+          "x": 698.3333333333334,
+          "y": 1451.8,
+          "w": 304.6666666666667,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.55
+        },
+        {
+          "type": "text",
+          "text": "THEY DO INDIAN",
+          "x": 698.3333333333334,
+          "y": 1473.8,
+          "w": 304.6666666666667,
+          "size": 13,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.6,
+          "opacity": 0.9
+        },
+        {
+          "type": "rect",
+          "x": 65,
+          "y": 1605.4,
+          "w": 285,
+          "h": 80.64,
+          "fill": "transparent",
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "opacity": 0.75
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 75,
+          "y": 1632.2800000000002,
+          "w": 266,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 8.34,
+      "duration": 3.66,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "04",
+          "x": 453.4,
+          "y": 185.95999999999998,
+          "w": 561.6,
+          "size": 451,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.07,
+          "transform": "none",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.5
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "NEXT STEP",
+          "x": 65,
+          "y": 170.6,
+          "size": 14,
+          "letterSpacing": 3,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.04,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 18
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SEE SAI\nTRAVELS",
+          "x": 65,
+          "y": 362.6,
+          "w": 893,
+          "size": 211,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "weight": 700,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "h": 447,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 253.2
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "They do indian tourism",
+          "x": 65,
+          "y": 843.6,
+          "w": 646,
+          "size": 33,
+          "face": "Space Grotesk",
+          "fill": "ink",
+          "lineHeight": 1.38,
+          "align": "left",
+          "opacity": 0.84,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1279,
+          "w": 950,
+          "h": 1,
+          "fill": "ink",
+          "opacity": 0.3
+        },
+        {
+          "type": "text",
+          "text": "SAI TRAVELS / 04 OF 04",
+          "x": 65,
+          "y": 1293,
+          "w": 950,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "left",
+          "letterSpacing": 1.8,
+          "opacity": 0.65
+        },
+        {
+          "type": "cta",
+          "text": "SEE SAI TRAVELS",
+          "x": 65,
+          "y": 1509.4,
+          "w": 589,
+          "h": 76.8,
+          "fill": "accent",
+          "textFill": "bg",
+          "face": "IBM Plex Mono",
+          "size": 16,
+          "arrow": true,
+          "letterSpacing": 2,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.4,
+              "dur": 0.36,
+              "ease": "power2.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "CUSTOM HYPER / 30 FPS",
+          "x": 635,
+          "y": 1529.4,
+          "w": 380,
+          "size": 12,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.8,
+          "opacity": 0.9
+        }
+      ]
+    },
+    {
+      "id": "anchor",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "blocks": [
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "motion": {
+            "in": false,
+            "out": false,
+            "keyframes": [
+              {
+                "at": 1.5,
+                "x": 151.20000000000002,
+                "y": 345.59999999999997,
+                "opacity": 0.9,
+                "scale": 1
+              },
+              {
+                "at": 4.17,
+                "x": 885.5999999999999,
+                "y": 729.5999999999999,
+                "opacity": 0.9,
+                "scale": 1
+              },
+              {
+                "at": 7.17,
+                "x": 151.20000000000002,
+                "y": 1113.6,
+                "opacity": 0.9,
+                "scale": 1
+              },
+              {
+                "at": 10.17,
+                "x": 885.5999999999999,
+                "y": 1497.6,
+                "opacity": 0.9,
+                "scale": 1
+              }
+            ]
+          },
+          "children": [
+            {
+              "type": "circle",
+              "r": 9,
+              "x": 0,
+              "y": 0,
+              "fill": "accent",
+              "opacity": 0.9
+            },
+            {
+              "type": "circle",
+              "r": 22,
+              "x": 0,
+              "y": 0,
+              "fill": "transparent",
+              "stroke": "accent",
+              "strokeWidth": 1,
+              "opacity": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "band",
+      "at": 3,
+      "duration": 0.5416721204342321,
+      "color": "accent",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A FILM BY CUSTOM HYPER",
+        "x": 65,
+        "y": 43,
+        "w": 323,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.4,
+        "opacity": 0.72,
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "text": "SAI TRAVELS",
+        "x": 350,
+        "y": 43,
+        "w": 380,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "center",
+        "letterSpacing": 2.4,
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "text": "EDITORIAL / 04",
+        "x": 730,
+        "y": 43,
+        "w": 285,
+        "size": 11,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 2,
+        "opacity": 0.66
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 83,
+        "w": 950,
+        "h": 1,
+        "fill": "#111111",
+        "opacity": 0.32
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 1859,
+        "w": 1080,
+        "h": 61,
+        "fill": "#983b1f"
+      },
+      {
+        "type": "text",
+        "text": "INDIAN   •   TOURISM   •   PROMOTE   •   SAI TRAVELS",
+        "x": 65,
+        "y": 1877,
+        "w": 741,
+        "size": 17,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.8,
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "text": "30 FPS",
+        "x": 882,
+        "y": 1877,
+        "w": 133,
+        "size": 17,
+        "face": "IBM Plex Mono",
+        "fill": "#111111",
+        "lineHeight": 1.1,
+        "align": "right",
+        "letterSpacing": 1.6,
+        "weight": 600
+      },
+      {
+        "type": "progress",
+        "h": 4,
+        "fill": "#111111"
+      }
+    ]
+  }
+}

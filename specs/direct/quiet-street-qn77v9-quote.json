@@ -1,0 +1,921 @@
+{
+  "id": "quiet-street-qn77v9-quote",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#120f0c",
+    "ink": "#f4ebdd",
+    "accent": "#ec8236",
+    "accent2": "#6e8b74",
+    "muted": "rgba(244,235,221,0.56)",
+    "paper": "#efe6d5"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Poppins",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.075,
+    "amount": 0.45,
+    "seed": 13,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#23180f",
+          "bottom": "#0f0c0a"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#ec8236",
+              "x": 364.33695740718395,
+              "y": 283.70728290081024,
+              "r": 458.30710334843025,
+              "blur": 112.26964478148147,
+              "opacity": 0.2394134785886854,
+              "float": 18.030004422646016,
+              "period": 10.874733849894255
+            },
+            {
+              "color": "#6e8b74",
+              "x": 1020.7159007191658,
+              "y": 1263.506737947464,
+              "r": 224.93326306482777,
+              "blur": 138.96906518610194,
+              "opacity": 0.1644844438135624,
+              "float": 12.547104500234127,
+              "period": 15.940694871358573
+            },
+            {
+              "color": "#ec8236",
+              "x": 833.1937819104642,
+              "y": 824.8013488054276,
+              "r": 277.1988582951017,
+              "blur": 132.0650751562789,
+              "opacity": 0.11240694284439087,
+              "float": 16.746904173865914,
+              "period": 10.831333223730326
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": 2.004551550373435,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 15.90023592999205,
+              "period": 9.177930550882593,
+              "phase": 2.651973728556186
+            }
+          },
+          "children": [
+            {
+              "type": "rect",
+              "w": 812.0019645486027,
+              "h": 15.919787045568228,
+              "x": 28.95206404477358,
+              "y": 29.442965984344482,
+              "fill": "#ec8236",
+              "opacity": 0.13225941612385214
+            },
+            {
+              "type": "rect",
+              "w": 11.517007250338793,
+              "h": 1068.6135985851288,
+              "x": 403.52488830685616,
+              "y": 142.68173244595528,
+              "fill": "#6e8b74",
+              "opacity": 0.10892555179074406
+            },
+            {
+              "type": "rect",
+              "w": 11.02378112077713,
+              "h": 1413.3068650960922,
+              "x": 816.203845096752,
+              "y": -52.033085748553276,
+              "fill": "#6e8b74",
+              "opacity": 0.09236172580625862
+            },
+            {
+              "type": "rect",
+              "w": 10.813189059495926,
+              "h": 1164.3881088495255,
+              "x": 513.7150309234858,
+              "y": 340.8675774782896,
+              "fill": "#ec8236",
+              "opacity": 0.04561242192052305
+            },
+            {
+              "type": "rect",
+              "w": 373.1652547493577,
+              "h": 9.825604490935802,
+              "x": -206.30187064781785,
+              "y": 789.0931431949139,
+              "fill": "#6e8b74",
+              "opacity": 0.09991885305847972
+            },
+            {
+              "type": "rect",
+              "w": 7.625151559710503,
+              "h": 1497.7327301502228,
+              "x": 93.08636594563723,
+              "y": 95.17613683640957,
+              "fill": "#6e8b74",
+              "opacity": 0.07907172051258385
+            },
+            {
+              "type": "rect",
+              "w": 9.743329025804996,
+              "h": 869.8304604291916,
+              "x": 758.0811124294996,
+              "y": 189.41654232144356,
+              "fill": "#ec8236",
+              "opacity": 0.04084601419512183
+            },
+            {
+              "type": "rect",
+              "w": 2.639422681182623,
+              "h": 585.0423109531403,
+              "x": 325.03626932390034,
+              "y": 142.9479314982891,
+              "fill": "#6e8b74",
+              "opacity": 0.057042824602685865
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2.4,
+      "fadeIn": 0.18,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 103.20497324243189,
+          "x": 153.72439741680307,
+          "y": 620.2679882587865,
+          "fill": "accent",
+          "opacity": 0.1625457241386175,
+          "blur": 20.453097496647388,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.955861429218203,
+              "period": 12.846100230235606,
+              "phase": 4.99155550613068
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "LAST LIGHT",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "THE CITY\nNEVER STOPS",
+          "x": 65,
+          "y": 252.5,
+          "w": 836,
+          "size": 182,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Except here. One block holds its breath.",
+          "x": 65,
+          "y": 599.54,
+          "w": 760,
+          "size": 28,
+          "face": "Poppins",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 577.54,
+          "w": 171,
+          "h": 3,
+          "fill": "accent",
+          "opacity": 1,
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 30
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 799,
+          "y": 160.6,
+          "w": 237.6,
+          "size": 211.2,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 1.8719999999999999,
+      "duration": 2.928,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "THE STREET",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SOUND\nFALLS\nAWAY",
+          "x": 65,
+          "y": 247.04,
+          "w": 551,
+          "size": 182,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 664.5,
+          "y": 178.6,
+          "w": 2,
+          "h": 1567.6000000000001,
+          "fill": "accent",
+          "opacity": 0.7,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "No engines. No screens.\nOnly a window and a\nchair.",
+          "x": 682.5,
+          "y": 192.6,
+          "w": 332.5,
+          "size": 25.2,
+          "face": "Poppins",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 820.6,
+          "y": 1605.4,
+          "w": 237.6,
+          "size": 134.4,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "align": "right",
+          "opacity": 0.24,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 40
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 4.272,
+      "duration": 2.927999999999999,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "WHAT REMAINS",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "THREE SMALL\nTHINGS",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 182,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 218.4
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 65,
+          "y": 590.08,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A LATE LAMP",
+          "x": 119,
+          "y": 587.08,
+          "w": 684,
+          "size": 22,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.4,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 636.08,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 65,
+          "y": 648.08,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.425,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A COLD CHAIR",
+          "x": 119,
+          "y": 645.08,
+          "w": 684,
+          "size": 22,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.445,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 694.08,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 65,
+          "y": 706.08,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.47,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "ONE OPEN WINDOW",
+          "x": 119,
+          "y": 703.08,
+          "w": 684,
+          "size": 22,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.49,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 752.08,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 6.671999999999999,
+      "duration": 2.928000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5016,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 7,
+          "x": 160,
+          "y": 176.6,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "A NEIGHBOR",
+          "x": 182,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "muted",
+          "rule": false,
+          "ruleColor": "muted",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.08,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 58
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "QUIET IS A\nLUXURY",
+          "x": 160,
+          "y": 362.6,
+          "w": 760,
+          "size": 149.23999999999998,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 179.08799999999997
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "You only hear it when the rest of the city\nagrees to leave.",
+          "x": 160,
+          "y": 1432.6000000000001,
+          "w": 592.8000000000001,
+          "size": 28,
+          "face": "Poppins",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.35,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 160,
+          "y": 1355.8000000000002,
+          "w": 114,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 9.072,
+      "duration": 2.928000000000001,
+      "fadeIn": 0.45,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "STAY",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "LISTEN LONGER",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.86,
+          "letterSpacing": -1,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "The street is still there tomorrow.",
+          "x": 65,
+          "y": 1221.4,
+          "w": 703,
+          "size": 28,
+          "face": "Poppins",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "WALK IT",
+          "x": 65,
+          "y": 1547.8000000000002,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "INTIMATE",
+          "x": 730,
+          "y": 1555.8000000000002,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 7.199999999999999,
+      "duration": 0.3116732393950224,
+      "color": "accent2"
+    },
+    {
+      "type": "band",
+      "at": 9.6,
+      "duration": 0.4576556826056912,
+      "color": "accent",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "QUIET STREET",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1866.24,
+        "w": 1080,
+        "h": 53.76,
+        "fill": "accent",
+        "textFill": "bg",
+        "size": 13,
+        "speed": 47.608723007142544,
+        "items": [
+          "QUIET STREET",
+          "LAST LIGHT",
+          "NO ENGINE"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      }
+    ]
+  }
+}

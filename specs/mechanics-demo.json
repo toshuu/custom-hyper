@@ -1,0 +1,66 @@
+{
+  "id": "mechanics-demo",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "duration": 15,
+  "palette": { "bg": "#0B0D12", "ink": "#F2F3F7", "accent": "#FFB400", "accent2": "#4C7DFF", "muted": "rgba(242,243,247,0.58)", "paper": "#EFE6D5" },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono", "serif": "Rozha One" },
+  "assets": { "hero": "../assets/hero.webp", "panel": "../assets/panel.png" },
+  "grain": { "opacity": 0.07, "amount": 0.5, "seed": 7, "cell": 2, "drift": 3 },
+  "layers": [
+    { "id": "ground", "from": 0, "duration": 15, "fadeIn": 0, "fadeOut": 0, "blocks": [
+      { "type": "bg", "top": "#0B0D12", "bottom": "#141824" },
+      { "type": "atmosphere", "blobs": [
+        { "color": "accent", "x": 900, "y": 300, "r": 420, "blur": 140, "opacity": 0.25, "float": 30, "period": 11 },
+        { "color": "accent2", "x": 120, "y": 1500, "r": 480, "blur": 160, "opacity": 0.2, "float": 24, "period": 13 } ] }
+    ] },
+    { "id": "thread", "from": 0, "duration": 15, "fadeIn": 0, "fadeOut": 0, "blocks": [
+      { "type": "track",
+        "child": { "type": "circle", "r": 46, "fill": "accent" },
+        "poses": [
+          { "at": 0.0,  "x": 940, "y": 160,  "scale": 0.8 },
+          { "at": 3.2,  "x": 940, "y": 160,  "scale": 0.8 },
+          { "at": 4.0,  "x": 880, "y": 1180, "scale": 1.6, "ease": "power3.inOut" },
+          { "at": 6.6,  "x": 880, "y": 1180, "scale": 1.6 },
+          { "at": 7.4,  "x": 140, "y": 1500, "scale": 0.9, "ease": "power3.inOut" },
+          { "at": 10.2, "x": 140, "y": 1500, "scale": 0.9 },
+          { "at": 11.0, "x": 540, "y": 1730, "scale": 1.2, "ease": "power3.inOut" },
+          { "at": 15.0, "x": 540, "y": 1730, "scale": 1.2 } ] }
+    ] },
+    { "id": "b1-cam", "from": 0, "duration": 3.6, "fadeIn": 0, "fadeOut": 0.3, "blocks": [
+      { "type": "photoCam", "x": 0, "y": 0, "w": 1080, "h": 1920, "src": "hero", "vignette": 0.55, "shake": 2,
+        "tint": { "color": "bg", "opacity": 0.25, "blend": "multiply" },
+        "shots": [ { "fx": 0.5, "fy": 0.5, "zoom": 1.05 }, { "fx": 0.62, "fy": 0.38, "zoom": 1.9, "at": 1.5, "dur": 0.9 } ],
+        "callouts": [ { "at": 2.5, "x": 0.5, "y": 0.5, "label": "Your roof" } ] },
+      { "type": "text", "text": "4 HOURS OF SUN\nNOBODY USES", "x": 70, "y": 1260, "w": 940, "size": 150, "face": "display", "lineHeight": 0.92, "fit": { "maxLines": 2, "minSize": 90 },
+        "motion": { "in": { "type": "maskUp", "at": 0.3, "dur": 0.7, "ease": "power3.out" }, "out": { "type": "fade", "dur": 0.3 } } }
+    ] },
+    { "id": "b2-receipt", "from": 3.2, "duration": 3.6, "fadeIn": 0.3, "fadeOut": 0.3, "blocks": [
+      { "type": "receipt", "x": 260, "y": 330, "w": 560, "title": "Light bill", "sub": "JULY",
+        "rows": [ { "label": "Units", "value": "412" }, { "label": "Fuel adj.", "value": "640" }, { "label": "Tax", "value": "380" }, { "label": "Last year", "value": "4,200", "hot": true } ],
+        "total": { "label": "You pay", "value": "2,100" }, "stamp": "Halved", "at": 0.4 },
+      { "type": "text", "text": "SAME HOUSE.\nHALF THE BILL.", "x": 70, "y": 1260, "w": 940, "size": 150, "face": "display", "lineHeight": 0.92, "fit": { "maxLines": 2, "minSize": 90 },
+        "motion": { "in": { "type": "slideLeft", "at": 1.6, "dur": 0.6, "distance": 120 }, "out": { "type": "fade", "dur": 0.3 } } }
+    ] },
+    { "id": "b3-count", "from": 6.6, "duration": 3.8, "fadeIn": 0.2, "fadeOut": 0.3, "blocks": [
+      { "type": "kicker", "text": "Saved in 5 years", "x": 90, "y": 640, "size": 26, "motion": { "in": { "type": "rise", "at": 0.1, "dur": 0.5 } } },
+      { "type": "counterRoll", "x": 90, "y": 720, "w": 900, "from": 0, "to": 248000, "prefix": "₹", "grouping": "indian", "size": 300, "at": 0.3, "dur": 2.0 },
+      { "type": "text", "text": "Your roof pays you back.", "x": 90, "y": 1060, "w": 900, "size": 44, "face": "body", "fill": "muted",
+        "motion": { "in": { "type": "rise", "at": 2.3, "dur": 0.6 }, "out": { "type": "fade", "dur": 0.3 } } }
+    ] },
+    { "id": "b4-ba", "from": 10.2, "duration": 2.4, "fadeIn": 0.2, "fadeOut": 0.2, "blocks": [
+      { "type": "beforeAfter", "x": 90, "y": 360, "w": 900, "h": 1000, "before": "hero", "after": "panel", "at": 0.3, "dur": 1.1, "labels": ["Now", "Solar"] }
+    ] },
+    { "id": "b5-stack", "from": 12.4, "duration": 2.6, "fadeIn": 0.2, "fadeOut": 0, "blocks": [
+      { "type": "cardStack", "x": 100, "y": 420, "w": 880, "h": 340, "at": 0.1, "step": 0.45,
+        "items": [ { "title": "Pay less", "sub": "From the first bill" }, { "title": "Own the roof", "sub": "25-year panels" }, { "title": "Zero effort", "sub": "Installed in 2 days" } ] },
+      { "type": "cta", "text": "Get a roof check", "x": 140, "y": 1500, "w": 800, "h": 110, "motion": { "in": { "type": "scale", "at": 1.5, "dur": 0.5, "ease": "back.out" } } }
+    ] }
+  ],
+  "transitions": [
+    { "type": "flash", "at": 3.4, "duration": 0.3, "color": "accent" },
+    { "type": "wipe", "at": 6.8, "duration": 0.7, "color": "accent2", "skew": -9 },
+    { "type": "dip", "at": 10.3, "duration": 0.3, "color": "bg" },
+    { "type": "band", "at": 12.5, "duration": 0.5, "color": "accent" }
+  ],
+  "chrome": { "blocks": [ { "type": "progress", "h": 8, "fill": "accent" } ] }
+}

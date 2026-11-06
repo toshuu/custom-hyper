@@ -1,0 +1,42 @@
+{
+  "id": "india-richness",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "duration": 12,
+  "palette": {
+    "bg": "#0B0D12",
+    "ink": "#F4F1EA",
+    "accent": "#FF9933",
+    "accent2": "#C8553D",
+    "muted": "rgba(244,241,234,0.5)",
+    "paper": "#EFE6D5"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono", "serif": "Rozha One" },
+  "grain": { "opacity": 0.06, "amount": 0.5, "seed": 11, "cell": 2, "drift": 2 },
+  "layers": [
+    { "id": "ground", "from": 0, "duration": 12, "fadeIn": 0, "fadeOut": 0, "blocks": [ { "type": "bg", "top": "#1B1510", "bottom": "#0B0D12" }, { "type": "atmosphere", "blobs": [ { "color": "accent", "x": 900, "y": 500, "r": 260, "blur": 140, "opacity": 0.16, "float": 12, "period": 8 }, { "color": "accent2", "x": 180, "y": 1600, "r": 340, "blur": 170, "opacity": 0.12, "float": 9, "period": 10 } ] } ] },
+    { "id": "hook", "from": 0.4, "duration": 3.2, "fadeIn": 0.25, "fadeOut": 0.4, "blocks": [
+      { "type": "kicker", "text": "BHARAT KI RICHNESS", "x": 64, "y": 240, "size": 14, "fill": "accent", "rule": true },
+      { "type": "text", "text": "SULTAN OF STORIES", "x": 64, "y": 320, "w": 952, "size": 100, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 0.4, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "text", "text": "Sone ki chidiya, phir se.", "x": 64, "y": 500, "w": 952, "size": 48, "face": "IBM Plex Mono", "letterSpacing": 1.6, "fill": "accent2", "motion": { "in": { "type": "rise", "at": 0.8, "dur": 0.6, "ease": "power2.out", "distance": 22 }, "out": false } }
+    ] },
+    { "id": "weave", "from": 2.8, "duration": 3.2, "fadeIn": 0.3, "fadeOut": 0.4, "blocks": [
+      { "type": "kicker", "text": "BUNKAR KA KAMAAL", "x": 64, "y": 920, "size": 14, "fill": "accent2", "rule": true },
+      { "type": "text", "text": "Banarsi to Bandhani", "x": 64, "y": 1000, "w": 952, "size": 88, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "maskUp", "at": 2.9, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "text", "text": "Har dhaga ek kahani.", "x": 64, "y": 1160, "w": 952, "size": 44, "face": "Inter", "fill": "muted", "motion": { "in": { "type": "fade", "at": 3.3, "dur": 0.5, "ease": "power2.out" }, "out": false } }
+    ] },
+    { "id": "spice", "from": 5.2, "duration": 3.2, "fadeIn": 0.3, "fadeOut": 0.4, "blocks": [
+      { "type": "kicker", "text": "MASALA MARKET", "x": 64, "y": 1300, "size": 14, "fill": "accent", "rule": true },
+      { "type": "text", "text": "Haldi, Mirch, Kesariya", "x": 64, "y": 1380, "w": 952, "size": 80, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "ink", "motion": { "in": { "type": "slideUp", "at": 5.3, "dur": 0.7, "ease": "back.out", "distance": 30 }, "out": false } },
+      { "type": "text", "text": "Swad ki duniya.", "x": 64, "y": 1520, "w": 952, "size": 42, "face": "IBM Plex Mono", "letterSpacing": 1.4, "fill": "accent", "motion": { "in": { "type": "fade", "at": 5.7, "dur": 0.5, "ease": "power2.out" }, "out": false } }
+    ] },
+    { "id": "close", "from": 7.6, "duration": 4.4, "fadeIn": 0.3, "fadeOut": 0.5, "blocks": [
+      { "type": "text", "text": "Incredible India", "x": 64, "y": 1560, "w": 952, "size": 92, "face": "Bebas Neue", "lineHeight": 0.9, "fill": "accent", "motion": { "in": { "type": "maskUp", "at": 7.8, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+      { "type": "cta", "text": "SEE IT", "x": 64, "y": 1760, "w": 340, "h": 68, "fill": "ink", "textFill": "bg", "size": 20, "arrow": true, "motion": { "in": { "type": "scale", "at": 8.0, "dur": 0.5, "ease": "back.out", "distance": 0 }, "out": false } }
+    ] }
+  ],
+  "chrome": { "blocks": [
+    { "type": "text", "text": "INDIA RICHNESS", "x": 64, "y": 52, "size": 12, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.4, "fill": "ink" },
+    { "type": "rule", "x": 64, "y": 94, "w": 952, "h": 1, "fill": "accent" },
+    { "type": "progress", "h": 5, "fill": "accent2" }
+  ] }
+}

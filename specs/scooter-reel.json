@@ -1,0 +1,120 @@
+{
+  "id": "scooter-reel",
+  "canvas": {
+    "w": 540,
+    "h": 960,
+    "fps": 30
+  },
+  "duration": 10,
+  "palette": {
+    "bg": "#101014",
+    "ink": "#F2F3F5",
+    "accent": "#FF9800",
+    "accent2": "#3F51B5"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Space Grotesk",
+    "mono": "IBM Plex Mono"
+  },
+  "assets": {
+    "v0f0": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f00.jpg",
+    "v0f1": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f01.jpg",
+    "v0f2": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f02.jpg",
+    "v0f3": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f03.jpg",
+    "v0f4": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f04.jpg",
+    "v0f5": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f05.jpg",
+    "v0f6": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f06.jpg",
+    "v0f7": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f07.jpg",
+    "v0f8": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f08.jpg",
+    "v0f9": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f09.jpg",
+    "v0f10": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f10.jpg",
+    "v0f11": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f11.jpg",
+    "v0f12": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f12.jpg",
+    "v0f13": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f13.jpg",
+    "v0f14": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f14.jpg",
+    "v0f15": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f15.jpg",
+    "v0f16": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f16.jpg",
+    "v0f17": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f17.jpg",
+    "v0f18": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f18.jpg",
+    "v0f19": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f19.jpg",
+    "v0f20": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f20.jpg",
+    "v0f21": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f21.jpg",
+    "v0f22": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f22.jpg",
+    "v0f23": "/kaggle/working/custom-hyper/data/video/ezgif-6cd750c387cc31e7/f23.jpg"
+  },
+  "layers": [
+    {
+      "from": 0,
+      "duration": 10,
+      "blocks": [
+        {
+          "type": "video",
+          "frames": [
+            "v0f0",
+            "v0f1",
+            "v0f2",
+            "v0f3",
+            "v0f4",
+            "v0f5",
+            "v0f6",
+            "v0f7",
+            "v0f8",
+            "v0f9",
+            "v0f10",
+            "v0f11",
+            "v0f12",
+            "v0f13",
+            "v0f14",
+            "v0f15",
+            "v0f16",
+            "v0f17",
+            "v0f18",
+            "v0f19",
+            "v0f20",
+            "v0f21",
+            "v0f22",
+            "v0f23"
+          ],
+          "fps": 8,
+          "x": 0,
+          "y": 0,
+          "w": 540,
+          "h": 960,
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "from": 0.3,
+      "duration": 4,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "SAFETY FIRST",
+          "x": 40,
+          "y": 120,
+          "size": 18,
+          "fill": "accent"
+        },
+        {
+          "type": "text",
+          "text": "Automatic braking. Crash detection.",
+          "x": 40,
+          "y": 170,
+          "w": 460,
+          "size": 52,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "motion": {
+            "in": {
+              "type": "slideUp",
+              "dur": 0.9,
+              "ease": "power3.out"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "minimal-3s",
+  "canvas": { "w": 540, "h": 960, "fps": 30 },
+  "duration": 3,
+  "palette": {
+    "bg": "#0B0D12",
+    "ink": "#F2F3F7",
+    "accent": "#FF4D2E",
+    "accent2": "#4C7DFF",
+    "muted": "rgba(242,243,247,0.58)"
+  },
+  "faces": { "display": "Bebas Neue", "body": "Inter", "mono": "IBM Plex Mono" },
+  "grain": { "opacity": 0.06, "seed": 7, "cell": 2 },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 3,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        { "type": "bg", "top": "#121722", "bottom": "#07080C" },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            { "color": "accent2", "x": 420, "y": 220, "r": 190, "blur": 90, "opacity": 0.32, "float": 12, "period": 6 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "from": 0.1,
+      "duration": 2.8,
+      "fadeIn": 0.3,
+      "fadeOut": 0.4,
+      "blocks": [
+        { "type": "kicker", "text": "Custom Hyper", "x": 32, "y": 300, "size": 15, "fill": "accent" },
+        { "type": "text", "text": "JSON IN.", "x": 28, "y": 380, "w": 480, "size": 120, "face": "Bebas Neue", "lineHeight": 0.86, "fill": "ink", "mask": true, "motion": { "in": { "type": "maskUp", "at": 0.2, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+        { "type": "text", "text": "MP4 OUT.", "x": 28, "y": 486, "w": 480, "size": 120, "face": "Bebas Neue", "lineHeight": 0.86, "fill": "accent", "mask": true, "motion": { "in": { "type": "maskUp", "at": 0.3, "dur": 0.7, "ease": "power3.out" }, "out": false } },
+        { "type": "ticker", "x": 0, "y": 840, "w": 540, "h": 54, "fill": "accent", "textFill": "bg", "size": 16, "speed": 60, "items": ["NO CHROME", "NO LLM", "DETERMINISTIC"] }
+      ]
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      { "type": "text", "text": "CUSTOM HYPER", "x": 32, "y": 40, "size": 11, "face": "IBM Plex Mono", "weight": 700, "letterSpacing": 2.4, "fill": "ink" },
+      { "type": "progress", "h": 6, "fill": "accent" }
+    ]
+  }
+}

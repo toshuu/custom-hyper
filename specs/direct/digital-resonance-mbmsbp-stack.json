@@ -1,0 +1,1185 @@
+{
+  "id": "digital-resonance-mbmsbp-stack",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 12,
+  "palette": {
+    "bg": "#120b08",
+    "ink": "#fff5ee",
+    "accent": "#fe2c00",
+    "accent2": "#00e5ff",
+    "muted": "rgba(255,245,238,0.56)",
+    "paper": "#ffe5cc"
+  },
+  "faces": {
+    "display": "Poppins",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "grain": {
+    "opacity": 0.075,
+    "amount": 0.45,
+    "seed": 19,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 12,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#210d07",
+          "bottom": "#0f0907"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "#fe2c00",
+              "x": 745.8301128968596,
+              "y": 1519.054545879364,
+              "r": 237.03928646771237,
+              "blur": 91.77073620259762,
+              "opacity": 0.23150671045295892,
+              "float": 12.794650587718934,
+              "period": 10.14457020862028
+            },
+            {
+              "color": "#00e5ff",
+              "x": 669.0907405111939,
+              "y": 193.18968451023102,
+              "r": 410.03373814886436,
+              "blur": 136.92541579250246,
+              "opacity": 0.21721332896500825,
+              "float": 21.89157011313364,
+              "period": 14.297296944539994
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "x": 0,
+          "y": 0,
+          "opacity": 1,
+          "rotation": 1.8538932530209422,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 1.4,
+              "ease": "power2.out"
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 15.548098389524966,
+              "period": 11.28219854645431,
+              "phase": 5.87450090283528
+            }
+          },
+          "children": [
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 320,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 640,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 960,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1280,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 1600,
+              "w": 1080,
+              "h": 1,
+              "fill": "#fff5ee",
+              "opacity": 0.055
+            },
+            {
+              "type": "rule",
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#fff5ee",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 270,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#fff5ee",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 540,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#fff5ee",
+              "opacity": 0.045
+            },
+            {
+              "type": "rule",
+              "x": 810,
+              "y": 0,
+              "w": 1,
+              "h": 1920,
+              "fill": "#fff5ee",
+              "opacity": 0.045
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beat-01",
+      "from": 0,
+      "duration": 2,
+      "fadeIn": 0.18,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 116.24853224605323,
+          "x": 532.2766564610833,
+          "y": 560.0391600838863,
+          "fill": "accent",
+          "opacity": 0.16263188594020905,
+          "blur": 18.035450933966786,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 13.568571190349758,
+              "period": 9.697103994432837,
+              "phase": 0.3247129882220179
+            }
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 0,
+          "y": 998.4000000000001,
+          "w": 1080,
+          "h": 921.5999999999999,
+          "radius": 0,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "slideUp",
+              "at": 0.12,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 80
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "New Dawn",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "From roadside tea stalls to orbital satellites, silicon beats\nwith an ancient rhythm.",
+          "x": 65,
+          "y": 222.6,
+          "w": 741,
+          "size": 26.599999999999998,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.24,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A billion\npulses in the\npalm.",
+          "x": 65,
+          "y": 1132.8000000000002,
+          "w": 950,
+          "size": 145.6,
+          "face": "Poppins",
+          "fill": "bg",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 174.72
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 955,
+          "y": 166.6,
+          "w": 60,
+          "size": 18,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.2
+        }
+      ]
+    },
+    {
+      "id": "beat-02",
+      "from": 1.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Velocity",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "10B+",
+          "x": 61,
+          "y": 285.79999999999995,
+          "w": 522.5,
+          "size": 367.20000000000005,
+          "face": "Poppins",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "opacity": 0.95,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Ten\nbillion\ninstants\nof trust.",
+          "x": 521,
+          "y": 285.79999999999995,
+          "w": 494,
+          "size": 105.55999999999999,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 126.67199999999998
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "UPI processes oceans of currency before\nthe morning chai cools down.",
+          "x": 521,
+          "y": 723.5952,
+          "w": 475,
+          "size": 23.8,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.32,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1790.6,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.3
+        }
+      ]
+    },
+    {
+      "id": "beat-03",
+      "from": 3.56,
+      "duration": 2.44,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 126.69319644458592,
+          "x": 413.49793139454636,
+          "y": 746.0108382747509,
+          "fill": "accent2",
+          "opacity": 0.21352997088804843,
+          "blur": 11.958690423052758,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 15.478425097186118,
+              "period": 10.232955820392817,
+              "phase": 0.08950880146585405
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "Infrastructure",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Iron,\nfiber, and\nambition.",
+          "x": 65,
+          "y": 247.04,
+          "w": 874,
+          "size": 169.26000000000002,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 203.11200000000002
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "The scaffolding of a billion futures rising\nsimultaneously.",
+          "x": 65,
+          "y": 774.6644,
+          "w": 741,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 65,
+          "y": 839.3044,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Subsea cables",
+          "x": 119,
+          "y": 836.3044,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.4,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 885.3044,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 65,
+          "y": 897.3044,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.425,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Open networks",
+          "x": 119,
+          "y": 894.3044,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.445,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 943.3044,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 65,
+          "y": 955.3044,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.47,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Silicon foundries",
+          "x": 119,
+          "y": 952.3044,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.49,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1001.3044,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 65,
+          "y": 1013.3044,
+          "w": 44,
+          "size": 15,
+          "face": "IBM Plex Mono",
+          "fill": "accent",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.2,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.515,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Rural fiber",
+          "x": 119,
+          "y": 1010.3044,
+          "w": 684,
+          "size": 22,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.535,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 14
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 65,
+          "y": 1059.3044,
+          "w": 950,
+          "h": 1,
+          "fill": "muted",
+          "opacity": 0.35
+        }
+      ]
+    },
+    {
+      "id": "beat-04",
+      "from": 5.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 193.40333445444702,
+          "x": 772.2800150914454,
+          "y": 337.5072575028986,
+          "fill": "accent",
+          "opacity": 0.15387276432476937,
+          "blur": 18.522363072261214,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0,
+              "dur": 0.8
+            },
+            "out": false,
+            "loop": {
+              "type": "float",
+              "amp": 8.265024709049612,
+              "period": 12.303732790518552,
+              "phase": 4.831436583772302
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "Metamorphosis",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Old looms meet\nneural webs.",
+          "x": 65,
+          "y": 247.04,
+          "w": 855,
+          "size": 103.891788,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 124.6701456
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 65,
+          "y": 492.66790448,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "paper",
+          "opacity": 0.05,
+          "stroke": "muted",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.28,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Heritage does not break under\ninnovation; it accelerates.",
+          "x": 81,
+          "y": 510.66790448,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "ink",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.34,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 81,
+          "y": 1117.46790448,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        },
+        {
+          "type": "rrect",
+          "x": 559,
+          "y": 492.66790448,
+          "w": 456,
+          "h": 652.8000000000001,
+          "radius": 8,
+          "fill": "accent",
+          "opacity": 0.9,
+          "stroke": "accent",
+          "strokeWidth": 1,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "NEW WAY",
+          "x": 575,
+          "y": 510.66790448,
+          "w": 424,
+          "size": 26,
+          "face": "Inter",
+          "fill": "bg",
+          "lineHeight": 1.24,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.44000000000000006,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 16
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 575,
+          "y": 1117.46790448,
+          "w": 424,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "bg",
+          "lineHeight": 1.1,
+          "letterSpacing": 1.8,
+          "opacity": 0.7
+        }
+      ]
+    },
+    {
+      "id": "beat-05",
+      "from": 7.56,
+      "duration": 2.4400000000000004,
+      "fadeIn": 0.418,
+      "fadeOut": 0.418,
+      "blocks": [
+        {
+          "type": "circle",
+          "r": 7,
+          "x": 160,
+          "y": 176.6,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "QUIET",
+          "x": 182,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "muted",
+          "rule": false,
+          "ruleColor": "muted",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.08,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 58
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Code\nwritten in\nthe\nvernacular.",
+          "x": 160,
+          "y": 362.6,
+          "w": 760,
+          "size": 149.23999999999998,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 179.08799999999997
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Technology speaks in every mother tongue,\nfinally.",
+          "x": 160,
+          "y": 1471,
+          "w": 592.8000000000001,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.35,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 160,
+          "y": 1394.1999999999998,
+          "w": 114,
+          "h": 2,
+          "fill": "accent",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "beat-06",
+      "from": 9.56,
+      "duration": 2.4399999999999995,
+      "fadeIn": 0.418,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "Final Beat",
+          "x": 65,
+          "y": 170.6,
+          "size": 13,
+          "letterSpacing": 2.4,
+          "fill": "accent",
+          "rule": true,
+          "ruleColor": "accent",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 24
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Build the\nnext layer\nwith us.",
+          "x": 65,
+          "y": 401,
+          "w": 855,
+          "size": 163.8,
+          "face": "Poppins",
+          "fill": "ink",
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "transform": "uppercase",
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.18,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 196.56
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Join the architects shaping the new subcontinent.",
+          "x": 65,
+          "y": 1259.8,
+          "w": 703,
+          "size": 28,
+          "face": "Inter",
+          "fill": "muted",
+          "lineHeight": 1.38,
+          "align": "left",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 22
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "Join the builders",
+          "x": 65,
+          "y": 1586.1999999999998,
+          "w": 540,
+          "h": 72.96,
+          "fill": "accent",
+          "textFill": "bg",
+          "size": 21,
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.42,
+              "dur": 0.45,
+              "ease": "back.out",
+              "distance": 0
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "VIBRANT DEVOTION",
+          "x": 730,
+          "y": 1594.1999999999998,
+          "w": 285,
+          "size": 11,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "lineHeight": 1.1,
+          "align": "right",
+          "letterSpacing": 1.6
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 4,
+      "duration": 0.30953820396214726,
+      "color": "accent2"
+    },
+    {
+      "type": "band",
+      "at": 10,
+      "duration": 0.6310250001540407,
+      "color": "accent2",
+      "color2": "ink"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "DIGITAL RESONANCE",
+        "x": 65,
+        "y": 40.3,
+        "w": 669.6,
+        "size": 12,
+        "face": "IBM Plex Mono",
+        "fill": "ink",
+        "lineHeight": 1.1,
+        "letterSpacing": 2.2,
+        "weight": 700
+      },
+      {
+        "type": "rule",
+        "x": 65,
+        "y": 81.25,
+        "w": 950,
+        "h": 1,
+        "fill": "ink",
+        "opacity": 0.22
+      },
+      {
+        "type": "text",
+        "text": "VIBRANT DEVOTION",
+        "x": 65,
+        "y": 1869.3,
+        "w": 540,
+        "size": 10,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "lineHeight": 1.1,
+        "letterSpacing": 1.4
+      }
+    ]
+  }
+}
