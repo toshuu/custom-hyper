@@ -297,3 +297,8 @@ After every change:
 ### 2026-11-06 - Portable agent kit
 - Added a platform-neutral authoring contract for OpenCode, ChatGPT workspaces, GitHub agents, and terminal agents. Added `agent/capabilities.json`, recipes, `npm run agent:review`, and a generic GitHub `Render Spec` workflow.
 - Verified: agent review on `minimal-3s`, standalone checks, deterministic still hashes, and proxy MP4 render all pass.
+
+### 2026-11-06 - Spotify Every Mood photo-led reel
+- Rebuilt `specs/spotify-every-mood.json` to remove all vector people. The reel now uses 8 real Pexels photo assets, cropped to 1080x1920 PNGs during GitHub Actions preparation, plus 3 generated abstract mood-cover PNGs.
+- Added photoCam camera moves, varied scene treatments, a persistent playback marker, playlist-card reveal, and a Ning Store CTA. Silent output; no voiceover, music, or SFX.
+- Workflow `Render Spec` downloads and prepares assets before validation/render; the delivery artifact includes MP4, review stills, contact sheet, compiled plan, metadata, and photo-source credits. Current full-resolution run: https://github.com/toshuu/custom-hyper/actions/runs/42247139336
