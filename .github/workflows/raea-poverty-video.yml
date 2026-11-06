@@ -65,6 +65,11 @@ jobs:
           raea render raea/poverty-in-india.tsx --at 0,150,300,450,600,750,900,1050,1200,1349 -o out/review/
       - name: Render final MP4 with RAEA
         run: raea render raea/poverty-in-india.tsx -o out/poverty-in-india-raea.mp4 --quality master --manifest out/render-manifest.json
+      - name: Re-encode master with high-bitrate H.264
+        run: |
+          set -euo pipefail
+          ffmpeg -y -i out/poverty-in-india-raea.mp4 -an -c:v libx264 -preset slow -crf 12 -tune grain -pix_fmt yuv420p -movflags +faststart out/poverty-in-india-raea-clean.mp4
+          mv out/poverty-in-india-raea-clean.mp4 out/poverty-in-india-raea.mp4
       - name: Check output
         run: |
           set -euo pipefail
