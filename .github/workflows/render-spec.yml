@@ -4,17 +4,14 @@ on:
   push:
     paths:
       - 'specs/poverty-in-india-reframed.json'
-      - 'specs/spotify-every-mood-fresh.json'
-      - 'scripts/spotify-every-mood-fresh.srt'
-      - 'scripts/spotify-every-mood-fresh.txt'
-      - 'specs/spotify-every-mood-fresh.json'
+      - 'specs/spotify-every-mood.json'
       - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
       spec:
         description: Repository-relative HyperSpec JSON path
         required: true
-        default: specs/spotify-every-mood-fresh.json
+        default: specs/spotify-every-mood.json
       stills_at:
         description: Review still seconds
         required: false
@@ -106,7 +103,7 @@ jobs:
           EOF
       - name: Validate and plan
         env:
-          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood-fresh.json' }}
+          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
         run: |
           case "$SPEC" in
             specs/*.json) test -f "$SPEC" ;;
@@ -117,7 +114,7 @@ jobs:
           node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
       - name: Render review stills and full-resolution MP4
         env:
-          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood-fresh.json' }}
+          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
           STILLS_AT: ${{ inputs.stills_at || '1.2,3.8,6.8,9.7,12.5,15.2,18.1,22.2,27.2' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
@@ -151,8 +148,6 @@ jobs:
             out/compiled-plan.json
             out/metadata.json
             out/contact-sheet.jpg
-            scripts/spotify-every-mood-fresh.srt
-            scripts/spotify-every-mood-fresh.txt
             assets/spotify/
           if-no-files-found: error
           retention-days: 14
