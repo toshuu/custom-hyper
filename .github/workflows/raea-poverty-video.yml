@@ -1,10 +1,10 @@
-name: Render Poverty in India with Raea
+name: Render Poverty in India
 
 on:
   push:
     branches: [main]
     paths:
-      - "poverty-in-india.tsx"
+      - "specs/poverty-in-india.json"
       - ".github/workflows/raea-poverty-video.yml"
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: raea-poverty-video
+  group: poverty-in-india-render
   cancel-in-progress: false
 
 jobs:
@@ -20,49 +20,47 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
-      - name: Checkout project
+      - name: Checkout Custom Hyper
         uses: actions/checkout@v4
 
-      - name: Install Vulkan software renderer and media tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl ffmpeg vulkan-tools mesa-vulkan-drivers libvulkan1 libfontconfig1 libasound2t64
-          echo "VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.x86_64.json" >> "$GITHUB_ENV"
-          echo "WGPU_BACKEND=vulkan" >> "$GITHUB_ENV"
-          echo "LIBGL_ALWAYS_SOFTWARE=1" >> "$GITHUB_ENV"
-          vulkaninfo --summary || true
+      - name: Checkout X80 engine source
+        uses: actions/checkout@v4
+        with:
+          repository: toshuu/VIDMAKE
+          ref: main
+          path: VIDMAKE
+          sparse-checkout: |
+            x80-video-engine
+          sparse-checkout-cone-mode: true
 
-      - name: Install Raea
+      - name: Prepare sibling engine path
         run: |
-          curl -fsSL https://raea.io/install | sh
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          echo "$HOME/.raea/bin" >> "$GITHUB_PATH"
-          find "$HOME/.raea" -type f -name raea -perm -111 -print || true
-          "$HOME/.local/bin/raea" --version || "$HOME/.raea/bin/raea" --version
+          ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
+          cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
+          npm ci
+          npm run build
 
-      - name: Render documentary
+      - name: Validate composition
+        run: node src/cli.mjs check specs/poverty-in-india.json
+
+      - name: Render review frames
+        run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22 --scale 0.5
+
+      - name: Render final MP4
+        run: node src/cli.mjs render specs/poverty-in-india.json --scale 0.5 --out out/poverty-in-india.mp4
+
+      - name: Verify output
         run: |
-          mkdir -p out
-          if [ -x "$HOME/.local/bin/raea" ]; then RAEA="$HOME/.local/bin/raea"; else RAEA="$HOME/.raea/bin/raea"; fi
-          "$RAEA" render poverty-in-india.tsx --quality master -o out/poverty-in-india-raea.mp4
-          "$RAEA" check out/poverty-in-india-raea.mp4 || true
+          test -s out/poverty-in-india.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
 
-      - name: Add original cinematic score
-        run: |
-          ffmpeg -y \
-            -f lavfi -i "sine=frequency=55:duration=36" \
-            -f lavfi -i "sine=frequency=82.41:duration=36" \
-            -f lavfi -i "sine=frequency=110:duration=36" \
-            -filter_complex "[0:a]volume=0.09,lowpass=f=120[a0];[1:a]volume=0.045,lowpass=f=180[a1];[2:a]volume=0.025,lowpass=f=240[a2];[a0][a1][a2]amix=inputs=3:normalize=0,afade=t=in:st=0:d=3,afade=t=out:st=32:d=4,volume=0.9[a]" \
-            -map "[a]" -c:a aac -b:a 192k out/score.m4a
-          ffmpeg -y -i out/poverty-in-india-raea.mp4 -i out/score.m4a \
-            -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest \
-            -movflags +faststart out/poverty-in-india.mp4
-
-      - name: Upload finished video
+      - name: Upload finished video and review frames
         uses: actions/upload-artifact@v4
         with:
-          name: poverty-in-india-raea-video
-          path: out/poverty-in-india.mp4
+          name: poverty-in-india-custom-hyper
+          path: |
+            out/poverty-in-india.mp4
+            out/metadata.json
+            out/poverty-in-india-f*.png
           if-no-files-found: error
           retention-days: 14
