@@ -35,4 +35,5 @@ test('package defines the standalone verification command', () => {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
   assert.equal(pkg.scripts['test:standalone'], 'node --test test/standalone-runtime.test.mjs && npm run verify && npm run smoke');
   assert.equal(pkg.engines.node, '>=22.20');
+  assert.match(pkg.scripts.smoke, /render specs\/minimal-3s\.json --scale 0\.5/);
 });
