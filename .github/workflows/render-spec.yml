@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'specs/poverty-in-india-reframed.json'
+      - 'specs/spotify-every-mood.json'
   workflow_dispatch:
     inputs:
       spec:
