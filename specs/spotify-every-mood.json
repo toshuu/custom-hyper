@@ -7,12 +7,12 @@
   },
   "duration": 30,
   "palette": {
-    "bg": "#080B0A",
-    "ink": "#F5F7F5",
+    "bg": "#070B09",
+    "ink": "#F5F8F6",
     "accent": "#1ED760",
     "accent2": "#B8F7CE",
-    "muted": "#789084",
-    "paper": "#FFFFFF"
+    "muted": "#A2B0A8",
+    "paper": "#F3F0E7"
   },
   "faces": {
     "display": "Bebas Neue",
@@ -20,10 +20,20 @@
     "mono": "IBM Plex Mono",
     "serif": "Rozha One"
   },
+  "assets": {
+    "hook": "../assets/spotify/hook.jpg",
+    "happy": "../assets/spotify/happy.jpg",
+    "sad": "../assets/spotify/sad.jpg",
+    "focus": "../assets/spotify/focus.jpg",
+    "party": "../assets/spotify/party.jpg",
+    "chill": "../assets/spotify/chill.jpg",
+    "travel": "../assets/spotify/travel.jpg",
+    "lateNight": "../assets/spotify/late-night.jpg"
+  },
   "grain": {
-    "opacity": 0.045,
-    "amount": 0.5,
-    "seed": 42,
+    "opacity": 0.055,
+    "amount": 0.45,
+    "seed": 17,
     "cell": 2,
     "drift": 2
   },
@@ -37,29 +47,29 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": "#080B0A"
+          "fill": "#070B09"
         },
         {
           "type": "atmosphere",
           "blobs": [
             {
               "color": "#1ED760",
-              "x": 920,
-              "y": 300,
+              "x": 950,
+              "y": 230,
               "r": 260,
-              "blur": 170,
-              "opacity": 0.18,
+              "blur": 160,
+              "opacity": 0.13,
               "float": 18,
               "period": 8
             },
             {
               "color": "#1ED760",
-              "x": 130,
-              "y": 1580,
-              "r": 300,
-              "blur": 190,
-              "opacity": 0.1,
-              "float": 16,
+              "x": 120,
+              "y": 1660,
+              "r": 280,
+              "blur": 170,
+              "opacity": 0.09,
+              "float": 15,
               "period": 10
             }
           ]
@@ -68,64 +78,70 @@
           "type": "track",
           "child": {
             "type": "circle",
-            "r": 24,
+            "r": 19,
             "fill": "#1ED760",
-            "opacity": 0.9
+            "opacity": 0.95
           },
           "poses": [
             {
               "at": 0,
-              "x": 900,
-              "y": 1500,
-              "scale": 0.7
+              "x": 920,
+              "y": 1690,
+              "scale": 0.8
             },
             {
-              "at": 3,
-              "x": 180,
-              "y": 680,
-              "scale": 0.9
+              "at": 2.5,
+              "x": 150,
+              "y": 1690,
+              "scale": 1
             },
             {
-              "at": 6,
-              "x": 900,
-              "y": 1450,
-              "scale": 0.65
+              "at": 5.4,
+              "x": 920,
+              "y": 1690,
+              "scale": 0.8
             },
             {
-              "at": 9,
-              "x": 170,
-              "y": 680,
-              "scale": 0.9
+              "at": 8.3,
+              "x": 150,
+              "y": 1690,
+              "scale": 1
             },
             {
-              "at": 12,
-              "x": 900,
-              "y": 1450,
-              "scale": 0.65
+              "at": 11.2,
+              "x": 920,
+              "y": 1690,
+              "scale": 0.8
             },
             {
-              "at": 15,
-              "x": 180,
-              "y": 680,
-              "scale": 0.9
+              "at": 14,
+              "x": 150,
+              "y": 1690,
+              "scale": 1
             },
             {
-              "at": 19,
-              "x": 900,
-              "y": 1450,
-              "scale": 0.7
+              "at": 16.8,
+              "x": 920,
+              "y": 1690,
+              "scale": 0.8
             },
             {
-              "at": 24,
-              "x": 180,
-              "y": 680,
-              "scale": 0.9
+              "at": 19.7,
+              "x": 150,
+              "y": 1690,
+              "scale": 1
             },
             {
-              "at": 27,
-              "x": 900,
-              "y": 1450,
-              "scale": 0.65
+              "at": 25,
+              "x": 920,
+              "y": 1690,
+              "scale": 0.8
+            },
+            {
+              "at": 28,
+              "x": 540,
+              "y": 1600,
+              "scale": 1
             }
           ]
         }
@@ -134,332 +150,71 @@
     {
       "id": "hook",
       "from": 0,
-      "duration": 3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
+      "duration": 2.6,
+      "fadeIn": 0.05,
+      "fadeOut": 0.12,
       "blocks": [
         {
-          "type": "bg",
-          "fill": "#0B1710"
-        },
-        {
-          "type": "rrect",
-          "x": 762,
-          "y": 790,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 0,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 727.1666049839541,
-          "y": 940,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 30,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 632,
-          "y": 1049.8076211353316,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 60,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 502,
-          "y": 1090,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 90,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 372.00000000000006,
-          "y": 1049.8076211353316,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 120,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 276.8333950160459,
-          "y": 940,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 150,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 242,
-          "y": 790,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 180,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 276.83339501604587,
-          "y": 640.0000000000001,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 210,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 371.9999999999999,
-          "y": 530.1923788646685,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 240,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 502,
-          "y": 490,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 270,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 632,
-          "y": 530.1923788646684,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#F5F7F5",
-          "rotation": 300,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 727.166604983954,
-          "y": 639.9999999999999,
-          "w": 76,
-          "h": 220,
-          "radius": 36,
-          "fill": "#1ED760",
-          "rotation": 330,
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "spin",
-              "period": 9,
-              "amp": 5
-            }
-          }
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
+          "type": "photoCam",
+          "src": "hook",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
             {
-              "type": "circle",
-              "x": 540,
-              "y": 874.25,
-              "r": 64.6,
-              "fill": "#171719"
+              "fx": 0.5,
+              "fy": 0.44,
+              "zoom": 1.04,
+              "at": 0,
+              "dur": 1.1,
+              "ease": "power3.out"
             },
             {
-              "type": "circle",
-              "x": 540,
-              "y": 907.5,
-              "r": 62.699999999999996,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 518.15,
-              "y": 902.75,
-              "r": 5.699999999999999,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 561.85,
-              "y": 902.75,
-              "r": 5.699999999999999,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 462.1,
-              "y": 974,
-              "w": 155.79999999999998,
-              "h": 199.5,
-              "radius": 45.599999999999994,
-              "fill": "#1ED760"
-            },
-            {
-              "type": "rrect",
-              "x": 414.6,
-              "y": 988.25,
-              "w": 45.599999999999994,
-              "h": 180.5,
-              "radius": 22.799999999999997,
-              "fill": "#D99A72",
-              "rotation": 12
-            },
-            {
-              "type": "rrect",
-              "x": 619.8,
-              "y": 988.25,
-              "w": 45.599999999999994,
-              "h": 180.5,
-              "radius": 22.799999999999997,
-              "fill": "#D99A72",
-              "rotation": -12
-            },
-            {
-              "type": "rrect",
-              "x": 473.5,
-              "y": 1149.75,
-              "w": 52.25,
-              "h": 161.5,
-              "radius": 22.799999999999997,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 554.25,
-              "y": 1149.75,
-              "w": 52.25,
-              "h": 161.5,
-              "radius": 22.799999999999997,
-              "fill": "#202A27"
+              "fx": 0.55,
+              "fy": 0.5,
+              "zoom": 1.2,
+              "at": 1.1,
+              "dur": 1.35,
+              "ease": "power2.inOut"
             }
           ]
         },
         {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(3,8,6,0.38)"
+        },
+        {
+          "type": "rrect",
+          "x": 48,
+          "y": 245,
+          "w": 910,
+          "h": 360,
+          "radius": 28,
+          "fill": "rgba(3,8,6,0.62)"
+        },
+        {
           "type": "text",
-          "text": "Aaj ka mood kya hai?",
-          "x": 72,
-          "y": 270,
-          "w": 936,
+          "text": "Mood ka koi\nschedule nahi.",
+          "x": 82,
+          "y": 310,
+          "w": 820,
           "h": 250,
-          "size": 74,
+          "size": 88,
           "face": "Inter",
           "weight": 800,
-          "fill": "#F5F7F5",
+          "fill": "#F5F8F6",
           "fit": {
-            "maxLines": 3,
-            "minSize": 48
+            "maxLines": 2,
+            "minSize": 58
           },
           "motion": {
             "in": {
               "type": "maskUp",
               "at": 0.12,
-              "dur": 0.55,
+              "dur": 0.52,
               "ease": "power3.out"
             },
             "out": false
@@ -467,23 +222,23 @@
         },
         {
           "type": "text",
-          "text": "ONE DAY. TOO MANY FEELINGS.",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
+          "text": "EK DIN. KITNE SAARE FEELS.",
+          "x": 84,
+          "y": 570,
+          "w": 820,
+          "h": 58,
+          "size": 23,
           "face": "IBM Plex Mono",
           "weight": 700,
           "letterSpacing": 2,
           "fill": "#1ED760",
           "motion": {
             "in": {
-              "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
+              "type": "slideLeft",
+              "at": 0.38,
+              "dur": 0.45,
+              "ease": "power3.out",
+              "distance": 50
             },
             "out": false
           }
@@ -492,1651 +247,171 @@
     },
     {
       "id": "happy",
-      "from": 2.7,
-      "duration": 3.4,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
+      "from": 2.4,
+      "duration": 3.2,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
       "blocks": [
         {
-          "type": "bg",
-          "fill": "#123A24"
-        },
-        {
-          "type": "circle",
-          "x": 130,
-          "y": 620,
-          "r": 24,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 2.5,
-              "phase": 0
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 235,
-          "y": 780,
-          "r": 34,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 2.7,
-              "phase": 1
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 340,
-          "y": 620,
-          "r": 44,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 2.9,
-              "phase": 2
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 445,
-          "y": 780,
-          "r": 24,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 3.1,
-              "phase": 3
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 550,
-          "y": 620,
-          "r": 34,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 3.3,
-              "phase": 4
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 655,
-          "y": 780,
-          "r": 44,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 3.5,
-              "phase": 5
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 760,
-          "y": 620,
-          "r": 24,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 3.7,
-              "phase": 6
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 865,
-          "y": 780,
-          "r": 34,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 3.9000000000000004,
-              "phase": 7
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 970,
-          "y": 620,
-          "r": 44,
-          "fill": "#B8F7CE",
-          "opacity": 0.8,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 30,
-              "period": 4.1,
-              "phase": 8
-            }
-          }
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
+          "type": "photoCam",
+          "src": "happy",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
             {
-              "type": "circle",
-              "x": 540,
-              "y": 935,
-              "r": 68,
-              "fill": "#171719"
+              "fx": 0.62,
+              "fy": 0.43,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1.2,
+              "ease": "power3.out"
             },
             {
-              "type": "circle",
-              "x": 540,
-              "y": 970,
-              "r": 66,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 517,
-              "y": 965,
-              "r": 6,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 563,
-              "y": 965,
-              "r": 6,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 458,
-              "y": 1040,
-              "w": 164,
-              "h": 210,
-              "radius": 48,
-              "fill": "#1ED760"
-            },
-            {
-              "type": "rrect",
-              "x": 408,
-              "y": 1055,
-              "w": 48,
-              "h": 190,
-              "radius": 24,
-              "fill": "#D99A72",
-              "rotation": -28
-            },
-            {
-              "type": "rrect",
-              "x": 624,
-              "y": 1055,
-              "w": 48,
-              "h": 190,
-              "radius": 24,
-              "fill": "#D99A72",
-              "rotation": 28
-            },
-            {
-              "type": "rrect",
-              "x": 470,
-              "y": 1225,
-              "w": 55,
-              "h": 170,
-              "radius": 24,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 555,
-              "y": 1225,
-              "w": 55,
-              "h": 170,
-              "radius": 24,
-              "fill": "#202A27"
+              "fx": 0.56,
+              "fy": 0.45,
+              "zoom": 1.18,
+              "at": 1.2,
+              "dur": 1.8,
+              "ease": "power2.inOut"
             }
           ]
         },
         {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(4,8,6,0.25)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 1340,
+          "w": 900,
+          "h": 310,
+          "radius": 28,
+          "fill": "rgba(3,8,6,0.68)"
+        },
+        {
           "type": "text",
-          "text": "Aaj toh sab mast hai!",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
+          "text": "Khushi?\nVolume badha.",
+          "x": 84,
+          "y": 1380,
+          "w": 810,
+          "h": 200,
+          "size": 82,
           "face": "Inter",
           "weight": 800,
-          "fill": "#F5F7F5",
+          "fill": "#FFFFFF",
           "fit": {
-            "maxLines": 3,
-            "minSize": 48
+            "maxLines": 2,
+            "minSize": 56
           },
           "motion": {
             "in": {
-              "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "GOOD VIBES ONLY",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#B8F7CE",
-          "motion": {
-            "in": {
               "type": "rise",
-              "at": 0.45,
+              "at": 0.18,
               "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "cardStack",
-          "x": 540,
-          "y": 700,
-          "w": 760,
-          "h": 230,
-          "titleSize": 72,
-          "subSize": 27,
-          "at": 0.25,
-          "step": 0.42,
-          "from": "below",
-          "tilt": 1.8,
-          "items": [
-            {
-              "title": "SUNNY SIDE",
-              "sub": "Bas aaj sab set hai",
-              "fill": "#FFFFFF",
-              "ink": "#07150D"
-            },
-            {
-              "title": "FULL VOLUME",
-              "sub": "That one song on repeat",
-              "fill": "#B8F7CE",
-              "ink": "#07150D"
-            },
-            {
-              "title": "GOOD ENERGY",
-              "sub": "Dil se, no reason",
-              "fill": "#1ED760",
-              "ink": "#07150D"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "heartbreak",
-      "from": 5.8,
-      "duration": 3.3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
-      "blocks": [
-        {
-          "type": "bg",
-          "fill": "#101D2D"
-        },
-        {
-          "type": "rule",
-          "x": 70,
-          "y": 420,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 126,
-          "y": 520,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.1
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 182,
-          "y": 620,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.2
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 238,
-          "y": 720,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.30000000000000004
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 294,
-          "y": 420,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.4
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 350,
-          "y": 520,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.5
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 406,
-          "y": 620,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.6000000000000001
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 462,
-          "y": 720,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.7000000000000001
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 518,
-          "y": 420,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.8
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 574,
-          "y": 520,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 0.9
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 630,
-          "y": 620,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 686,
-          "y": 720,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.1
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 742,
-          "y": 420,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.2000000000000002
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 798,
-          "y": 520,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.3
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 854,
-          "y": 620,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.4000000000000001
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 910,
-          "y": 720,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.5
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 966,
-          "y": 420,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.6
-            }
-          }
-        },
-        {
-          "type": "rule",
-          "x": 1022,
-          "y": 520,
-          "w": 3,
-          "h": 100,
-          "fill": "#76B9FF",
-          "rotation": 18,
-          "opacity": 0.65,
-          "motion": {
-            "loop": {
-              "type": "drift",
-              "dx": 0,
-              "dy": 120,
-              "period": 1.6,
-              "phase": 1.7000000000000002
-            }
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 120,
-          "y": 1120,
-          "w": 840,
-          "h": 28,
-          "radius": 14,
-          "fill": "#52677D"
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 902,
-              "r": 54.400000000000006,
-              "fill": "#171719"
-            },
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 930,
-              "r": 52.800000000000004,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 521.6,
-              "y": 926,
-              "r": 4.800000000000001,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 558.4,
-              "y": 926,
-              "r": 4.800000000000001,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 474.4,
-              "y": 986,
-              "w": 131.20000000000002,
-              "h": 168,
-              "radius": 38.400000000000006,
-              "fill": "#24384D"
-            },
-            {
-              "type": "rrect",
-              "x": 434.4,
-              "y": 998,
-              "w": 38.400000000000006,
-              "h": 152,
-              "radius": 19.200000000000003,
-              "fill": "#D99A72",
-              "rotation": 12
-            },
-            {
-              "type": "rrect",
-              "x": 607.2,
-              "y": 998,
-              "w": 38.400000000000006,
-              "h": 152,
-              "radius": 19.200000000000003,
-              "fill": "#D99A72",
-              "rotation": -12
-            },
-            {
-              "type": "rrect",
-              "x": 484,
-              "y": 1134,
-              "w": 44,
-              "h": 136,
-              "radius": 19.200000000000003,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 552,
-              "y": 1134,
-              "w": 44,
-              "h": 136,
-              "radius": 19.200000000000003,
-              "fill": "#202A27"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "Phir yaad aa gayi uski...",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
-          "face": "Inter",
-          "weight": 800,
-          "fill": "#F5F7F5",
-          "fit": {
-            "maxLines": 3,
-            "minSize": 48
-          },
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "SOME SONGS HIT DIFFERENT",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#76B9FF",
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "cardStack",
-          "x": 540,
-          "y": 700,
-          "w": 760,
-          "h": 230,
-          "titleSize": 72,
-          "subSize": 27,
-          "at": 0.25,
-          "step": 0.42,
-          "from": "right",
-          "tilt": 1.4,
-          "items": [
-            {
-              "title": "OLD CHAT",
-              "sub": "Naam abhi bhi yaad hai",
-              "fill": "#FFFFFF",
-              "ink": "#07150D"
-            },
-            {
-              "title": "2:17 AM",
-              "sub": "Woh gaana phir se",
-              "fill": "#A8C8FF",
-              "ink": "#07150D"
-            },
-            {
-              "title": "LET IT OUT",
-              "sub": "Feel it. Don't hide it.",
-              "fill": "#76B9FF",
-              "ink": "#07150D"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "motivation",
-      "from": 8.8,
-      "duration": 3.3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
-      "blocks": [
-        {
-          "type": "bg",
-          "fill": "#25200F"
-        },
-        {
-          "type": "rule",
-          "x": 110,
-          "y": 760,
-          "w": 860,
-          "h": 5,
-          "fill": "#F5F7F5",
-          "rotation": -12,
-          "opacity": 0.7
-        },
-        {
-          "type": "rule",
-          "x": 110,
-          "y": 870,
-          "w": 860,
-          "h": 5,
-          "fill": "#FFD166",
-          "rotation": -12,
-          "opacity": 0.7
-        },
-        {
-          "type": "rule",
-          "x": 110,
-          "y": 980,
-          "w": 860,
-          "h": 5,
-          "fill": "#F5F7F5",
-          "rotation": -12,
-          "opacity": 0.7
-        },
-        {
-          "type": "rule",
-          "x": 110,
-          "y": 1090,
-          "w": 860,
-          "h": 5,
-          "fill": "#FFD166",
-          "rotation": -12,
-          "opacity": 0.7
-        },
-        {
-          "type": "rule",
-          "x": 110,
-          "y": 1200,
-          "w": 860,
-          "h": 5,
-          "fill": "#F5F7F5",
-          "rotation": -12,
-          "opacity": 0.7
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 923.5,
-              "r": 61.2,
-              "fill": "#171719"
-            },
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 955,
-              "r": 59.4,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 519.3,
-              "y": 950.5,
-              "r": 5.4,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 560.7,
-              "y": 950.5,
-              "r": 5.4,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 466.2,
-              "y": 1018,
-              "w": 147.6,
-              "h": 189,
-              "radius": 43.2,
-              "fill": "#D49A28"
-            },
-            {
-              "type": "rrect",
-              "x": 421.2,
-              "y": 1031.5,
-              "w": 43.2,
-              "h": 171,
-              "radius": 21.6,
-              "fill": "#D99A72",
-              "rotation": -28
-            },
-            {
-              "type": "rrect",
-              "x": 615.6,
-              "y": 1031.5,
-              "w": 43.2,
-              "h": 171,
-              "radius": 21.6,
-              "fill": "#D99A72",
-              "rotation": 28
-            },
-            {
-              "type": "rrect",
-              "x": 477,
-              "y": 1184.5,
-              "w": 49.5,
-              "h": 153,
-              "radius": 21.6,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 553.5,
-              "y": 1184.5,
-              "w": 49.5,
-              "h": 153,
-              "radius": 21.6,
-              "fill": "#202A27"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "Kal se nahi. Aaj se.",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
-          "face": "Inter",
-          "weight": 800,
-          "fill": "#F5F7F5",
-          "fit": {
-            "maxLines": 3,
-            "minSize": 48
-          },
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "GET UP. GO AGAIN.",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#FFD166",
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "stamp",
-          "text": "RESET / REPEAT",
-          "x": 560,
-          "y": 690,
-          "w": 370,
-          "h": 130,
-          "size": 38,
-          "rotation": -8,
-          "stroke": "#1ED760",
-          "fill": "#1ED760",
-          "strokeWidth": 5,
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 0.3,
-              "dur": 0.5,
-              "ease": "back.out"
-            },
-            "out": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "alone",
-      "from": 11.8,
-      "duration": 3.3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
-      "blocks": [
-        {
-          "type": "bg",
-          "fill": "#10131F"
-        },
-        {
-          "type": "rrect",
-          "x": -20,
-          "y": 760,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#1C2237"
-        },
-        {
-          "type": "rrect",
-          "x": 125,
-          "y": 855,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#242B43"
-        },
-        {
-          "type": "rrect",
-          "x": 270,
-          "y": 950,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#1C2237"
-        },
-        {
-          "type": "rrect",
-          "x": 415,
-          "y": 760,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#242B43"
-        },
-        {
-          "type": "rrect",
-          "x": 560,
-          "y": 855,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#1C2237"
-        },
-        {
-          "type": "rrect",
-          "x": 705,
-          "y": 950,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#242B43"
-        },
-        {
-          "type": "rrect",
-          "x": 850,
-          "y": 760,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#1C2237"
-        },
-        {
-          "type": "rrect",
-          "x": 995,
-          "y": 855,
-          "w": 110,
-          "h": 650,
-          "radius": 8,
-          "fill": "#242B43"
-        },
-        {
-          "type": "rect",
-          "x": 20,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 165,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 310,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 455,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 600,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 745,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 890,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 1035,
-          "y": 850,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 20,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 165,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 310,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 455,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 600,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 745,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 890,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 1035,
-          "y": 970,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 20,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 165,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 310,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 455,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 600,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 745,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 890,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "rect",
-          "x": 1035,
-          "y": 1090,
-          "w": 22,
-          "h": 34,
-          "fill": "#A8A5FF",
-          "opacity": 0.7
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 1025.7,
-              "r": 53.04,
-              "fill": "#171719"
-            },
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 1053,
-              "r": 51.480000000000004,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 522.06,
-              "y": 1049.1,
-              "r": 4.68,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 557.94,
-              "y": 1049.1,
-              "r": 4.68,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 476.04,
-              "y": 1107.6,
-              "w": 127.92,
-              "h": 163.8,
-              "radius": 37.44,
-              "fill": "#47436F"
-            },
-            {
-              "type": "rrect",
-              "x": 437.03999999999996,
-              "y": 1119.3,
-              "w": 37.44,
-              "h": 148.20000000000002,
-              "radius": 18.72,
-              "fill": "#D99A72",
-              "rotation": 12
-            },
-            {
-              "type": "rrect",
-              "x": 605.52,
-              "y": 1119.3,
-              "w": 37.44,
-              "h": 148.20000000000002,
-              "radius": 18.72,
-              "fill": "#D99A72",
-              "rotation": -12
-            },
-            {
-              "type": "rrect",
-              "x": 485.4,
-              "y": 1251.9,
-              "w": 42.9,
-              "h": 132.6,
-              "radius": 18.72,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 551.7,
-              "y": 1251.9,
-              "w": 42.9,
-              "h": 132.6,
-              "radius": 18.72,
-              "fill": "#202A27"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "Kabhi bas khud ke saath.",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
-          "face": "Inter",
-          "weight": 800,
-          "fill": "#F5F7F5",
-          "fit": {
-            "maxLines": 3,
-            "minSize": 48
-          },
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "AND THAT'S OKAY.",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#A8A5FF",
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "stamp",
-          "text": "NO PLANS\nNO PRESSURE",
-          "x": 620,
-          "y": 690,
-          "w": 390,
-          "h": 150,
-          "size": 35,
-          "rotation": 7,
-          "stroke": "#A8A5FF",
-          "fill": "#A8A5FF",
-          "strokeWidth": 5,
-          "motion": {
-            "in": {
-              "type": "slideLeft",
-              "at": 0.3,
-              "dur": 0.6,
               "ease": "power3.out",
               "distance": 80
             },
             "out": false
           }
+        },
+        {
+          "type": "text",
+          "text": "GOOD MOOD. FULL VOLUME.",
+          "x": 86,
+          "y": 1580,
+          "w": 810,
+          "h": 54,
+          "size": 22,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 2,
+          "fill": "#1ED760",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.48,
+              "dur": 0.45,
+              "ease": "power2.out",
+              "distance": 50
+            },
+            "out": false
+          }
         }
       ]
     },
     {
-      "id": "confidence",
-      "from": 14.8,
-      "duration": 4,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
+      "id": "sad",
+      "from": 5.4,
+      "duration": 3,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
       "blocks": [
         {
-          "type": "bg",
-          "fill": "#241326"
-        },
-        {
-          "type": "circle",
-          "x": 540,
-          "y": 1000,
-          "r": 420,
-          "fill": "#F2A6FF",
-          "opacity": 0.13,
-          "blur": 70
-        },
-        {
-          "type": "rrect",
-          "x": 210,
-          "y": 1380,
-          "w": 660,
-          "h": 18,
-          "radius": 9,
-          "fill": "#F2A6FF"
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
+          "type": "photoCam",
+          "src": "sad",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
             {
-              "type": "circle",
-              "x": 540,
-              "y": 901.3,
-              "r": 69.36,
-              "fill": "#171719"
+              "fx": 0.64,
+              "fy": 0.42,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1.15,
+              "ease": "power2.out"
             },
             {
-              "type": "circle",
-              "x": 540,
-              "y": 937,
-              "r": 67.32000000000001,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 516.54,
-              "y": 931.9,
-              "r": 6.12,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 563.46,
-              "y": 931.9,
-              "r": 6.12,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 456.36,
-              "y": 1008.4,
-              "w": 167.28,
-              "h": 214.20000000000002,
-              "radius": 48.96,
-              "fill": "#8E4C98"
-            },
-            {
-              "type": "rrect",
-              "x": 405.36,
-              "y": 1023.7,
-              "w": 48.96,
-              "h": 193.8,
-              "radius": 24.48,
-              "fill": "#D99A72",
-              "rotation": -28
-            },
-            {
-              "type": "rrect",
-              "x": 625.6800000000001,
-              "y": 1023.7,
-              "w": 48.96,
-              "h": 193.8,
-              "radius": 24.48,
-              "fill": "#D99A72",
-              "rotation": 28
-            },
-            {
-              "type": "rrect",
-              "x": 468.6,
-              "y": 1197.1,
-              "w": 56.1,
-              "h": 173.4,
-              "radius": 24.48,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 555.3,
-              "y": 1197.1,
-              "w": 56.1,
-              "h": 173.4,
-              "radius": 24.48,
-              "fill": "#202A27"
+              "fx": 0.58,
+              "fy": 0.45,
+              "zoom": 1.18,
+              "at": 1.15,
+              "dur": 1.6,
+              "ease": "power2.inOut"
             }
           ]
         },
         {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(3,7,14,0.28)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 250,
+          "w": 910,
+          "h": 330,
+          "radius": 28,
+          "fill": "rgba(3,8,14,0.68)"
+        },
+        {
           "type": "text",
-          "text": "Main character energy.",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
+          "text": "Dil heavy?\nFeel it.",
+          "x": 84,
+          "y": 315,
+          "w": 810,
+          "h": 210,
+          "size": 88,
           "face": "Inter",
           "weight": 800,
-          "fill": "#F5F7F5",
+          "fill": "#FFFFFF",
           "fit": {
-            "maxLines": 3,
-            "minSize": 48
+            "maxLines": 2,
+            "minSize": 60
           },
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
+              "at": 0.14,
+              "dur": 0.5,
               "ease": "power3.out"
             },
             "out": false
@@ -2144,266 +419,208 @@
         },
         {
           "type": "text",
-          "text": "YOUR MOMENT. YOUR RULES.",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
-          "size": 22,
+          "text": "KABHI SAD SONGS BHI ZAROORI HAIN.",
+          "x": 86,
+          "y": 540,
+          "w": 830,
+          "h": 58,
+          "size": 19,
           "face": "IBM Plex Mono",
           "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#F2A6FF",
+          "letterSpacing": 1.2,
+          "fill": "#B8D7FF",
           "motion": {
             "in": {
               "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
+              "at": 0.42,
+              "dur": 0.4,
               "ease": "power2.out",
-              "distance": 20
+              "distance": 36
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "from": 8.25,
+      "duration": 3,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "focus",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
+            {
+              "fx": 0.35,
+              "fy": 0.42,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1.15,
+              "ease": "power3.out"
+            },
+            {
+              "fx": 0.42,
+              "fy": 0.48,
+              "zoom": 1.17,
+              "at": 1.15,
+              "dur": 1.6,
+              "ease": "power2.inOut"
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(3,8,6,0.27)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 1350,
+          "w": 900,
+          "h": 300,
+          "radius": 28,
+          "fill": "rgba(3,8,6,0.70)"
+        },
+        {
+          "type": "text",
+          "text": "Focus?\nZone in.",
+          "x": 84,
+          "y": 1390,
+          "w": 810,
+          "h": 190,
+          "size": 86,
+          "face": "Inter",
+          "weight": 800,
+          "fill": "#FFFFFF",
+          "fit": {
+            "maxLines": 2,
+            "minSize": 60
+          },
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.16,
+              "dur": 0.5,
+              "ease": "power3.out",
+              "distance": 75
             },
             "out": false
           }
         },
         {
-          "type": "stamp",
-          "text": "MAIN\nCHARACTER",
-          "x": 620,
-          "y": 690,
-          "w": 390,
-          "h": 150,
-          "size": 42,
-          "rotation": -6,
-          "stroke": "#F2A6FF",
-          "fill": "#F2A6FF",
-          "strokeWidth": 5,
+          "type": "text",
+          "text": "ONE TASK. ONE PLAYLIST.",
+          "x": 86,
+          "y": 1580,
+          "w": 810,
+          "h": 52,
+          "size": 22,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 2,
+          "fill": "#1ED760",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.46,
+              "dur": 0.42,
+              "ease": "power2.out",
+              "distance": 46
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "party",
+      "from": 11.1,
+      "duration": 2.9,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "party",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
+            {
+              "fx": 0.58,
+              "fy": 0.44,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1,
+              "ease": "power3.out"
+            },
+            {
+              "fx": 0.62,
+              "fy": 0.42,
+              "zoom": 1.2,
+              "at": 1,
+              "dur": 1.65,
+              "ease": "power2.inOut"
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(4,5,10,0.26)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 250,
+          "w": 910,
+          "h": 330,
+          "radius": 28,
+          "fill": "rgba(4,5,10,0.66)"
+        },
+        {
+          "type": "text",
+          "text": "Energy?\nBeat on.",
+          "x": 84,
+          "y": 310,
+          "w": 810,
+          "h": 210,
+          "size": 88,
+          "face": "Inter",
+          "weight": 800,
+          "fill": "#FFFFFF",
+          "fit": {
+            "maxLines": 2,
+            "minSize": 60
+          },
           "motion": {
             "in": {
               "type": "scale",
-              "at": 0.3,
-              "dur": 0.5,
+              "at": 0.14,
+              "dur": 0.45,
               "ease": "back.out"
             },
             "out": false
           }
-        }
-      ]
-    },
-    {
-      "id": "portals",
-      "from": 18.5,
-      "duration": 5.5,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
-      "blocks": [
-        {
-          "type": "bg",
-          "fill": "#07150D"
-        },
-        {
-          "type": "circle",
-          "x": 840,
-          "y": 1000,
-          "r": 145,
-          "fill": "#1ED760",
-          "opacity": 0.23,
-          "stroke": "#F5F7F5",
-          "strokeWidth": 5,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 32,
-              "period": 3,
-              "phase": 0
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 632.8868439171073,
-          "y": 1313.783621967135,
-          "r": 145,
-          "fill": "#76B9FF",
-          "opacity": 0.23,
-          "stroke": "#F5F7F5",
-          "strokeWidth": 5,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 32,
-              "period": 3.7,
-              "phase": 1
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 297.519771819207,
-          "y": 1194.3091354493724,
-          "r": 145,
-          "fill": "#FFD166",
-          "opacity": 0.23,
-          "stroke": "#F5F7F5",
-          "strokeWidth": 5,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 32,
-              "period": 4.4,
-              "phase": 2
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 296.9583353628002,
-          "y": 806.5414602738911,
-          "r": 145,
-          "fill": "#A8A5FF",
-          "opacity": 0.23,
-          "stroke": "#F5F7F5",
-          "strokeWidth": 5,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 32,
-              "period": 5.1,
-              "phase": 3
-            }
-          }
-        },
-        {
-          "type": "circle",
-          "x": 631.9777403907297,
-          "y": 685.8925099908237,
-          "r": 145,
-          "fill": "#F2A6FF",
-          "opacity": 0.23,
-          "stroke": "#F5F7F5",
-          "strokeWidth": 5,
-          "motion": {
-            "loop": {
-              "type": "float",
-              "amp": 32,
-              "period": 5.8,
-              "phase": 4
-            }
-          }
-        },
-        {
-          "type": "group",
-          "x": 0,
-          "y": 0,
-          "children": [
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 970.5,
-              "r": 47.599999999999994,
-              "fill": "#171719"
-            },
-            {
-              "type": "circle",
-              "x": 540,
-              "y": 995,
-              "r": 46.199999999999996,
-              "fill": "#D99A72"
-            },
-            {
-              "type": "circle",
-              "x": 523.9,
-              "y": 991.5,
-              "r": 4.199999999999999,
-              "fill": "#151515"
-            },
-            {
-              "type": "circle",
-              "x": 556.1,
-              "y": 991.5,
-              "r": 4.199999999999999,
-              "fill": "#151515"
-            },
-            {
-              "type": "rrect",
-              "x": 482.6,
-              "y": 1044,
-              "w": 114.8,
-              "h": 147,
-              "radius": 33.599999999999994,
-              "fill": "#1ED760"
-            },
-            {
-              "type": "rrect",
-              "x": 447.6,
-              "y": 1054.5,
-              "w": 33.599999999999994,
-              "h": 133,
-              "radius": 16.799999999999997,
-              "fill": "#D99A72",
-              "rotation": 12
-            },
-            {
-              "type": "rrect",
-              "x": 598.8,
-              "y": 1054.5,
-              "w": 33.599999999999994,
-              "h": 133,
-              "radius": 16.799999999999997,
-              "fill": "#D99A72",
-              "rotation": -12
-            },
-            {
-              "type": "rrect",
-              "x": 491,
-              "y": 1173.5,
-              "w": 38.5,
-              "h": 118.99999999999999,
-              "radius": 16.799999999999997,
-              "fill": "#202A27"
-            },
-            {
-              "type": "rrect",
-              "x": 550.5,
-              "y": 1173.5,
-              "w": 38.5,
-              "h": 118.99999999999999,
-              "radius": 16.799999999999997,
-              "fill": "#202A27"
-            }
-          ]
         },
         {
           "type": "text",
-          "text": "Har feeling ka apna sound.",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
-          "face": "Inter",
-          "weight": 800,
-          "fill": "#F5F7F5",
-          "fit": {
-            "maxLines": 3,
-            "minSize": 48
-          },
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "WHATEVER YOU FEEL, PRESS PLAY.",
-          "x": 78,
-          "y": 530,
-          "w": 920,
-          "h": 65,
+          "text": "BASS UP. WORLD OFF.",
+          "x": 86,
+          "y": 535,
+          "w": 820,
+          "h": 55,
           "size": 22,
           "face": "IBM Plex Mono",
           "weight": 700,
@@ -2411,34 +628,11 @@
           "fill": "#1ED760",
           "motion": {
             "in": {
-              "type": "rise",
-              "at": 0.45,
-              "dur": 0.5,
-              "ease": "power2.out",
-              "distance": 20
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "stamp",
-          "text": "PRESS PLAY",
-          "x": 620,
-          "y": 690,
-          "w": 390,
-          "h": 150,
-          "size": 48,
-          "rotation": 5,
-          "stroke": "#1ED760",
-          "fill": "#1ED760",
-          "strokeWidth": 5,
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.3,
-              "dur": 0.6,
+              "type": "slideRight",
+              "at": 0.42,
+              "dur": 0.4,
               "ease": "power3.out",
-              "distance": 90
+              "distance": 55
             },
             "out": false
           }
@@ -2446,78 +640,339 @@
       ]
     },
     {
-      "id": "brand",
-      "from": 23.7,
-      "duration": 3.3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
+      "id": "chill",
+      "from": 13.85,
+      "duration": 2.9,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "chill",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
+            {
+              "fx": 0.55,
+              "fy": 0.45,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1.1,
+              "ease": "power2.out"
+            },
+            {
+              "fx": 0.6,
+              "fy": 0.45,
+              "zoom": 1.16,
+              "at": 1.1,
+              "dur": 1.55,
+              "ease": "power2.inOut"
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(3,8,6,0.32)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 1350,
+          "w": 900,
+          "h": 300,
+          "radius": 28,
+          "fill": "rgba(3,8,6,0.67)"
+        },
+        {
+          "type": "text",
+          "text": "Bas thoda\nsukoon.",
+          "x": 84,
+          "y": 1390,
+          "w": 810,
+          "h": 190,
+          "size": 86,
+          "face": "Inter",
+          "weight": 800,
+          "fill": "#FFFFFF",
+          "fit": {
+            "maxLines": 2,
+            "minSize": 60
+          },
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.15,
+              "dur": 0.5,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SLOW DOWN. PRESS PLAY.",
+          "x": 86,
+          "y": 1585,
+          "w": 810,
+          "h": 50,
+          "size": 22,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 2,
+          "fill": "#B8F7CE",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.46,
+              "dur": 0.42,
+              "ease": "power2.out",
+              "distance": 34
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "from": 16.6,
+      "duration": 3.25,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "travel",
+          "w": 1080,
+          "h": 1920,
+          "shots": [
+            {
+              "fx": 0.52,
+              "fy": 0.42,
+              "zoom": 1.02,
+              "at": 0,
+              "dur": 1.15,
+              "ease": "power3.out"
+            },
+            {
+              "fx": 0.58,
+              "fy": 0.44,
+              "zoom": 1.18,
+              "at": 1.15,
+              "dur": 1.8,
+              "ease": "power2.inOut"
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "fill": "rgba(4,8,7,0.30)"
+        },
+        {
+          "type": "rrect",
+          "x": 52,
+          "y": 250,
+          "w": 910,
+          "h": 340,
+          "radius": 28,
+          "fill": "rgba(3,8,6,0.68)"
+        },
+        {
+          "type": "text",
+          "text": "Raasta lamba?\nPlaylist saath.",
+          "x": 84,
+          "y": 305,
+          "w": 830,
+          "h": 220,
+          "size": 80,
+          "face": "Inter",
+          "weight": 800,
+          "fill": "#FFFFFF",
+          "fit": {
+            "maxLines": 2,
+            "minSize": 56
+          },
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.14,
+              "dur": 0.52,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "CITY LIGHTS. YOUR SOUNDTRACK.",
+          "x": 86,
+          "y": 545,
+          "w": 830,
+          "h": 55,
+          "size": 20,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 1.6,
+          "fill": "#1ED760",
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.46,
+              "dur": 0.4,
+              "ease": "power2.out",
+              "distance": 52
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "playlist",
+      "from": 19.75,
+      "duration": 5.35,
+      "fadeIn": 0.08,
+      "fadeOut": 0.12,
       "blocks": [
         {
           "type": "bg",
-          "fill": "#1ED760"
-        },
-        {
-          "type": "circle",
-          "x": 540,
-          "y": 870,
-          "r": 240,
           "fill": "#07150D"
         },
         {
           "type": "circle",
           "x": 540,
-          "y": 870,
-          "r": 172,
-          "fill": "#1ED760"
+          "y": 920,
+          "r": 480,
+          "fill": "#1ED760",
+          "opacity": 0.1,
+          "blur": 85
         },
         {
-          "type": "rule",
-          "x": 450,
-          "y": 800,
-          "w": 180,
-          "h": 18,
-          "fill": "#07150D",
-          "rotation": -14
+          "type": "rrect",
+          "x": 150,
+          "y": 190,
+          "w": 780,
+          "h": 1480,
+          "radius": 78,
+          "fill": "#101A14",
+          "stroke": "#1ED760",
+          "strokeWidth": 5
         },
         {
-          "type": "rule",
-          "x": 450,
-          "y": 865,
-          "w": 180,
-          "h": 18,
-          "fill": "#07150D",
-          "rotation": -14
+          "type": "rrect",
+          "x": 178,
+          "y": 220,
+          "w": 724,
+          "h": 1420,
+          "radius": 58,
+          "fill": "#08100C"
         },
         {
-          "type": "rule",
-          "x": 450,
-          "y": 930,
-          "w": 180,
-          "h": 18,
-          "fill": "#07150D",
-          "rotation": -14
+          "type": "rrect",
+          "x": 462,
+          "y": 250,
+          "w": 156,
+          "h": 16,
+          "radius": 8,
+          "fill": "#5B6D62"
         },
         {
           "type": "text",
-          "text": "Whatever the mood. Spotify.",
-          "x": 72,
-          "y": 270,
-          "w": 936,
-          "h": 250,
-          "size": 74,
+          "text": "Spotify",
+          "x": 250,
+          "y": 360,
+          "w": 580,
+          "h": 90,
+          "size": 64,
           "face": "Inter",
           "weight": 800,
-          "fill": "#07150D",
+          "fill": "#F5F8F6"
+        },
+        {
+          "type": "text",
+          "text": "Har mood ka\napna soundtrack.",
+          "x": 250,
+          "y": 480,
+          "w": 600,
+          "h": 190,
+          "size": 66,
+          "face": "Inter",
+          "weight": 800,
+          "fill": "#F5F8F6",
           "fit": {
-            "maxLines": 3,
+            "maxLines": 2,
             "minSize": 48
           },
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.12,
-              "dur": 0.55,
+              "at": 0.2,
+              "dur": 0.5,
               "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cardStack",
+          "x": 540,
+          "y": 1010,
+          "w": 650,
+          "h": 220,
+          "titleSize": 58,
+          "subSize": 24,
+          "at": 0.72,
+          "step": 0.58,
+          "from": "below",
+          "tilt": 2.2,
+          "items": [
+            {
+              "title": "FEEL GOOD",
+              "sub": "Jab din apna ho",
+              "fill": "#B8F7CE",
+              "ink": "#07150D"
+            },
+            {
+              "title": "FOCUS MODE",
+              "sub": "Jab kaam pe lock-in",
+              "fill": "#F5F8F6",
+              "ink": "#07150D"
+            },
+            {
+              "title": "SAD SONGS",
+              "sub": "Jab dil ko gaana ho",
+              "fill": "#1ED760",
+              "ink": "#07150D"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "ONE APP. EVERY FEELING.",
+          "x": 250,
+          "y": 1440,
+          "w": 580,
+          "h": 60,
+          "size": 22,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 1.8,
+          "fill": "#1ED760",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 2.65,
+              "dur": 0.45,
+              "ease": "power2.out",
+              "distance": 35
             },
             "out": false
           }
@@ -2526,59 +981,70 @@
     },
     {
       "id": "cta",
-      "from": 26.7,
-      "duration": 3.3,
-      "fadeIn": 0.22,
-      "fadeOut": 0.3,
+      "from": 24.9,
+      "duration": 5.1,
+      "fadeIn": 0.08,
+      "fadeOut": 0,
       "blocks": [
         {
           "type": "bg",
-          "fill": "#080B0A"
+          "fill": "#1ED760"
         },
         {
           "type": "circle",
           "x": 540,
-          "y": 900,
-          "r": 250,
-          "fill": "#1ED760",
-          "opacity": 0.14,
-          "blur": 40
+          "y": 790,
+          "r": 270,
+          "fill": "#07150D"
         },
         {
-          "type": "cta",
-          "text": "GET IT ON NING STORE",
-          "x": 150,
-          "y": 1390,
-          "w": 780,
-          "h": 120,
-          "fill": "#1ED760",
-          "textFill": "#07150D",
-          "size": 30,
-          "face": "Inter",
-          "arrow": true,
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 0.5,
-              "dur": 0.55,
-              "ease": "back.out"
-            }
-          }
+          "type": "circle",
+          "x": 540,
+          "y": 790,
+          "r": 205,
+          "fill": "#1ED760"
+        },
+        {
+          "type": "rule",
+          "x": 430,
+          "y": 715,
+          "w": 220,
+          "h": 22,
+          "fill": "#07150D",
+          "rotation": -13
+        },
+        {
+          "type": "rule",
+          "x": 430,
+          "y": 790,
+          "w": 220,
+          "h": 22,
+          "fill": "#07150D",
+          "rotation": -13
+        },
+        {
+          "type": "rule",
+          "x": 430,
+          "y": 865,
+          "w": 220,
+          "h": 22,
+          "fill": "#07150D",
+          "rotation": -13
         },
         {
           "type": "text",
-          "text": "Jo feel karo. Play karo.",
+          "text": "Jo feel karo.\nPlay karo.",
           "x": 72,
-          "y": 270,
+          "y": 260,
           "w": 936,
           "h": 250,
-          "size": 74,
+          "size": 94,
           "face": "Inter",
           "weight": 800,
-          "fill": "#F5F7F5",
+          "fill": "#07150D",
           "fit": {
-            "maxLines": 3,
-            "minSize": 48
+            "maxLines": 2,
+            "minSize": 66
           },
           "motion": {
             "in": {
@@ -2592,25 +1058,46 @@
         },
         {
           "type": "text",
-          "text": "AVAILABLE ON NING STORE",
+          "text": "SPOTIFY. HAR MOOD MEIN SAATH.",
           "x": 78,
-          "y": 530,
+          "y": 555,
           "w": 920,
-          "h": 65,
-          "size": 22,
+          "h": 60,
+          "size": 24,
           "face": "IBM Plex Mono",
           "weight": 700,
-          "letterSpacing": 2,
-          "fill": "#1ED760",
+          "letterSpacing": 1.5,
+          "fill": "#07150D",
           "motion": {
             "in": {
               "type": "rise",
               "at": 0.45,
-              "dur": 0.5,
+              "dur": 0.42,
               "ease": "power2.out",
-              "distance": 20
+              "distance": 25
             },
             "out": false
+          }
+        },
+        {
+          "type": "cta",
+          "text": "GET IT FROM NING STORE",
+          "x": 150,
+          "y": 1400,
+          "w": 780,
+          "h": 130,
+          "fill": "#07150D",
+          "textFill": "#1ED760",
+          "size": 32,
+          "face": "Inter",
+          "arrow": true,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1.05,
+              "dur": 0.55,
+              "ease": "back.out"
+            }
           }
         }
       ]
@@ -2619,41 +1106,54 @@
   "transitions": [
     {
       "type": "wipe",
-      "at": 3,
-      "duration": 0.48,
+      "at": 2.45,
+      "duration": 0.42,
       "color": "#1ED760",
-      "skew": -12
+      "skew": -10
     },
     {
       "type": "flash",
-      "at": 9,
-      "duration": 0.25,
+      "at": 5.45,
+      "duration": 0.22,
+      "color": "#B8F7CE"
+    },
+    {
+      "type": "wipe",
+      "at": 8.35,
+      "duration": 0.44,
+      "color": "#1ED760",
+      "skew": 12
+    },
+    {
+      "type": "flash",
+      "at": 11.2,
+      "duration": 0.2,
       "color": "#FFD166"
     },
     {
       "type": "band",
-      "at": 15,
-      "duration": 0.55,
-      "color": "#F2A6FF"
+      "at": 14,
+      "duration": 0.48,
+      "color": "#B8F7CE"
     },
     {
       "type": "wipe",
-      "at": 19,
-      "duration": 0.6,
+      "at": 16.75,
+      "duration": 0.48,
       "color": "#1ED760",
-      "skew": 10
+      "skew": -8
     },
     {
       "type": "dip",
-      "at": 24,
-      "duration": 0.45,
+      "at": 19.85,
+      "duration": 0.42,
       "color": "#07150D"
     },
     {
       "type": "flash",
-      "at": 27,
+      "at": 25,
       "duration": 0.2,
-      "color": "#1ED760"
+      "color": "#F5F8F6"
     }
   ],
   "chrome": {
@@ -2667,7 +1167,7 @@
         "face": "IBM Plex Mono",
         "weight": 700,
         "letterSpacing": 2,
-        "fill": "#F5F7F5"
+        "fill": "#F5F8F6"
       },
       {
         "type": "rule",
