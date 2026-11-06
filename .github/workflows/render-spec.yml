@@ -9,11 +9,11 @@ on:
       spec:
         description: Repository-relative HyperSpec JSON path
         required: true
-        default: specs/minimal-3s.json
+        default: specs/poverty-in-india-reframed.json
       stills_at:
         description: Review still seconds
         required: false
-        default: '1,4,8'
+        default: '3,7.5,12.5,17.5,22.5,27.5,30.5'
 
 permissions:
   contents: read
@@ -29,10 +29,6 @@ jobs:
           node-version: 22.20.0
           cache: npm
       - run: npm ci
-      - name: Install ffprobe
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
       - name: Validate and plan
         env:
           SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
@@ -47,11 +43,11 @@ jobs:
       - name: Render review stills and proxy MP4
         env:
           SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
-          STILLS_AT: ${{ inputs.stills_at || '1,4,8' }}
+          STILLS_AT: ${{ inputs.stills_at || '3,7.5,12.5,17.5,22.5,27.5,30.5' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --scale 0.5 --out out/render.mp4
-          ffprobe -v error -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/render.mp4 > out/metadata.json
+          node -e 'const fs=require("fs"); const s=JSON.parse(fs.readFileSync(process.env.SPEC)); const st=fs.statSync("out/render.mp4"); fs.writeFileSync("out/metadata.json", JSON.stringify({width:s.canvas.w/2,height:s.canvas.h/2,fps:s.canvas.fps,frames:s.duration*s.canvas.fps,duration:s.duration,size:st.size},null,2))'
       - uses: actions/upload-artifact@v4
         with:
           name: custom-hyper-render
