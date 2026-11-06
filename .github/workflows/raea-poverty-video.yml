@@ -51,6 +51,9 @@ jobs:
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" assets/poverty/vendor.jpg
           file assets/poverty/*
 
+      - name: Install Custom Hyper runtime dependencies
+        run: npm ci
+
       - name: Prepare X80 engine
         run: |
           ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
