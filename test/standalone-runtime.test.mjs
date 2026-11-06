@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import test from 'node:test';
 
 test('local runtime exports the required renderer API', async () => {
@@ -17,4 +18,15 @@ test('render source owns its font root', () => {
 
   assert.match(source, /CUSTOM_HYPER_ROOT/);
   assert.doesNotMatch(source, /x80-video-engine/);
+});
+
+const sourceFiles = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+  const file = join(dir, entry.name);
+  return entry.isDirectory() ? sourceFiles(file) : (/\.(?:mjs|js)$/).test(file) ? [file] : [];
+});
+
+test('source and runtime do not reference the X80 workspace', () => {
+  for (const file of [...sourceFiles('src'), ...sourceFiles('engine'), 'server.mjs']) {
+    assert.doesNotMatch(readFileSync(file, 'utf8'), /x80-video-engine/, file);
+  }
 });

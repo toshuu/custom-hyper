@@ -12,7 +12,7 @@ import { slideshowLint } from './slideshow-lint.mjs';
 import { loadSpec, renderHyper, registerFonts } from './render.mjs';
 import { demoPlan } from './director.mjs';
 import { generatePlan } from './llm.mjs';
-import { createSkiaMeasurer } from '../../x80-video-engine/packages/renderer-skia/dist/index.js';
+import { createSkiaMeasurer } from '../engine/skia/index.js';
 
 const argv = process.argv.slice(2);
 const cmd = argv[0];

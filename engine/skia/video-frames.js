@@ -1,6 +1,6 @@
 /**
  * M5 — Upload predecoded RGBA video frames to drawable canvases.
- * Decode stays in @x80/media (raw bytes); this helper turns bytes into
+ * Decode stays in the caller (raw bytes); this helper turns bytes into
  * backend handles the compositor can draw. One upload per frame, cached.
  */
 import { createCanvas } from '@napi-rs/canvas';

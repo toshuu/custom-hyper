@@ -1,7 +1,7 @@
 /**
  * M3 — Skia backend for the agnostic Renderer interface.
  * Implemented on @napi-rs/canvas (Skia). No timeline/animation logic here:
- * all frame math happens in @x80/core's compositor; this file only turns
+ * all frame math happens in the core compositor; this file only turns
  * draw calls into pixels.
  *
  * Conventions (documented, M4 may refine text):

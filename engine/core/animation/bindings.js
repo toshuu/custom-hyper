@@ -41,7 +41,7 @@ export const resolveAnimNumber = (value, frame, fps) => {
         return interpolate(frame, [...value.frames], [...value.values], value.options);
     }
     if (value.binding === 'path' || value.binding === 'stagger') {
-        throw new Error(`motion '${value.binding}' bindings compile away in @x80/reelspec (compileFreeNode) — the core only resolves interpolate/keyframes/spring/color`);
+        throw new Error(`motion '${value.binding}' bindings must compile away before rendering; the core only resolves interpolate/keyframes/spring/color`);
     }
     return spring({
         frame,

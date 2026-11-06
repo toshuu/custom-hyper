@@ -3,7 +3,7 @@ import { bake, combineMotion, motionFns } from './motion.mjs';
 import { easeFn } from './ease.mjs';
 import { compileMechanic } from './mechanics.mjs';
 import { compileExplain } from './explain.mjs';
-import { layoutText } from '../../x80-video-engine/packages/core/dist/index.js';
+import { layoutText } from '../engine/core/index.js';
 
 const TAU = Math.PI * 2;
 const num = (v, d) => (typeof v === 'number' && Number.isFinite(v) ? v : d);

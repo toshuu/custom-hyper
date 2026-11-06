@@ -1,8 +1,8 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join } from 'node:path';
-import { createSkiaMeasurer } from '../../x80-video-engine/packages/renderer-skia/dist/index.js';
-import { layoutText } from '../../x80-video-engine/packages/core/dist/index.js';
+import { createSkiaMeasurer } from '../engine/skia/index.js';
+import { layoutText } from '../engine/core/index.js';
 import { expandPlan, demoPlan } from './director.mjs';
 import { generatePlan, generateBoard } from './llm.mjs';
 import { renderHyper, registerFonts } from './render.mjs';

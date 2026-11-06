@@ -1,5 +1,5 @@
 
-import { Easing } from '../../x80-video-engine/packages/core/dist/index.js';
+import { Easing } from '../engine/core/index.js';
 
 const make = (name) => {
   switch (name) {
