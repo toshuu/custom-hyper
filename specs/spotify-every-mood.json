@@ -63,6 +63,71 @@
               "period": 10
             }
           ]
+        },
+        {
+          "type": "track",
+          "child": {
+            "type": "circle",
+            "r": 24,
+            "fill": "#1ED760",
+            "opacity": 0.9
+          },
+          "poses": [
+            {
+              "at": 0,
+              "x": 900,
+              "y": 1500,
+              "scale": 0.7
+            },
+            {
+              "at": 3,
+              "x": 180,
+              "y": 680,
+              "scale": 0.9
+            },
+            {
+              "at": 6,
+              "x": 900,
+              "y": 1450,
+              "scale": 0.65
+            },
+            {
+              "at": 9,
+              "x": 170,
+              "y": 680,
+              "scale": 0.9
+            },
+            {
+              "at": 12,
+              "x": 900,
+              "y": 1450,
+              "scale": 0.65
+            },
+            {
+              "at": 15,
+              "x": 180,
+              "y": 680,
+              "scale": 0.9
+            },
+            {
+              "at": 19,
+              "x": 900,
+              "y": 1450,
+              "scale": 0.7
+            },
+            {
+              "at": 24,
+              "x": 180,
+              "y": 680,
+              "scale": 0.9
+            },
+            {
+              "at": 27,
+              "x": 900,
+              "y": 1450,
+              "scale": 0.65
+            }
+          ]
         }
       ]
     },
@@ -709,6 +774,39 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 540,
+          "y": 700,
+          "w": 760,
+          "h": 230,
+          "titleSize": 72,
+          "subSize": 27,
+          "at": 0.25,
+          "step": 0.42,
+          "from": "below",
+          "tilt": 1.8,
+          "items": [
+            {
+              "title": "SUNNY SIDE",
+              "sub": "Bas aaj sab set hai",
+              "fill": "#FFFFFF",
+              "ink": "#07150D"
+            },
+            {
+              "title": "FULL VOLUME",
+              "sub": "That one song on repeat",
+              "fill": "#B8F7CE",
+              "ink": "#07150D"
+            },
+            {
+              "title": "GOOD ENERGY",
+              "sub": "Dil se, no reason",
+              "fill": "#1ED760",
+              "ink": "#07150D"
+            }
+          ]
         }
       ]
     },
@@ -1203,6 +1301,39 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 540,
+          "y": 700,
+          "w": 760,
+          "h": 230,
+          "titleSize": 72,
+          "subSize": 27,
+          "at": 0.25,
+          "step": 0.42,
+          "from": "right",
+          "tilt": 1.4,
+          "items": [
+            {
+              "title": "OLD CHAT",
+              "sub": "Naam abhi bhi yaad hai",
+              "fill": "#FFFFFF",
+              "ink": "#07150D"
+            },
+            {
+              "title": "2:17 AM",
+              "sub": "Woh gaana phir se",
+              "fill": "#A8C8FF",
+              "ink": "#07150D"
+            },
+            {
+              "title": "LET IT OUT",
+              "sub": "Feel it. Don't hide it.",
+              "fill": "#76B9FF",
+              "ink": "#07150D"
+            }
+          ]
         }
       ]
     },
@@ -1393,6 +1524,28 @@
               "dur": 0.5,
               "ease": "power2.out",
               "distance": 20
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "RESET / REPEAT",
+          "x": 650,
+          "y": 690,
+          "w": 370,
+          "h": 130,
+          "size": 38,
+          "rotation": -8,
+          "stroke": "#1ED760",
+          "fill": "#1ED760",
+          "strokeWidth": 5,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.3,
+              "dur": 0.5,
+              "ease": "back.out"
             },
             "out": false
           }
@@ -1827,6 +1980,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "stamp",
+          "text": "NO PLANS\nNO PRESSURE",
+          "x": 620,
+          "y": 690,
+          "w": 390,
+          "h": 150,
+          "size": 35,
+          "rotation": 7,
+          "stroke": "#A8A5FF",
+          "fill": "#A8A5FF",
+          "strokeWidth": 5,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.3,
+              "dur": 0.6,
+              "ease": "power3.out",
+              "distance": 80
+            },
+            "out": false
+          }
         }
       ]
     },
@@ -1985,6 +2161,28 @@
               "dur": 0.5,
               "ease": "power2.out",
               "distance": 20
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "MAIN\nCHARACTER",
+          "x": 620,
+          "y": 690,
+          "w": 390,
+          "h": 150,
+          "size": 42,
+          "rotation": -6,
+          "stroke": "#F2A6FF",
+          "fill": "#F2A6FF",
+          "strokeWidth": 5,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.3,
+              "dur": 0.5,
+              "ease": "back.out"
             },
             "out": false
           }
@@ -2221,6 +2419,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "stamp",
+          "text": "PRESS PLAY",
+          "x": 620,
+          "y": 690,
+          "w": 390,
+          "h": 150,
+          "size": 48,
+          "rotation": 5,
+          "stroke": "#1ED760",
+          "fill": "#1ED760",
+          "strokeWidth": 5,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.6,
+              "ease": "power3.out",
+              "distance": 90
+            },
+            "out": false
+          }
         }
       ]
     },
@@ -2286,7 +2507,7 @@
           "size": 74,
           "face": "Inter",
           "weight": 800,
-          "fill": "#F5F7F5",
+          "fill": "#07150D",
           "fit": {
             "maxLines": 3,
             "minSize": 48
