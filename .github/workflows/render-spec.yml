@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'specs/*.json'
-      - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
       spec:
@@ -14,7 +13,7 @@ on:
       stills_at:
         description: Review still seconds
         required: false
-        default: 1
+        default: '1,4,8'
 
 permissions:
   contents: read
@@ -38,7 +37,13 @@ jobs:
           if [ -n "$SPEC_INPUT" ]; then
             SPEC="$SPEC_INPUT"
           else
-            SPEC="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -E '^specs/[^/]+\\.json
+            SPEC="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -E '^specs/[^/]+\.json$' | head -n 1)"
+          fi
+          case "$SPEC" in
+            specs/*.json) test -f "$SPEC" ;;
+            *) echo "No valid spec found. Pass a specs/*.json path or commit one."; exit 1 ;;
+          esac
+          echo "spec=$SPEC" >> "$GITHUB_OUTPUT"
       - name: Validate and plan
         env:
           SPEC: ${{ steps.select-spec.outputs.spec }}
@@ -48,40 +53,8 @@ jobs:
           node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
       - name: Render review stills and proxy MP4
         env:
-          SPEC: ${{ inputs.spec }}
+          SPEC: ${{ steps.select-spec.outputs.spec }}
           STILLS_AT: ${{ inputs.stills_at || '1,4,8' }}
-        run: |
-          node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
-          node src/cli.mjs render "$SPEC" --scale 0.5 --out out/render.mp4
-          ffprobe -v error -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/render.mp4 > out/metadata.json
-      - uses: actions/upload-artifact@v4
-        with:
-          name: custom-hyper-render
-          path: |
-            out/review/
-            out/render.mp4
-            out/compiled-plan.json
-            out/metadata.json
-          if-no-files-found: error
-          retention-days: 14
- | head -n 1)"
-          fi
-          case "$SPEC" in
-            specs/*.json) test -f "$SPEC" ;;
-            *) echo "No valid spec found. Pass a specs/*.json path or commit one."; exit 1 ;;
-          esac
-          echo "spec=$SPEC" >> "$GITHUB_OUTPUT"
-      - name: Validate and plan
-        env:
-          SPEC: ${{ inputs.spec }}
-        run: |
-          node src/cli.mjs lint "$SPEC"
-          node src/cli.mjs check "$SPEC"
-          node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
-      - name: Render review stills and proxy MP4
-        env:
-          SPEC: ${{ inputs.spec }}
-          STILLS_AT: ${{ inputs.stills_at }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --scale 0.5 --out out/render.mp4
