@@ -23,22 +23,8 @@ jobs:
       - name: Checkout Custom Hyper
         uses: actions/checkout@v4
 
-      - name: Checkout X80 engine source
-        uses: actions/checkout@v4
-        with:
-          repository: toshuu/VIDMAKE
-          ref: main
-          path: VIDMAKE
-          sparse-checkout: |
-            x80-video-engine
-          sparse-checkout-cone-mode: true
-
-      - name: Prepare sibling engine path
-        run: |
-          ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
-          cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
-          npm install
-          npm run build
+      - name: Install Custom Hyper
+        run: npm ci
 
       - name: Validate composition
         run: node src/cli.mjs check specs/poverty-in-india.json
