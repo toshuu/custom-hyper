@@ -313,3 +313,10 @@ After every change:
 - Added `scripts/validate-assets.mjs` for deterministic file signature, dimensions, alpha, duplicate-hash, and manifest checks. Missing assets are reported as pending; they are never silently replaced.
 - Generation policy explicitly forbids contact sheets, collages, storyboards, embedded text, and generated brand logos. Each manifest entry is one independent generation request.
 - Current Spotify manifest assets are planned, not yet generated or validated. Do not render the updated reel until all required assets pass validation and official logo source is acquired.
+
+
+## Project status dashboard (2026-11-07)
+
+- Added read-only dashboard at `public/project-status.html`. It shows the P0-P4 roadmap, open prototype-gate work, deferred scope, architecture, documented evidence, and live commit activity from this repository's GitHub API.
+- Dashboard status is intentionally evidence-based. Roadmap phase completion does not mean the prototype acceptance gate has passed. Detailed engine evidence in this file is dated 2026-11-01; later repository commits are shown separately.
+- `stageset` is recorded as a Git submodule (gitlink) at commit `0285c835da75a58c4b771fd900f544d651a16e53`. Its internal files are not stored in this repository. The dashboard does not infer StageSet task counts.
