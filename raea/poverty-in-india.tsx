@@ -18,20 +18,20 @@ function Scene({ index, title, kicker, body, image, accent=C.amber, children }:a
       <Img src={staticFile(image)} style={{width:"100%",height:"100%",objectFit:"cover",transform:`translateY(${pan}px) scale(${drift})`}} />
     </AbsoluteFill>
     <AbsoluteFill style={{background:"linear-gradient(180deg,rgba(4,8,12,.18) 0%,rgba(4,8,12,.28) 30%,rgba(4,8,12,.94) 75%,#080D12 100%)"}}/>
-    <div style={{position:"absolute",left:72,right:72,top:86,display:"flex",justifyContent:"space-between",fontSize:23,letterSpacing:5,color:C.muted}}>
+    <div style={{position:"absolute",left:72,right:72,top:250,display:"flex",justifyContent:"space-between",fontSize:23,letterSpacing:5,color:C.muted}}>
       <span>INDIA / 2026</span><span>FIELD NOTES　{String(index).padStart(2,"0")}</span>
     </div>
-    <div style={{position:"absolute",left:72,right:72,top:450,opacity:enter,transform:`translateY(${(1-enter)*42}px)`}}>
+    <div style={{position:"absolute",left:72,right:72,top:430,opacity:enter,transform:`translateY(${(1-enter)*42}px)`}}>
       <div style={{fontSize:24,letterSpacing:7,color:accent,fontWeight:700,marginBottom:34}}>{kicker.toUpperCase()}</div>
       <div style={{fontSize:92,lineHeight:0.99,fontWeight:800,letterSpacing:-3,maxWidth:900}}>{title}</div>
       <div style={{width:112,height:7,background:accent,marginTop:42,marginBottom:34}}/>
       <div style={{fontSize:34,lineHeight:1.42,color:"#E0E1DC",maxWidth:850}}>{body}</div>
     </div>
     {children}
-    <div style={{position:"absolute",bottom:110,left:72,right:72,height:3,background:"rgba(255,255,255,.22)"}}>
+    <div style={{position:"absolute",bottom:480,left:72,right:72,height:3,background:"rgba(255,255,255,.22)"}}>
       <div style={{height:3,width:`${clamp((f/180)*100,0,100)}%`,background:accent}}/>
     </div>
-    <div style={{position:"absolute",bottom:56,left:72,fontSize:18,letterSpacing:4,color:"#929B9E"}}>POVERTY IS NOT A LACK OF AMBITION.</div>
+    <div style={{position:"absolute",bottom:430,left:72,fontSize:18,letterSpacing:4,color:"#929B9E"}}>POVERTY IS NOT A LACK OF AMBITION.</div>
   </AbsoluteFill>;
 }
 function DataBars() {
@@ -48,15 +48,15 @@ function NumberBeat({value,label}) {
  <div style={{fontSize:28,letterSpacing:3,maxWidth:800,lineHeight:1.4}}>{label}</div>
  </div>;
 }
-function Opening(){return <Scene index={1} kicker="A documentary on access" title={<>THE OTHER<br/>SIDE OF INDIA.</>} body="A country can move forward at extraordinary speed — while millions are still waiting for the basics." image="poverty/dharavi-aerial.jpg" accent={C.amber}/>;}
-function Divide(){return <Scene index={2} kicker="The urban divide" title={<>ONE CITY.<br/>TWO REALITIES.</>} body="Glass towers rise beside crowded settlements. Opportunity is not distributed by distance alone — it is shaped by access." image="poverty/dharavi-street.jpg" accent={C.red}/>;}
-function Work(){return <Scene index={3} kicker="Work and income" title={<>A DAY'S WORK.<br/>AN UNCERTAIN TOMORROW.</>} body="For informal workers, one missed day can mean lost income. Hard work does not always create financial security." image="poverty/vendor.jpg" accent={C.amber}/>;}
-function Rural(){return <Scene index={4} kicker="Rural livelihoods" title={<>WHEN THE HARVEST<br/>IS NOT ENOUGH.</>} body="Small farms face changing weather, rising costs and uncertain markets. Rural poverty is often a problem of risk as much as income." image="poverty/farmer.jpg" accent={C.teal}/>;}
-function Water(){return <Scene index={5} kicker="Basic services" title={<>TIME SPENT<br/>FINDING WATER.</>} body="When safe water is far away, the cost is measured in hours, health and lost opportunities — often carried by women and girls." image="poverty/water.jpg" accent={C.teal}/>;}
-function School(){return <Scene index={6} kicker="Education" title={<>TALENT IS EVERYWHERE.<br/>ACCESS IS NOT.</>} body="A child's future can depend on a classroom, a working device, a safe journey and the time to study." image="poverty/classroom.jpg" accent={C.amber}/>;}
-function Systems(){return <Scene index={7} kicker="The structure" title={<>POVERTY IS NOT<br/>ONE PROBLEM.</>} body="Housing. Health. Education. Transport. Stable work. These systems connect — and a gap in one can deepen every other gap." image="poverty/dharavi-aerial.jpg" accent={C.red}><DataBars/></Scene>;}
-function Change(){return <Scene index={8} kicker="What changes the equation" title={<>MAKE THE BASICS<br/>RELIABLE.</>} body="Quality public services, decent work, resilient agriculture, affordable housing and equal opportunity can change the trajectory." image="poverty/classroom.jpg" accent={C.teal}/>;}
-function End(){return <Scene index={9} kicker="The measure of progress" title={<>PROGRESS MEANS<br/>NO ONE LEFT<br/>WAITING.</>} body="The story of India is not complete until dignity and opportunity reach every home." image="poverty/dharavi-aerial.jpg" accent={C.amber}/>;}
+function Opening(){return <Scene index={1} kicker="A documentary on access" title={<>THE OTHER<br/>SIDE OF INDIA.</>} body="India moves forward. Millions still wait for basic services and opportunity." image="poverty/dharavi-aerial.jpg" accent={C.amber}/>;}
+function Divide(){return <Scene index={2} kicker="The urban divide" title={<>ONE CITY.<br/>TWO REALITIES.</>} body="Glass towers stand beside crowded settlements. Access shapes opportunity." image="poverty/dharavi-street.jpg" accent={C.red}/>;}
+function Work(){return <Scene index={3} kicker="Work and income" title={<>A DAY'S WORK.<br/>AN UNCERTAIN TOMORROW.</>} body="For informal workers, one missed day can erase income. Hard work does not ensure security." image="poverty/vendor.jpg" accent={C.amber}/>;}
+function Rural(){return <Scene index={4} kicker="Rural livelihoods" title={<>WHEN THE HARVEST<br/>IS NOT ENOUGH.</>} body="Small farms face changing weather, rising costs and uncertain markets." image="poverty/farmer.jpg" accent={C.teal}/>;}
+function Water(){return <Scene index={5} kicker="Basic services" title={<>TIME SPENT<br/>FINDING WATER.</>} body="When water is far away, families lose time, health and opportunity." image="poverty/water.jpg" accent={C.teal}/>;}
+function School(){return <Scene index={6} kicker="Education" title={<>TALENT IS EVERYWHERE.<br/>ACCESS IS NOT.</>} body="A child's future depends on classrooms, safe travel and time to learn." image="poverty/classroom.jpg" accent={C.amber}/>;}
+function Systems(){return <Scene index={7} kicker="The structure" title={<>POVERTY IS NOT<br/>ONE PROBLEM.</>} body="Housing, health, education and work are linked. One gap can deepen another." image="poverty/dharavi-aerial.jpg" accent={C.red}><DataBars/></Scene>;}
+function Change(){return <Scene index={8} kicker="What changes the equation" title={<>MAKE THE BASICS<br/>RELIABLE.</>} body="Reliable services, decent work, resilient farms and affordable housing create change." image="poverty/classroom.jpg" accent={C.teal}/>;}
+function End(){return <Scene index={9} kicker="The measure of progress" title={<>PROGRESS MEANS<br/>NO ONE LEFT<br/>WAITING.</>} body="India moves forward when dignity and opportunity reach every home." image="poverty/dharavi-aerial.jpg" accent={C.amber}/>;}
 
 function Film(){
  return <AbsoluteFill style={{background:C.ink}}>
