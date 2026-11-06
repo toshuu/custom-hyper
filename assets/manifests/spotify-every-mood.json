@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "project": "spotify-every-mood",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationSeconds": 30
+  },
+  "characterBible": {
+    "id": "lead_genz_woman_v1",
+    "referenceAsset": "assets/spotify/character/master.png",
+    "invariant": "Same South Asian woman, mid-20s, warm medium-brown skin, shoulder-length dark curly hair, cream hoodie, lime-green over-ear headphones, same facial structure and proportions.",
+    "allowedChanges": [
+      "expression",
+      "pose",
+      "hand position",
+      "camera angle"
+    ],
+    "forbiddenChanges": [
+      "outfit",
+      "hair length",
+      "headphone color",
+      "age",
+      "face identity"
+    ]
+  },
+  "generationPolicy": {
+    "oneAssetPerGeneration": true,
+    "noContactSheets": true,
+    "noCollages": true,
+    "noTextInImages": true,
+    "noLogosInGeneratedImages": true,
+    "backgroundsSeparateFromCharacters": true,
+    "transparentCutouts": true,
+    "generateFromManifestPrompts": true,
+    "referenceCharacterForEveryPose": true
+  },
+  "assets": [
+    {
+      "id": "char_hook",
+      "path": "assets/spotify/character/char-hook.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single full-body transparent PNG cutout of the exact character defined by characterBible. Neutral thoughtful pose, one hand near chin, cream hoodie and lime-green headphones. Entire subject visible, centered, no props, no text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "hook",
+          "from": 0,
+          "to": 3,
+          "animation": "scale-in with subtle float"
+        }
+      ]
+    },
+    {
+      "id": "char_happy",
+      "path": "assets/spotify/character/char-happy.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single full-body transparent PNG cutout of the exact same character as the supplied reference. Laughing with arms open, cream hoodie and lime-green headphones unchanged. Entire subject visible, no props, no text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "happy",
+          "from": 3,
+          "to": 6,
+          "animation": "rise and gentle sway"
+        }
+      ]
+    },
+    {
+      "id": "char_sad",
+      "path": "assets/spotify/character/char-sad.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single full-body transparent PNG cutout of the exact same character as the supplied reference. Seated curled posture, reflective/downcast expression, cream hoodie and lime-green headphones unchanged. Entire subject visible, no props, no text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "sad",
+          "from": 6,
+          "to": 9,
+          "animation": "slow drift downward"
+        }
+      ]
+    },
+    {
+      "id": "char_focus",
+      "path": "assets/spotify/character/char-focus.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single waist-up transparent PNG cutout of the exact same character as the supplied reference. Focused expression, looking down as if writing, optional simple notebook held in hands, cream hoodie and lime-green headphones unchanged. No text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "focus",
+          "from": 9,
+          "to": 12,
+          "animation": "subtle writing movement via separate layers if available"
+        }
+      ]
+    },
+    {
+      "id": "char_party",
+      "path": "assets/spotify/character/char-party.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single full-body transparent PNG cutout of the exact same character as the supplied reference. Joyful dance pose with one arm raised, cream hoodie and lime-green headphones unchanged. Entire subject visible, no props, no text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "party",
+          "from": 12,
+          "to": 15,
+          "animation": "bounce and sway"
+        }
+      ]
+    },
+    {
+      "id": "char_chill",
+      "path": "assets/spotify/character/char-chill.png",
+      "kind": "character_cutout",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": true,
+      "reference": "characterBible.referenceAsset",
+      "prompt": "Single full-body transparent PNG cutout of the exact same character as the supplied reference. Peaceful relaxed seated pose, eyes gently closed, cream hoodie and lime-green headphones unchanged. Entire subject visible, no props, no text, no background, no border, no collage.",
+      "scenes": [
+        {
+          "id": "chill",
+          "from": 15,
+          "to": 19,
+          "animation": "slow float"
+        }
+      ]
+    },
+    {
+      "id": "bg_happy",
+      "path": "assets/spotify/backgrounds/bg_happy.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Golden-hour sunlit city park, warm yellow-green palette, cinematic illustrated realism, empty foreground reserved for character, no people, no text, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "happy",
+          "from": 3,
+          "to": 6,
+          "animation": "slow parallax camera move"
+        }
+      ]
+    },
+    {
+      "id": "bg_sad",
+      "path": "assets/spotify/backgrounds/bg_sad.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Blue rainy apartment window at night, droplets on glass, soft city bokeh, cinematic illustrated realism, empty foreground reserved for character, no people, no text, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "sad",
+          "from": 6,
+          "to": 9,
+          "animation": "slow parallax camera move"
+        }
+      ]
+    },
+    {
+      "id": "bg_focus",
+      "path": "assets/spotify/backgrounds/bg_focus.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Cozy green-lit study desk, books, notebook and warm desk lamp, cinematic illustrated realism, clear open center-left area reserved for character, no people, no text, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "focus",
+          "from": 9,
+          "to": 12,
+          "animation": "slow parallax camera move"
+        }
+      ]
+    },
+    {
+      "id": "bg_party",
+      "path": "assets/spotify/backgrounds/bg_party.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Vibrant magenta-purple dance venue with disco ball, beams and distant anonymous crowd silhouettes, cinematic illustrated realism, clear foreground reserved for character, no readable text, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "party",
+          "from": 12,
+          "to": 15,
+          "animation": "slow parallax camera move"
+        }
+      ]
+    },
+    {
+      "id": "bg_chill",
+      "path": "assets/spotify/backgrounds/bg_chill.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Deep midnight-blue rooftop skyline, large moon, stars and soft clouds, cinematic illustrated realism, empty foreground reserved for character, no people, no text, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "chill",
+          "from": 15,
+          "to": 19,
+          "animation": "slow parallax camera move"
+        }
+      ]
+    },
+    {
+      "id": "bg_hook",
+      "path": "assets/spotify/backgrounds/bg_hook.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Dark charcoal textured studio background with subtle neon-green ambient glow and plenty of negative space, cinematic illustrated realism, no people, no text, no logo, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "hook",
+          "from": 0,
+          "to": 3,
+          "animation": "slow push-in"
+        }
+      ]
+    },
+    {
+      "id": "bg_reveal",
+      "path": "assets/spotify/backgrounds/bg_reveal.png",
+      "kind": "background",
+      "format": "png",
+      "width": 1080,
+      "height": 1920,
+      "alpha": false,
+      "reference": null,
+      "prompt": "Deep forest-green and near-black atmospheric gradient environment with soft luminous green light shafts and clean central negative space for a phone mockup, no text, no logo, vertical 9:16.",
+      "scenes": [
+        {
+          "id": "reveal",
+          "from": 19,
+          "to": 27,
+          "animation": "radial light pulse"
+        }
+      ]
+    },
+    {
+      "id": "logo_spotify",
+      "path": "assets/spotify/brand/spotify-logo.png",
+      "kind": "brand_asset",
+      "format": "png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "reference": "official_source_required",
+      "prompt": null,
+      "scenes": [
+        {
+          "id": "cta",
+          "from": 27,
+          "to": 30,
+          "animation": "fade and scale"
+        }
+      ]
+    },
+    {
+      "id": "phone_ui",
+      "path": "assets/spotify/ui/phone-ui.png",
+      "kind": "ui_asset",
+      "format": "png",
+      "width": 720,
+      "height": 1280,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Standalone front-facing generic modern smartphone mockup with a blank dark screen, transparent background, no brand marks, no text, no hands, no border outside phone.",
+      "scenes": [
+        {
+          "id": "reveal",
+          "from": 19,
+          "to": 27,
+          "animation": "rise and slight tilt"
+        }
+      ]
+    },
+    {
+      "id": "playlist_ui",
+      "path": "assets/spotify/ui/playlist-cards.png",
+      "kind": "ui_asset",
+      "format": "png",
+      "width": 900,
+      "height": 1000,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Standalone transparent stack of five clean dark music playlist cards with blank title areas and simple colorful mood icon placeholders, no words, no logos, no background.",
+      "scenes": [
+        {
+          "id": "reveal",
+          "from": 19,
+          "to": 27,
+          "animation": "staggered cardStack"
+        }
+      ]
+    },
+    {
+      "id": "confetti",
+      "path": "assets/spotify/overlays/confetti.gif",
+      "kind": "overlay",
+      "format": "gif",
+      "width": 1080,
+      "height": 1920,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Transparent looping confetti overlay, small yellow, green and pink paper pieces drifting downward, no background, no text.",
+      "scenes": [
+        {
+          "id": "happy",
+          "from": 3,
+          "to": 6,
+          "animation": "loop"
+        }
+      ]
+    },
+    {
+      "id": "rain",
+      "path": "assets/spotify/overlays/rain.gif",
+      "kind": "overlay",
+      "format": "gif",
+      "width": 1080,
+      "height": 1920,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Transparent looping rain streak overlay, fine diagonal raindrops with subtle blue highlights, no background, no text.",
+      "scenes": [
+        {
+          "id": "sad",
+          "from": 6,
+          "to": 9,
+          "animation": "loop"
+        }
+      ]
+    },
+    {
+      "id": "party_lights",
+      "path": "assets/spotify/overlays/party-lights.gif",
+      "kind": "overlay",
+      "format": "gif",
+      "width": 1080,
+      "height": 1920,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Transparent looping magenta and violet moving light beams with subtle lens glows, no background, no text.",
+      "scenes": [
+        {
+          "id": "party",
+          "from": 12,
+          "to": 15,
+          "animation": "loop"
+        }
+      ]
+    },
+    {
+      "id": "stars",
+      "path": "assets/spotify/overlays/stars.gif",
+      "kind": "overlay",
+      "format": "gif",
+      "width": 1080,
+      "height": 1920,
+      "alpha": true,
+      "reference": null,
+      "prompt": "Transparent looping tiny white and pale-green twinkling stars, sparse elegant particles, no background, no text.",
+      "scenes": [
+        {
+          "id": "chill",
+          "from": 15,
+          "to": 19,
+          "animation": "loop"
+        }
+      ]
+    }
+  ]
+}

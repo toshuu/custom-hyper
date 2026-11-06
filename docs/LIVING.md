@@ -304,3 +304,12 @@ After every change:
 - Workflow `Render Spec` downloads and prepares assets before validation/render; the delivery artifact includes MP4, review stills, contact sheet, compiled plan, metadata, and photo-source credits. Current full-resolution run: https://github.com/toshuu/custom-hyper/actions/runs/42247139336
 
 - Final verification: the latest 30 s render completed successfully in GitHub Actions run 42248527783. Full-resolution H.264 MP4 verified at 1080x1920, 30 fps, 900 frames, 28,028,528 bytes; no audio stream. Render engine time: 63.826 s. Review stills and the encoded MP4 were inspected; the final end card uses the corrected three-bar soundwave mark.
+
+
+## Asset generation pipeline (2026-11-06)
+
+- Added manifest-first asset production contract at `docs/ASSET_PIPELINE.md`.
+- Added `assets/manifests/spotify-every-mood.json` with explicit individual asset prompts, dimensions, transparency requirements, character invariants, and scene/time/animation mappings.
+- Added `scripts/validate-assets.mjs` for deterministic file signature, dimensions, alpha, duplicate-hash, and manifest checks. Missing assets are reported as pending; they are never silently replaced.
+- Generation policy explicitly forbids contact sheets, collages, storyboards, embedded text, and generated brand logos. Each manifest entry is one independent generation request.
+- Current Spotify manifest assets are planned, not yet generated or validated. Do not render the updated reel until all required assets pass validation and official logo source is acquired.
