@@ -6,6 +6,8 @@ on:
     paths:
       - "specs/poverty-in-india.json"
       - ".github/workflows/raea-poverty-video.yml"
+      - "engine/**"
+      - "src/**"
   workflow_dispatch:
 
 permissions:
@@ -20,20 +22,24 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
-      - name: Checkout Custom Hyper
+      - name: Checkout standalone Custom Hyper
         uses: actions/checkout@v4
 
-      - name: Checkout X80 engine source
-        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          repository: toshuu/VIDMAKE
-          ref: main
-          path: VIDMAKE
-          sparse-checkout: |
-            x80-video-engine
-          sparse-checkout-cone-mode: true
+          node-version: "22.20.0"
+          cache: npm
 
-      - name: Download licensed documentary photographs
+      - name: Install ffprobe
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install standalone runtime
+        run: npm ci
+
+      - name: Download documentary photographs
         run: |
           set -euo pipefail
           mkdir -p assets/poverty
@@ -51,17 +57,10 @@ jobs:
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" assets/poverty/vendor.jpg
           file assets/poverty/*
 
-      - name: Install Custom Hyper runtime dependencies
-        run: npm ci
+      - name: Test standalone engine
+        run: npm run test:standalone
 
-      - name: Prepare X80 engine
-        run: |
-          ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
-          cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
-          npm install
-          npm run build
-
-      - name: Validate and lint composition
+      - name: Validate and lint documentary
         run: |
           node src/cli.mjs check specs/poverty-in-india.json
           node src/cli.mjs lint specs/poverty-in-india.json
@@ -69,15 +68,16 @@ jobs:
       - name: Render review frames
         run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22,27,32,35 --out out/review
 
-      - name: Render final 1080x1920 MP4
+      - name: Render final 1080x1920 reel
         run: node src/cli.mjs render specs/poverty-in-india.json --out out/poverty-in-india.mp4
 
-      - name: Verify video
+      - name: Verify encoded video
         run: |
+          set -euo pipefail
           test -s out/poverty-in-india.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
 
-      - name: Upload finished video and review frames
+      - name: Upload final reel and review frames
         uses: actions/upload-artifact@v4
         with:
           name: poverty-in-india-custom-hyper-master
