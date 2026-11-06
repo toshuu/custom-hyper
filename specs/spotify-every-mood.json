@@ -21,14 +21,14 @@
     "serif": "Rozha One"
   },
   "assets": {
-    "hook": "../assets/spotify/hook.jpg",
-    "happy": "../assets/spotify/happy.jpg",
-    "sad": "../assets/spotify/sad.jpg",
-    "focus": "../assets/spotify/focus.jpg",
-    "party": "../assets/spotify/party.jpg",
-    "chill": "../assets/spotify/chill.jpg",
-    "travel": "../assets/spotify/travel.jpg",
-    "lateNight": "../assets/spotify/late-night.jpg"
+    "hook": "../assets/spotify/hook.png",
+    "happy": "../assets/spotify/happy.png",
+    "sad": "../assets/spotify/sad.png",
+    "focus": "../assets/spotify/focus.png",
+    "party": "../assets/spotify/party.png",
+    "chill": "../assets/spotify/chill.png",
+    "travel": "../assets/spotify/travel.png",
+    "lateNight": "../assets/spotify/late-night.png"
   },
   "grain": {
     "opacity": 0.055,
