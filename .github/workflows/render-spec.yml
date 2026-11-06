@@ -3,7 +3,7 @@ name: Render Spec
 on:
   push:
     paths:
-      - 'specs/*.json'
+      - 'specs/poverty-in-india-reframed.json'
   workflow_dispatch:
     inputs:
       spec:
@@ -29,36 +29,20 @@ jobs:
           node-version: 22.20.0
           cache: npm
       - run: npm ci
-      - name: Select and validate spec
-        id: select-spec
-        env:
-          SPEC_INPUT: ${{ inputs.spec }}
-        run: |
-          if [ -n "$SPEC_INPUT" ]; then
-            SPEC="$SPEC_INPUT"
-          else
-            SPEC=""
-            while IFS= read -r candidate; do
-              case "$candidate" in
-                specs/*.json) SPEC="$candidate"; break ;;
-              esac
-            done < <(jq -r '[.head_commit.added[]?, .head_commit.modified[]?] | .[]' "$GITHUB_EVENT_PATH")
-          fi
-          case "$SPEC" in
-            specs/*.json) test -f "$SPEC" ;;
-            *) echo "No valid spec found. Pass a specs/*.json path or commit one."; exit 1 ;;
-          esac
-          echo "spec=$SPEC" >> "$GITHUB_OUTPUT"
       - name: Validate and plan
         env:
-          SPEC: ${{ steps.select-spec.outputs.spec }}
+          SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
         run: |
+          case "$SPEC" in
+            specs/*.json) test -f "$SPEC" ;;
+            *) echo "spec must be a repository-relative path under specs/"; exit 1 ;;
+          esac
           node src/cli.mjs lint "$SPEC"
           node src/cli.mjs check "$SPEC"
           node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
       - name: Render review stills and proxy MP4
         env:
-          SPEC: ${{ steps.select-spec.outputs.spec }}
+          SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
           STILLS_AT: ${{ inputs.stills_at || '1,4,8' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
