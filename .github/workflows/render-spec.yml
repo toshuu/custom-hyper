@@ -1,6 +1,10 @@
 name: Render Spec
 
 on:
+  push:
+    paths:
+      - 'specs/*.json'
+      - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
       spec:
