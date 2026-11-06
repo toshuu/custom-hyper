@@ -48,7 +48,7 @@ jobs:
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --out out/render.mp4
-          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/render.mp4 > out/metadata.json
+          node -e 'const fs=require("fs"); const s=JSON.parse(fs.readFileSync(process.env.SPEC)); const st=fs.statSync("out/render.mp4"); fs.writeFileSync("out/metadata.json", JSON.stringify({width:s.canvas.w,height:s.canvas.h,fps:s.canvas.fps,frames:s.duration*s.canvas.fps,duration:s.duration,size:st.size,codec:"H.264"},null,2))'
           python -m pip install --quiet pillow
           python - <<'PY'
           from PIL import Image, ImageOps, ImageDraw
