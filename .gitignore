@@ -4,6 +4,7 @@ data/
 user-special-files/
 .claude/
 .opencode/
+.worktrees/
 .env
 .env.*
 !.env.example
