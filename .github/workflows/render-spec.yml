@@ -5,6 +5,7 @@ on:
     paths:
       - 'specs/poverty-in-india-reframed.json'
       - 'specs/spotify-every-mood.json'
+      - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
       spec:
@@ -14,7 +15,7 @@ on:
       stills_at:
         description: Review still seconds
         required: false
-        default: '1.5,4.5,7.5,10.5,14,17,21,25,28'
+        default: '1.2,3.8,6.8,9.7,12.5,15.2,18.1,22.2,27.2'
 
 permissions:
   contents: read
@@ -30,6 +31,48 @@ jobs:
           node-version: 22.20.0
           cache: npm
       - run: npm ci
+      - name: Prepare Pexels photo assets
+        run: |
+          set -euo pipefail
+          mkdir -p assets/spotify /tmp/spotify-src
+          curl -fL --retry 3 'https://images.pexels.com/photos/7241298/pexels-photo-7241298.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/hook.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/4127610/pexels-photo-4127610.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/happy.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/8820970/pexels-photo-8820970.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/sad.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/1181367/pexels-photo-1181367.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/focus.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/5899284/pexels-photo-5899284.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/party.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/36714306/pexels-photo-36714306.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/chill.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/7129206/pexels-photo-7129206.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/travel.jpg
+          curl -fL --retry 3 'https://images.pexels.com/photos/17680322/pexels-photo-17680322.jpeg?auto=compress&cs=tinysrgb&w=1800' -o /tmp/spotify-src/late-night.jpg
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image, ImageOps, ImageEnhance
+          from pathlib import Path
+          src=Path('/tmp/spotify-src')
+          dst=Path('assets/spotify')
+          focus={
+            'hook.jpg':(0.50,0.50),'happy.jpg':(0.63,0.50),'sad.jpg':(0.65,0.50),
+            'focus.jpg':(0.35,0.50),'party.jpg':(0.60,0.50),'chill.jpg':(0.55,0.50),
+            'travel.jpg':(0.52,0.50),'late-night.jpg':(0.50,0.50)
+          }
+          for name,point in focus.items():
+            im=Image.open(src/name).convert('RGB')
+            im=ImageOps.fit(im,(1080,1920),method=Image.Resampling.LANCZOS,centering=point)
+            im=ImageEnhance.Contrast(im).enhance(1.08)
+            im=ImageEnhance.Color(im).enhance(1.10)
+            im.save(dst/name,quality=91,optimize=True,progressive=True)
+          PY
+          cat > assets/spotify/SOURCES.md <<'EOF'
+          # Photo asset credits
+          All photos are downloaded from Pexels pages marked Free / Free to use. They are fetched at workflow time and cropped to 1080x1920 before rendering.
+          - Eren Li — https://www.pexels.com/photo/ethnic-male-teenager-using-tablet-and-listening-to-music-in-headphones-at-home-7241298/
+          - Gustavo Fring — https://www.pexels.com/photo/cheerful-woman-listening-to-music-and-dancing-4127610/
+          - Khoa Võ — https://www.pexels.com/photo/sad-young-woman-with-clasped-hands-on-a-rainy-day-8820970/
+          - Christina Morillo — https://www.pexels.com/photo/photography-of-woman-listening-to-music-1181367/
+          - Kaboompics — https://www.pexels.com/photo/smiling-woman-dancing-in-the-living-room-5899284/
+          - Vitaly Gariev — https://www.pexels.com/photo/young-woman-relaxing-by-window-with-music-36714306/
+          - Michael Burrows — https://www.pexels.com/photo/indian-man-listening-to-song-from-earbud-in-town-7129206/
+          - Vi Tran — https://www.pexels.com/photo/young-man-using-headphones-and-listening-to-music-17680322/
+          EOF
       - name: Validate and plan
         env:
           SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
@@ -44,14 +87,13 @@ jobs:
       - name: Render review stills and full-resolution MP4
         env:
           SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
-          STILLS_AT: ${{ inputs.stills_at || '1.5,4.5,7.5,10.5,14,17,21,25,28' }}
+          STILLS_AT: ${{ inputs.stills_at || '1.2,3.8,6.8,9.7,12.5,15.2,18.1,22.2,27.2' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --out out/render.mp4
-          node -e 'const fs=require("fs"); const s=JSON.parse(fs.readFileSync(process.env.SPEC)); const st=fs.statSync("out/render.mp4"); fs.writeFileSync("out/metadata.json", JSON.stringify({width:s.canvas.w,height:s.canvas.h,fps:s.canvas.fps,frames:s.duration*s.canvas.fps,duration:s.duration,size:st.size,codec:"H.264"},null,2))'
-          python -m pip install --quiet pillow
+          node -e 'const fs=require("fs"); const s=JSON.parse(fs.readFileSync(process.env.SPEC)); const st=fs.statSync("out/render.mp4"); fs.writeFileSync("out/metadata.json", JSON.stringify({width:s.canvas.w,height:s.canvas.h,fps:s.canvas.fps,frames:s.duration*s.canvas.fps,duration:s.duration,size:st.size,codec:"H.264",audio:"none"},null,2))'
           python - <<'PY'
-          from PIL import Image, ImageOps, ImageDraw
+          from PIL import Image, ImageDraw
           from pathlib import Path
           files=sorted(Path("out/review").glob("*.png"))
           if not files: raise SystemExit("No review stills found")
@@ -71,12 +113,13 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: custom-hyper-render
+          name: spotify-every-mood-delivery
           path: |
             out/review/
             out/render.mp4
             out/compiled-plan.json
             out/metadata.json
             out/contact-sheet.jpg
+            assets/spotify/
           if-no-files-found: error
           retention-days: 14
