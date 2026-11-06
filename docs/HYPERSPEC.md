@@ -32,7 +32,7 @@ Rule: the planner picks names, text, numbers, and block types. The planner does 
 | `faces` | object | Default font per role: `display`, `body`, `mono`, `serif`. |
 | `assets` | `{id: path}` | Paths are relative to the spec file. |
 | `grain` | bool/object | Film grain overlay. Deterministic seed. |
-| `fonts` | array | Extra local font files. The X80 font cache loads first. |
+| `fonts` | array | Extra local font files. The owned `fonts/cache` loads first. |
 | `layers` | array | Paint order: first = bottom. Required. |
 | `transitions` | array | Wipes and flashes above layers, below chrome. |
 | `chrome` | object | Persistent layer above transitions. Same block list. |
@@ -95,7 +95,7 @@ Every block accepts:
 | `progress` | `h`,`fill` | Full-reel progress bar. |
 | `wipe` | `w`,`fill`,`skew` | Moving color band. |
 | `grain` | `opacity` | Grain overlay block. |
-| `raw` | `node` | Escape hatch. Must be a valid X80 scene node. |
+| `raw` | `node` | Escape hatch. Must be a valid Custom Hyper scene node. |
 
 ### Text fit
 

@@ -58,6 +58,7 @@ If access is lost, a fresh agent can continue from this file alone.
 | Mechanics | 7 composites: calendarFlip, counterRoll, beforeAfter, receipt, photoCam, cardStack, track; planner picks one per beat | `src/mechanics.mjs`, `src/director.mjs`, `docs/MECHANICS.md` |
 | Video assets | Upload or URL, library or temp; ffmpeg samples 6-24 frames plus a contact sheet; vision returns desc, tags and 2-5 segments; `video` block plays the frames | `src/video.mjs`, `src/assets.mjs`, `src/blocks.mjs`, `docs/VIDEO.md` |
 | Explain scenes | 9 drawn devices: flight, spiral, zoom, map, growth, compare, process, orbit, timeline; auto-picked from the beat text, plus year to calendarFlip | `src/explain.mjs`, `src/director.mjs`, `docs/EXPLAIN.md` |
+| Portable agent kit | Canonical agent contract, capability manifest, recipes, review command, GitHub render workflow | `AGENTS.md`, `docs/AGENT_API.md`, `agent/capabilities.json` |
 ## 2. What does not work yet
 
 - No Lite upload surface.
@@ -293,3 +294,6 @@ After every change:
 ### 2026-11-06 - Standalone runtime
 - Vendored the core compositor, Skia renderer, deterministic effects, and in-process encoder into `engine/`. Added owned `fonts/`, native npm dependencies, and a no-X80-path test.
 - `npm run test:standalone` passed: deterministic still hashes matched and proxy stills rendered without the X80 workspace.
+### 2026-11-06 - Portable agent kit
+- Added a platform-neutral authoring contract for OpenCode, ChatGPT workspaces, GitHub agents, and terminal agents. Added `agent/capabilities.json`, recipes, `npm run agent:review`, and a generic GitHub `Render Spec` workflow.
+- Verified: agent review on `minimal-3s`, standalone checks, deterministic still hashes, and proxy MP4 render all pass.

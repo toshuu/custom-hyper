@@ -1,0 +1,61 @@
+name: Render Spec
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: Repository-relative HyperSpec JSON path
+        required: true
+        default: specs/minimal-3s.json
+      stills_at:
+        description: Review still seconds
+        required: false
+        default: 1
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.20
+          cache: npm
+      - run: npm ci
+      - name: Validate selected path
+        env:
+          SPEC: ${{ inputs.spec }}
+        run: |
+          case "$SPEC" in
+            specs/*.json) test -f "$SPEC" ;;
+            *) echo "spec must be a repository-relative path under specs/"; exit 1 ;;
+          esac
+      - name: Validate and plan
+        env:
+          SPEC: ${{ inputs.spec }}
+        run: |
+          node src/cli.mjs lint "$SPEC"
+          node src/cli.mjs check "$SPEC"
+          node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
+      - name: Render review stills and proxy MP4
+        env:
+          SPEC: ${{ inputs.spec }}
+          STILLS_AT: ${{ inputs.stills_at }}
+        run: |
+          node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
+          node src/cli.mjs render "$SPEC" --scale 0.5 --out out/render.mp4
+          ffprobe -v error -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/render.mp4 > out/metadata.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: custom-hyper-render
+          path: |
+            out/review/
+            out/render.mp4
+            out/compiled-plan.json
+            out/metadata.json
+          if-no-files-found: error
+          retention-days: 14

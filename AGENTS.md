@@ -1,6 +1,6 @@
 # Custom Hyper - Agent Instructions
 
-Read `docs/LIVING.md` first. It is the engine handoff source of truth. Then read `docs/GRAND_LIVING.md` for the product vision and build order. Read `HOW_TO_USE.md` for the user-facing flow.
+This is the canonical contract for OpenCode, ChatGPT workspaces, GitHub agents, and terminal agents. Read `docs/AGENT_API.md`, `agent/capabilities.json`, `docs/HYPERSPEC.md`, and the closest spec before authoring.
 
 Current build: the prototype portal in `docs/GRAND_LIVING.md` section 9. Reserved areas: `server.mjs` routes, `public/app.html`, `src/store.mjs`, `src/prototype.mjs`, `data/`. Do not build post-prototype features yet.
 
@@ -8,15 +8,15 @@ Current build: the prototype portal in `docs/GRAND_LIVING.md` section 9. Reserve
 
 Custom Hyper is a deterministic, browser-free video engine. JSON in, Skia frames, in-process H.264 MP4 out. No Chrome, no DOM, no vision model, no agent loop at render time.
 
-Old products at `../x80-video-engine/` are separate. Do not change their entry points or merge them with this project.
+Custom Hyper is standalone. Do not import, configure, or upload `../x80-video-engine/`.
 
 ## When the user asks for a video
 
-1. Read `docs/HYPERSPEC.md` and the closest spec in `specs/`.
-2. Write one spec at `specs/<slug>.json`. Use the existing palette, faces, and blocks.
-3. Run `node src/cli.mjs check specs/<slug>.json`.
-4. Run `node src/cli.mjs stills specs/<slug>.json --at <3-4 key times>`.
-5. Inspect the stills. Fix clipping, contrast, empty space, and weak hierarchy. Repeat once.
+1. State audience, objective, format, duration, style, evidence, and CTA.
+2. Read `docs/VIDEO_RECIPES.md`, `docs/HYPERSPEC.md`, and the closest spec.
+3. Write one spec at `specs/<slug>.json`. Use the existing palette, faces, and blocks.
+4. Run `npm run agent:review -- specs/<slug>.json --at 1,4,8`.
+5. Inspect the stills. Fix clipping, contrast, empty space, weak hierarchy, and slideshow rhythm. Repeat once.
 6. Run `node src/cli.mjs render specs/<slug>.json --scale 0.5`.
 7. Verify with `ffprobe`. Report path, size, duration, and frame count.
 8. Update `docs/LIVING.md`: evidence, roadmap, session log.

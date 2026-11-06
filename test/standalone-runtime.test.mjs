@@ -37,6 +37,23 @@ test('CI uses only the standalone runtime', () => {
   assert.match(workflow, /npm ci/);
 });
 
+test('portable agent kit exposes one canonical contract', () => {
+  const capabilities = JSON.parse(readFileSync('agent/capabilities.json', 'utf8'));
+  assert.equal(capabilities.engine.name, 'Custom Hyper');
+  assert.ok(capabilities.blocks.includes('mechanics'));
+  assert.match(readFileSync('CHATGPT.md', 'utf8'), /AGENTS\.md/);
+  assert.match(readFileSync('.github/copilot-instructions.md', 'utf8'), /AGENTS\.md/);
+  assert.match(readFileSync('docs/AGENT_API.md', 'utf8'), /npm run agent:review/);
+});
+
+test('generic workflow renders a selected repository spec', () => {
+  const workflow = readFileSync('.github/workflows/render-spec.yml', 'utf8');
+  assert.match(workflow, /node-version: 22\.20/);
+  assert.match(workflow, /spec:/);
+  assert.match(workflow, /case "\$SPEC"/);
+  assert.match(workflow, /actions\/upload-artifact@v4/);
+});
+
 test('package defines the standalone verification command', () => {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
   assert.equal(pkg.scripts['test:standalone'], 'node --test test/standalone-runtime.test.mjs && npm run verify && npm run smoke');

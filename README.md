@@ -4,6 +4,11 @@ Deterministic, browser-free motion compositor. JSON in, MP4 out.
 
 Start here: [`HOW_TO_USE.md`](HOW_TO_USE.md). Status and handoff: [`docs/LIVING.md`](docs/LIVING.md). Agent rules: [`AGENTS.md`](AGENTS.md).
 
+Agent workspaces: read [`docs/AGENT_API.md`](docs/AGENT_API.md),
+[`agent/capabilities.json`](agent/capabilities.json), and
+[`docs/VIDEO_RECIPES.md`](docs/VIDEO_RECIPES.md). ChatGPT workspaces can use
+[`CHATGPT.md`](CHATGPT.md) directly.
+
 Custom Hyper uses a HyperFrames-style composition model: continuous clips, overlapping tracks, dense layers, and explicit motion.
 
 - No Chrome. No DOM. No CSS engine.

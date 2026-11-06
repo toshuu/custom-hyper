@@ -1,0 +1,26 @@
+{
+  "engine": {
+    "name": "Custom Hyper",
+    "version": "0.1",
+    "runtime": "standalone Skia and in-process H.264",
+    "renderTime": { "browser": false, "network": false, "llm": false, "vision": false }
+  },
+  "input": {
+    "spec": "HyperSpec JSON",
+    "assets": ["png", "jpg", "jpeg", "webp", "mp4", "mov", "webm"],
+    "canvas": ["1080x1920", "1920x1080", "1080x1080"],
+    "fps": [24, 25, 30, 60]
+  },
+  "blocks": ["background", "text", "image", "photo", "groups", "shapes", "charts", "timeline", "ticker", "stamp", "cta", "mechanics", "explain", "video", "chrome"],
+  "motion": ["fade", "rise", "drop", "slide", "scale", "blurIn", "maskUp", "float", "sway", "pulse", "spin", "drift", "marquee", "keyframes"],
+  "transitions": ["wipe", "flash", "dip", "band", "cut"],
+  "commands": {
+    "lint": "node src/cli.mjs lint <spec>",
+    "check": "node src/cli.mjs check <spec>",
+    "stills": "node src/cli.mjs stills <spec> --at <seconds> --scale 0.5",
+    "render": "node src/cli.mjs render <spec> --scale 0.5",
+    "verify": "node src/cli.mjs verify <spec> --at <seconds>"
+  },
+  "qualityGates": ["creative brief", "lint", "check", "review stills", "proxy MP4", "ffprobe report"],
+  "limits": ["No audio composition", "No live-action generation", "No image generation", "MP4 bytes can vary while pixels remain deterministic"]
+}

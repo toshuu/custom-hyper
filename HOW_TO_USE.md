@@ -31,12 +31,12 @@ Results:
 
 Open the stills first. If a still looks wrong, fix the spec before rendering the video.
 
-## 2. Make a video with opencode (Custom Hyper Main)
+## 2. Make a video with an AI workspace
 
-This is the main version. There is no special UI. The LLM is the author. The engine is the renderer.
+This works in OpenCode, ChatGPT workspaces, GitHub agents, or any shell-capable AI workspace. The agent is the author. The engine is the renderer.
 
 1. Open a terminal in `/kaggle/working`.
-2. Start `opencode`.
+2. Start your agent workspace.
 3. Paste a prompt like this:
 
 ```text
@@ -226,7 +226,7 @@ Rules:
 
 | Problem | Fix |
 |---|---|
-| `font cache missing` | Check `../x80-video-engine/fonts/cache/` and the family name in the spec. |
+| `font cache missing` | Check `fonts/cache/` and the family name in the spec. |
 | `asset not found` | Put the file in `assets/` and use a path relative to the spec. |
 | Text is clipped | Reduce size, widen `w`, or move `x`. |
 | Render is slow | Use `--scale 0.5` for review. Full 1080p is about 4x slower. |
