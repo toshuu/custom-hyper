@@ -1,0 +1,66 @@
+name: Render Poverty in India
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "specs/poverty-in-india.json"
+      - ".github/workflows/raea-poverty-video.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: poverty-in-india-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout Custom Hyper
+        uses: actions/checkout@v4
+
+      - name: Checkout X80 engine source
+        uses: actions/checkout@v4
+        with:
+          repository: toshuu/VIDMAKE
+          ref: main
+          path: VIDMAKE
+          sparse-checkout: |
+            x80-video-engine
+          sparse-checkout-cone-mode: true
+
+      - name: Prepare sibling engine path
+        run: |
+          ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
+          cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
+          npm install
+          npm run build
+
+      - name: Validate composition
+        run: node src/cli.mjs check specs/poverty-in-india.json
+
+      - name: Render review frames
+        run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22 --scale 0.5
+
+      - name: Render final MP4
+        run: node src/cli.mjs render specs/poverty-in-india.json --scale 0.5 --out out/poverty-in-india.mp4
+
+      - name: Verify output
+        run: |
+          test -s out/poverty-in-india.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
+
+      - name: Upload finished video and review frames
+        uses: actions/upload-artifact@v4
+        with:
+          name: poverty-in-india-custom-hyper
+          path: |
+            out/poverty-in-india.mp4
+            out/metadata.json
+            out/poverty-in-india-f*.png
+          if-no-files-found: error
+          retention-days: 14
