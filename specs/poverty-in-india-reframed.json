@@ -203,8 +203,8 @@
         {
           "type": "stamp",
           "text": "A HUMAN\\nSYSTEMS STORY",
-          "x": 730,
-          "y": 1530,
+          "x": 720,
+          "y": 1450,
           "w": 250,
           "h": 150,
           "size": 21,
@@ -338,6 +338,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 120,
+          "y": 330,
+          "w": 840,
+          "h": 300,
+          "at": 0.45,
+          "step": 0.55,
+          "items": [
+            {
+              "title": "SAFE HOME",
+              "sub": "A stable place to begin."
+            },
+            {
+              "title": "NEARBY SERVICES",
+              "sub": "Schools, care and transport."
+            },
+            {
+              "title": "ROOM TO CHOOSE",
+              "sub": "A fair chance to move forward."
+            }
+          ]
         }
       ]
     },
@@ -430,6 +453,38 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "receipt",
+          "x": 250,
+          "y": 330,
+          "w": 580,
+          "title": "THE INVISIBLE BILL",
+          "sub": "EVERYDAY BARRIERS",
+          "rows": [
+            {
+              "label": "Travel",
+              "value": "TIME"
+            },
+            {
+              "label": "Waiting",
+              "value": "HOURS"
+            },
+            {
+              "label": "Lost work",
+              "value": "INCOME"
+            },
+            {
+              "label": "Missed class",
+              "value": "CHOICE"
+            }
+          ],
+          "total": {
+            "label": "The real cost",
+            "value": "Opportunity"
+          },
+          "stamp": "UNSEEN",
+          "at": 0.35
         }
       ]
     },
@@ -523,6 +578,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 140,
+          "y": 360,
+          "w": 800,
+          "h": 300,
+          "at": 0.3,
+          "step": 0.5,
+          "items": [
+            {
+              "title": "WEATHER",
+              "sub": "One bad season."
+            },
+            {
+              "title": "DEBT",
+              "sub": "A shock that compounds."
+            },
+            {
+              "title": "NO SAFETY NET",
+              "sub": "Progress can disappear."
+            }
+          ]
         }
       ]
     },
@@ -625,6 +703,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 150,
+          "y": 340,
+          "w": 780,
+          "h": 270,
+          "at": 0.35,
+          "step": 0.5,
+          "items": [
+            {
+              "title": "NUTRITION",
+              "sub": "The ability to learn."
+            },
+            {
+              "title": "HEALTH",
+              "sub": "The ability to thrive."
+            },
+            {
+              "title": "EDUCATION",
+              "sub": "The power to choose."
+            }
+          ]
         }
       ]
     },
@@ -748,6 +849,29 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 170,
+          "y": 280,
+          "w": 740,
+          "h": 250,
+          "at": 0.25,
+          "step": 0.45,
+          "items": [
+            {
+              "title": "ACCESS",
+              "sub": "Services within reach."
+            },
+            {
+              "title": "SECURITY",
+              "sub": "Protection from shocks."
+            },
+            {
+              "title": "DIGNITY",
+              "sub": "Work that can sustain a life."
+            }
+          ]
         }
       ]
     },
@@ -838,7 +962,7 @@
           "type": "cta",
           "text": "ACCESS. DIGNITY. OPPORTUNITY.",
           "x": 72,
-          "y": 1580,
+          "y": 1530,
           "w": 800,
           "h": 88,
           "fill": "accent",
@@ -854,6 +978,25 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 210,
+          "y": 1250,
+          "w": 660,
+          "h": 220,
+          "at": 1.1,
+          "step": 0.35,
+          "items": [
+            {
+              "title": "ACCESS",
+              "sub": "Make the basics reachable."
+            },
+            {
+              "title": "DIGNITY",
+              "sub": "Protect people's choices."
+            }
+          ]
         }
       ]
     },
@@ -877,6 +1020,153 @@
           "fill": "rgba(244,240,231,0.08)",
           "textFill": "paper",
           "size": 18
+        }
+      ]
+    },
+    {
+      "id": "continuity-thread",
+      "from": 0,
+      "duration": 36,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "track",
+          "child": {
+            "type": "circle",
+            "r": 13,
+            "fill": "accent",
+            "shadow": {
+              "color": "rgba(242,184,75,0.7)",
+              "blur": 26
+            }
+          },
+          "poses": [
+            {
+              "at": 0,
+              "x": 1000,
+              "y": 150,
+              "scale": 0.8,
+              "opacity": 0.9
+            },
+            {
+              "at": 5.5,
+              "x": 1000,
+              "y": 150,
+              "scale": 1,
+              "opacity": 1,
+              "ease": "power3.inOut"
+            },
+            {
+              "at": 11,
+              "x": 1000,
+              "y": 150,
+              "scale": 0.8,
+              "opacity": 0.9
+            },
+            {
+              "at": 16.5,
+              "x": 1000,
+              "y": 150,
+              "scale": 1.2,
+              "opacity": 1
+            },
+            {
+              "at": 22,
+              "x": 1000,
+              "y": 150,
+              "scale": 0.8,
+              "opacity": 0.9
+            },
+            {
+              "at": 27,
+              "x": 1000,
+              "y": 150,
+              "scale": 1.2,
+              "opacity": 1
+            },
+            {
+              "at": 31.5,
+              "x": 1000,
+              "y": 150,
+              "scale": 0.8,
+              "opacity": 0.9
+            },
+            {
+              "at": 36,
+              "x": 1000,
+              "y": 150,
+              "scale": 1,
+              "opacity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impact-punch-one",
+      "from": 14.65,
+      "duration": 0.9,
+      "fadeIn": 0.05,
+      "fadeOut": 0.15,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "TIME IS NOT FREE.",
+          "x": 72,
+          "y": 870,
+          "w": 930,
+          "h": 150,
+          "size": 112,
+          "face": "Bebas Neue",
+          "fill": "accent2",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 72
+          },
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.35,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "impact-punch-two",
+      "from": 25.35,
+      "duration": 0.9,
+      "fadeIn": 0.05,
+      "fadeOut": 0.15,
+      "blocks": [
+        {
+          "type": "text",
+          "text": "POTENTIAL NEEDS ACCESS.",
+          "x": 72,
+          "y": 900,
+          "w": 930,
+          "h": 145,
+          "size": 88,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 62
+          },
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.05,
+              "dur": 0.35,
+              "distance": 60,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
         }
       ]
     }
@@ -986,7 +1276,3 @@
     ]
   }
 }
-
-
-
-
