@@ -28,7 +28,10 @@
     "party": "../assets/spotify/party.png",
     "chill": "../assets/spotify/chill.png",
     "travel": "../assets/spotify/travel.png",
-    "lateNight": "../assets/spotify/late-night.png"
+    "lateNight": "../assets/spotify/late-night.png",
+    "coverFeelGood": "../assets/spotify/cover-feelgood.png",
+    "coverFocus": "../assets/spotify/cover-focus.png",
+    "coverSad": "../assets/spotify/cover-sad.png"
   },
   "grain": {
     "opacity": 0.055,
@@ -851,11 +854,85 @@
           }
         },
         {
+          "type": "image",
+          "src": "coverFeelGood",
+          "x": 255,
+          "y": 760,
+          "w": 160,
+          "h": 160,
+          "fit": "cover",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.55,
+              "dur": 0.42,
+              "ease": "back.out"
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "coverFocus",
+          "x": 460,
+          "y": 760,
+          "w": 160,
+          "h": 160,
+          "fit": "cover",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.72,
+              "dur": 0.42,
+              "ease": "back.out"
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "coverSad",
+          "x": 665,
+          "y": 760,
+          "w": 160,
+          "h": 160,
+          "fit": "cover",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.89,
+              "dur": 0.42,
+              "ease": "back.out"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "FEEL GOOD      FOCUS       SAD SONGS",
+          "x": 250,
+          "y": 925,
+          "w": 600,
+          "h": 48,
+          "size": 16,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 0.3,
+          "fill": "#B8F7CE",
+          "align": "center",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 1,
+              "dur": 0.4,
+              "ease": "power2.out",
+              "distance": 20
+            }
+          }
+        },
+        {
           "type": "cardStack",
           "x": 540,
-          "y": 1010,
+          "y": 1170,
           "w": 650,
-          "h": 220,
+          "h": 200,
           "titleSize": 58,
           "subSize": 24,
           "at": 0.72,
