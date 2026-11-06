@@ -318,30 +318,6 @@
             },
             "out": false
           }
-        },
-        {
-          "type": "stamp",
-          "text": "FEEL IT",
-          "x": 650,
-          "y": 620,
-          "w": 300,
-          "h": 120,
-          "size": 34,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 1.2,
-          "fill": "#B8D7FF",
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 0.55,
-              "dur": 0.45,
-              "ease": "back.out"
-            }
-          },
-          "rotation": -7,
-          "stroke": "#B8D7FF",
-          "strokeWidth": 4
         }
       ]
     },
@@ -517,12 +493,12 @@
         {
           "type": "stamp",
           "text": "PLAY IT\nLOUD",
-          "x": 620,
-          "y": 610,
-          "w": 330,
-          "h": 150,
+          "x": 70,
+          "y": 650,
+          "w": 320,
+          "h": 130,
           "size": 40,
-          "rotation": 6,
+          "rotation": -5,
           "stroke": "#1ED760",
           "fill": "#1ED760",
           "strokeWidth": 5,
@@ -708,8 +684,8 @@
         {
           "type": "stamp",
           "text": "ON THE GO",
-          "x": 650,
-          "y": 620,
+          "x": 70,
+          "y": 650,
           "w": 310,
           "h": 120,
           "size": 32,
