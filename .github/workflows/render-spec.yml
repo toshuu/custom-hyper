@@ -32,7 +32,7 @@ jobs:
       - run: npm ci
       - name: Validate and plan
         env:
-          SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
+          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
         run: |
           case "$SPEC" in
             specs/*.json) test -f "$SPEC" ;;
@@ -47,8 +47,28 @@ jobs:
           STILLS_AT: ${{ inputs.stills_at || '3,7.5,12.5,17.5,22.5,27.5,30.5' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
-          node src/cli.mjs render "$SPEC" --scale 0.5 --out out/render.mp4
-          node -e 'const fs=require("fs"); const s=JSON.parse(fs.readFileSync(process.env.SPEC)); const st=fs.statSync("out/render.mp4"); fs.writeFileSync("out/metadata.json", JSON.stringify({width:s.canvas.w/2,height:s.canvas.h/2,fps:s.canvas.fps,frames:s.duration*s.canvas.fps,duration:s.duration,size:st.size},null,2))'
+          node src/cli.mjs render "$SPEC" --out out/render.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/render.mp4 > out/metadata.json
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image, ImageOps, ImageDraw
+          from pathlib import Path
+          files=sorted(Path("out/review").glob("*.png"))
+          if not files: raise SystemExit("No review stills found")
+          thumbs=[]
+          for p in files:
+              im=Image.open(p).convert("RGB")
+              im.thumbnail((270,480))
+              tile=Image.new("RGB",(290,520),"#111")
+              tile.paste(im,((290-im.width)//2,10))
+              ImageDraw.Draw(tile).text((10,495),p.stem,fill="white")
+              thumbs.append(tile)
+          cols=3
+          rows=(len(thumbs)+cols-1)//cols
+          sheet=Image.new("RGB",(cols*290,rows*520),"#222")
+          for i,im in enumerate(thumbs): sheet.paste(im,((i%cols)*290,(i//cols)*520))
+          sheet.save("out/contact-sheet.jpg",quality=92)
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: custom-hyper-render
