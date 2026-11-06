@@ -40,20 +40,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#162A32"
-              },
-              {
-                "offset": 1,
-                "color": "#071116"
-              }
-            ]
-          }
+          "fill": "#162A32"
         },
         {
           "type": "circle",
@@ -843,20 +830,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#D9E7DF"
-              },
-              {
-                "offset": 1,
-                "color": "#8FB7AF"
-              }
-            ]
-          }
+          "fill": "#D9E7DF"
         },
         {
           "type": "circle",
@@ -1216,20 +1190,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#D6A46E"
-              },
-              {
-                "offset": 1,
-                "color": "#9A5C40"
-              }
-            ]
-          }
+          "fill": "#D6A46E"
         },
         {
           "type": "circle",
@@ -1591,20 +1552,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#1E4847"
-              },
-              {
-                "offset": 1,
-                "color": "#0D252B"
-              }
-            ]
-          }
+          "fill": "#1E4847"
         },
         {
           "type": "group",
@@ -2025,20 +1973,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#4A3D40"
-              },
-              {
-                "offset": 1,
-                "color": "#1C252C"
-              }
-            ]
-          }
+          "fill": "#4A3D40"
         },
         {
           "type": "group",
@@ -2271,20 +2206,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#DCE8DD"
-              },
-              {
-                "offset": 1,
-                "color": "#A9C6B9"
-              }
-            ]
-          }
+          "fill": "#DCE8DD"
         },
         {
           "type": "circle",
@@ -2725,20 +2647,7 @@
       "blocks": [
         {
           "type": "bg",
-          "fill": {
-            "kind": "linear",
-            "angle": 90,
-            "stops": [
-              {
-                "offset": 0,
-                "color": "#192D32"
-              },
-              {
-                "offset": 1,
-                "color": "#081318"
-              }
-            ]
-          }
+          "fill": "#192D32"
         },
         {
           "type": "circle",
