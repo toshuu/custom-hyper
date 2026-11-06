@@ -60,6 +60,34 @@ jobs:
             im=ImageEnhance.Contrast(im).enhance(1.08)
             im=ImageEnhance.Color(im).enhance(1.10)
             im.save(dst/name.replace('.jpg','.png'),optimize=True)
+          from PIL import ImageDraw, ImageFilter
+          import math, random
+          random.seed(17)
+          def cover(name, base, accent, mode):
+            im=Image.new('RGB',(480,480),base)
+            d=ImageDraw.Draw(im,'RGBA')
+            if mode=='sun':
+              d.ellipse((80,55,400,375),fill=accent)
+              for i in range(8):
+                d.arc((35+i*9,35+i*9,445-i*9,445-i*9),start=195,end=345,fill=(245,255,245,170),width=5)
+              for x,y,r in [(85,90,18),(390,115,13),(105,380,22),(390,360,17)]: d.ellipse((x-r,y-r,x+r,y+r),fill=(255,255,255,150))
+            elif mode=='focus':
+              for i in range(10):
+                x=35+i*45
+                d.line((x,25,x,455),fill=(180,245,220,85),width=2)
+                d.line((25,x,455,x),fill=(180,245,220,85),width=2)
+              d.ellipse((110,110,370,370),outline=accent,width=24)
+              d.ellipse((185,185,295,295),fill=(245,255,248,220))
+            else:
+              for i in range(22):
+                x=random.randint(20,460); y=random.randint(10,470); h=random.randint(22,75)
+                d.line((x,y,x-8,y+h),fill=(180,205,255,150),width=random.randint(2,5))
+              d.ellipse((95,80,385,370),fill=(70,85,150,90),outline=accent,width=8)
+            im=im.filter(ImageFilter.GaussianBlur(0.35))
+            im.save(dst/name,optimize=True)
+          cover('cover-feelgood.png','#10271A','#1ED760','sun')
+          cover('cover-focus.png','#101D2D','#76B9FF','focus')
+          cover('cover-sad.png','#17142D','#A8A5FF','rain')
           PY
           cat > assets/spotify/SOURCES.md <<'EOF'
           # Photo asset credits
