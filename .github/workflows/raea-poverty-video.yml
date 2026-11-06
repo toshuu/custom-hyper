@@ -1,20 +1,18 @@
-name: Render Poverty in India
+name: Render Poverty in India with RAEA
 
 on:
   push:
     branches: [main]
     paths:
-      - "specs/poverty-in-india.json"
+      - "raea/poverty-in-india.tsx"
       - ".github/workflows/raea-poverty-video.yml"
-      - "engine/**"
-      - "src/**"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: poverty-in-india-render
+  group: poverty-in-india-raea
   cancel-in-progress: false
 
 jobs:
@@ -22,68 +20,53 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
-      - name: Checkout standalone Custom Hyper
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.20.0"
-          cache: npm
-
-      - name: Install ffprobe
+      - uses: actions/checkout@v4
+      - name: Install system media tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
-
-      - name: Install standalone runtime
-        run: npm ci
-
+          sudo apt-get install -y ffmpeg curl
+      - name: Install RAEA
+        run: |
+          curl -fsSL https://raea.io/install | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.raea/bin" >> "$GITHUB_PATH"
       - name: Download documentary photographs
         run: |
           set -euo pipefail
-          mkdir -p assets/poverty
+          mkdir -p media/poverty
           fetch() {
             curl --fail --location --retry 3 --retry-delay 2 \
-              --user-agent "CustomHyperDocumentary/1.0 (asset attribution in repo)" \
-              "$1" -o "$2"
+              --user-agent "RAEADocumentary/1.0 (asset attribution in repo)" "$1" -o "$2"
             test -s "$2"
           }
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_slum_in_Mumbai_India_August_2009.jpg?width=1800" assets/poverty/dharavi-aerial.jpg
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_Slum.jpg?width=1800" assets/poverty/dharavi-street.jpg
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_farmer_woman.jpg?width=1800" assets/poverty/farmer.jpg
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/India_-_Sights_%26_Culture_-_33_-_woman_fetching_water.jpg?width=1800" assets/poverty/water.jpg
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Classroom_in_India.jpg?width=1800" assets/poverty/classroom.jpg
-          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" assets/poverty/vendor.jpg
-          file assets/poverty/*
-
-      - name: Test standalone engine
-        run: npm run test:standalone
-
-      - name: Validate and lint documentary
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_slum_in_Mumbai_India_August_2009.jpg?width=1800" media/poverty/dharavi-aerial.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_Slum.jpg?width=1800" media/poverty/dharavi-street.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_farmer_woman.jpg?width=1800" media/poverty/farmer.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/India_-_Sights_%26_Culture_-_33_-_woman_fetching_water.jpg?width=1800" media/poverty/water.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Classroom_in_India.jpg?width=1800" media/poverty/classroom.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" media/poverty/vendor.jpg
+          mkdir -p public/poverty
+          cp media/poverty/* public/poverty/
+      - name: Render review frames with RAEA
         run: |
-          node src/cli.mjs check specs/poverty-in-india.json
-          node src/cli.mjs lint specs/poverty-in-india.json
-
-      - name: Render review frames
-        run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22,27,32,35 --out out/review
-
-      - name: Render final 1080x1920 reel
-        run: node src/cli.mjs render specs/poverty-in-india.json --out out/poverty-in-india.mp4
-
-      - name: Verify encoded video
+          mkdir -p out/review
+          raea render raea/poverty-in-india.tsx --at 0,150,300,450,600,750,900,1050,1200,1349 -o out/review/
+      - name: Render final MP4 with RAEA
+        run: raea render raea/poverty-in-india.tsx -o out/poverty-in-india-raea.mp4 --quality master --manifest out/render-manifest.json
+      - name: Check output
         run: |
           set -euo pipefail
-          test -s out/poverty-in-india.mp4
-          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
-
-      - name: Upload final reel and review frames
-        uses: actions/upload-artifact@v4
+          test -s out/poverty-in-india-raea.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india-raea.mp4 | tee out/metadata.json
+          raea check out/poverty-in-india-raea.mp4 --manifest out/render-manifest.json -o out/quality-check.json
+      - uses: actions/upload-artifact@v4
         with:
-          name: poverty-in-india-custom-hyper-master
+          name: poverty-in-india-raea-master
           path: |
-            out/poverty-in-india.mp4
+            out/poverty-in-india-raea.mp4
+            out/render-manifest.json
             out/metadata.json
-            out/review/*.png
+            out/quality-check.json
+            out/review/*
           if-no-files-found: error
           retention-days: 14
