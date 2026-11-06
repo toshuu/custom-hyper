@@ -10,11 +10,11 @@ on:
       spec:
         description: Repository-relative HyperSpec JSON path
         required: true
-        default: specs/poverty-in-india-reframed.json
+        default: specs/spotify-every-mood.json
       stills_at:
         description: Review still seconds
         required: false
-        default: '3,7.5,12.5,17.5,22.5,27.5,30.5'
+        default: '1.5,4.5,7.5,10.5,14,17,21,25,28'
 
 permissions:
   contents: read
