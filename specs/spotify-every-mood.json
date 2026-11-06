@@ -951,7 +951,7 @@
           "w": 220,
           "h": 22,
           "fill": "#1ED760",
-          "rotation": -13
+          "rotation": 0
         },
         {
           "type": "rule",
@@ -960,7 +960,7 @@
           "w": 220,
           "h": 22,
           "fill": "#1ED760",
-          "rotation": -13
+          "rotation": 0
         },
         {
           "type": "rule",
@@ -969,7 +969,7 @@
           "w": 220,
           "h": 22,
           "fill": "#1ED760",
-          "rotation": -13
+          "rotation": 0
         },
         {
           "type": "text",
