@@ -1171,48 +1171,7 @@
       ]
     }
   ],
-  "transitions": [
-    {
-      "type": "wipe",
-      "at": 4.95,
-      "duration": 0.75,
-      "color": "accent",
-      "skew": -10
-    },
-    {
-      "type": "band",
-      "at": 10.35,
-      "duration": 0.7,
-      "color": "accent2",
-      "color2": "ink"
-    },
-    {
-      "type": "wipe",
-      "at": 15.75,
-      "duration": 0.8,
-      "color": "accent",
-      "skew": 9
-    },
-    {
-      "type": "flash",
-      "at": 20.95,
-      "duration": 0.3,
-      "color": "paper"
-    },
-    {
-      "type": "dip",
-      "at": 26.15,
-      "duration": 0.65,
-      "color": "bg"
-    },
-    {
-      "type": "wipe",
-      "at": 31.45,
-      "duration": 0.8,
-      "color": "accent2",
-      "skew": -8
-    }
-  ],
+  "transitions": [],
   "chrome": {
     "blocks": [
       {
@@ -1276,4 +1235,3 @@
     ]
   }
 }
-
