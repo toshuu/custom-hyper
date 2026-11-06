@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { patchElement, getProjectBundle } from '/kaggle/working/custom-hyper/src/prototype.mjs';
+import { patchElement, getProjectBundle } from '../src/prototype.mjs';
 
-const APP = readFileSync('/kaggle/working/custom-hyper/public/app.html', 'utf8');
-const ED = readFileSync('/kaggle/working/custom-hyper/public/editor.js', 'utf8');
-const CSS = readFileSync('/kaggle/working/custom-hyper/public/editor.css', 'utf8');
+const APP = readFileSync(new URL('../public/app.html', import.meta.url), 'utf8');
+const ED = readFileSync(new URL('../public/editor.js', import.meta.url), 'utf8');
+const CSS = readFileSync(new URL('../public/editor.css', import.meta.url), 'utf8');
 
 const callSites = APP.match(/openEditor\(/g) ?? [];
 assert.equal(callSites.length, 1, `expected exactly 1 openEditor call site, got ${callSites.length}`);

@@ -4,7 +4,7 @@ import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomInt, randomUUID } from 'node:crypto';
 
-import { createSkiaMeasurer } from '../x80-video-engine/packages/renderer-skia/dist/index.js';
+import { createSkiaMeasurer } from './engine/skia/index.js';
 import { expandPlan, demoPlan } from './src/director.mjs';
 import { generatePlan } from './src/llm.mjs';
 import { registerFonts, renderHyper } from './src/render.mjs';
@@ -32,7 +32,7 @@ process.on('unhandledRejection', (err) => {
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = join(ROOT, 'public');
-const FONT_CACHE = join(ROOT, '..', 'x80-video-engine', 'fonts', 'cache');
+const FONT_CACHE = join(ROOT, 'fonts', 'cache');
 const SPEC_ROOT = join(ROOT, 'specs', 'direct');
 const OUT_ROOT = join(ROOT, 'out', 'direct');
 mkdirSync(SPEC_ROOT, { recursive: true });

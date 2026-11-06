@@ -4,7 +4,7 @@ Deterministic, browser-free motion compositor. JSON in, MP4 out.
 
 Start here: [`HOW_TO_USE.md`](HOW_TO_USE.md). Status and handoff: [`docs/LIVING.md`](docs/LIVING.md). Agent rules: [`AGENTS.md`](AGENTS.md).
 
-Custom Hyper takes the HyperFrames composition model (continuous clips, overlapping tracks, dense layers, GSAP-grade motion) and runs it on the X80 philosophy:
+Custom Hyper uses a HyperFrames-style composition model: continuous clips, overlapping tracks, dense layers, and explicit motion.
 
 - No Chrome. No DOM. No CSS engine.
 - No Vision LLM. No agent loop. No retries.
@@ -17,19 +17,19 @@ Custom Hyper takes the HyperFrames composition model (continuous clips, overlapp
 
 | Product | Folder | Meaning |
 |---|---|---|
-| **X80 Studio** | `../x80-video-engine/` (`studio/server.mjs`, port 8099) | Old full engine + full Studio. Remotion-like surface, optional prompt/API authoring. |
-| **X80 Lite** | `../x80-video-engine/studio/public/lite.html` + `POST /upload` | Old no-API upload page. JSON + sprite sheet -> MP4. |
-| **Custom Hyper** | this folder | New engine. Deterministic HyperFrames-style layered timeline on the X80 Skia core. |
+| **Custom Hyper** | this folder | Standalone deterministic layered timeline engine. |
 | **Custom Hyper Main** | `AGENTS.md` + `src/cli.mjs` | LLM authoring. Tell opencode to make the video. Works now. |
 | **Custom Hyper Main Direct** | `server.mjs` + `public/index.html`, port 8098 (`/direct`) | Web UI for Main. User supplies an LLM API key. Local preview needs no key. |
 | **Custom Hyper Studio** | `server.mjs` + `public/app.html`, port 8098 (`/`) | Prototype portal. One local client, asset drop, brief, boards, element edit, MP4. |
 | **Custom Hyper Lite** | not built | Planned upload surface. No API key. |
 
-The old folders are untouched. Do not mix the surfaces. Main Direct and Lite will share this engine and differ only at the authoring and upload entry points.
+Custom Hyper owns its runtime, native dependencies, and font cache. Main Direct and Lite share this engine and differ only at the authoring and upload entry points.
 
 ## Quickstart
 
 ```bash
+npm install
+npm run test:standalone
 node src/cli.mjs check  specs/signal-16s.json
 node src/cli.mjs stills specs/signal-16s.json --at 1,4,8,12,15
 node src/cli.mjs plan   specs/signal-16s.json
@@ -61,17 +61,17 @@ The portal keeps one client and its work in `data/`. Probes and storyboards in `
 ```
 HyperSpec JSON
   -> validate (fail loud)
-  -> compile blocks to X80 scene nodes
+  -> compile blocks to local scene nodes
   -> bake all motion to keyframes (plain data)
   -> Skia surface per frame
   -> WebCodecs H.264 -> MP4
 ```
 
-Reused engine packages: `@x80/core`, `@x80/renderer-skia`, `@x80/encoding`, `@x80/font-fetch` cache. No new npm dependencies.
+Internal runtime: `engine/core`, `engine/skia`, `engine/effects`, and `engine/encoding`. Native dependencies install from npm. Fonts are in `fonts/`.
 
 ## Why this is not a slideshow
 
-X80 was act-based: one block per beat, cut after cut. Custom Hyper is track-based:
+Custom Hyper is track-based:
 
 - Layers overlap in time. Crossfades are real, not cuts.
 - Every layer can carry ambient motion (float, drift, marquee, spin) for its full life.
@@ -84,7 +84,7 @@ X80 was act-based: one block per beat, cut after cut. Custom Hyper is track-base
 - `HOW_TO_USE.md` - render the demo, use the agent, review stills.
 - `docs/LIVING.md` - what works, what is next, decisions, session log.
 - `docs/HYPERSPEC.md` - full JSON contract, every block and motion field.
-- `docs/PHILOSOPHY.md` - how X80 rules map to Custom Hyper.
+- `docs/PHILOSOPHY.md` - composition rules for Custom Hyper.
 - `docs/NAMING.md` - product and version names.
 
 ## Limits (v0.1)

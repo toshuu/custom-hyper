@@ -3,15 +3,15 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { renderFrame } from '../../x80-video-engine/packages/core/dist/index.js';
+import { renderFrame } from '../engine/core/index.js';
 import {
   SkiaRenderer, createGrainTile, createSkiaMeasurer, preloadImages, registerFontFile,
-} from '../../x80-video-engine/packages/renderer-skia/dist/index.js';
-import { renderToMp4 } from '../../x80-video-engine/packages/encoding/dist/index.js';
+} from '../engine/skia/index.js';
+import { renderToMp4 } from '../engine/encoding/index.js';
 import { compileHyper } from './compile.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-export const X80_ROOT = resolve(HERE, '../../x80-video-engine');
+export const CUSTOM_HYPER_ROOT = resolve(HERE, '..');
 
 const slug = (family) => family.toLowerCase().trim().replace(/[\s_]+/g, '-').replace(/[^a-z0-9-]/g, '');
 
@@ -24,8 +24,8 @@ const FAMILY_ALIAS = {
 
 export const registerFonts = (spec, specDir) => {
   let n = 0;
-  const cacheRoot = join(X80_ROOT, 'fonts', 'cache');
-  const manifestPath = join(X80_ROOT, 'fonts', 'manifest.json');
+  const cacheRoot = join(CUSTOM_HYPER_ROOT, 'fonts', 'cache');
+  const manifestPath = join(CUSTOM_HYPER_ROOT, 'fonts', 'manifest.json');
   const manifest = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, 'utf8')) : {};
   const bySlug = new Map(Object.keys(manifest).map((f) => [slug(f), f]));
   if (existsSync(cacheRoot)) {
