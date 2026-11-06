@@ -37,7 +37,7 @@ jobs:
         run: |
           ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
           cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
-          npm ci
+          npm install
           npm run build
 
       - name: Validate composition
