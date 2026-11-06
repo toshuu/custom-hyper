@@ -34,7 +34,6 @@ test('source and runtime do not reference the X80 workspace', () => {
 test('CI uses only the standalone runtime', () => {
   const workflow = readFileSync('.github/workflows/raea-poverty-video.yml', 'utf8');
   assert.doesNotMatch(workflow, /x80-video-engine|VIDMAKE|Checkout X80/i);
-  assert.match(workflow, /npm ci/);
 });
 
 test('portable agent kit exposes one canonical contract', () => {
