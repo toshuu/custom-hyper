@@ -665,6 +665,28 @@
           "face": "IBM Plex Mono",
           "fill": "#3E7774",
           "letterSpacing": 1.2
+        },
+        {
+          "type": "stamp",
+          "text": "FIELD\nREPORT",
+          "x": 770,
+          "y": 510,
+          "w": 190,
+          "h": 120,
+          "size": 24,
+          "rotation": 6,
+          "stroke": "#C75B3A",
+          "fill": "#C75B3A",
+          "strokeWidth": 3,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1.05,
+              "dur": 0.55,
+              "ease": "back.out"
+            },
+            "out": false
+          }
         }
       ]
     },
@@ -960,6 +982,32 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "timeline",
+          "x": 85,
+          "y": 1660,
+          "w": 900,
+          "draw": 1.15,
+          "at": 1.2,
+          "step": 0.2,
+          "nodes": [
+            {
+              "at": 0.05,
+              "label": "SOURCE",
+              "sub": "WATER"
+            },
+            {
+              "at": 0.5,
+              "label": "JOURNEY",
+              "sub": "TIME"
+            },
+            {
+              "at": 0.95,
+              "label": "TRADE-OFF",
+              "sub": "WORK"
+            }
+          ]
         }
       ]
     },
@@ -1362,6 +1410,34 @@
           "face": "IBM Plex Mono",
           "fill": "#C75B3A",
           "letterSpacing": 1
+        },
+        {
+          "type": "cardStack",
+          "x": 140,
+          "y": 820,
+          "w": 800,
+          "h": 180,
+          "at": 1.15,
+          "step": 0.3,
+          "lift": 70,
+          "shrink": 0.025,
+          "tilt": 1.2,
+          "titleSize": 35,
+          "subSize": 16,
+          "items": [
+            {
+              "title": "NO CONTRACT",
+              "sub": "Income can stop overnight."
+            },
+            {
+              "title": "NO SAVINGS",
+              "sub": "A shock becomes a crisis."
+            },
+            {
+              "title": "NO BUFFER",
+              "sub": "Recovery takes longer."
+            }
+          ]
         }
       ]
     },
@@ -1659,6 +1735,32 @@
           "size": 25,
           "face": "IBM Plex Mono",
           "fill": "#FFF9EE"
+        },
+        {
+          "type": "ledger",
+          "x": 690,
+          "y": 620,
+          "w": 270,
+          "header": "THE SUPPORT GAP",
+          "rowH": 48,
+          "valueSize": 22,
+          "labelSize": 11,
+          "at": 1,
+          "step": 0.12,
+          "rows": [
+            {
+              "value": "FOOD",
+              "label": "NUTRITION"
+            },
+            {
+              "value": "CARE",
+              "label": "HEALTH"
+            },
+            {
+              "value": "SCHOOL",
+              "label": "LEARNING"
+            }
+          ]
         }
       ]
     },
@@ -1892,6 +1994,34 @@
           "size": 24,
           "face": "IBM Plex Mono",
           "fill": "#3E7774"
+        },
+        {
+          "type": "receipt",
+          "x": 590,
+          "y": 570,
+          "w": 350,
+          "title": "THE COST",
+          "sub": "WHEN CARE IS DELAYED",
+          "rows": [
+            {
+              "label": "Treatment",
+              "value": "LATER"
+            },
+            {
+              "label": "Wages",
+              "value": "LOST"
+            },
+            {
+              "label": "Debt",
+              "value": "MORE"
+            }
+          ],
+          "total": {
+            "label": "The risk",
+            "value": "COMPOUNDS"
+          },
+          "stamp": "AVOIDABLE",
+          "at": 0.8
         }
       ]
     },
@@ -2671,6 +2801,28 @@
           "face": "IBM Plex Mono",
           "fill": "#C75B3A",
           "letterSpacing": 1.5
+        },
+        {
+          "type": "stamp",
+          "text": "BUILD\nACCESS",
+          "x": 760,
+          "y": 970,
+          "w": 200,
+          "h": 140,
+          "size": 25,
+          "rotation": -6,
+          "stroke": "#3E7774",
+          "fill": "#3E7774",
+          "strokeWidth": 3,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1,
+              "dur": 0.6,
+              "ease": "back.out"
+            },
+            "out": false
+          }
         }
       ]
     },
