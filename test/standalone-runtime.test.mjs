@@ -30,3 +30,9 @@ test('source and runtime do not reference the X80 workspace', () => {
     assert.doesNotMatch(readFileSync(file, 'utf8'), /x80-video-engine/, file);
   }
 });
+
+test('package defines the standalone verification command', () => {
+  const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+  assert.equal(pkg.scripts['test:standalone'], 'node --test test/standalone-runtime.test.mjs && npm run verify && npm run smoke');
+  assert.equal(pkg.engines.node, '>=22.20');
+});

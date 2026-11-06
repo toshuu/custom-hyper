@@ -22,9 +22,9 @@ If access is lost, a fresh agent can continue from this file alone.
 | Transitions | 5 types: wipe, flash, dip, band, cut | `src/compile.mjs` |
 | Motion | 12 named easings, baked keyframes | `src/ease.mjs`, `src/motion.mjs` |
 | Renderer | Skia, no browser | `src/render.mjs` |
-| MP4 | In-process H.264 | `@x80/encoding`, ffprobe verified |
+| MP4 | In-process H.264 | `engine/encoding`, ffprobe verified |
 | Stills | PNG, deterministic | `verify` passes across two processes |
-| Fonts | 25 faces from X80 cache | `registerFonts`, includes Bebas Neue |
+| Fonts | 25 owned face files | `fonts/cache`, includes Bebas Neue |
 | Demo | 16 s vertical, 6 layers | `specs/signal-16s.json` |
 | Proxy MP4 | 540x960, 480 frames, 16.000 s | `out/signal-16s-540.mp4` |
 | Agent flow | Documented and runnable via opencode | `AGENTS.md`, `HOW_TO_USE.md` |
@@ -176,7 +176,7 @@ HyperSpec JSON
   -> MP4
 ```
 
-No DOM, CSS, Chrome, network, or LLM at render time. Reused packages: `@x80/core`, `@x80/renderer-skia`, `@x80/encoding`.
+No DOM, CSS, Chrome, network, or LLM at render time. Local runtime: `engine/core`, `engine/skia`, `engine/effects`, and `engine/encoding`.
 ## 8. Decisions locked
 
 1. Track-based composition, not act-based. Layers overlap and live across beats.
@@ -219,7 +219,7 @@ Keep the core rules:
 - Font fallback is silent in Skia. Register every face the spec names and test stills.
 - LLM output can be plausible but invalid. Always validate before render.
 - Old X80 packages are shared. Do not edit them without checking both products.
-- `x80-video-engine/node_modules/@x80/*` must link to `packages/*`. If the links are missing, every Custom Hyper command fails with `ERR_MODULE_NOT_FOUND`. `npm install --offline` fails on uncached `vite-node`; create the links directly or use a network install.
+- Native Skia and WebCodecs packages need compatible npm binaries during installation.
 ## 12. Session log
 ### 2026-10-29 - Core v0.1
 - Built engine, 22 blocks, 5 transitions, 25 fonts, 2 specs. 16 s 540x960 demo in 29.0 s.
@@ -290,3 +290,6 @@ After every change:
 - Direct UI now aborts every API call after 180 s, so a dead server shows an error instead of a stuck "one LLM call".
 - Devtunnel (`*.devtunnels.ms`) returns 302 to GitHub auth for `/public/editor.css`, which the browser reports as a bad MIME type. Use the cloudflared URL. Cloudflare serves `text/css` with 200.
 - Verified: real Gemini plan returns in 3.2 s, 4 beats, 4274 in / 824 out; local and cloudflared CSS `text/css` 200.
+### 2026-11-06 - Standalone runtime
+- Vendored the core compositor, Skia renderer, deterministic effects, and in-process encoder into `engine/`. Added owned `fonts/`, native npm dependencies, and a no-X80-path test.
+- `npm run test:standalone` passed: deterministic still hashes matched and proxy stills rendered without the X80 workspace.

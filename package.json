@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Custom Hyper — deterministic, browser-free, JSON-first motion compositor. HyperFrames composition model on the X80 Skia engine.",
+  "description": "Custom Hyper: deterministic, browser-free, JSON-first motion compositor.",
   "scripts": {
     "check": "node src/cli.mjs check specs/signal-16s.json",
     "lint": "node src/cli.mjs lint specs/signal-16s.json",
@@ -11,10 +11,13 @@
     "stills": "node src/cli.mjs stills specs/signal-16s.json --at 0.8,2.4,5.6,7.2,11.4,14.2",
     "render": "node src/cli.mjs render specs/signal-16s.json --scale 0.5",
     "smoke": "node src/cli.mjs check specs/signal-16s.json && node src/cli.mjs stills specs/signal-16s.json --scale 0.5 --at 1,5",
-    "verify": "node src/cli.mjs verify specs/minimal-3s.json --at 1.5"
+    "verify": "node src/cli.mjs verify specs/minimal-3s.json --at 1.5",
+    "test": "node --test test/editor-model.test.mjs test/standalone-runtime.test.mjs",
+    "test:integration": "node --test test/editor-api.test.mjs",
+    "test:standalone": "node --test test/standalone-runtime.test.mjs && npm run verify && npm run smoke"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.20"
   },
   "license": "UNLICENSED",
   "dependencies": {
