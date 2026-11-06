@@ -5,18 +5,17 @@
     "h": 1920,
     "fps": 30
   },
-  "duration": 32,
+  "duration": 31.3,
   "palette": {
-    "bg": "#F2EBDD",
-    "ink": "#202A31",
-    "rust": "#C75B3A",
-    "gold": "#E6A94B",
-    "teal": "#3E7774",
-    "blue": "#637D91",
-    "paper": "#FFF9EE",
-    "muted": "#647078",
-    "dark": "#17252B",
-    "line": "rgba(32,42,49,0.22)"
+    "bg": "#101A20",
+    "ink": "#F7F0E4",
+    "accent": "#E2A04A",
+    "accent2": "#5D9B91",
+    "muted": "#A9B4B1",
+    "paper": "#F4E8D4",
+    "rust": "#C45C43",
+    "blue": "#527A8A",
+    "dark": "#18272D"
   },
   "faces": {
     "display": "Bebas Neue",
@@ -26,18 +25,18 @@
   },
   "grain": {
     "opacity": 0.035,
-    "amount": 0.3,
-    "seed": 119,
+    "amount": 0.28,
+    "seed": 127,
     "cell": 2,
     "drift": 1
   },
   "layers": [
     {
-      "id": "paper-ground",
+      "id": "opening",
       "from": 0,
-      "duration": 32,
+      "duration": 4.8,
       "fadeIn": 0,
-      "fadeOut": 0,
+      "fadeOut": 0.4,
       "blocks": [
         {
           "type": "bg",
@@ -47,1583 +46,694 @@
             "stops": [
               {
                 "offset": 0,
-                "color": "#F7F1E5"
-              },
-              {
-                "offset": 0.58,
-                "color": "#EEE4D3"
+                "color": "#162A32"
               },
               {
                 "offset": 1,
-                "color": "#E6D9C5"
+                "color": "#071116"
               }
             ]
           }
         },
         {
-          "type": "atmosphere",
-          "blobs": [
-            {
-              "color": "#E6A94B",
-              "x": 900,
-              "y": 300,
-              "r": 240,
-              "blur": 130,
-              "opacity": 0.13,
-              "float": 12,
-              "period": 12
-            },
-            {
-              "color": "#3E7774",
-              "x": 100,
-              "y": 1550,
-              "r": 300,
-              "blur": 160,
-              "opacity": 0.1,
-              "float": 18,
-              "period": 15
-            }
-          ]
+          "type": "circle",
+          "x": 880,
+          "y": 340,
+          "r": 270,
+          "fill": "rgba(226,160,74,.15)"
         },
         {
-          "type": "rect",
-          "x": 0,
-          "y": 0,
-          "w": 18,
-          "h": 1920,
-          "fill": "#C75B3A"
-        },
-        {
-          "type": "rect",
-          "x": 72,
-          "y": 116,
-          "w": 936,
-          "h": 2,
-          "fill": "rgba(32,42,49,0.22)"
-        },
-        {
-          "type": "rect",
-          "x": 72,
-          "y": 1800,
-          "w": 936,
-          "h": 2,
-          "fill": "rgba(32,42,49,0.22)"
-        }
-      ]
-    },
-    {
-      "id": "opening-city",
-      "from": 0,
-      "duration": 5.6,
-      "fadeIn": 0.1,
-      "fadeOut": 0.5,
-      "blocks": [
-        {
-          "type": "kicker",
-          "text": "INDIA / THE UNEQUAL MAP",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#C75B3A",
-          "rule": true
-        },
-        {
-          "type": "text",
-          "text": "THE COUNTRY IS MOVING FORWARD.",
-          "x": 72,
-          "y": 250,
-          "w": 900,
-          "size": 78,
-          "face": "Bebas Neue",
-          "fill": "#202A31",
-          "lineHeight": 0.9,
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.2,
-              "dur": 0.8,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "But not everyone gets to move at the same speed.",
-          "x": 76,
-          "y": 410,
-          "w": 850,
-          "size": 30,
-          "face": "Inter",
-          "fill": "#647078",
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.55,
-              "dur": 0.7,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
+          "type": "circle",
+          "x": 880,
+          "y": 340,
+          "r": 170,
+          "fill": "rgba(226,160,74,.13)"
         },
         {
           "type": "group",
-          "x": 55,
+          "x": 0,
           "y": 610,
           "children": [
             {
               "type": "rect",
               "x": 0,
-              "y": 500,
-              "w": 970,
-              "h": 14,
-              "fill": "#17252B"
+              "y": 850,
+              "w": 1080,
+              "h": 12,
+              "fill": "#071116"
             },
             {
               "type": "rrect",
               "x": 50,
-              "y": 160,
-              "w": 125,
-              "h": 340,
-              "fill": "#9BA9A4",
-              "radius": 5,
-              "motion": {
-                "in": {
-                  "type": "rise",
-                  "at": 0.1,
-                  "dur": 0.6,
-                  "distance": 24,
-                  "ease": "power3.out"
-                },
-                "out": false
-              }
-            },
-            {
-              "type": "rrect",
-              "x": 235,
-              "y": 110,
-              "w": 125,
-              "h": 390,
-              "fill": "#D2B99A",
-              "radius": 5,
-              "motion": {
-                "in": {
-                  "type": "rise",
-                  "at": 0.18,
-                  "dur": 0.6,
-                  "distance": 24,
-                  "ease": "power3.out"
-                },
-                "out": false
-              }
-            },
-            {
-              "type": "rrect",
-              "x": 420,
-              "y": 160,
-              "w": 125,
-              "h": 340,
-              "fill": "#7C9692",
-              "radius": 5,
-              "motion": {
-                "in": {
-                  "type": "rise",
-                  "at": 0.26,
-                  "dur": 0.6,
-                  "distance": 24,
-                  "ease": "power3.out"
-                },
-                "out": false
-              }
-            },
-            {
-              "type": "rrect",
-              "x": 605,
-              "y": 110,
-              "w": 125,
-              "h": 390,
-              "fill": "#B8A18B",
-              "radius": 5,
-              "motion": {
-                "in": {
-                  "type": "rise",
-                  "at": 0.33999999999999997,
-                  "dur": 0.6,
-                  "distance": 24,
-                  "ease": "power3.out"
-                },
-                "out": false
-              }
-            },
-            {
-              "type": "rrect",
-              "x": 790,
-              "y": 160,
-              "w": 125,
-              "h": 340,
-              "fill": "#8DA5A0",
-              "radius": 5,
-              "motion": {
-                "in": {
-                  "type": "rise",
-                  "at": 0.42000000000000004,
-                  "dur": 0.6,
-                  "distance": 24,
-                  "ease": "power3.out"
-                },
-                "out": false
-              }
-            },
-            {
-              "type": "group",
-              "x": 55,
-              "y": 170,
-              "children": [
-                {
-                  "type": "rect",
-                  "x": 15,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 50,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 85,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "x": 240,
-              "y": 120,
-              "children": [
-                {
-                  "type": "rect",
-                  "x": 15,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 50,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 85,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "x": 425,
-              "y": 170,
-              "children": [
-                {
-                  "type": "rect",
-                  "x": 15,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 50,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 85,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "x": 610,
-              "y": 120,
-              "children": [
-                {
-                  "type": "rect",
-                  "x": 15,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 50,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 85,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "x": 795,
-              "y": 170,
-              "children": [
-                {
-                  "type": "rect",
-                  "x": 15,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 50,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                },
-                {
-                  "type": "rect",
-                  "x": 85,
-                  "y": 35,
-                  "w": 18,
-                  "h": 30,
-                  "fill": "#F5E5C6"
-                }
-              ]
-            },
-            {
-              "type": "rrect",
-              "x": 20,
-              "y": 395,
-              "w": 54,
-              "h": 90,
-              "fill": "#B96B4D",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 68,
-              "y": 417,
-              "w": 54,
-              "h": 80,
-              "fill": "#D1A477",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 116,
-              "y": 439,
-              "w": 54,
-              "h": 70,
-              "fill": "#7E9187",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 164,
-              "y": 395,
-              "w": 54,
-              "h": 90,
-              "fill": "#B96B4D",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 212,
-              "y": 417,
-              "w": 54,
-              "h": 80,
-              "fill": "#D1A477",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 260,
-              "y": 439,
-              "w": 54,
-              "h": 70,
-              "fill": "#7E9187",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 308,
-              "y": 395,
-              "w": 54,
-              "h": 90,
-              "fill": "#B96B4D",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 356,
-              "y": 417,
-              "w": 54,
-              "h": 80,
-              "fill": "#D1A477",
-              "radius": 4
-            },
-            {
-              "type": "rrect",
-              "x": 404,
-              "y": 439,
-              "w": 54,
-              "h": 70,
-              "fill": "#7E9187",
-              "radius": 4
-            },
-            {
-              "type": "rect",
-              "x": 28,
-              "y": 425,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 75,
-              "y": 447,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 122,
-              "y": 469,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 169,
-              "y": 425,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 216,
-              "y": 447,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 263,
-              "y": 469,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 310,
-              "y": 425,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 357,
-              "y": 447,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 404,
-              "y": 469,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 451,
-              "y": 425,
-              "w": 16,
-              "h": 5,
-              "fill": "#EAD8B8"
-            },
-            {
-              "type": "rect",
-              "x": 0,
-              "y": 580,
-              "w": 970,
-              "h": 4,
-              "fill": "#C75B3A",
-              "rotation": 0
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.25,
-              "dur": 0.9,
-              "distance": 45,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "ONE SKYLINE. TWO REALITIES.",
-          "x": 72,
-          "y": 1270,
-          "w": 930,
-          "size": 66,
-          "face": "Bebas Neue",
-          "fill": "#C75B3A",
-          "motion": {
-            "in": {
-              "type": "slideLeft",
-              "at": 0.65,
-              "dur": 0.7,
-              "distance": 70,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "A booming economy can exist beside fragile housing, insecure work and missing services.",
-          "x": 76,
-          "y": 1370,
-          "w": 880,
-          "size": 29,
-          "face": "Inter",
-          "fill": "#202A31",
-          "lineHeight": 1.25,
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.9,
-              "dur": 0.7,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "THE STORY IS NOT ABOUT EFFORT. IT IS ABOUT ACCESS.",
-          "x": 72,
-          "y": 1655,
-          "w": 900,
-          "size": 17,
-          "face": "IBM Plex Mono",
-          "fill": "#3E7774",
-          "letterSpacing": 1.2
-        },
-        {
-          "type": "stamp",
-          "text": "FIELD\nREPORT",
-          "x": 770,
-          "y": 510,
-          "w": 190,
-          "h": 120,
-          "size": 24,
-          "rotation": 6,
-          "stroke": "#C75B3A",
-          "fill": "#C75B3A",
-          "strokeWidth": 3,
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 1.05,
-              "dur": 0.55,
-              "ease": "back.out"
-            },
-            "out": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "water-distance",
-      "from": 5.1,
-      "duration": 5.3,
-      "fadeIn": 0.55,
-      "fadeOut": 0.5,
-      "blocks": [
-        {
-          "type": "kicker",
-          "text": "01 / THE DISTANCE TAX",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#3E7774",
-          "rule": true
-        },
-        {
-          "type": "group",
-          "x": 65,
-          "y": 380,
-          "children": [
-            {
-              "type": "circle",
-              "x": 165,
               "y": 230,
-              "r": 100,
-              "fill": "#B9D5CE"
-            },
-            {
-              "type": "circle",
-              "x": 165,
-              "y": 230,
-              "r": 72,
-              "fill": "#3E7774"
-            },
-            {
-              "type": "circle",
-              "x": 165,
-              "y": 230,
-              "r": 44,
-              "fill": "#9CC4BA"
-            },
-            {
-              "type": "rect",
-              "x": 128,
-              "y": 115,
-              "w": 74,
-              "h": 115,
-              "fill": "#17252B"
+              "w": 120,
+              "h": 610,
+              "fill": "#527A78",
+              "radius": 4
             },
             {
               "type": "rrect",
-              "x": 100,
-              "y": 80,
-              "w": 130,
-              "h": 36,
-              "fill": "#C75B3A",
-              "radius": 10
-            },
-            {
-              "type": "circle",
-              "x": 115,
-              "y": 225,
-              "r": 5,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "circle",
-              "x": 140,
-              "y": 225,
-              "r": 5,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "circle",
-              "x": 165,
-              "y": 225,
-              "r": 5,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "circle",
-              "x": 190,
-              "y": 225,
-              "r": 5,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "circle",
               "x": 215,
-              "y": 225,
-              "r": 5,
-              "fill": "#FFF9EE"
+              "y": 150,
+              "w": 120,
+              "h": 690,
+              "fill": "#8A9B8E",
+              "radius": 4
             },
             {
-              "type": "rect",
-              "x": 300,
+              "type": "rrect",
+              "x": 380,
               "y": 230,
-              "w": 430,
-              "h": 7,
-              "fill": "#E6A94B",
-              "rotation": -8
+              "w": 120,
+              "h": 610,
+              "fill": "#B68E6A",
+              "radius": 4
+            },
+            {
+              "type": "rrect",
+              "x": 545,
+              "y": 150,
+              "w": 120,
+              "h": 690,
+              "fill": "#637D8A",
+              "radius": 4
+            },
+            {
+              "type": "rrect",
+              "x": 710,
+              "y": 230,
+              "w": 120,
+              "h": 610,
+              "fill": "#A88A70",
+              "radius": 4
+            },
+            {
+              "type": "rrect",
+              "x": 875,
+              "y": 150,
+              "w": 120,
+              "h": 690,
+              "fill": "#55716D",
+              "radius": 4
             },
             {
               "type": "rect",
-              "x": 315,
-              "y": 190,
-              "w": 430,
-              "h": 7,
-              "fill": "#E6A94B",
-              "rotation": 8
+              "x": 70,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 335,
-              "y": 225,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 235,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 390,
-              "y": 241,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 400,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 445,
-              "y": 225,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 565,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 500,
-              "y": 241,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 730,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 555,
-              "y": 225,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 895,
+              "y": 280,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 610,
-              "y": 241,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 70,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
-              "type": "circle",
-              "x": 665,
-              "y": 225,
-              "r": 8,
-              "fill": "#C75B3A"
+              "type": "rect",
+              "x": 235,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 400,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 565,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 730,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 390,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 70,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 235,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 400,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 565,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 730,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 500,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 70,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 235,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 400,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 565,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 730,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 610,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 70,
+              "y": 720,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
+            },
+            {
+              "type": "rect",
+              "x": 235,
+              "y": 720,
+              "w": 18,
+              "h": 32,
+              "fill": "#E9DCC6"
             },
             {
               "type": "group",
-              "x": 790,
-              "y": 80,
+              "x": 20,
+              "y": 660,
               "children": [
-                {
-                  "type": "rect",
-                  "x": 0,
-                  "y": 190,
-                  "w": 165,
-                  "h": 100,
-                  "fill": "#D2B99A"
-                },
-                {
-                  "type": "rect",
-                  "x": 25,
-                  "y": 120,
-                  "w": 115,
-                  "h": 70,
-                  "fill": "#D2B99A"
-                },
-                {
-                  "type": "rect",
-                  "x": 55,
-                  "y": 150,
-                  "w": 35,
-                  "h": 140,
-                  "fill": "#17252B"
-                },
                 {
                   "type": "rrect",
-                  "x": 45,
-                  "y": 70,
-                  "w": 70,
-                  "h": 80,
-                  "fill": "#C75B3A",
-                  "radius": 6
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#A65B43",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 152,
+              "y": 688,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#B58A63",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 284,
+              "y": 716,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#6D8178",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 416,
+              "y": 660,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#A65B43",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 548,
+              "y": 688,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#B58A63",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 680,
+              "y": 716,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#6D8178",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 812,
+              "y": 660,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#A65B43",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 944,
+              "y": 688,
+              "children": [
+                {
+                  "type": "rrect",
+                  "x": 0,
+                  "y": 0,
+                  "w": 112,
+                  "h": 170,
+                  "fill": "#B58A63",
+                  "radius": 3
+                },
+                {
+                  "type": "rect",
+                  "x": -4,
+                  "y": 0,
+                  "w": 120,
+                  "h": 13,
+                  "fill": "#C77A4D",
+                  "rotation": -12
+                },
+                {
+                  "type": "rect",
+                  "x": 16,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
+                },
+                {
+                  "type": "rect",
+                  "x": 70,
+                  "y": 60,
+                  "w": 18,
+                  "h": 36,
+                  "fill": "#EAD8B8"
                 }
               ]
             },
             {
               "type": "circle",
-              "x": 840,
-              "y": 40,
-              "r": 35,
-              "fill": "#E6A94B"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "slideRight",
-              "at": 0.2,
-              "dur": 0.9,
-              "distance": 65,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "A BASIC NEED\nBECOMES A JOURNEY.",
-          "x": 72,
-          "y": 1000,
-          "w": 920,
-          "size": 94,
-          "face": "Bebas Neue",
-          "fill": "#202A31",
-          "lineHeight": 0.86,
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.35,
-              "dur": 0.8,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "When water, transport or healthcare is far away, the cost is paid in hours — often by women and children.",
-          "x": 76,
-          "y": 1240,
-          "w": 900,
-          "size": 30,
-          "face": "Inter",
-          "fill": "#647078",
-          "lineHeight": 1.3,
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.8,
-              "dur": 0.7,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 72,
-          "y": 1510,
-          "w": 900,
-          "h": 130,
-          "fill": "#3E7774",
-          "radius": 18
-        },
-        {
-          "type": "text",
-          "text": "TIME LOST  →  INCOME LOST  →  CHOICES LOST",
-          "x": 108,
-          "y": 1550,
-          "w": 830,
-          "size": 26,
-          "face": "IBM Plex Mono",
-          "fill": "#FFF9EE",
-          "letterSpacing": 0.6,
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 1,
-              "dur": 0.55,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "timeline",
-          "x": 85,
-          "y": 1660,
-          "w": 900,
-          "draw": 1.15,
-          "at": 1.2,
-          "step": 0.2,
-          "nodes": [
-            {
-              "at": 0.05,
-              "label": "SOURCE",
-              "sub": "WATER"
-            },
-            {
-              "at": 0.5,
-              "label": "JOURNEY",
-              "sub": "TIME"
-            },
-            {
-              "at": 0.95,
-              "label": "TRADE-OFF",
-              "sub": "WORK"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fragile-livelihood",
-      "from": 9.9,
-      "duration": 5.5,
-      "fadeIn": 0.5,
-      "fadeOut": 0.5,
-      "blocks": [
-        {
-          "type": "kicker",
-          "text": "02 / WORK WITHOUT A SAFETY NET",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#C75B3A",
-          "rule": true
-        },
-        {
-          "type": "group",
-          "x": 75,
-          "y": 390,
-          "children": [
-            {
-              "type": "rect",
-              "x": 0,
-              "y": 330,
-              "w": 880,
-              "h": 12,
-              "fill": "#17252B"
-            },
-            {
-              "type": "rrect",
-              "x": 95,
-              "y": 160,
-              "w": 360,
-              "h": 160,
-              "fill": "#C75B3A",
-              "radius": 16
-            },
-            {
-              "type": "rect",
-              "x": 120,
-              "y": 190,
-              "w": 310,
-              "h": 28,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "circle",
-              "x": 145,
-              "y": 252,
+              "x": 90,
+              "y": 835,
               "r": 13,
-              "fill": "#E5C98D"
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 193,
-              "y": 252,
+              "x": 202,
+              "y": 835,
               "r": 13,
-              "fill": "#E6A94B"
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 241,
-              "y": 252,
+              "x": 314,
+              "y": 835,
               "r": 13,
-              "fill": "#E5C98D"
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 289,
-              "y": 252,
+              "x": 426,
+              "y": 835,
               "r": 13,
-              "fill": "#E5C98D"
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 337,
-              "y": 252,
+              "x": 538,
+              "y": 835,
               "r": 13,
-              "fill": "#E6A94B"
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 385,
-              "y": 252,
+              "x": 650,
+              "y": 835,
               "r": 13,
-              "fill": "#E5C98D"
-            },
-            {
-              "type": "rect",
-              "x": 120,
-              "y": 315,
-              "w": 35,
-              "h": 125,
-              "fill": "#17252B",
-              "rotation": -18
-            },
-            {
-              "type": "rect",
-              "x": 420,
-              "y": 315,
-              "w": 35,
-              "h": 125,
-              "fill": "#17252B",
-              "rotation": 18
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 270,
-              "y": 95,
-              "r": 45,
-              "fill": "#A96F50"
-            },
-            {
-              "type": "rrect",
-              "x": 215,
-              "y": 140,
-              "w": 110,
-              "h": 145,
-              "fill": "#3E7774",
-              "radius": 28
-            },
-            {
-              "type": "rect",
-              "x": 250,
-              "y": 280,
-              "w": 18,
-              "h": 100,
-              "fill": "#17252B",
-              "rotation": -8
-            },
-            {
-              "type": "rect",
-              "x": 290,
-              "y": 280,
-              "w": 18,
-              "h": 100,
-              "fill": "#17252B",
-              "rotation": 8
-            },
-            {
-              "type": "rect",
-              "x": 215,
-              "y": 190,
-              "w": 90,
-              "h": 18,
-              "fill": "#17252B",
-              "rotation": -18
+              "x": 762,
+              "y": 835,
+              "r": 13,
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 740,
-              "y": 70,
-              "r": 48,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 620,
-              "y": 180,
-              "w": 110,
-              "h": 150,
-              "fill": "#A7B4A8"
-            },
-            {
-              "type": "rect",
-              "x": 755,
-              "y": 140,
-              "w": 95,
-              "h": 190,
-              "fill": "#8C9D97"
-            },
-            {
-              "type": "rect",
-              "x": 870,
-              "y": 210,
-              "w": 90,
-              "h": 120,
-              "fill": "#C6AE91"
-            },
-            {
-              "type": "rect",
-              "x": 635,
-              "y": 205,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 665,
-              "y": 205,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 695,
-              "y": 205,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 635,
-              "y": 247,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 665,
-              "y": 247,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 695,
-              "y": 247,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 635,
-              "y": 289,
-              "w": 14,
-              "h": 18,
-              "fill": "#FFF9EE"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.2,
-              "dur": 0.8,
-              "distance": 40,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "HARD WORK CAN STILL BE FRAGILE.",
-          "x": 72,
-          "y": 1050,
-          "w": 940,
-          "size": 76,
-          "face": "Bebas Neue",
-          "fill": "#202A31",
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.3,
-              "dur": 0.8,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "A day without customers. A sick family member. A failed harvest. One shock can erase the month.",
-          "x": 76,
-          "y": 1170,
-          "w": 900,
-          "size": 30,
-          "face": "Inter",
-          "fill": "#647078",
-          "lineHeight": 1.28,
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 0.75,
-              "dur": 0.65,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 72,
-          "y": 1470,
-          "w": 280,
-          "h": 95,
-          "fill": "#FFF9EE",
-          "radius": 12,
-          "stroke": "rgba(32,42,49,0.22)",
-          "strokeWidth": 2,
-          "children": [
-            {
-              "type": "text",
-              "text": "NO CONTRACT",
-              "x": 18,
-              "y": 30,
-              "w": 245,
-              "size": 21,
-              "face": "IBM Plex Mono",
-              "fill": "#202A31"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 1,
-              "dur": 0.45,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 382,
-          "y": 1470,
-          "w": 280,
-          "h": 95,
-          "fill": "#D6E1D8",
-          "radius": 12,
-          "stroke": "rgba(32,42,49,0.22)",
-          "strokeWidth": 2,
-          "children": [
-            {
-              "type": "text",
-              "text": "NO SAVINGS",
-              "x": 18,
-              "y": 30,
-              "w": 245,
-              "size": 21,
-              "face": "IBM Plex Mono",
-              "fill": "#202A31"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 1.12,
-              "dur": 0.45,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "rrect",
-          "x": 692,
-          "y": 1470,
-          "w": 280,
-          "h": 95,
-          "fill": "#E7CBA7",
-          "radius": 12,
-          "stroke": "rgba(32,42,49,0.22)",
-          "strokeWidth": 2,
-          "children": [
-            {
-              "type": "text",
-              "text": "NO BUFFER",
-              "x": 18,
-              "y": 30,
-              "w": 245,
-              "size": 21,
-              "face": "IBM Plex Mono",
-              "fill": "#202A31"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "scale",
-              "at": 1.24,
-              "dur": 0.45,
-              "distance": 35,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "text",
-          "text": "THE SHOCK IS PERSONAL. THE RISK IS STRUCTURAL.",
-          "x": 72,
-          "y": 1660,
-          "w": 930,
-          "size": 17,
-          "face": "IBM Plex Mono",
-          "fill": "#C75B3A",
-          "letterSpacing": 1
-        },
-        {
-          "type": "cardStack",
-          "x": 140,
-          "y": 820,
-          "w": 800,
-          "h": 180,
-          "at": 1.15,
-          "step": 0.3,
-          "lift": 70,
-          "shrink": 0.025,
-          "tilt": 1.2,
-          "titleSize": 35,
-          "subSize": 16,
-          "items": [
-            {
-              "title": "NO CONTRACT",
-              "sub": "Income can stop overnight."
-            },
-            {
-              "title": "NO SAVINGS",
-              "sub": "A shock becomes a crisis."
-            },
-            {
-              "title": "NO BUFFER",
-              "sub": "Recovery takes longer."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "education",
-      "from": 15,
-      "duration": 5.1,
-      "fadeIn": 0.5,
-      "fadeOut": 0.45,
-      "blocks": [
-        {
-          "type": "kicker",
-          "text": "03 / THE NEXT GENERATION",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#3E7774",
-          "rule": true
-        },
-        {
-          "type": "group",
-          "x": 65,
-          "y": 360,
-          "children": [
-            {
-              "type": "rrect",
-              "x": 40,
-              "y": 20,
-              "w": 840,
-              "h": 420,
-              "fill": "#D5C6A9",
-              "radius": 12
-            },
-            {
-              "type": "rrect",
-              "x": 105,
-              "y": 65,
-              "w": 520,
-              "h": 205,
-              "fill": "#34564F",
-              "radius": 8
-            },
-            {
-              "type": "rect",
-              "x": 145,
-              "y": 115,
-              "w": 300,
-              "h": 5,
-              "fill": "#E9E1CA",
-              "rotation": 0
-            },
-            {
-              "type": "rect",
-              "x": 145,
-              "y": 160,
-              "w": 390,
-              "h": 5,
-              "fill": "#E9E1CA",
-              "rotation": 0
-            },
-            {
-              "type": "rect",
-              "x": 145,
-              "y": 205,
-              "w": 260,
-              "h": 5,
-              "fill": "#E9E1CA",
-              "rotation": 0
-            },
-            {
-              "type": "rect",
-              "x": 665,
-              "y": 65,
-              "w": 160,
-              "h": 205,
-              "fill": "#B88D62"
-            },
-            {
-              "type": "rrect",
-              "x": 100,
-              "y": 315,
-              "w": 140,
-              "h": 22,
-              "fill": "#C75B3A",
-              "radius": 6
-            },
-            {
-              "type": "rrect",
-              "x": 290,
-              "y": 315,
-              "w": 140,
-              "h": 22,
-              "fill": "#C75B3A",
-              "radius": 6
-            },
-            {
-              "type": "rrect",
-              "x": 480,
-              "y": 315,
-              "w": 140,
-              "h": 22,
-              "fill": "#C75B3A",
-              "radius": 6
-            },
-            {
-              "type": "rrect",
-              "x": 670,
-              "y": 315,
-              "w": 140,
-              "h": 22,
-              "fill": "#C75B3A",
-              "radius": 6
+              "x": 874,
+              "y": 835,
+              "r": 13,
+              "fill": "#D6A66A"
             },
             {
               "type": "circle",
-              "x": 165,
-              "y": 285,
-              "r": 28,
-              "fill": "#9E6C4E"
-            },
-            {
-              "type": "circle",
-              "x": 355,
-              "y": 285,
-              "r": 28,
-              "fill": "#C28C61"
-            },
-            {
-              "type": "circle",
-              "x": 545,
-              "y": 285,
-              "r": 28,
-              "fill": "#8B624D"
-            },
-            {
-              "type": "circle",
-              "x": 735,
-              "y": 285,
-              "r": 28,
-              "fill": "#B77C57"
-            },
-            {
-              "type": "rrect",
-              "x": 135,
-              "y": 315,
-              "w": 62,
-              "h": 85,
-              "fill": "#3E7774",
-              "radius": 10
-            },
-            {
-              "type": "rrect",
-              "x": 325,
-              "y": 315,
-              "w": 62,
-              "h": 85,
-              "fill": "#3E7774",
-              "radius": 10
-            },
-            {
-              "type": "rrect",
-              "x": 515,
-              "y": 315,
-              "w": 62,
-              "h": 85,
-              "fill": "#3E7774",
-              "radius": 10
-            },
-            {
-              "type": "rrect",
-              "x": 705,
-              "y": 315,
-              "w": 62,
-              "h": 85,
-              "fill": "#3E7774",
-              "radius": 10
-            },
-            {
-              "type": "rect",
-              "x": 0,
-              "y": 450,
-              "w": 900,
-              "h": 5,
-              "fill": "#17252B",
-              "rotation": 0
+              "x": 986,
+              "y": 835,
+              "r": 13,
+              "fill": "#D6A66A"
             }
           ],
           "motion": {
@@ -1631,7 +741,7 @@
               "type": "rise",
               "at": 0.15,
               "dur": 0.8,
-              "distance": 45,
+              "distance": 55,
               "ease": "power3.out"
             },
             "out": false
@@ -1639,18 +749,18 @@
         },
         {
           "type": "text",
-          "text": "A CHILD'S TALENT\nSHOULD NOT DEPEND ON PIN CODE.",
-          "x": 72,
-          "y": 970,
-          "w": 930,
-          "size": 80,
+          "text": "INDIA IS\nRISING.",
+          "x": 66,
+          "y": 190,
+          "w": 900,
+          "size": 150,
           "face": "Bebas Neue",
-          "fill": "#202A31",
-          "lineHeight": 0.9,
+          "fill": "#F7F0E4",
+          "lineHeight": 0.82,
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.3,
+              "at": 0.15,
               "dur": 0.8,
               "distance": 35,
               "ease": "power3.out"
@@ -1660,18 +770,17 @@
         },
         {
           "type": "text",
-          "text": "Nutrition, safe classrooms, digital access and reliable transport decide which doors stay open.",
-          "x": 76,
-          "y": 1190,
-          "w": 890,
-          "size": 29,
+          "text": "But millions still live one shock away from falling behind.",
+          "x": 74,
+          "y": 500,
+          "w": 780,
+          "size": 31,
           "face": "Inter",
-          "fill": "#647078",
-          "lineHeight": 1.3,
+          "fill": "#D1D8D2",
           "motion": {
             "in": {
               "type": "rise",
-              "at": 0.8,
+              "at": 0.6,
               "dur": 0.65,
               "distance": 35,
               "ease": "power3.out"
@@ -1680,72 +789,1215 @@
           }
         },
         {
-          "type": "rrect",
+          "type": "text",
+          "text": "THE GAP IS NOT AMBITION.\nIT IS ACCESS.",
+          "x": 72,
+          "y": 1570,
+          "w": 900,
+          "size": 48,
+          "face": "Bebas Neue",
+          "fill": "#E2A04A",
+          "lineHeight": 0.95,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.9,
+              "dur": 0.6,
+              "distance": 55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "A HUMAN\nSTORY",
+          "x": 800,
+          "y": 1380,
+          "w": 190,
+          "h": 130,
+          "size": 24,
+          "rotation": 7,
+          "stroke": "#E2A04A",
+          "fill": "#E2A04A",
+          "strokeWidth": 3,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1.2,
+              "dur": 0.5,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "from": 4.4,
+      "duration": 4.8,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#D9E7DF"
+              },
+              {
+                "offset": 1,
+                "color": "#8FB7AF"
+              }
+            ]
+          }
+        },
+        {
+          "type": "circle",
+          "x": 810,
+          "y": 500,
+          "r": 360,
+          "fill": "rgba(255,255,255,.25)"
+        },
+        {
+          "type": "circle",
+          "x": 810,
+          "y": 500,
+          "r": 250,
+          "fill": "rgba(255,255,255,.25)"
+        },
+        {
+          "type": "group",
+          "x": 600,
+          "y": 180,
+          "children": [
+            {
+              "type": "rrect",
+              "x": 80,
+              "y": 140,
+              "w": 300,
+              "h": 440,
+              "fill": "#456F70",
+              "radius": 80
+            },
+            {
+              "type": "rrect",
+              "x": 110,
+              "y": 165,
+              "w": 240,
+              "h": 390,
+              "fill": "#A9C9BD",
+              "radius": 70
+            },
+            {
+              "type": "rrect",
+              "x": 135,
+              "y": 195,
+              "w": 190,
+              "h": 340,
+              "fill": "#DDE9DB",
+              "radius": 55
+            },
+            {
+              "type": "rect",
+              "x": 70,
+              "y": 135,
+              "w": 320,
+              "h": 55,
+              "fill": "#C45C43",
+              "rotation": -2
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 160,
+              "fill": "#4E7D7B"
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 120,
+              "fill": "#BBD7CB"
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 60,
+              "fill": "rgba(255,255,255,.0)",
+              "stroke": "rgba(255,255,255,.5)",
+              "strokeWidth": 3
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 88,
+              "fill": "rgba(255,255,255,.0)",
+              "stroke": "rgba(255,255,255,.5)",
+              "strokeWidth": 3
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 116,
+              "fill": "rgba(255,255,255,.0)",
+              "stroke": "rgba(255,255,255,.5)",
+              "strokeWidth": 3
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 144,
+              "fill": "rgba(255,255,255,.0)",
+              "stroke": "rgba(255,255,255,.5)",
+              "strokeWidth": 3
+            },
+            {
+              "type": "circle",
+              "x": 230,
+              "y": 135,
+              "r": 172,
+              "fill": "rgba(255,255,255,.0)",
+              "stroke": "rgba(255,255,255,.5)",
+              "strokeWidth": 3
+            }
+          ],
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.2,
+              "dur": 0.8,
+              "distance": 55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "group",
+          "x": 40,
+          "y": 780,
+          "children": [
+            {
+              "type": "rect",
+              "x": 20,
+              "y": 100,
+              "w": 440,
+              "h": 8,
+              "fill": "#C45C43",
+              "rotation": -10
+            },
+            {
+              "type": "rect",
+              "x": 440,
+              "y": 100,
+              "w": 360,
+              "h": 8,
+              "fill": "#C45C43",
+              "rotation": 12
+            },
+            {
+              "type": "rect",
+              "x": 795,
+              "y": 100,
+              "w": 190,
+              "h": 8,
+              "fill": "#C45C43",
+              "rotation": -8
+            },
+            {
+              "type": "circle",
+              "x": 35,
+              "y": 100,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 103,
+              "y": 94,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 171,
+              "y": 88,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 239,
+              "y": 82,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 307,
+              "y": 76,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 375,
+              "y": 70,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 443,
+              "y": 64,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 511,
+              "y": 100,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 579,
+              "y": 106,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 647,
+              "y": 112,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 715,
+              "y": 118,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 783,
+              "y": 124,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 851,
+              "y": 130,
+              "r": 7,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "circle",
+              "x": 919,
+              "y": 136,
+              "r": 7,
+              "fill": "#C45C43"
+            }
+          ],
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.4,
+              "dur": 0.6,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "WATER SHOULD\nNOT TAKE A DAY.",
+          "x": 68,
+          "y": 220,
+          "w": 600,
+          "size": 104,
+          "face": "Bebas Neue",
+          "fill": "#1B3438",
+          "lineHeight": 0.85,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.75,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A long walk for a basic need steals time from school, paid work and rest.",
+          "x": 74,
+          "y": 530,
+          "w": 500,
+          "size": 29,
+          "face": "Inter",
+          "fill": "#2B4B4D",
+          "lineHeight": 1.28,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.7,
+              "dur": 0.65,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "DISTANCE  →  TIME  →  LOST CHOICE",
+          "x": 72,
+          "y": 1510,
+          "w": 920,
+          "size": 27,
+          "face": "IBM Plex Mono",
+          "fill": "#1B3438",
+          "letterSpacing": 0.5
+        },
+        {
+          "type": "timeline",
+          "x": 110,
+          "y": 1670,
+          "w": 850,
+          "draw": 1,
+          "at": 1,
+          "step": 0.18,
+          "nodes": [
+            {
+              "at": 0.05,
+              "label": "WELL",
+              "sub": "WATER"
+            },
+            {
+              "at": 0.5,
+              "label": "WALK",
+              "sub": "HOURS"
+            },
+            {
+              "at": 0.95,
+              "label": "HOME",
+              "sub": "LATE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "from": 8.8,
+      "duration": 4.9,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#D6A46E"
+              },
+              {
+                "offset": 1,
+                "color": "#9A5C40"
+              }
+            ]
+          }
+        },
+        {
+          "type": "circle",
+          "x": 880,
+          "y": 300,
+          "r": 180,
+          "fill": "rgba(255,240,200,.22)"
+        },
+        {
+          "type": "group",
+          "x": 40,
+          "y": 480,
+          "children": [
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 650,
+              "w": 1000,
+              "h": 12,
+              "fill": "#2B2722"
+            },
+            {
+              "type": "rrect",
+              "x": 110,
+              "y": 180,
+              "w": 520,
+              "h": 350,
+              "fill": "#E6C28D",
+              "radius": 18
+            },
+            {
+              "type": "rect",
+              "x": 95,
+              "y": 150,
+              "w": 550,
+              "h": 60,
+              "fill": "#9B4F37"
+            },
+            {
+              "type": "circle",
+              "x": 160,
+              "y": 280,
+              "r": 24,
+              "fill": "#B84F38"
+            },
+            {
+              "type": "circle",
+              "x": 218,
+              "y": 280,
+              "r": 24,
+              "fill": "#E4A64C"
+            },
+            {
+              "type": "circle",
+              "x": 276,
+              "y": 280,
+              "r": 24,
+              "fill": "#55796E"
+            },
+            {
+              "type": "circle",
+              "x": 334,
+              "y": 280,
+              "r": 24,
+              "fill": "#D9C18F"
+            },
+            {
+              "type": "circle",
+              "x": 392,
+              "y": 280,
+              "r": 24,
+              "fill": "#B84F38"
+            },
+            {
+              "type": "circle",
+              "x": 450,
+              "y": 280,
+              "r": 24,
+              "fill": "#E4A64C"
+            },
+            {
+              "type": "circle",
+              "x": 508,
+              "y": 280,
+              "r": 24,
+              "fill": "#55796E"
+            },
+            {
+              "type": "circle",
+              "x": 566,
+              "y": 280,
+              "r": 24,
+              "fill": "#D9C18F"
+            },
+            {
+              "type": "rect",
+              "x": 140,
+              "y": 345,
+              "w": 60,
+              "h": 80,
+              "fill": "#A65A3E"
+            },
+            {
+              "type": "rect",
+              "x": 230,
+              "y": 345,
+              "w": 60,
+              "h": 80,
+              "fill": "#E3A64A"
+            },
+            {
+              "type": "rect",
+              "x": 320,
+              "y": 345,
+              "w": 60,
+              "h": 80,
+              "fill": "#6C8275"
+            },
+            {
+              "type": "rect",
+              "x": 410,
+              "y": 345,
+              "w": 60,
+              "h": 80,
+              "fill": "#A65A3E"
+            },
+            {
+              "type": "rect",
+              "x": 500,
+              "y": 345,
+              "w": 60,
+              "h": 80,
+              "fill": "#E3A64A"
+            },
+            {
+              "type": "circle",
+              "x": 770,
+              "y": 180,
+              "r": 55,
+              "fill": "#87553E"
+            },
+            {
+              "type": "rrect",
+              "x": 710,
+              "y": 245,
+              "w": 130,
+              "h": 260,
+              "fill": "#315E5A",
+              "radius": 35
+            },
+            {
+              "type": "rect",
+              "x": 735,
+              "y": 490,
+              "w": 26,
+              "h": 150,
+              "fill": "#2A3030",
+              "rotation": -6
+            },
+            {
+              "type": "rect",
+              "x": 805,
+              "y": 490,
+              "w": 26,
+              "h": 150,
+              "fill": "#2A3030",
+              "rotation": 6
+            },
+            {
+              "type": "rect",
+              "x": 715,
+              "y": 300,
+              "w": 130,
+              "h": 22,
+              "fill": "#87553E",
+              "rotation": -18
+            },
+            {
+              "type": "rect",
+              "x": 830,
+              "y": 300,
+              "w": 110,
+              "h": 20,
+              "fill": "#87553E",
+              "rotation": 22
+            },
+            {
+              "type": "rect",
+              "x": 60,
+              "y": 80,
+              "w": 650,
+              "h": 20,
+              "fill": "#2B2722"
+            },
+            {
+              "type": "rect",
+              "x": 90,
+              "y": 80,
+              "w": 24,
+              "h": 110,
+              "fill": "#2B2722",
+              "rotation": 0
+            },
+            {
+              "type": "rect",
+              "x": 650,
+              "y": 80,
+              "w": 24,
+              "h": 110,
+              "fill": "#2B2722",
+              "rotation": 0
+            },
+            {
+              "type": "rect",
+              "x": 90,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#B94F39"
+            },
+            {
+              "type": "rect",
+              "x": 178,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#E7B052"
+            },
+            {
+              "type": "rect",
+              "x": 266,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#E9D6B6"
+            },
+            {
+              "type": "rect",
+              "x": 354,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#B94F39"
+            },
+            {
+              "type": "rect",
+              "x": 442,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#E7B052"
+            },
+            {
+              "type": "rect",
+              "x": 530,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#E9D6B6"
+            },
+            {
+              "type": "rect",
+              "x": 618,
+              "y": 20,
+              "w": 80,
+              "h": 60,
+              "fill": "#B94F39"
+            }
+          ],
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.15,
+              "dur": 0.8,
+              "distance": 50,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "WORKING HARD.\nLIVING PRECARIOUSLY.",
+          "x": 68,
+          "y": 190,
+          "w": 930,
+          "size": 90,
+          "face": "Bebas Neue",
+          "fill": "#2A2825",
+          "lineHeight": 0.86,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.75,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A missed shift, illness or bad season can wipe out the income a family depends on.",
+          "x": 74,
+          "y": 1190,
+          "w": 800,
+          "size": 29,
+          "face": "Inter",
+          "fill": "#F8E8D0",
+          "lineHeight": 1.3,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.7,
+              "dur": 0.65,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "cardStack",
           "x": 120,
-          "y": 1510,
-          "w": 220,
-          "h": 220,
-          "fill": "#E6A94B",
-          "radius": 10
+          "y": 1450,
+          "w": 840,
+          "h": 180,
+          "at": 0.7,
+          "step": 0.28,
+          "lift": 65,
+          "shrink": 0.02,
+          "tilt": 1,
+          "titleSize": 33,
+          "subSize": 15,
+          "items": [
+            {
+              "title": "NO CONTRACT",
+              "sub": "Work can disappear."
+            },
+            {
+              "title": "NO SAVINGS",
+              "sub": "One bill becomes debt."
+            },
+            {
+              "title": "NO BUFFER",
+              "sub": "Recovery takes time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "from": 13.3,
+      "duration": 4.8,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
+      "blocks": [
+        {
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#1E4847"
+              },
+              {
+                "offset": 1,
+                "color": "#0D252B"
+              }
+            ]
+          }
         },
         {
-          "type": "rrect",
-          "x": 390,
-          "y": 1510,
-          "w": 220,
-          "h": 220,
-          "fill": "#3E7774",
-          "radius": 10
-        },
-        {
-          "type": "rrect",
-          "x": 660,
-          "y": 1510,
-          "w": 220,
-          "h": 220,
-          "fill": "#C75B3A",
-          "radius": 10
+          "type": "group",
+          "x": 35,
+          "y": 340,
+          "children": [
+            {
+              "type": "rrect",
+              "x": 20,
+              "y": 30,
+              "w": 960,
+              "h": 600,
+              "fill": "#D7C9A9",
+              "radius": 12
+            },
+            {
+              "type": "rrect",
+              "x": 100,
+              "y": 85,
+              "w": 650,
+              "h": 300,
+              "fill": "#244A43",
+              "radius": 8
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 135,
+              "w": 390,
+              "h": 5,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 187,
+              "w": 520,
+              "h": 5,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 239,
+              "w": 390,
+              "h": 5,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 291,
+              "w": 520,
+              "h": 5,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 343,
+              "w": 390,
+              "h": 5,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "rect",
+              "x": 810,
+              "y": 85,
+              "w": 115,
+              "h": 300,
+              "fill": "#AD8159"
+            },
+            {
+              "type": "rect",
+              "x": 835,
+              "y": 120,
+              "w": 65,
+              "h": 8,
+              "fill": "#E8DFC9"
+            },
+            {
+              "type": "group",
+              "x": 80,
+              "y": 430,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 45,
+                  "y": 0,
+                  "r": 34,
+                  "fill": "#9C6549"
+                },
+                {
+                  "type": "rrect",
+                  "x": 5,
+                  "y": 42,
+                  "w": 80,
+                  "h": 150,
+                  "fill": "#C25F42",
+                  "radius": 18
+                },
+                {
+                  "type": "rect",
+                  "x": 20,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 55,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 255,
+              "y": 430,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 45,
+                  "y": 0,
+                  "r": 34,
+                  "fill": "#C18A5E"
+                },
+                {
+                  "type": "rrect",
+                  "x": 5,
+                  "y": 42,
+                  "w": 80,
+                  "h": 150,
+                  "fill": "#4E8277",
+                  "radius": 18
+                },
+                {
+                  "type": "rect",
+                  "x": 20,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 55,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 430,
+              "y": 430,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 45,
+                  "y": 0,
+                  "r": 34,
+                  "fill": "#8D624B"
+                },
+                {
+                  "type": "rrect",
+                  "x": 5,
+                  "y": 42,
+                  "w": 80,
+                  "h": 150,
+                  "fill": "#D49A45",
+                  "radius": 18
+                },
+                {
+                  "type": "rect",
+                  "x": 20,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 55,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 605,
+              "y": 430,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 45,
+                  "y": 0,
+                  "r": 34,
+                  "fill": "#9C6549"
+                },
+                {
+                  "type": "rrect",
+                  "x": 5,
+                  "y": 42,
+                  "w": 80,
+                  "h": 150,
+                  "fill": "#C25F42",
+                  "radius": 18
+                },
+                {
+                  "type": "rect",
+                  "x": 20,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 55,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 780,
+              "y": 430,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 45,
+                  "y": 0,
+                  "r": 34,
+                  "fill": "#C18A5E"
+                },
+                {
+                  "type": "rrect",
+                  "x": 5,
+                  "y": 42,
+                  "w": 80,
+                  "h": 150,
+                  "fill": "#4E8277",
+                  "radius": 18
+                },
+                {
+                  "type": "rect",
+                  "x": 20,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 55,
+                  "y": 185,
+                  "w": 17,
+                  "h": 85,
+                  "fill": "#17252A",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "rrect",
+              "x": 65,
+              "y": 610,
+              "w": 165,
+              "h": 28,
+              "fill": "#9A6E4D",
+              "radius": 5
+            },
+            {
+              "type": "rrect",
+              "x": 285,
+              "y": 610,
+              "w": 165,
+              "h": 28,
+              "fill": "#9A6E4D",
+              "radius": 5
+            },
+            {
+              "type": "rrect",
+              "x": 505,
+              "y": 610,
+              "w": 165,
+              "h": 28,
+              "fill": "#9A6E4D",
+              "radius": 5
+            },
+            {
+              "type": "rrect",
+              "x": 725,
+              "y": 610,
+              "w": 165,
+              "h": 28,
+              "fill": "#9A6E4D",
+              "radius": 5
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 720,
+              "w": 1000,
+              "h": 10,
+              "fill": "#0A191E"
+            }
+          ],
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.1,
+              "dur": 0.8,
+              "distance": 50,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
         },
         {
           "type": "text",
-          "text": "LEARN",
-          "x": 155,
-          "y": 1590,
-          "w": 160,
-          "size": 25,
-          "face": "IBM Plex Mono",
-          "fill": "#202A31"
+          "text": "A CLASSROOM IS A\nDOOR TO CHOICE.",
+          "x": 72,
+          "y": 160,
+          "w": 900,
+          "size": 90,
+          "face": "Bebas Neue",
+          "fill": "#F7F0E4",
+          "lineHeight": 0.85,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.2,
+              "dur": 0.75,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
         },
         {
           "type": "text",
-          "text": "GROW",
-          "x": 430,
-          "y": 1590,
-          "w": 160,
-          "size": 25,
-          "face": "IBM Plex Mono",
-          "fill": "#FFF9EE"
-        },
-        {
-          "type": "text",
-          "text": "CHOOSE",
-          "x": 690,
-          "y": 1590,
-          "w": 170,
-          "size": 25,
-          "face": "IBM Plex Mono",
-          "fill": "#FFF9EE"
+          "text": "Nutrition, safe schools, books and transport shape what a child can become.",
+          "x": 78,
+          "y": 1120,
+          "w": 870,
+          "size": 30,
+          "face": "Inter",
+          "fill": "#D5E2D8",
+          "lineHeight": 1.3,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.7,
+              "dur": 0.65,
+              "distance": 35,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
         },
         {
           "type": "ledger",
           "x": 690,
-          "y": 620,
-          "w": 270,
-          "header": "THE SUPPORT GAP",
-          "rowH": 48,
-          "valueSize": 22,
-          "labelSize": 11,
-          "at": 1,
+          "y": 1380,
+          "w": 300,
+          "header": "WHAT MUST BE THERE",
+          "rowH": 52,
+          "valueSize": 23,
+          "labelSize": 10,
+          "at": 0.8,
           "step": 0.12,
           "rows": [
             {
@@ -1766,159 +2018,165 @@
     },
     {
       "id": "health",
-      "from": 19.7,
-      "duration": 5.2,
-      "fadeIn": 0.5,
-      "fadeOut": 0.5,
+      "from": 17.7,
+      "duration": 4.8,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
       "blocks": [
         {
-          "type": "kicker",
-          "text": "04 / WHEN HEALTH BECOMES A FINANCIAL RISK",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#C75B3A",
-          "rule": true
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#4A3D40"
+              },
+              {
+                "offset": 1,
+                "color": "#1C252C"
+              }
+            ]
+          }
         },
         {
           "type": "group",
-          "x": 90,
-          "y": 390,
+          "x": 40,
+          "y": 360,
           "children": [
             {
               "type": "rrect",
-              "x": 30,
-              "y": 70,
-              "w": 820,
+              "x": 20,
+              "y": 30,
+              "w": 970,
+              "h": 640,
+              "fill": "#D7D9CF",
+              "radius": 12
+            },
+            {
+              "type": "rect",
+              "x": 70,
+              "y": 90,
+              "w": 360,
               "h": 420,
-              "fill": "#DCE4D9",
-              "radius": 20
+              "fill": "#E8E6D9"
             },
             {
               "type": "rect",
-              "x": 80,
-              "y": 130,
-              "w": 340,
-              "h": 230,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 80,
-              "y": 130,
-              "w": 340,
-              "h": 42,
-              "fill": "#3E7774"
+              "x": 70,
+              "y": 90,
+              "w": 360,
+              "h": 65,
+              "fill": "#4D8179"
             },
             {
               "type": "circle",
               "x": 250,
-              "y": 90,
-              "r": 44,
-              "fill": "#C75B3A"
+              "y": 75,
+              "r": 45,
+              "fill": "#C45C43"
             },
             {
               "type": "rect",
-              "x": 238,
-              "y": 45,
-              "w": 24,
-              "h": 90,
-              "fill": "#FFF9EE"
+              "x": 235,
+              "y": 40,
+              "w": 30,
+              "h": 70,
+              "fill": "#F7F0E4"
             },
             {
               "type": "rect",
-              "x": 205,
-              "y": 78,
-              "w": 90,
-              "h": 24,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rrect",
-              "x": 475,
-              "y": 240,
-              "w": 270,
-              "h": 65,
-              "fill": "#FFF9EE",
-              "radius": 15
+              "x": 210,
+              "y": 60,
+              "w": 80,
+              "h": 28,
+              "fill": "#F7F0E4"
             },
             {
               "type": "rrect",
               "x": 500,
-              "y": 305,
-              "w": 220,
-              "h": 75,
-              "fill": "#A8B7AA",
-              "radius": 12
-            },
-            {
-              "type": "circle",
-              "x": 530,
-              "y": 220,
-              "r": 32,
-              "fill": "#A96F50"
-            },
-            {
-              "type": "rect",
-              "x": 560,
-              "y": 285,
-              "w": 150,
-              "h": 8,
-              "fill": "#3E7774",
-              "rotation": -8
-            },
-            {
-              "type": "rect",
-              "x": 560,
-              "y": 375,
-              "w": 18,
-              "h": 100,
-              "fill": "#17252B",
-              "rotation": 12
-            },
-            {
-              "type": "rect",
-              "x": 680,
-              "y": 375,
-              "w": 18,
-              "h": 100,
-              "fill": "#17252B",
-              "rotation": -12
+              "y": 370,
+              "w": 380,
+              "h": 65,
+              "fill": "#F5F0E6",
+              "radius": 20
             },
             {
               "type": "rrect",
-              "x": 720,
-              "y": 125,
-              "w": 90,
-              "h": 160,
-              "fill": "#C75B3A",
-              "radius": 12
+              "x": 540,
+              "y": 435,
+              "w": 310,
+              "h": 100,
+              "fill": "#A6B8AF",
+              "radius": 15
+            },
+            {
+              "type": "circle",
+              "x": 560,
+              "y": 340,
+              "r": 45,
+              "fill": "#9B694F"
+            },
+            {
+              "type": "rrect",
+              "x": 600,
+              "y": 390,
+              "w": 210,
+              "h": 65,
+              "fill": "#557D78",
+              "radius": 18
             },
             {
               "type": "rect",
-              "x": 758,
-              "y": 150,
-              "w": 14,
-              "h": 110,
-              "fill": "#FFF9EE"
+              "x": 620,
+              "y": 520,
+              "w": 22,
+              "h": 100,
+              "fill": "#28383A",
+              "rotation": -10
             },
             {
               "type": "rect",
-              "x": 730,
-              "y": 198,
-              "w": 70,
-              "h": 14,
-              "fill": "#FFF9EE"
+              "x": 790,
+              "y": 520,
+              "w": 22,
+              "h": 100,
+              "fill": "#28383A",
+              "rotation": 10
+            },
+            {
+              "type": "rrect",
+              "x": 880,
+              "y": 130,
+              "w": 75,
+              "h": 155,
+              "fill": "#B5D0C2",
+              "radius": 14
+            },
+            {
+              "type": "rect",
+              "x": 892,
+              "y": 110,
+              "w": 50,
+              "h": 30,
+              "fill": "#C45C43"
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 185,
+              "w": 45,
+              "h": 45,
+              "fill": "#F2E9D8"
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 500,
-              "w": 900,
-              "h": 5,
-              "fill": "#17252B",
-              "rotation": 0
+              "y": 700,
+              "w": 1000,
+              "h": 10,
+              "fill": "#10191D"
             }
           ],
           "motion": {
@@ -1926,7 +2184,7 @@
               "type": "slideLeft",
               "at": 0.2,
               "dur": 0.8,
-              "distance": 60,
+              "distance": 55,
               "ease": "power3.out"
             },
             "out": false
@@ -1934,19 +2192,19 @@
         },
         {
           "type": "text",
-          "text": "ILLNESS SHOULD NOT\nPUSH A FAMILY BACK.",
+          "text": "ILLNESS SHOULD NOT\nBECOME A DEBT TRAP.",
           "x": 72,
-          "y": 1040,
-          "w": 920,
-          "size": 86,
+          "y": 160,
+          "w": 930,
+          "size": 88,
           "face": "Bebas Neue",
-          "fill": "#202A31",
-          "lineHeight": 0.88,
+          "fill": "#F7F0E4",
+          "lineHeight": 0.86,
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.35,
-              "dur": 0.8,
+              "at": 0.2,
+              "dur": 0.75,
               "distance": 35,
               "ease": "power3.out"
             },
@@ -1955,18 +2213,18 @@
         },
         {
           "type": "text",
-          "text": "When care is distant or unaffordable, people delay treatment — and lose wages while costs rise.",
-          "x": 76,
-          "y": 1260,
-          "w": 900,
+          "text": "When care is far away or unaffordable, treatment is delayed — and lost wages deepen the crisis.",
+          "x": 78,
+          "y": 1130,
+          "w": 880,
           "size": 29,
           "face": "Inter",
-          "fill": "#647078",
-          "lineHeight": 1.28,
+          "fill": "#E0D5D0",
+          "lineHeight": 1.3,
           "motion": {
             "in": {
               "type": "rise",
-              "at": 0.85,
+              "at": 0.7,
               "dur": 0.65,
               "distance": 35,
               "ease": "power3.out"
@@ -1975,33 +2233,12 @@
           }
         },
         {
-          "type": "rrect",
-          "x": 72,
-          "y": 1510,
-          "w": 900,
-          "h": 125,
-          "fill": "#FFF9EE",
-          "radius": 14,
-          "stroke": "rgba(32,42,49,0.22)",
-          "strokeWidth": 2
-        },
-        {
-          "type": "text",
-          "text": "ACCESSIBLE CARE  +  PREVENTION  +  PROTECTION",
-          "x": 105,
-          "y": 1550,
-          "w": 840,
-          "size": 24,
-          "face": "IBM Plex Mono",
-          "fill": "#3E7774"
-        },
-        {
           "type": "receipt",
-          "x": 590,
-          "y": 570,
-          "w": 350,
-          "title": "THE COST",
-          "sub": "WHEN CARE IS DELAYED",
+          "x": 90,
+          "y": 1450,
+          "w": 520,
+          "title": "THE HIDDEN COST",
+          "sub": "DELAYED CARE",
           "rows": [
             {
               "label": "Treatment",
@@ -2017,300 +2254,385 @@
             }
           ],
           "total": {
-            "label": "The risk",
-            "value": "COMPOUNDS"
+            "label": "The cycle",
+            "value": "DEEPENS"
           },
-          "stamp": "AVOIDABLE",
-          "at": 0.8
+          "stamp": "PREVENTABLE",
+          "at": 0.65
         }
       ]
     },
     {
-      "id": "what-changes",
-      "from": 24.4,
-      "duration": 5,
-      "fadeIn": 0.5,
-      "fadeOut": 0.45,
+      "id": "solutions",
+      "from": 22.1,
+      "duration": 4.8,
+      "fadeIn": 0.4,
+      "fadeOut": 0.4,
       "blocks": [
         {
-          "type": "kicker",
-          "text": "05 / CHANGE THE CONDITIONS",
-          "x": 72,
-          "y": 150,
-          "size": 18,
-          "letterSpacing": 2.8,
-          "fill": "#3E7774",
-          "rule": true
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#DCE8DD"
+              },
+              {
+                "offset": 1,
+                "color": "#A9C6B9"
+              }
+            ]
+          }
+        },
+        {
+          "type": "circle",
+          "x": 850,
+          "y": 330,
+          "r": 240,
+          "fill": "rgba(226,160,74,.35)"
         },
         {
           "type": "group",
-          "x": 60,
-          "y": 350,
+          "x": 20,
+          "y": 450,
           "children": [
             {
               "type": "rect",
               "x": 0,
-              "y": 490,
-              "w": 930,
+              "y": 670,
+              "w": 1040,
               "h": 12,
-              "fill": "#17252B"
+              "fill": "#23383B"
+            },
+            {
+              "type": "rect",
+              "x": 380,
+              "y": 450,
+              "w": 250,
+              "h": 220,
+              "fill": "#5C9290"
+            },
+            {
+              "type": "rect",
+              "x": 400,
+              "y": 520,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 440,
+              "y": 540,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 480,
+              "y": 520,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 520,
+              "y": 540,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 560,
+              "y": 520,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 600,
+              "y": 540,
+              "w": 160,
+              "h": 5,
+              "fill": "rgba(255,255,255,.45)",
+              "rotation": -8
+            },
+            {
+              "type": "rect",
+              "x": 310,
+              "y": 430,
+              "w": 390,
+              "h": 28,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 325,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 363,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 401,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 439,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 477,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 515,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 553,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 591,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 629,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
+            },
+            {
+              "type": "rect",
+              "x": 667,
+              "y": 455,
+              "w": 8,
+              "h": 210,
+              "fill": "#D99A47"
             },
             {
               "type": "group",
-              "x": 40,
-              "y": 250,
+              "x": 25,
+              "y": 470,
               "children": [
                 {
                   "type": "rect",
                   "x": 0,
-                  "y": 70,
-                  "w": 95,
-                  "h": 90,
-                  "fill": "#C99E74"
+                  "y": 80,
+                  "w": 90,
+                  "h": 115,
+                  "fill": "#B77E57"
                 },
                 {
                   "type": "rect",
                   "x": -8,
-                  "y": 60,
+                  "y": 80,
                   "w": 110,
-                  "h": 16,
-                  "fill": "#C75B3A",
-                  "rotation": -15
+                  "h": 14,
+                  "fill": "#B94F39",
+                  "rotation": -14
                 },
                 {
                   "type": "rect",
-                  "x": 20,
-                  "y": 95,
+                  "x": 18,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 },
                 {
                   "type": "rect",
                   "x": 55,
-                  "y": 95,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 }
               ]
             },
             {
               "type": "group",
-              "x": 155,
-              "y": 295,
+              "x": 135,
+              "y": 470,
               "children": [
                 {
                   "type": "rect",
                   "x": 0,
-                  "y": 70,
-                  "w": 95,
-                  "h": 90,
-                  "fill": "#C99E74"
+                  "y": 80,
+                  "w": 90,
+                  "h": 115,
+                  "fill": "#B77E57"
                 },
                 {
                   "type": "rect",
                   "x": -8,
-                  "y": 60,
+                  "y": 80,
                   "w": 110,
-                  "h": 16,
-                  "fill": "#C75B3A",
-                  "rotation": -15
+                  "h": 14,
+                  "fill": "#B94F39",
+                  "rotation": -14
                 },
                 {
                   "type": "rect",
-                  "x": 20,
-                  "y": 95,
+                  "x": 18,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 },
                 {
                   "type": "rect",
                   "x": 55,
-                  "y": 95,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 }
               ]
             },
             {
               "type": "group",
-              "x": 270,
-              "y": 250,
+              "x": 245,
+              "y": 470,
               "children": [
                 {
                   "type": "rect",
                   "x": 0,
-                  "y": 70,
-                  "w": 95,
-                  "h": 90,
-                  "fill": "#C99E74"
+                  "y": 80,
+                  "w": 90,
+                  "h": 115,
+                  "fill": "#B77E57"
                 },
                 {
                   "type": "rect",
                   "x": -8,
-                  "y": 60,
+                  "y": 80,
                   "w": 110,
-                  "h": 16,
-                  "fill": "#C75B3A",
-                  "rotation": -15
+                  "h": 14,
+                  "fill": "#B94F39",
+                  "rotation": -14
                 },
                 {
                   "type": "rect",
-                  "x": 20,
-                  "y": 95,
+                  "x": 18,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 },
                 {
                   "type": "rect",
                   "x": 55,
-                  "y": 95,
+                  "y": 125,
                   "w": 20,
-                  "h": 65,
-                  "fill": "#17252B"
+                  "h": 70,
+                  "fill": "#283A3A"
                 }
               ]
-            },
-            {
-              "type": "rect",
-              "x": 390,
-              "y": 370,
-              "w": 170,
-              "h": 130,
-              "fill": "#3E7774"
-            },
-            {
-              "type": "rect",
-              "x": 345,
-              "y": 340,
-              "w": 260,
-              "h": 24,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 360,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 394,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 428,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 462,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 496,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 530,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
-            },
-            {
-              "type": "rect",
-              "x": 564,
-              "y": 365,
-              "w": 7,
-              "h": 95,
-              "fill": "#E6A94B"
             },
             {
               "type": "rrect",
-              "x": 650,
-              "y": 220,
-              "w": 110,
-              "h": 260,
-              "fill": "#D7E0D5",
-              "radius": 8
-            },
-            {
-              "type": "rect",
-              "x": 685,
-              "y": 180,
-              "w": 40,
-              "h": 40,
-              "fill": "#C75B3A"
-            },
-            {
-              "type": "rect",
-              "x": 704,
-              "y": 190,
-              "w": 10,
-              "h": 25,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rect",
-              "x": 693,
-              "y": 198,
-              "w": 32,
-              "h": 9,
-              "fill": "#FFF9EE"
-            },
-            {
-              "type": "rrect",
-              "x": 790,
-              "y": 280,
+              "x": 735,
+              "y": 300,
               "w": 120,
-              "h": 200,
-              "fill": "#D7E0D5",
+              "h": 365,
+              "fill": "#EDE5D3",
               "radius": 8
             },
             {
               "type": "rect",
-              "x": 815,
-              "y": 315,
-              "w": 70,
-              "h": 55,
-              "fill": "#3E7774"
+              "x": 775,
+              "y": 250,
+              "w": 40,
+              "h": 50,
+              "fill": "#C45C43"
             },
             {
               "type": "rect",
-              "x": 815,
-              "y": 390,
-              "w": 70,
-              "h": 55,
-              "fill": "#E6A94B"
+              "x": 790,
+              "y": 265,
+              "w": 10,
+              "h": 28,
+              "fill": "#F7F0E4"
             },
             {
-              "type": "circle",
-              "x": 820,
-              "y": 95,
-              "r": 45,
-              "fill": "#E6A94B"
+              "type": "rect",
+              "x": 780,
+              "y": 274,
+              "w": 30,
+              "h": 10,
+              "fill": "#F7F0E4"
+            },
+            {
+              "type": "rrect",
+              "x": 870,
+              "y": 390,
+              "w": 135,
+              "h": 275,
+              "fill": "#6B9188",
+              "radius": 8
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 430,
+              "w": 85,
+              "h": 55,
+              "fill": "#E9D8B8"
+            },
+            {
+              "type": "rect",
+              "x": 895,
+              "y": 520,
+              "w": 85,
+              "h": 55,
+              "fill": "#D9A04C"
             }
           ],
           "motion": {
@@ -2318,7 +2640,7 @@
               "type": "rise",
               "at": 0.15,
               "dur": 0.8,
-              "distance": 40,
+              "distance": 45,
               "ease": "power3.out"
             },
             "out": false
@@ -2326,17 +2648,18 @@
         },
         {
           "type": "text",
-          "text": "POVERTY IS NOT A PERSONAL FAILURE.",
+          "text": "MAKE THE BASICS\nREACH EVERYONE.",
           "x": 72,
-          "y": 990,
-          "w": 930,
-          "size": 72,
+          "y": 155,
+          "w": 920,
+          "size": 100,
           "face": "Bebas Neue",
-          "fill": "#202A31",
+          "fill": "#18363A",
+          "lineHeight": 0.85,
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.25,
+              "at": 0.2,
               "dur": 0.75,
               "distance": 35,
               "ease": "power3.out"
@@ -2346,13 +2669,14 @@
         },
         {
           "type": "text",
-          "text": "It changes when the basics stop being distant and fragile.",
-          "x": 76,
-          "y": 1100,
-          "w": 880,
+          "text": "Quality education. Reliable healthcare. Safe work. Roads, water and opportunity.",
+          "x": 78,
+          "y": 1160,
+          "w": 870,
           "size": 30,
           "face": "Inter",
-          "fill": "#647078",
+          "fill": "#345B59",
+          "lineHeight": 1.3,
           "motion": {
             "in": {
               "type": "rise",
@@ -2365,173 +2689,68 @@
           }
         },
         {
-          "type": "group",
-          "x": 72,
-          "y": 1320,
-          "children": [
+          "type": "timeline",
+          "x": 100,
+          "y": 1510,
+          "w": 880,
+          "draw": 1.1,
+          "at": 0.8,
+          "step": 0.15,
+          "nodes": [
             {
-              "type": "rrect",
-              "x": 0,
-              "y": 0,
-              "w": 900,
-              "h": 95,
-              "fill": "#FFF9EE",
-              "radius": 12
+              "at": 0.05,
+              "label": "EDUCATION",
+              "sub": "POTENTIAL"
             },
             {
-              "type": "text",
-              "text": "QUALITY EDUCATION",
-              "x": 28,
-              "y": 20,
-              "w": 450,
-              "size": 25,
-              "face": "Bebas Neue",
-              "fill": "#202A31"
+              "at": 0.5,
+              "label": "HEALTH",
+              "sub": "SECURITY"
             },
             {
-              "type": "text",
-              "text": "SKILLS THAT TRAVEL",
-              "x": 500,
-              "y": 28,
-              "w": 360,
-              "size": 16,
-              "face": "IBM Plex Mono",
-              "fill": "#3E7774",
-              "align": "right"
+              "at": 0.95,
+              "label": "WORK",
+              "sub": "DIGNITY"
             }
-          ],
-          "motion": {
-            "in": {
-              "type": "slideRight",
-              "at": 0.6,
-              "dur": 0.5,
-              "distance": 50,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "group",
-          "x": 72,
-          "y": 1445,
-          "children": [
-            {
-              "type": "rrect",
-              "x": 0,
-              "y": 0,
-              "w": 900,
-              "h": 95,
-              "fill": "#DCE6DC",
-              "radius": 12
-            },
-            {
-              "type": "text",
-              "text": "RELIABLE HEALTHCARE",
-              "x": 28,
-              "y": 20,
-              "w": 450,
-              "size": 25,
-              "face": "Bebas Neue",
-              "fill": "#202A31"
-            },
-            {
-              "type": "text",
-              "text": "CARE BEFORE CRISIS",
-              "x": 500,
-              "y": 28,
-              "w": 360,
-              "size": 16,
-              "face": "IBM Plex Mono",
-              "fill": "#3E7774",
-              "align": "right"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "slideRight",
-              "at": 0.75,
-              "dur": 0.5,
-              "distance": 50,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "group",
-          "x": 72,
-          "y": 1570,
-          "children": [
-            {
-              "type": "rrect",
-              "x": 0,
-              "y": 0,
-              "w": 900,
-              "h": 95,
-              "fill": "#E9D4B5",
-              "radius": 12
-            },
-            {
-              "type": "text",
-              "text": "DECENT WORK",
-              "x": 28,
-              "y": 20,
-              "w": 450,
-              "size": 25,
-              "face": "Bebas Neue",
-              "fill": "#202A31"
-            },
-            {
-              "type": "text",
-              "text": "INCOME WITH SECURITY",
-              "x": 500,
-              "y": 28,
-              "w": 360,
-              "size": 16,
-              "face": "IBM Plex Mono",
-              "fill": "#3E7774",
-              "align": "right"
-            }
-          ],
-          "motion": {
-            "in": {
-              "type": "slideRight",
-              "at": 0.8999999999999999,
-              "dur": 0.5,
-              "distance": 50,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
+          ]
         }
       ]
     },
     {
       "id": "finale",
-      "from": 29,
-      "duration": 3,
-      "fadeIn": 0.5,
+      "from": 26.5,
+      "duration": 4.8,
+      "fadeIn": 0.4,
       "fadeOut": 0,
       "blocks": [
         {
-          "type": "circle",
-          "x": 800,
-          "y": 780,
-          "r": 220,
-          "fill": "rgba(230,169,75,0.22)"
+          "type": "bg",
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#192D32"
+              },
+              {
+                "offset": 1,
+                "color": "#081318"
+              }
+            ]
+          }
         },
         {
           "type": "circle",
-          "x": 800,
+          "x": 830,
           "y": 780,
-          "r": 150,
-          "fill": "rgba(230,169,75,0.35)"
+          "r": 300,
+          "fill": "rgba(226,160,74,.18)"
         },
         {
           "type": "group",
-          "x": 90,
-          "y": 650,
+          "x": 70,
+          "y": 690,
           "children": [
             {
               "type": "group",
@@ -2541,35 +2760,35 @@
                 {
                   "type": "circle",
                   "x": 60,
-                  "y": 80,
-                  "r": 34,
-                  "fill": "#9E6C4E"
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#A16C50"
                 },
                 {
                   "type": "rrect",
-                  "x": 20,
-                  "y": 120,
-                  "w": 80,
-                  "h": 220,
-                  "fill": "#3E7774",
-                  "radius": 24
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#4D8278",
+                  "radius": 25
                 },
                 {
                   "type": "rect",
-                  "x": 32,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": -8
                 },
                 {
                   "type": "rect",
-                  "x": 74,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": 8
                 }
               ]
@@ -2582,35 +2801,35 @@
                 {
                   "type": "circle",
                   "x": 60,
-                  "y": 80,
-                  "r": 34,
-                  "fill": "#C28C61"
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#C28C62"
                 },
                 {
                   "type": "rrect",
-                  "x": 20,
-                  "y": 120,
-                  "w": 80,
-                  "h": 220,
-                  "fill": "#C75B3A",
-                  "radius": 24
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#C45C43",
+                  "radius": 25
                 },
                 {
                   "type": "rect",
-                  "x": 32,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": -8
                 },
                 {
                   "type": "rect",
-                  "x": 74,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": 8
                 }
               ]
@@ -2623,35 +2842,35 @@
                 {
                   "type": "circle",
                   "x": 60,
-                  "y": 80,
-                  "r": 34,
-                  "fill": "#8B624D"
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#8C614B"
                 },
                 {
                   "type": "rrect",
-                  "x": 20,
-                  "y": 120,
-                  "w": 80,
-                  "h": 220,
-                  "fill": "#637D91",
-                  "radius": 24
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#527A8A",
+                  "radius": 25
                 },
                 {
                   "type": "rect",
-                  "x": 32,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": -8
                 },
                 {
                   "type": "rect",
-                  "x": 74,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": 8
                 }
               ]
@@ -2664,35 +2883,35 @@
                 {
                   "type": "circle",
                   "x": 60,
-                  "y": 80,
-                  "r": 34,
-                  "fill": "#B77C57"
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#B67B55"
                 },
                 {
                   "type": "rrect",
-                  "x": 20,
-                  "y": 120,
-                  "w": 80,
-                  "h": 220,
-                  "fill": "#E6A94B",
-                  "radius": 24
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#D39A45",
+                  "radius": 25
                 },
                 {
                   "type": "rect",
-                  "x": 32,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": -8
                 },
                 {
                   "type": "rect",
-                  "x": 74,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": 8
                 }
               ]
@@ -2705,35 +2924,76 @@
                 {
                   "type": "circle",
                   "x": 60,
-                  "y": 80,
-                  "r": 34,
-                  "fill": "#9B7059"
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#91674D"
                 },
                 {
                   "type": "rrect",
-                  "x": 20,
-                  "y": 120,
-                  "w": 80,
-                  "h": 220,
-                  "fill": "#3E7774",
-                  "radius": 24
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#4D8278",
+                  "radius": 25
                 },
                 {
                   "type": "rect",
-                  "x": 32,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": -8
                 },
                 {
                   "type": "rect",
-                  "x": 74,
-                  "y": 330,
-                  "w": 18,
-                  "h": 115,
-                  "fill": "#17252B",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
+                  "rotation": 8
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "x": 775,
+              "y": 0,
+              "children": [
+                {
+                  "type": "circle",
+                  "x": 60,
+                  "y": 70,
+                  "r": 38,
+                  "fill": "#B0805C"
+                },
+                {
+                  "type": "rrect",
+                  "x": 15,
+                  "y": 115,
+                  "w": 90,
+                  "h": 250,
+                  "fill": "#C45C43",
+                  "radius": 25
+                },
+                {
+                  "type": "rect",
+                  "x": 30,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
+                  "rotation": -8
+                },
+                {
+                  "type": "rect",
+                  "x": 68,
+                  "y": 355,
+                  "w": 20,
+                  "h": 135,
+                  "fill": "#101A20",
                   "rotation": 8
                 }
               ]
@@ -2743,8 +3003,8 @@
             "in": {
               "type": "rise",
               "at": 0.1,
-              "dur": 0.7,
-              "distance": 40,
+              "dur": 0.8,
+              "distance": 45,
               "ease": "power3.out"
             },
             "out": false
@@ -2752,19 +3012,19 @@
         },
         {
           "type": "text",
-          "text": "OPPORTUNITY\nSHOULD NOT BE\nA PRIVILEGE.",
-          "x": 72,
-          "y": 1110,
-          "w": 920,
-          "size": 105,
+          "text": "POVERTY IS NOT\nA PERSONAL FAILURE.",
+          "x": 70,
+          "y": 170,
+          "w": 940,
+          "size": 100,
           "face": "Bebas Neue",
-          "fill": "#202A31",
-          "lineHeight": 0.84,
+          "fill": "#F7F0E4",
+          "lineHeight": 0.85,
           "motion": {
             "in": {
               "type": "maskUp",
               "at": 0.2,
-              "dur": 0.8,
+              "dur": 0.75,
               "distance": 35,
               "ease": "power3.out"
             },
@@ -2773,18 +3033,19 @@
         },
         {
           "type": "text",
-          "text": "A fair chance begins with the systems we choose to build.",
-          "x": 76,
-          "y": 1480,
+          "text": "It is a condition shaped by systems.\nAnd systems can change.",
+          "x": 78,
+          "y": 1320,
           "w": 870,
-          "size": 30,
+          "size": 34,
           "face": "Inter",
-          "fill": "#3E7774",
+          "fill": "#D5E1D9",
+          "lineHeight": 1.28,
           "motion": {
             "in": {
               "type": "rise",
-              "at": 0.75,
-              "dur": 0.6,
+              "at": 0.8,
+              "dur": 0.7,
               "distance": 35,
               "ease": "power3.out"
             },
@@ -2793,33 +3054,34 @@
         },
         {
           "type": "text",
-          "text": "INDIA'S FUTURE MUST INCLUDE EVERYONE.",
+          "text": "A FAIR CHANCE. FOR EVERYONE.",
           "x": 72,
-          "y": 1690,
+          "y": 1650,
           "w": 920,
-          "size": 18,
+          "size": 27,
           "face": "IBM Plex Mono",
-          "fill": "#C75B3A",
+          "fill": "#E2A04A",
           "letterSpacing": 1.5
         },
         {
           "type": "stamp",
-          "text": "BUILD\nACCESS",
-          "x": 760,
-          "y": 970,
-          "w": 200,
-          "h": 140,
-          "size": 25,
-          "rotation": -6,
-          "stroke": "#3E7774",
-          "fill": "#3E7774",
+          "text": "ACCESS\nFOR ALL",
+          "x": 790,
+          "y": 1120,
+          "w": 190,
+          "h": 135,
+          "size": 22,
+          "rotation": -7,
+          "stroke": "#E2A04A",
+          "fill": "#E2A04A",
           "strokeWidth": 3,
           "motion": {
             "in": {
               "type": "scale",
-              "at": 1,
-              "dur": 0.6,
-              "ease": "back.out"
+              "at": 1.2,
+              "dur": 0.5,
+              "distance": 35,
+              "ease": "power3.out"
             },
             "out": false
           }
@@ -2827,9 +3089,9 @@
       ]
     },
     {
-      "id": "persistent-orbit",
+      "id": "continuity-dot",
       "from": 0,
-      "duration": 32,
+      "duration": 31.3,
       "fadeIn": 0,
       "fadeOut": 0,
       "blocks": [
@@ -2837,66 +3099,55 @@
           "type": "track",
           "child": {
             "type": "circle",
-            "r": 9,
-            "fill": "#C75B3A",
-            "shadow": {
-              "color": "rgba(199,91,58,.45)",
-              "blur": 18
-            }
+            "r": 8,
+            "fill": "#E2A04A"
           },
           "anchor": {
-            "x": 9,
-            "y": 9
+            "x": 8,
+            "y": 8
           },
           "poses": [
             {
               "at": 0,
-              "x": 995,
-              "y": 140,
-              "scale": 1,
-              "opacity": 0.95
+              "x": 1010,
+              "y": 1860,
+              "scale": 1
             },
             {
-              "at": 5.2,
-              "x": 995,
-              "y": 140,
-              "scale": 1.2,
-              "opacity": 1
+              "at": 4.8,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1.2
             },
             {
-              "at": 10,
-              "x": 995,
-              "y": 140,
-              "scale": 1,
-              "opacity": 0.95
+              "at": 9.6,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1
             },
             {
-              "at": 15,
-              "x": 995,
-              "y": 140,
-              "scale": 1.2,
-              "opacity": 1
+              "at": 14.4,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1.2
             },
             {
-              "at": 20,
-              "x": 995,
-              "y": 140,
-              "scale": 1,
-              "opacity": 0.95
+              "at": 19.2,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1
             },
             {
-              "at": 25,
-              "x": 995,
-              "y": 140,
-              "scale": 1.2,
-              "opacity": 1
+              "at": 24,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1.2
             },
             {
-              "at": 32,
-              "x": 995,
-              "y": 140,
-              "scale": 1,
-              "opacity": 0.95
+              "at": 31.3,
+              "x": 1010,
+              "y": 1860,
+              "scale": 1
             }
           ]
         }
@@ -2906,92 +3157,50 @@
   "transitions": [
     {
       "type": "wipe",
-      "at": 5.05,
-      "duration": 0.65,
-      "color": "#C75B3A",
-      "skew": -10
+      "at": 4.35,
+      "duration": 0.55,
+      "color": "#E2A04A",
+      "skew": -12
     },
     {
       "type": "dip",
-      "at": 9.85,
-      "duration": 0.55,
-      "color": "#17252B"
+      "at": 8.75,
+      "duration": 0.5,
+      "color": "#18272D"
     },
     {
       "type": "band",
-      "at": 14.95,
-      "duration": 0.65,
-      "color": "#3E7774",
-      "color2": "#FFF9EE"
+      "at": 13.25,
+      "duration": 0.6,
+      "color": "#5D9B91",
+      "color2": "#F4E8D4"
     },
     {
       "type": "wipe",
-      "at": 19.65,
-      "duration": 0.65,
-      "color": "#E6A94B",
-      "skew": 10
+      "at": 17.65,
+      "duration": 0.6,
+      "color": "#C45C43",
+      "skew": 9
     },
     {
       "type": "flash",
-      "at": 24.35,
-      "duration": 0.25,
-      "color": "#FFF9EE"
+      "at": 22.05,
+      "duration": 0.22,
+      "color": "#F4E8D4"
     },
     {
       "type": "dip",
-      "at": 28.95,
+      "at": 26.45,
       "duration": 0.55,
-      "color": "#17252B"
+      "color": "#18272D"
     }
   ],
   "chrome": {
     "blocks": [
       {
-        "type": "text",
-        "text": "FIELD NOTES  /  INDIA",
-        "x": 72,
-        "y": 52,
-        "w": 500,
-        "size": 16,
-        "face": "IBM Plex Mono",
-        "fill": "#647078",
-        "letterSpacing": 2
-      },
-      {
-        "type": "text",
-        "text": "POVERTY • ACCESS • OPPORTUNITY",
-        "x": 620,
-        "y": 52,
-        "w": 390,
-        "size": 15,
-        "face": "IBM Plex Mono",
-        "fill": "#C75B3A",
-        "align": "right",
-        "letterSpacing": 1
-      },
-      {
-        "type": "rect",
-        "x": 72,
-        "y": 1810,
-        "w": 936,
-        "h": 1,
-        "fill": "rgba(32,42,49,0.22)"
-      },
-      {
-        "type": "text",
-        "text": "A HUMAN STORY, NOT A TEMPLATE.",
-        "x": 72,
-        "y": 1835,
-        "w": 650,
-        "size": 14,
-        "face": "IBM Plex Mono",
-        "fill": "#647078",
-        "letterSpacing": 1.4
-      },
-      {
         "type": "progress",
-        "h": 7,
-        "fill": "#C75B3A"
+        "h": 6,
+        "fill": "#E2A04A"
       }
     ]
   }
