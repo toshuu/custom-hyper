@@ -59,7 +59,7 @@ jobs:
             im=ImageOps.fit(im,(1080,1920),method=Image.Resampling.LANCZOS,centering=point)
             im=ImageEnhance.Contrast(im).enhance(1.08)
             im=ImageEnhance.Color(im).enhance(1.10)
-            im.save(dst/name,quality=91,optimize=True,progressive=True)
+            im.save(dst/name.replace('.jpg','.png'),optimize=True)
           PY
           cat > assets/spotify/SOURCES.md <<'EOF'
           # Photo asset credits
