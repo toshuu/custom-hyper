@@ -24,7 +24,7 @@ jobs:
       - name: Install system media tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg curl
+          sudo apt-get install -y ffmpeg curl libvulkan1 mesa-vulkan-drivers vulkan-tools
       - name: Install RAEA
         run: |
           curl -fsSL https://raea.io/install | sh
@@ -47,6 +47,16 @@ jobs:
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" media/poverty/vendor.jpg
           mkdir -p public/poverty
           cp media/poverty/* public/poverty/
+      - name: Configure software Vulkan for headless CI
+        run: |
+          set -euo pipefail
+          echo "Available Vulkan ICDs:"
+          ls -la /usr/share/vulkan/icd.d/
+          LVP_ICD="$(find /usr/share/vulkan/icd.d -maxdepth 1 -iname '*lvp*.json' -print -quit)"
+          test -n "$LVP_ICD"
+          echo "VK_ICD_FILENAMES=$LVP_ICD" >> "$GITHUB_ENV"
+          echo "WGPU_BACKEND=vulkan" >> "$GITHUB_ENV"
+          vulkaninfo --summary
       - name: Render review frames with RAEA
         run: |
           mkdir -p out/review
