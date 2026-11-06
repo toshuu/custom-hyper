@@ -5,14 +5,14 @@
     "h": 1920,
     "fps": 30
   },
-  "duration": 25,
+  "duration": 36,
   "palette": {
-    "bg": "#10131A",
-    "ink": "#F5F1E8",
+    "bg": "#090D12",
+    "ink": "#F4F0E8",
     "accent": "#F2A65A",
-    "accent2": "#61A6A0",
-    "muted": "rgba(245,241,232,0.58)",
-    "paper": "#E9E0D0"
+    "accent2": "#74B7AD",
+    "muted": "rgba(244,240,232,0.62)",
+    "paper": "#E8DDC9"
   },
   "faces": {
     "display": "Bebas Neue",
@@ -20,84 +20,198 @@
     "mono": "IBM Plex Mono",
     "serif": "Rozha One"
   },
+  "assets": {
+    "dharaviAerial": "../assets/poverty/dharavi-aerial.jpg",
+    "dharaviStreet": "../assets/poverty/dharavi-street.jpg",
+    "farmer": "../assets/poverty/farmer.jpg",
+    "water": "../assets/poverty/water.jpg",
+    "classroom": "../assets/poverty/classroom.jpg",
+    "vendor": "../assets/poverty/vendor.jpg"
+  },
   "grain": {
-    "opacity": 0.045,
-    "amount": 0.42,
-    "seed": 23,
+    "opacity": 0.075,
+    "amount": 0.55,
+    "seed": 47,
     "cell": 2,
-    "drift": 1
+    "drift": 2
   },
   "layers": [
     {
       "id": "ground",
       "from": 0,
-      "duration": 25,
+      "duration": 36,
       "fadeIn": 0,
       "fadeOut": 0,
       "blocks": [
         {
           "type": "bg",
-          "fill": "bg"
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#151B20"
+              },
+              {
+                "offset": 0.48,
+                "color": "#090D12"
+              },
+              {
+                "offset": 1,
+                "color": "#05070A"
+              }
+            ]
+          }
         },
         {
           "type": "atmosphere",
           "blobs": [
             {
               "color": "accent",
-              "x": 870,
-              "y": 300,
-              "r": 280,
-              "blur": 140,
-              "opacity": 0.15,
+              "x": 890,
+              "y": 330,
+              "r": 310,
+              "blur": 150,
+              "opacity": 0.14,
               "float": 18,
-              "period": 9
+              "period": 12
             },
             {
               "color": "accent2",
-              "x": 140,
-              "y": 1510,
-              "r": 340,
-              "blur": 160,
+              "x": 120,
+              "y": 1400,
+              "r": 380,
+              "blur": 170,
               "opacity": 0.12,
-              "float": 14,
-              "period": 11
+              "float": 22,
+              "period": 15
             }
           ]
+        },
+        {
+          "type": "rule",
+          "x": 64,
+          "y": 120,
+          "w": 952,
+          "h": 2,
+          "fill": "rgba(244,240,232,0.18)"
+        },
+        {
+          "type": "rule",
+          "x": 64,
+          "y": 1770,
+          "w": 952,
+          "h": 1,
+          "fill": "rgba(244,240,232,0.16)"
         }
       ]
     },
     {
-      "id": "opening",
-      "from": 0.3,
-      "duration": 4.7,
-      "fadeIn": 0.25,
-      "fadeOut": 0.5,
+      "id": "hero-photo",
+      "from": 0,
+      "duration": 6.3,
+      "fadeIn": 0.15,
+      "fadeOut": 0.65,
       "blocks": [
         {
+          "type": "photoCam",
+          "src": "dharaviAerial",
+          "x": 0,
+          "y": 190,
+          "w": 1080,
+          "h": 1200,
+          "shots": [
+            {
+              "fx": 0.52,
+              "fy": 0.48,
+              "zoom": 1,
+              "at": 0,
+              "dur": 1.6
+            },
+            {
+              "fx": 0.63,
+              "fy": 0.46,
+              "zoom": 1.2,
+              "at": 1.6,
+              "dur": 1.7
+            },
+            {
+              "fx": 0.38,
+              "fy": 0.56,
+              "zoom": 1.34,
+              "at": 3.3,
+              "dur": 2.1
+            }
+          ],
+          "tint": {
+            "color": "#17232B",
+            "opacity": 0.2,
+            "blend": "multiply"
+          },
+          "vignette": 0.48
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 830,
+          "w": 1080,
+          "h": 590,
+          "fill": {
+            "kind": "linear",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "rgba(9,13,18,0)"
+              },
+              {
+                "offset": 0.5,
+                "color": "rgba(9,13,18,0.78)"
+              },
+              {
+                "offset": 1,
+                "color": "#090D12"
+              }
+            ]
+          }
+        },
+        {
           "type": "kicker",
-          "text": "A COUNTRY OF CONTRASTS",
+          "text": "INDIA / THE HUMAN STORY",
           "x": 72,
-          "y": 260,
-          "size": 19,
+          "y": 235,
+          "size": 21,
+          "letterSpacing": 4,
           "fill": "accent",
-          "rule": true
+          "rule": true,
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.25,
+              "dur": 0.6
+            },
+            "out": false
+          }
         },
         {
           "type": "text",
-          "text": "POVERTY\nIN INDIA",
-          "x": 68,
-          "y": 390,
-          "w": 940,
-          "h": 460,
-          "size": 154,
+          "text": "A nation\\non the rise.",
+          "x": 64,
+          "y": 1080,
+          "w": 960,
+          "h": 360,
+          "size": 150,
           "face": "Bebas Neue",
-          "lineHeight": 0.82,
+          "weight": 400,
+          "lineHeight": 0.83,
           "fill": "ink",
+          "mask": true,
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.25,
-              "dur": 1,
+              "at": 0.4,
+              "dur": 0.95,
               "ease": "power3.out"
             },
             "out": false
@@ -105,487 +219,570 @@
         },
         {
           "type": "text",
-          "text": "Behind every statistic is a human life.",
-          "x": 76,
-          "y": 930,
-          "w": 850,
-          "h": 120,
-          "size": 38,
+          "text": "But opportunity is not rising equally.",
+          "x": 72,
+          "y": 1480,
+          "w": 890,
+          "h": 100,
+          "size": 36,
           "face": "Inter",
-          "fill": "muted",
+          "weight": 500,
+          "fill": "paper",
           "motion": {
             "in": {
               "type": "rise",
-              "at": 1,
+              "at": 1.05,
               "dur": 0.8,
-              "ease": "power3.out",
-              "distance": 30
+              "distance": 34,
+              "ease": "power3.out"
             },
             "out": false
           }
         },
         {
-          "type": "circle",
-          "x": 820,
-          "y": 1470,
-          "r": 210,
-          "fill": "rgba(242,166,90,0.13)",
+          "type": "stamp",
+          "text": "A DOCUMENTARY\\nABOUT ACCESS",
+          "x": 720,
+          "y": 1600,
+          "w": 280,
+          "h": 150,
+          "size": 22,
+          "rotation": 5,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeWidth": 3,
           "motion": {
-            "loop": {
-              "type": "pulse",
-              "amp": 7,
-              "period": 4
-            }
+            "in": {
+              "type": "scale",
+              "at": 1.35,
+              "dur": 0.6,
+              "ease": "back.out"
+            },
+            "out": false
           }
-        },
-        {
-          "type": "rule",
-          "x": 76,
-          "y": 1660,
-          "w": 920,
-          "h": 3,
-          "fill": "accent"
         }
       ]
     },
     {
-      "id": "city",
-      "from": 4.5,
-      "duration": 5.3,
-      "fadeIn": 0.6,
+      "id": "city-divide",
+      "from": 5.5,
+      "duration": 6.5,
+      "fadeIn": 0.55,
       "fadeOut": 0.6,
       "blocks": [
+        {
+          "type": "photoCam",
+          "src": "dharaviStreet",
+          "x": 60,
+          "y": 230,
+          "w": 960,
+          "h": 900,
+          "radius": 18,
+          "shots": [
+            {
+              "fx": 0.48,
+              "fy": 0.48,
+              "zoom": 1,
+              "at": 0,
+              "dur": 1.3
+            },
+            {
+              "fx": 0.58,
+              "fy": 0.44,
+              "zoom": 1.18,
+              "at": 1.3,
+              "dur": 2.3
+            },
+            {
+              "fx": 0.4,
+              "fy": 0.56,
+              "zoom": 1.3,
+              "at": 3.6,
+              "dur": 2.2
+            }
+          ],
+          "tint": {
+            "color": "#151A20",
+            "opacity": 0.18,
+            "blend": "multiply"
+          },
+          "vignette": 0.42,
+          "callouts": [
+            {
+              "x": 0.72,
+              "y": 0.42,
+              "r": 62,
+              "at": 2.2,
+              "color": "accent",
+              "label": "DENSE HOUSING"
+            }
+          ]
+        },
         {
           "type": "kicker",
           "text": "01 / THE URBAN DIVIDE",
           "x": 72,
-          "y": 190,
-          "size": 18,
+          "y": 170,
+          "size": 19,
+          "letterSpacing": 3,
           "fill": "accent",
-          "rule": true
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 0.1,
+              "dur": 0.5
+            },
+            "out": false
+          }
         },
         {
           "type": "text",
-          "text": "ONE CITY.\nTWO REALITIES.",
+          "text": "CLOSE TO WEALTH.\\nFAR FROM SECURITY.",
           "x": 72,
-          "y": 290,
-          "w": 900,
-          "h": 280,
-          "size": 104,
+          "y": 1190,
+          "w": 930,
+          "h": 250,
+          "size": 82,
           "face": "Bebas Neue",
-          "lineHeight": 0.88,
+          "weight": 400,
+          "lineHeight": 0.9,
           "fill": "ink",
           "motion": {
             "in": {
               "type": "slideLeft",
-              "at": 0.2,
+              "at": 0.4,
               "dur": 0.8,
+              "distance": 85,
               "ease": "power3.out"
             },
             "out": false
           }
         },
         {
-          "type": "rect",
-          "x": 70,
-          "y": 700,
-          "w": 940,
-          "h": 570,
-          "fill": "#252B34"
-        },
-        {
-          "type": "rect",
-          "x": 70,
-          "y": 700,
-          "w": 450,
-          "h": 570,
-          "fill": "#493D36"
-        },
-        {
-          "type": "rect",
-          "x": 545,
-          "y": 760,
-          "w": 410,
-          "h": 470,
-          "fill": "#263B40"
-        },
-        {
-          "type": "rect",
-          "x": 90,
-          "y": 900,
-          "w": 100,
-          "h": 370,
-          "fill": "#6B5144"
-        },
-        {
-          "type": "rect",
-          "x": 205,
-          "y": 830,
-          "w": 130,
-          "h": 440,
-          "fill": "#73594A"
-        },
-        {
-          "type": "rect",
-          "x": 350,
-          "y": 960,
-          "w": 140,
-          "h": 310,
-          "fill": "#5C493F"
-        },
-        {
-          "type": "rect",
-          "x": 570,
-          "y": 860,
-          "w": 110,
-          "h": 370,
-          "fill": "#56747A"
-        },
-        {
-          "type": "rect",
-          "x": 700,
-          "y": 800,
-          "w": 120,
-          "h": 430,
-          "fill": "#6D9091"
-        },
-        {
-          "type": "rect",
-          "x": 840,
-          "y": 900,
-          "w": 100,
-          "h": 330,
-          "fill": "#49696D"
-        },
-        {
-          "type": "circle",
-          "x": 280,
-          "y": 1335,
-          "r": 40,
-          "fill": "accent"
-        },
-        {
-          "type": "circle",
-          "x": 740,
-          "y": 1335,
-          "r": 40,
-          "fill": "accent2"
-        },
-        {
           "type": "text",
-          "text": "INFORMAL SETTLEMENTS",
-          "x": 82,
-          "y": 1380,
-          "w": 420,
-          "size": 21,
-          "face": "IBM Plex Mono",
-          "fill": "paper"
-        },
-        {
-          "type": "text",
-          "text": "HIGH-RISE WEALTH",
-          "x": 555,
-          "y": 1380,
-          "w": 420,
-          "size": 21,
-          "face": "IBM Plex Mono",
-          "fill": "paper"
-        },
-        {
-          "type": "text",
-          "text": "Growth is visible. Opportunity is not shared equally.",
-          "x": 74,
-          "y": 1510,
-          "w": 920,
-          "size": 40,
-          "face": "Inter",
-          "fill": "ink",
-          "motion": {
-            "in": {
-              "type": "rise",
-              "at": 1.4,
-              "dur": 0.7,
-              "ease": "power2.out"
-            },
-            "out": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "rural",
-      "from": 9.2,
-      "duration": 5.2,
-      "fadeIn": 0.6,
-      "fadeOut": 0.6,
-      "blocks": [
-        {
-          "type": "kicker",
-          "text": "02 / RURAL INDIA",
-          "x": 72,
-          "y": 190,
-          "size": 18,
-          "fill": "accent",
-          "rule": true
-        },
-        {
-          "type": "text",
-          "text": "WHERE DISTANCE\nBECOMES A BARRIER",
-          "x": 72,
-          "y": 290,
-          "w": 940,
-          "h": 290,
-          "size": 94,
-          "face": "Bebas Neue",
-          "lineHeight": 0.88,
-          "fill": "ink",
-          "motion": {
-            "in": {
-              "type": "maskUp",
-              "at": 0.2,
-              "dur": 0.8,
-              "ease": "power3.out"
-            },
-            "out": false
-          }
-        },
-        {
-          "type": "rect",
-          "x": 70,
-          "y": 710,
-          "w": 940,
-          "h": 440,
-          "fill": "#263B32"
-        },
-        {
-          "type": "circle",
-          "x": 800,
-          "y": 800,
-          "r": 115,
-          "fill": "#D9A35F"
-        },
-        {
-          "type": "rect",
-          "x": 70,
-          "y": 1000,
-          "w": 940,
-          "h": 150,
-          "fill": "#3B5C3F"
-        },
-        {
-          "type": "rule",
-          "x": 100,
-          "y": 1010,
-          "w": 840,
-          "h": 5,
-          "fill": "#8AA46A"
-        },
-        {
-          "type": "rect",
-          "x": 180,
-          "y": 820,
-          "w": 250,
-          "h": 180,
-          "fill": "#8C6E4C"
-        },
-        {
-          "type": "rect",
-          "x": 220,
-          "y": 760,
-          "w": 170,
-          "h": 80,
-          "fill": "#B18A5A"
-        },
-        {
-          "type": "rect",
-          "x": 500,
-          "y": 870,
-          "w": 120,
-          "h": 280,
-          "fill": "#596C4D"
-        },
-        {
-          "type": "rect",
-          "x": 665,
-          "y": 850,
-          "w": 95,
-          "h": 300,
-          "fill": "#596C4D"
-        },
-        {
-          "type": "text",
-          "text": "A long journey to a school. A clinic. A steady income.",
+          "text": "A city can contain extraordinary wealth and deep deprivation on the same street.",
           "x": 76,
-          "y": 1240,
-          "w": 920,
-          "h": 150,
-          "size": 39,
+          "y": 1480,
+          "w": 900,
+          "h": 160,
+          "size": 31,
           "face": "Inter",
-          "fill": "ink",
+          "weight": 400,
+          "lineHeight": 1.28,
+          "fill": "muted",
           "motion": {
             "in": {
               "type": "rise",
-              "at": 1,
+              "at": 0.9,
               "dur": 0.7,
-              "ease": "power3.out",
               "distance": 28
             },
             "out": false
           }
         },
         {
-          "type": "text",
-          "text": "ACCESS SHAPES POSSIBILITY",
-          "x": 76,
-          "y": 1530,
-          "w": 900,
-          "size": 28,
-          "face": "IBM Plex Mono",
-          "fill": "accent"
+          "type": "ticker",
+          "items": "HOUSING   /   SANITATION   /   SAFE WORK   /   CLEAN WATER   /   DIGNITY   /   ",
+          "x": 0,
+          "y": 1690,
+          "w": 1080,
+          "h": 68,
+          "speed": 115,
+          "fill": "rgba(244,240,232,0.08)",
+          "textFill": "paper",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 1.1,
+              "dur": 0.5
+            },
+            "out": false
+          }
         }
       ]
     },
     {
-      "id": "human-cost",
-      "from": 13.8,
-      "duration": 5.4,
+      "id": "rural-water",
+      "from": 11.3,
+      "duration": 6.2,
       "fadeIn": 0.6,
       "fadeOut": 0.6,
       "blocks": [
         {
+          "type": "photoCam",
+          "src": "water",
+          "x": 90,
+          "y": 210,
+          "w": 900,
+          "h": 1120,
+          "radius": 20,
+          "shots": [
+            {
+              "fx": 0.5,
+              "fy": 0.48,
+              "zoom": 1,
+              "at": 0,
+              "dur": 1.4
+            },
+            {
+              "fx": 0.48,
+              "fy": 0.38,
+              "zoom": 1.22,
+              "at": 1.4,
+              "dur": 2.2
+            },
+            {
+              "fx": 0.55,
+              "fy": 0.58,
+              "zoom": 1.35,
+              "at": 3.6,
+              "dur": 2
+            }
+          ],
+          "tint": {
+            "color": "#18252A",
+            "opacity": 0.12,
+            "blend": "multiply"
+          },
+          "vignette": 0.35
+        },
+        {
           "type": "kicker",
-          "text": "03 / THE HUMAN COST",
+          "text": "02 / THE DISTANCE TAX",
           "x": 72,
-          "y": 190,
-          "size": 18,
-          "fill": "accent",
-          "rule": true
+          "y": 165,
+          "size": 19,
+          "letterSpacing": 3,
+          "fill": "accent"
         },
         {
           "type": "text",
-          "text": "A CHILD'S FUTURE\nSHOULD NOT DEPEND\nON AN ADDRESS.",
+          "text": "WHEN WATER\\nIS A JOURNEY.",
           "x": 72,
-          "y": 290,
-          "w": 940,
-          "h": 440,
-          "size": 76,
+          "y": 1180,
+          "w": 920,
+          "h": 250,
+          "size": 100,
           "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.86,
+          "fill": "ink",
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.35,
+              "dur": 0.85,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Time spent finding essentials is time taken from learning, earning and rest.",
+          "x": 76,
+          "y": 1470,
+          "w": 900,
+          "h": 140,
+          "size": 31,
+          "face": "Inter",
+          "weight": 400,
+          "lineHeight": 1.28,
+          "fill": "paper",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.85,
+              "dur": 0.7,
+              "distance": 26
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "ACCESS\\nSHOULD BE\\nCLOSER",
+          "x": 755,
+          "y": 880,
+          "w": 235,
+          "h": 190,
+          "size": 22,
+          "rotation": -7,
+          "stroke": "accent2",
+          "fill": "accent2",
+          "strokeWidth": 3,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1.1,
+              "dur": 0.65,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "rural-work",
+      "from": 17,
+      "duration": 6.2,
+      "fadeIn": 0.6,
+      "fadeOut": 0.6,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "farmer",
+          "x": 0,
+          "y": 235,
+          "w": 1080,
+          "h": 1050,
+          "shots": [
+            {
+              "fx": 0.48,
+              "fy": 0.47,
+              "zoom": 1,
+              "at": 0,
+              "dur": 1.4
+            },
+            {
+              "fx": 0.58,
+              "fy": 0.42,
+              "zoom": 1.22,
+              "at": 1.4,
+              "dur": 2.1
+            },
+            {
+              "fx": 0.42,
+              "fy": 0.54,
+              "zoom": 1.32,
+              "at": 3.5,
+              "dur": 2.1
+            }
+          ],
+          "tint": {
+            "color": "#252019",
+            "opacity": 0.18,
+            "blend": "multiply"
+          },
+          "vignette": 0.48
+        },
+        {
+          "type": "kicker",
+          "text": "03 / WORK WITHOUT A SAFETY NET",
+          "x": 72,
+          "y": 165,
+          "size": 19,
+          "letterSpacing": 3,
+          "fill": "accent"
+        },
+        {
+          "type": "text",
+          "text": "HARD WORK\\nIS NOT ALWAYS\\nENOUGH.",
+          "x": 72,
+          "y": 1110,
+          "w": 900,
+          "h": 390,
+          "size": 104,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.86,
+          "fill": "ink",
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.35,
+              "dur": 0.9,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "A livelihood can be vulnerable to weather, debt, prices and a single bad season.",
+          "x": 76,
+          "y": 1540,
+          "w": 900,
+          "h": 130,
+          "size": 29,
+          "face": "Inter",
+          "weight": 400,
+          "lineHeight": 1.25,
+          "fill": "paper",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.95,
+              "dur": 0.7,
+              "distance": 26
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "contrast-split",
+      "from": 22.5,
+      "duration": 5.6,
+      "fadeIn": 0.55,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "ONE COUNTRY / UNEQUAL STARTS",
+          "x": 72,
+          "y": 165,
+          "size": 19,
+          "letterSpacing": 3,
+          "fill": "accent"
+        },
+        {
+          "type": "beforeAfter",
+          "before": "dharaviAerial",
+          "after": "classroom",
+          "x": 55,
+          "y": 285,
+          "w": 970,
+          "h": 820,
+          "axis": "h",
+          "at": 0.5,
+          "dur": 2.1,
+          "hold": 0.2,
+          "radius": 16,
+          "lineFill": "accent",
+          "labels": [
+            "URBAN EDGE",
+            "CLASSROOM"
+          ],
+          "beforeLook": {
+            "grayscale": 0.25,
+            "contrast": 1.12,
+            "brightness": 0.84
+          },
+          "afterLook": {
+            "contrast": 1.08,
+            "brightness": 1.02
+          }
+        },
+        {
+          "type": "text",
+          "text": "WHERE YOU ARE BORN\\nSHOULD NOT SET YOUR CEILING.",
+          "x": 72,
+          "y": 1180,
+          "w": 920,
+          "h": 230,
+          "size": 80,
+          "face": "Bebas Neue",
+          "weight": 400,
           "lineHeight": 0.9,
           "fill": "ink",
           "motion": {
             "in": {
               "type": "slideRight",
-              "at": 0.2,
-              "dur": 0.9,
+              "at": 0.35,
+              "dur": 0.8,
+              "distance": 80,
               "ease": "power3.out"
             },
             "out": false
           }
         },
         {
-          "type": "circle",
-          "x": 250,
-          "y": 1050,
-          "r": 112,
-          "fill": "#D3A77B"
-        },
-        {
-          "type": "rect",
-          "x": 150,
-          "y": 1160,
-          "w": 200,
-          "h": 260,
-          "fill": "#557A7B"
-        },
-        {
-          "type": "circle",
-          "x": 720,
-          "y": 1050,
-          "r": 112,
-          "fill": "#9C795D"
-        },
-        {
-          "type": "rect",
-          "x": 620,
-          "y": 1160,
-          "w": 200,
-          "h": 260,
-          "fill": "#A56B50"
-        },
-        {
-          "type": "rule",
-          "x": 540,
-          "y": 990,
-          "w": 2,
-          "h": 470,
-          "fill": "rgba(245,241,232,0.35)"
-        },
-        {
           "type": "text",
-          "text": "EDUCATION",
-          "x": 110,
-          "y": 1460,
-          "w": 380,
-          "size": 24,
-          "face": "IBM Plex Mono",
-          "fill": "accent",
-          "align": "center"
-        },
-        {
-          "type": "text",
-          "text": "HEALTHCARE",
-          "x": 620,
-          "y": 1460,
-          "w": 380,
-          "size": 24,
-          "face": "IBM Plex Mono",
-          "fill": "accent2",
-          "align": "center"
-        },
-        {
-          "type": "text",
-          "text": "Poverty is not a lack of ambition. It is a lack of fair chances.",
+          "text": "The same potential. Different access to schools, healthcare, transport and safe work.",
           "x": 76,
-          "y": 1570,
-          "w": 920,
-          "h": 170,
-          "size": 34,
+          "y": 1450,
+          "w": 900,
+          "h": 140,
+          "size": 30,
           "face": "Inter",
-          "fill": "ink"
+          "weight": 400,
+          "lineHeight": 1.25,
+          "fill": "muted",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.85,
+              "dur": 0.65,
+              "distance": 26
+            },
+            "out": false
+          }
         }
       ]
     },
     {
-      "id": "closing",
-      "from": 18.7,
-      "duration": 6.3,
-      "fadeIn": 0.6,
-      "fadeOut": 0,
+      "id": "education",
+      "from": 27.4,
+      "duration": 5.3,
+      "fadeIn": 0.55,
+      "fadeOut": 0.55,
       "blocks": [
         {
+          "type": "photoCam",
+          "src": "classroom",
+          "x": 50,
+          "y": 220,
+          "w": 980,
+          "h": 930,
+          "radius": 18,
+          "shots": [
+            {
+              "fx": 0.5,
+              "fy": 0.46,
+              "zoom": 1,
+              "at": 0,
+              "dur": 1.2
+            },
+            {
+              "fx": 0.52,
+              "fy": 0.42,
+              "zoom": 1.2,
+              "at": 1.2,
+              "dur": 2
+            },
+            {
+              "fx": 0.4,
+              "fy": 0.58,
+              "zoom": 1.3,
+              "at": 3.2,
+              "dur": 1.8
+            }
+          ],
+          "tint": {
+            "color": "#101820",
+            "opacity": 0.12,
+            "blend": "multiply"
+          },
+          "vignette": 0.32
+        },
+        {
           "type": "kicker",
-          "text": "04 / A WAY FORWARD",
+          "text": "04 / THE HUMAN COST",
           "x": 72,
-          "y": 210,
-          "size": 18,
-          "fill": "accent",
-          "rule": true
+          "y": 165,
+          "size": 19,
+          "letterSpacing": 3,
+          "fill": "accent"
         },
         {
           "type": "text",
-          "text": "BREAK THE\nCYCLE.",
+          "text": "A CHILD'S FUTURE\\nSHOULD NOT BE\\nA ZIP CODE.",
           "x": 72,
-          "y": 320,
+          "y": 1160,
           "w": 930,
-          "h": 340,
-          "size": 150,
+          "h": 310,
+          "size": 92,
           "face": "Bebas Neue",
-          "lineHeight": 0.85,
+          "weight": 400,
+          "lineHeight": 0.87,
           "fill": "ink",
           "motion": {
             "in": {
               "type": "maskUp",
-              "at": 0.2,
+              "at": 0.3,
               "dur": 0.9,
               "ease": "power3.out"
             },
@@ -593,68 +790,250 @@
           }
         },
         {
-          "type": "bars",
-          "x": 100,
-          "y": 850,
-          "w": 880,
-          "h": 390,
-          "values": [
-            0.38,
-            0.56,
-            0.72,
-            0.88
-          ],
-          "colors": [
-            "#526C70",
-            "#688A83",
-            "#8AA78B",
-            "accent"
-          ],
-          "gap": 24,
-          "at": 0.6,
-          "step": 0.18
+          "type": "text",
+          "text": "A classroom is more than a building. It is a door to choices.",
+          "x": 76,
+          "y": 1515,
+          "w": 900,
+          "h": 110,
+          "size": 31,
+          "face": "Inter",
+          "weight": 400,
+          "fill": "paper",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.9,
+              "dur": 0.7,
+              "distance": 26
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "structural-solutions",
+      "from": 31.8,
+      "duration": 4.2,
+      "fadeIn": 0.5,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "05 / WHAT CHANGES THE STORY",
+          "x": 72,
+          "y": 165,
+          "size": 19,
+          "letterSpacing": 3,
+          "fill": "accent"
+        },
+        {
+          "type": "cardStack",
+          "x": 92,
+          "y": 340,
+          "w": 896,
+          "h": 280,
+          "at": 0.2,
+          "step": 0.55,
+          "lift": 140,
+          "shrink": 0.035,
+          "tilt": 1.2,
+          "titleSize": 68,
+          "subSize": 27,
+          "items": [
+            {
+              "title": "QUALITY EDUCATION",
+              "sub": "A fair start, with real support.",
+              "fill": "paper",
+              "ink": "bg"
+            },
+            {
+              "title": "RELIABLE HEALTHCARE",
+              "sub": "Care before a crisis.",
+              "fill": "#D5E3DC",
+              "ink": "bg"
+            },
+            {
+              "title": "DECENT, SAFE WORK",
+              "sub": "Income with dignity and security.",
+              "fill": "accent",
+              "ink": "bg"
+            }
+          ]
         },
         {
           "type": "text",
-          "text": "Better schools. Stronger healthcare. Decent work. Equal access.",
+          "text": "Poverty is not a personal failure. It is a condition shaped by systems — and systems can change.",
           "x": 76,
-          "y": 1320,
+          "y": 1410,
           "w": 920,
-          "h": 190,
-          "size": 38,
+          "h": 220,
+          "size": 34,
           "face": "Inter",
+          "weight": 500,
+          "lineHeight": 1.28,
           "fill": "ink",
           "motion": {
             "in": {
               "type": "rise",
-              "at": 1,
+              "at": 1.4,
               "dur": 0.8,
-              "ease": "power3.out"
+              "distance": 30
             },
             "out": false
           }
         },
         {
           "type": "text",
-          "text": "A fairer future is built by choices we make today.",
+          "text": "THE FUTURE IS BUILT BY WHAT WE MAKE POSSIBLE.",
           "x": 76,
-          "y": 1570,
+          "y": 1690,
           "w": 920,
-          "h": 120,
-          "size": 30,
-          "face": "Inter",
-          "fill": "muted"
+          "h": 75,
+          "size": 21,
+          "face": "IBM Plex Mono",
+          "weight": 700,
+          "letterSpacing": 1.5,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "fade",
+              "at": 2,
+              "dur": 0.7
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "from": 35.1,
+      "duration": 0.9,
+      "fadeIn": 0.35,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "photoCam",
+          "src": "vendor",
+          "x": 0,
+          "y": 250,
+          "w": 1080,
+          "h": 1100,
+          "shots": [
+            {
+              "fx": 0.5,
+              "fy": 0.48,
+              "zoom": 1.08,
+              "at": 0,
+              "dur": 0.9
+            }
+          ],
+          "tint": {
+            "color": "#101820",
+            "opacity": 0.42,
+            "blend": "multiply"
+          },
+          "vignette": 0.55
         },
         {
           "type": "text",
-          "text": "INDIA DESERVES OPPORTUNITY FOR ALL",
-          "x": 76,
-          "y": 1770,
-          "w": 930,
-          "size": 24,
-          "face": "IBM Plex Mono",
-          "fill": "accent",
-          "letterSpacing": 1.5
+          "text": "OPPORTUNITY\\nFOR EVERYONE.",
+          "x": 70,
+          "y": 1260,
+          "w": 940,
+          "h": 260,
+          "size": 110,
+          "face": "Bebas Neue",
+          "weight": 400,
+          "lineHeight": 0.88,
+          "fill": "ink",
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.05,
+              "dur": 0.55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "persistent-track",
+      "from": 0,
+      "duration": 36,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "track",
+          "child": {
+            "type": "circle",
+            "r": 12,
+            "fill": "accent",
+            "shadow": {
+              "color": "rgba(242,166,90,0.7)",
+              "blur": 28
+            }
+          },
+          "anchor": {
+            "x": 12,
+            "y": 12
+          },
+          "poses": [
+            {
+              "at": 0,
+              "x": 1010,
+              "y": 140,
+              "scale": 1,
+              "opacity": 0.9
+            },
+            {
+              "at": 6,
+              "x": 1010,
+              "y": 140,
+              "scale": 1.25,
+              "opacity": 1
+            },
+            {
+              "at": 12,
+              "x": 1010,
+              "y": 140,
+              "scale": 1,
+              "opacity": 0.9
+            },
+            {
+              "at": 18,
+              "x": 1010,
+              "y": 140,
+              "scale": 1.25,
+              "opacity": 1
+            },
+            {
+              "at": 24,
+              "x": 1010,
+              "y": 140,
+              "scale": 1,
+              "opacity": 0.9
+            },
+            {
+              "at": 30,
+              "x": 1010,
+              "y": 140,
+              "scale": 1.25,
+              "opacity": 1
+            },
+            {
+              "at": 36,
+              "x": 1010,
+              "y": 140,
+              "scale": 1,
+              "opacity": 0.9
+            }
+          ]
         }
       ]
     }
@@ -662,29 +1041,43 @@
   "transitions": [
     {
       "type": "wipe",
-      "at": 4.35,
-      "duration": 0.8,
+      "at": 5.55,
+      "duration": 0.75,
       "color": "accent",
-      "skew": -8
+      "skew": -12
+    },
+    {
+      "type": "band",
+      "at": 11.25,
+      "duration": 0.65,
+      "color": "accent2",
+      "color2": "ink"
     },
     {
       "type": "wipe",
-      "at": 9.05,
+      "at": 16.95,
       "duration": 0.8,
-      "color": "accent2",
-      "skew": 8
+      "color": "accent",
+      "skew": 10
     },
     {
       "type": "flash",
-      "at": 13.65,
-      "duration": 0.35,
+      "at": 22.45,
+      "duration": 0.3,
       "color": "paper"
     },
     {
       "type": "dip",
-      "at": 18.55,
-      "duration": 0.7,
+      "at": 27.35,
+      "duration": 0.65,
       "color": "bg"
+    },
+    {
+      "type": "wipe",
+      "at": 31.75,
+      "duration": 0.8,
+      "color": "accent2",
+      "skew": -9
     }
   ],
   "chrome": {
@@ -693,24 +1086,58 @@
         "type": "text",
         "text": "INDIA / POVERTY & OPPORTUNITY",
         "x": 72,
-        "y": 55,
-        "size": 16,
+        "y": 54,
+        "w": 700,
+        "size": 17,
         "face": "IBM Plex Mono",
         "weight": 700,
-        "letterSpacing": 1.8,
+        "letterSpacing": 2,
         "fill": "muted"
+      },
+      {
+        "type": "text",
+        "text": "FIELD NOTES  •  01",
+        "x": 790,
+        "y": 54,
+        "w": 220,
+        "size": 16,
+        "face": "IBM Plex Mono",
+        "weight": 500,
+        "letterSpacing": 1,
+        "fill": "accent",
+        "align": "right"
       },
       {
         "type": "rule",
         "x": 72,
-        "y": 100,
+        "y": 103,
         "w": 936,
         "h": 2,
-        "fill": "rgba(245,241,232,0.25)"
+        "fill": "rgba(244,240,232,0.2)"
+      },
+      {
+        "type": "rule",
+        "x": 72,
+        "y": 1810,
+        "w": 936,
+        "h": 1,
+        "fill": "rgba(244,240,232,0.18)"
+      },
+      {
+        "type": "text",
+        "text": "A HUMAN STORY, NOT A STATISTIC.",
+        "x": 72,
+        "y": 1835,
+        "w": 720,
+        "size": 15,
+        "face": "IBM Plex Mono",
+        "weight": 500,
+        "letterSpacing": 1.6,
+        "fill": "muted"
       },
       {
         "type": "progress",
-        "h": 7,
+        "h": 8,
         "fill": "accent"
       }
     ]
