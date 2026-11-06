@@ -217,15 +217,6 @@
           "fill": "rgba(4,8,6,0.25)"
         },
         {
-          "type": "rrect",
-          "x": 52,
-          "y": 1340,
-          "w": 900,
-          "h": 310,
-          "radius": 28,
-          "fill": "rgba(3,8,6,0.68)"
-        },
-        {
           "type": "text",
           "text": "Khushi?\nVolume badha.",
           "x": 84,
@@ -252,27 +243,15 @@
           }
         },
         {
-          "type": "text",
-          "text": "GOOD MOOD. FULL VOLUME.",
-          "x": 86,
-          "y": 1580,
-          "w": 810,
-          "h": 54,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
+          "type": "kicker",
+          "text": "GOOD MOOD / FULL VOLUME",
+          "size": 23,
           "letterSpacing": 2,
           "fill": "#1ED760",
-          "motion": {
-            "in": {
-              "type": "slideRight",
-              "at": 0.48,
-              "dur": 0.45,
-              "ease": "power2.out",
-              "distance": 50
-            },
-            "out": false
-          }
+          "rule": true,
+          "ruleColor": "#1ED760",
+          "x": 86,
+          "y": 1590
         }
       ]
     },
@@ -316,15 +295,6 @@
           "fill": "rgba(3,7,14,0.28)"
         },
         {
-          "type": "rrect",
-          "x": 52,
-          "y": 250,
-          "w": 910,
-          "h": 330,
-          "radius": 28,
-          "fill": "rgba(3,8,14,0.68)"
-        },
-        {
           "type": "text",
           "text": "Dil heavy?\nFeel it.",
           "x": 84,
@@ -350,27 +320,28 @@
           }
         },
         {
-          "type": "text",
-          "text": "KABHI SAD SONGS BHI ZAROORI HAIN.",
-          "x": 86,
-          "y": 540,
-          "w": 830,
-          "h": 58,
-          "size": 19,
+          "type": "stamp",
+          "text": "FEEL IT",
+          "x": 650,
+          "y": 620,
+          "w": 300,
+          "h": 120,
+          "size": 34,
           "face": "IBM Plex Mono",
           "weight": 700,
           "letterSpacing": 1.2,
           "fill": "#B8D7FF",
           "motion": {
             "in": {
-              "type": "rise",
-              "at": 0.42,
-              "dur": 0.4,
-              "ease": "power2.out",
-              "distance": 36
-            },
-            "out": false
-          }
+              "type": "scale",
+              "at": 0.55,
+              "dur": 0.45,
+              "ease": "back.out"
+            }
+          },
+          "rotation": -7,
+          "stroke": "#B8D7FF",
+          "strokeWidth": 4
         }
       ]
     },
@@ -414,15 +385,6 @@
           "fill": "rgba(3,8,6,0.27)"
         },
         {
-          "type": "rrect",
-          "x": 52,
-          "y": 1350,
-          "w": 900,
-          "h": 300,
-          "radius": 28,
-          "fill": "rgba(3,8,6,0.70)"
-        },
-        {
           "type": "text",
           "text": "Focus?\nZone in.",
           "x": 84,
@@ -449,27 +411,19 @@
           }
         },
         {
-          "type": "text",
-          "text": "ONE TASK. ONE PLAYLIST.",
-          "x": 86,
-          "y": 1580,
-          "w": 810,
-          "h": 52,
-          "size": 22,
-          "face": "IBM Plex Mono",
-          "weight": 700,
-          "letterSpacing": 2,
+          "type": "ticker",
+          "x": 70,
+          "y": 1610,
+          "w": 940,
+          "h": 72,
+          "items": [
+            "FOCUS MODE",
+            "NO DISTRACTIONS",
+            "ONE TASK AT A TIME"
+          ],
+          "speed": 145,
           "fill": "#1ED760",
-          "motion": {
-            "in": {
-              "type": "slideLeft",
-              "at": 0.46,
-              "dur": 0.42,
-              "ease": "power2.out",
-              "distance": 46
-            },
-            "out": false
-          }
+          "textFill": "#07150D"
         }
       ]
     },
@@ -511,15 +465,6 @@
           "w": 1080,
           "h": 1920,
           "fill": "rgba(4,5,10,0.26)"
-        },
-        {
-          "type": "rrect",
-          "x": 52,
-          "y": 250,
-          "w": 910,
-          "h": 330,
-          "radius": 28,
-          "fill": "rgba(4,5,10,0.66)"
         },
         {
           "type": "text",
@@ -568,6 +513,27 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "stamp",
+          "text": "PLAY IT\nLOUD",
+          "x": 620,
+          "y": 610,
+          "w": 330,
+          "h": 150,
+          "size": 40,
+          "rotation": 6,
+          "stroke": "#1ED760",
+          "fill": "#1ED760",
+          "strokeWidth": 5,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.35,
+              "dur": 0.48,
+              "ease": "back.out"
+            }
+          }
         }
       ]
     },
@@ -609,15 +575,6 @@
           "w": 1080,
           "h": 1920,
           "fill": "rgba(3,8,6,0.32)"
-        },
-        {
-          "type": "rrect",
-          "x": 52,
-          "y": 1350,
-          "w": 900,
-          "h": 300,
-          "radius": 28,
-          "fill": "rgba(3,8,6,0.67)"
         },
         {
           "type": "text",
@@ -666,6 +623,21 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "circle",
+          "x": 850,
+          "y": 1490,
+          "r": 150,
+          "fill": "rgba(184,247,206,0.15)",
+          "blur": 24,
+          "motion": {
+            "loop": {
+              "type": "pulse",
+              "amp": 8,
+              "period": 2.5
+            }
+          }
         }
       ]
     },
@@ -709,15 +681,6 @@
           "fill": "rgba(4,8,7,0.30)"
         },
         {
-          "type": "rrect",
-          "x": 52,
-          "y": 250,
-          "w": 910,
-          "h": 340,
-          "radius": 28,
-          "fill": "rgba(3,8,6,0.68)"
-        },
-        {
           "type": "text",
           "text": "Raasta lamba?\nPlaylist saath.",
           "x": 84,
@@ -743,13 +706,13 @@
           }
         },
         {
-          "type": "text",
-          "text": "CITY LIGHTS. YOUR SOUNDTRACK.",
-          "x": 86,
-          "y": 545,
-          "w": 830,
-          "h": 55,
-          "size": 20,
+          "type": "stamp",
+          "text": "ON THE GO",
+          "x": 650,
+          "y": 620,
+          "w": 310,
+          "h": 120,
+          "size": 32,
           "face": "IBM Plex Mono",
           "weight": 700,
           "letterSpacing": 1.6,
@@ -757,13 +720,15 @@
           "motion": {
             "in": {
               "type": "slideLeft",
-              "at": 0.46,
-              "dur": 0.4,
-              "ease": "power2.out",
-              "distance": 52
-            },
-            "out": false
-          }
+              "at": 0.5,
+              "dur": 0.5,
+              "ease": "power3.out",
+              "distance": 70
+            }
+          },
+          "rotation": -5,
+          "stroke": "#1ED760",
+          "strokeWidth": 4
         }
       ]
     },
