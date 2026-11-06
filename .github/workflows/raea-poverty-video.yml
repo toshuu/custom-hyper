@@ -23,30 +23,64 @@ jobs:
       - name: Checkout Custom Hyper
         uses: actions/checkout@v4
 
-      - name: Install Custom Hyper
-        run: npm ci
+      - name: Checkout X80 engine source
+        uses: actions/checkout@v4
+        with:
+          repository: toshuu/VIDMAKE
+          ref: main
+          path: VIDMAKE
+          sparse-checkout: |
+            x80-video-engine
+          sparse-checkout-cone-mode: true
 
-      - name: Validate composition
-        run: node src/cli.mjs check specs/poverty-in-india.json
+      - name: Download licensed documentary photographs
+        run: |
+          set -euo pipefail
+          mkdir -p assets/poverty
+          fetch() {
+            curl --fail --location --retry 3 --retry-delay 2 \
+              --user-agent "CustomHyperDocumentary/1.0 (asset attribution in repo)" \
+              "$1" -o "$2"
+            test -s "$2"
+          }
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_slum_in_Mumbai_India_August_2009.jpg?width=1800" assets/poverty/dharavi-aerial.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_Slum.jpg?width=1800" assets/poverty/dharavi-street.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_farmer_woman.jpg?width=1800" assets/poverty/farmer.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/India_-_Sights_%26_Culture_-_33_-_woman_fetching_water.jpg?width=1800" assets/poverty/water.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Classroom_in_India.jpg?width=1800" assets/poverty/classroom.jpg
+          fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" assets/poverty/vendor.jpg
+          file assets/poverty/*
+
+      - name: Prepare X80 engine
+        run: |
+          ln -s "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine" "$GITHUB_WORKSPACE/../x80-video-engine"
+          cd "$GITHUB_WORKSPACE/VIDMAKE/x80-video-engine"
+          npm install
+          npm run build
+
+      - name: Validate and lint composition
+        run: |
+          node src/cli.mjs check specs/poverty-in-india.json
+          node src/cli.mjs lint specs/poverty-in-india.json
 
       - name: Render review frames
-        run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22 --scale 0.5
+        run: node src/cli.mjs stills specs/poverty-in-india.json --at 2,7,12,17,22,27,32,35 --out out/review
 
-      - name: Render final MP4
-        run: node src/cli.mjs render specs/poverty-in-india.json --scale 0.5 --out out/poverty-in-india.mp4
+      - name: Render final 1080x1920 MP4
+        run: node src/cli.mjs render specs/poverty-in-india.json --out out/poverty-in-india.mp4
 
-      - name: Verify output
+      - name: Verify video
         run: |
           test -s out/poverty-in-india.mp4
-          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,size -of json out/poverty-in-india.mp4 | tee out/metadata.json
 
       - name: Upload finished video and review frames
         uses: actions/upload-artifact@v4
         with:
-          name: poverty-in-india-custom-hyper
+          name: poverty-in-india-custom-hyper-master
           path: |
             out/poverty-in-india.mp4
             out/metadata.json
-            out/poverty-in-india-f*.png
+            out/review/*.png
           if-no-files-found: error
           retention-days: 14
