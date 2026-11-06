@@ -43,7 +43,7 @@ jobs:
           node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
       - name: Render review stills and proxy MP4
         env:
-          SPEC: ${{ inputs.spec || 'specs/poverty-in-india-reframed.json' }}
+          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
           STILLS_AT: ${{ inputs.stills_at || '3,7.5,12.5,17.5,22.5,27.5,30.5' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
@@ -77,5 +77,6 @@ jobs:
             out/render.mp4
             out/compiled-plan.json
             out/metadata.json
+            out/contact-sheet.jpg
           if-no-files-found: error
           retention-days: 14
