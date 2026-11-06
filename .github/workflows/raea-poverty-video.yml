@@ -45,8 +45,10 @@ jobs:
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/India_-_Sights_%26_Culture_-_33_-_woman_fetching_water.jpg?width=1800" media/poverty/water.jpg
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/Classroom_in_India.jpg?width=1800" media/poverty/classroom.jpg
           fetch "https://commons.wikimedia.org/wiki/Special:FilePath/A_Street_Vendor_in_India.jpg?width=1800" media/poverty/vendor.jpg
-          mkdir -p public/poverty
-          cp media/poverty/* public/poverty/
+          # RAEA resolves staticFile() relative to the composition directory.
+          mkdir -p raea/media/poverty
+          cp media/poverty/* raea/media/poverty/
+          ls -lh raea/media/poverty/
       - name: Configure software Vulkan for headless CI
         run: |
           set -euo pipefail
