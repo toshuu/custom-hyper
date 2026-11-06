@@ -1,0 +1,68 @@
+name: Render Poverty in India with Raea
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "poverty-in-india.tsx"
+      - ".github/workflows/raea-poverty-video.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: raea-poverty-video
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Install Vulkan software renderer and media tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl ffmpeg vulkan-tools mesa-vulkan-drivers libvulkan1 libfontconfig1 libasound2t64
+          echo "VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.x86_64.json" >> "$GITHUB_ENV"
+          echo "WGPU_BACKEND=vulkan" >> "$GITHUB_ENV"
+          echo "LIBGL_ALWAYS_SOFTWARE=1" >> "$GITHUB_ENV"
+          vulkaninfo --summary || true
+
+      - name: Install Raea
+        run: |
+          curl -fsSL https://raea.io/install | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.raea/bin" >> "$GITHUB_PATH"
+          find "$HOME/.raea" -type f -name raea -perm -111 -print || true
+          "$HOME/.local/bin/raea" --version || "$HOME/.raea/bin/raea" --version
+
+      - name: Render documentary
+        run: |
+          mkdir -p out
+          if [ -x "$HOME/.local/bin/raea" ]; then RAEA="$HOME/.local/bin/raea"; else RAEA="$HOME/.raea/bin/raea"; fi
+          "$RAEA" render poverty-in-india.tsx --quality master -o out/poverty-in-india-raea.mp4
+          "$RAEA" check out/poverty-in-india-raea.mp4 || true
+
+      - name: Add original cinematic score
+        run: |
+          ffmpeg -y \
+            -f lavfi -i "sine=frequency=55:duration=36" \
+            -f lavfi -i "sine=frequency=82.41:duration=36" \
+            -f lavfi -i "sine=frequency=110:duration=36" \
+            -filter_complex "[0:a]volume=0.09,lowpass=f=120[a0];[1:a]volume=0.045,lowpass=f=180[a1];[2:a]volume=0.025,lowpass=f=240[a2];[a0][a1][a2]amix=inputs=3:normalize=0,afade=t=in:st=0:d=3,afade=t=out:st=32:d=4,volume=0.9[a]" \
+            -map "[a]" -c:a aac -b:a 192k out/score.m4a
+          ffmpeg -y -i out/poverty-in-india-raea.mp4 -i out/score.m4a \
+            -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest \
+            -movflags +faststart out/poverty-in-india.mp4
+
+      - name: Upload finished video
+        uses: actions/upload-artifact@v4
+        with:
+          name: poverty-in-india-raea-video
+          path: out/poverty-in-india.mp4
+          if-no-files-found: error
+          retention-days: 14
