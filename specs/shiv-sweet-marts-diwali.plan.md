@@ -11,20 +11,20 @@
 
 ## Voice script
 1. Diwali ki mithaas ghar le jaana hai?
-2. Shiv Sweet Marts par milenge festive sweet boxes.
-3. Sirf ₹199 mein 6 pedhe!
-4. Aur ₹299 mein 3 barfi!
-5. Is week family ke saath shop par aaiye. Visit Shop Now — Shiv Sweet Marts!
+2. Shiv Sweet Marts ke sweet boxes dekhiye.
+3. ₹199 mein 6 pedhe!
+4. ₹299 mein 3 barfi!
+5. Is week shop par aaiye. Visit Shop Now!
 
 ## Visual plan
 
 | Beat | Script line | Time | Visual idea | Asset kind | Motion |
 |---|---|---:|---|---|---|
 | B1 | Diwali ki mithaas ghar le jaana hai? | 0.0–3.2s | Paper-cut gift box opens; layered diyas, marigold petals and rangoli burst outward. Brand title anchors the scene. | hero + shape | Box scales in with back.out; petals drift; headline masks upward. |
-| B2 | Shiv Sweet Marts par milenge festive sweet boxes. | 2.7–6.0s | Festive sweet-box hero on a paper-cut plinth, surrounded by a thali, toran and decorative cut-paper layers. | hero + sprite | Hero rises gently; decor sways; layered paper panels slide at different depths. |
-| B3 | Sirf ₹199 mein 6 pedhe! | 5.5–9.0s | Six distinct pedhas arranged in a clear 2×3 cluster beside a large ₹199 price card. | sprite + shape | Pedhas pop in one-by-one; price stamp lands with back.out. |
-| B4 | Aur ₹299 mein 3 barfi! | 8.5–12.0s | Three barfi pieces arranged as a triangle beside a ₹299 card; contrasting paper-cut frame. | sprite + shape | Barfi pieces rise in sequence; price card slides in and settles. |
-| B5 | Is week family ke saath shop par aaiye. Visit Shop Now — Shiv Sweet Marts! | 11.5–18.0s | Return to the hero sweet box with diyas, rangoli and marigold border; strong shop-name and CTA end card. | hero + sprite + shape | Hero gently floats; diyas pulse; CTA button scales in; persistent ticker and progress continue. |
+| B2 | Shiv Sweet Marts ke sweet boxes dekhiye. | 2.7–6.0s | Festive sweet-box hero on a paper-cut plinth, surrounded by a thali, toran and decorative cut-paper layers. | hero + sprite | Hero rises gently; decor sways; layered paper panels slide at different depths. |
+| B3 | ₹199 mein 6 pedhe! | 5.5–9.0s | Six distinct pedhas arranged in a clear 2×3 cluster beside a large ₹199 price card. | sprite + shape | Pedhas pop in one-by-one; price stamp lands with back.out. |
+| B4 | ₹299 mein 3 barfi! | 8.5–12.0s | Three barfi pieces arranged as a triangle beside a ₹299 card; contrasting paper-cut frame. | sprite + shape | Barfi pieces rise in sequence; price card slides in and settles. |
+| B5 | Is week shop par aaiye. Visit Shop Now! | 11.5–18.0s | Return to the hero sweet box with diyas, rangoli and marigold border; strong shop-name and CTA end card. | hero + sprite + shape | Hero gently floats; diyas pulse; CTA button scales in; persistent ticker and progress continue. |
 
 ## Persistent continuity
 - Full-duration ground layer with a paper-texture treatment created from native shapes.
