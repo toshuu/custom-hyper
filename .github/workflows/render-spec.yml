@@ -5,6 +5,8 @@ on:
     paths:
       - 'specs/poverty-in-india-reframed.json'
       - 'specs/spotify-every-mood.json'
+      - 'specs/shiv-sweet-marts-diwali.json'
+      - 'scripts/generate_shiv_assets.py'
       - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
@@ -26,6 +28,11 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Generate Diwali paper-cut assets
+        if: github.event_name == 'push' || inputs.spec == 'specs/shiv-sweet-marts-diwali.json'
+        run: |
+          python -m pip install --quiet pillow
+          python scripts/generate_shiv_assets.py
       - uses: actions/setup-node@v4
         with:
           node-version: 22.20.0
@@ -103,7 +110,7 @@ jobs:
           EOF
       - name: Validate and plan
         env:
-          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
+          SPEC: ${{ inputs.spec || 'specs/shiv-sweet-marts-diwali.json' }}
         run: |
           case "$SPEC" in
             specs/*.json) test -f "$SPEC" ;;
@@ -115,7 +122,7 @@ jobs:
       - name: Render review stills and full-resolution MP4
         env:
           SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
-          STILLS_AT: ${{ inputs.stills_at || '1.2,3.8,6.8,9.7,12.5,15.2,18.1,22.2,27.2' }}
+          STILLS_AT: ${{ inputs.stills_at || '1.0,2.8,5.8,8.8,11.8,14.8,17.2' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --out out/render.mp4
