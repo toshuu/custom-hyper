@@ -81,6 +81,53 @@
               "period": 8
             }
           }
+        },
+        {
+          "type": "track",
+          "child": {
+            "type": "circle",
+            "r": 18,
+            "fill": "#00bdcc",
+            "opacity": 0.95
+          },
+          "poses": [
+            {
+              "at": 0,
+              "x": 920,
+              "y": 1740,
+              "scale": 0.75
+            },
+            {
+              "at": 3.2,
+              "x": 150,
+              "y": 1740,
+              "scale": 1
+            },
+            {
+              "at": 6,
+              "x": 920,
+              "y": 1740,
+              "scale": 0.75
+            },
+            {
+              "at": 9,
+              "x": 150,
+              "y": 1740,
+              "scale": 1
+            },
+            {
+              "at": 12,
+              "x": 920,
+              "y": 1740,
+              "scale": 0.75
+            },
+            {
+              "at": 18,
+              "x": 540,
+              "y": 1740,
+              "scale": 1
+            }
+          ]
         }
       ]
     },
@@ -342,6 +389,31 @@
           "y": 1310,
           "w": 184,
           "h": 179
+        },
+        {
+          "type": "receipt",
+          "x": 130,
+          "y": 890,
+          "w": 820,
+          "title": "SHIV SWEET MARTS",
+          "sub": "DIWALI SWEET BOX",
+          "rows": [
+            {
+              "label": "6 PEDHE",
+              "value": "6 PCS",
+              "hot": true
+            }
+          ],
+          "total": {
+            "label": "OFFER PRICE",
+            "value": "₹199"
+          },
+          "stamp": "DIWALI OFFER",
+          "at": 0.25,
+          "dur": 1.4,
+          "fill": "ink",
+          "paper": "paper",
+          "stampColor": "accent"
         }
       ]
     },
@@ -428,6 +500,31 @@
           "y": 1320,
           "w": 255,
           "h": 151
+        },
+        {
+          "type": "receipt",
+          "x": 130,
+          "y": 890,
+          "w": 820,
+          "title": "SHIV SWEET MARTS",
+          "sub": "DIWALI SWEET BOX",
+          "rows": [
+            {
+              "label": "3 BARFI",
+              "value": "3 PCS",
+              "hot": true
+            }
+          ],
+          "total": {
+            "label": "OFFER PRICE",
+            "value": "₹299"
+          },
+          "stamp": "DIWALI OFFER",
+          "at": 0.25,
+          "dur": 1.4,
+          "fill": "ink",
+          "paper": "paper",
+          "stampColor": "accent2"
         }
       ]
     },
