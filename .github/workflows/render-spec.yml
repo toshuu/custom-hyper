@@ -6,7 +6,7 @@ on:
       - 'specs/poverty-in-india-reframed.json'
       - 'specs/spotify-every-mood.json'
       - 'specs/shiv-sweet-marts-diwali.json'
-      - 'scripts/generate_shiv_assets.py'
+      - 'assets/shiv-sweet-marts-diwali/**'
       - '.github/workflows/render-spec.yml'
   workflow_dispatch:
     inputs:
@@ -31,11 +31,6 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Generate Diwali paper-cut assets
-        if: env.SPEC == 'specs/shiv-sweet-marts-diwali.json'
-        run: |
-          python -m pip install --quiet pillow
-          python scripts/generate_shiv_assets.py
       - uses: actions/setup-node@v4
         with:
           node-version: 22.20.0
@@ -112,6 +107,9 @@ jobs:
           - Michael Burrows — https://www.pexels.com/photo/indian-man-listening-to-song-from-earbud-in-town-7129206/
           - Vi Tran — https://www.pexels.com/photo/young-man-using-headphones-and-listening-to-music-17680322/
           EOF
+      - name: Verify authored image assets
+        if: env.SPEC == 'specs/shiv-sweet-marts-diwali.json'
+        run: node scripts/verify_spec_assets.mjs "$SPEC"
       - name: Validate and plan
         run: |
           case "$SPEC" in
