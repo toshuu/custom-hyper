@@ -1,0 +1,95 @@
+{
+  "sheets": [
+    {
+      "file": "sheet-1.png",
+      "cols": 3,
+      "rows": 3,
+      "key": "#FF00FF",
+      "cells": [
+        {
+          "cell": 1,
+          "id": "pedha-single",
+          "role": "sweet"
+        },
+        {
+          "cell": 2,
+          "id": "barfi-single",
+          "role": "sweet"
+        },
+        {
+          "cell": 3,
+          "id": "diya-single",
+          "role": "festival-decor"
+        },
+        {
+          "cell": 4,
+          "id": "rangoli-motif",
+          "role": "festival-decor"
+        },
+        {
+          "cell": 5,
+          "id": "marigold-cluster",
+          "role": "festival-decor"
+        },
+        {
+          "cell": 6,
+          "id": "toran-segment",
+          "role": "festival-decor"
+        },
+        {
+          "cell": 7,
+          "id": "puja-thali",
+          "role": "festival-prop"
+        },
+        {
+          "cell": 8,
+          "id": "sweet-gift-box",
+          "role": "product-prop"
+        },
+        {
+          "cell": 9,
+          "id": "paper-burst",
+          "role": "collage-decor"
+        }
+      ]
+    },
+    {
+      "file": "sheet-2.png",
+      "cols": 3,
+      "rows": 2,
+      "key": "#FF00FF",
+      "cells": [
+        {
+          "cell": 1,
+          "id": "sweet-box-lid",
+          "role": "product-prop"
+        },
+        {
+          "cell": 2,
+          "id": "sweet-box-base",
+          "role": "product-prop"
+        },
+        {
+          "cell": 3,
+          "id": "pedha-cluster-six",
+          "role": "offer-visual"
+        },
+        {
+          "cell": 4,
+          "id": "barfi-trio",
+          "role": "offer-visual"
+        },
+        {
+          "cell": 5,
+          "id": "diya-pair",
+          "role": "festival-decor"
+        },
+        {
+          "cell": 6,
+          "id": "marigold-corner",
+          "role": "festival-decor"
+        }
+      ]
+    }
+  ]
+}
