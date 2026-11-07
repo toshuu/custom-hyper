@@ -13,11 +13,11 @@ on:
       spec:
         description: Repository-relative HyperSpec JSON path
         required: true
-        default: specs/spotify-every-mood.json
+        default: specs/shiv-sweet-marts-diwali.json
       stills_at:
         description: Review still seconds
         required: false
-        default: '1.2,3.8,6.8,9.7,12.5,15.2,18.1,22.2,27.2'
+        default: '1.0,2.8,5.8,8.8,11.8,14.8,17.2'
 
 permissions:
   contents: read
@@ -25,11 +25,14 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-24.04
+    env:
+      SPEC: ${{ inputs.spec || 'specs/shiv-sweet-marts-diwali.json' }}
+      STILLS_AT: ${{ inputs.stills_at || '1.0,2.8,5.8,8.8,11.8,14.8,17.2' }}
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - name: Generate Diwali paper-cut assets
-        if: github.event_name == 'push' || inputs.spec == 'specs/shiv-sweet-marts-diwali.json'
+        if: env.SPEC == 'specs/shiv-sweet-marts-diwali.json'
         run: |
           python -m pip install --quiet pillow
           python scripts/generate_shiv_assets.py
@@ -39,6 +42,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Prepare Pexels photo assets
+        if: env.SPEC == 'specs/spotify-every-mood.json'
         run: |
           set -euo pipefail
           mkdir -p assets/spotify /tmp/spotify-src
@@ -109,8 +113,6 @@ jobs:
           - Vi Tran — https://www.pexels.com/photo/young-man-using-headphones-and-listening-to-music-17680322/
           EOF
       - name: Validate and plan
-        env:
-          SPEC: ${{ inputs.spec || 'specs/shiv-sweet-marts-diwali.json' }}
         run: |
           case "$SPEC" in
             specs/*.json) test -f "$SPEC" ;;
@@ -120,9 +122,6 @@ jobs:
           node src/cli.mjs check "$SPEC"
           node src/cli.mjs plan "$SPEC" --out out/compiled-plan.json
       - name: Render review stills and full-resolution MP4
-        env:
-          SPEC: ${{ inputs.spec || 'specs/spotify-every-mood.json' }}
-          STILLS_AT: ${{ inputs.stills_at || '1.0,2.8,5.8,8.8,11.8,14.8,17.2' }}
         run: |
           node src/cli.mjs stills "$SPEC" --at "$STILLS_AT" --scale 0.5 --out out/review
           node src/cli.mjs render "$SPEC" --out out/render.mp4
@@ -148,7 +147,7 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: spotify-every-mood-delivery
+          name: custom-hyper-render-delivery
           path: |
             out/review/
             out/render.mp4
@@ -156,5 +155,6 @@ jobs:
             out/metadata.json
             out/contact-sheet.jpg
             assets/spotify/
+            assets/shiv-sweet-marts-diwali/
           if-no-files-found: error
           retention-days: 14
