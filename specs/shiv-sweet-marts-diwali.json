@@ -1,0 +1,599 @@
+{
+  "id": "shiv-sweet-marts-diwali",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 18,
+  "palette": {
+    "bg": "#10211f",
+    "ink": "#ffffff",
+    "accent": "#90c141",
+    "accent2": "#00bdcc"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Inter",
+    "mono": "IBM Plex Mono",
+    "serif": "Rozha One"
+  },
+  "assets": {
+    "hero": "../assets/shiv-sweet-marts-diwali/sheets/hero-1.png",
+    "pedha": "../assets/shiv-sweet-marts-diwali/sprites/pedha-single.png",
+    "barfi": "../assets/shiv-sweet-marts-diwali/sprites/barfi-single.png",
+    "diya": "../assets/shiv-sweet-marts-diwali/sprites/diya-single.png",
+    "rangoli": "../assets/shiv-sweet-marts-diwali/sprites/rangoli-motif.png",
+    "marigold": "../assets/shiv-sweet-marts-diwali/sprites/marigold-cluster.png",
+    "toran": "../assets/shiv-sweet-marts-diwali/sprites/toran-segment.png",
+    "giftbox": "../assets/shiv-sweet-marts-diwali/sprites/sweet-gift-box.png",
+    "burst": "../assets/shiv-sweet-marts-diwali/sprites/paper-burst.png",
+    "pedhas6": "../assets/shiv-sweet-marts-diwali/sprites/pedha-cluster-six.png",
+    "barfi3": "../assets/shiv-sweet-marts-diwali/sprites/barfi-trio.png",
+    "diyas2": "../assets/shiv-sweet-marts-diwali/sprites/diya-pair.png",
+    "marigoldCorner": "../assets/shiv-sweet-marts-diwali/sprites/marigold-corner.png"
+  },
+  "grain": {
+    "opacity": 0.045,
+    "amount": 0.45,
+    "seed": 19,
+    "cell": 2,
+    "drift": 2
+  },
+  "layers": [
+    {
+      "id": "ground",
+      "from": 0,
+      "duration": 18,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#18332e",
+          "bottom": "#10211f"
+        },
+        {
+          "type": "circle",
+          "x": 960,
+          "y": 350,
+          "r": 190,
+          "fill": "rgba(0,189,204,0.10)",
+          "blur": 65,
+          "motion": {
+            "loop": {
+              "type": "float",
+              "amp": 20,
+              "period": 8
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "rangoli",
+          "x": 820,
+          "y": 1330,
+          "w": 211,
+          "h": 184,
+          "opacity": 0.58,
+          "motion": {
+            "loop": {
+              "type": "float",
+              "amp": 12,
+              "period": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "hook",
+      "from": 0,
+      "duration": 3.2,
+      "fadeIn": 0.15,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "rrect",
+          "x": 70,
+          "y": 280,
+          "w": 940,
+          "h": 280,
+          "radius": 34,
+          "fill": "#10211f"
+        },
+        {
+          "type": "text",
+          "text": "Diwali ki mithaas",
+          "x": 112,
+          "y": 330,
+          "w": 850,
+          "h": 118,
+          "size": 100,
+          "face": "Bebas Neue",
+          "fill": "#ffffff",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          },
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.1,
+              "dur": 0.65,
+              "ease": "power3.out"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "ghar le jaana hai?",
+          "x": 112,
+          "y": 445,
+          "w": 850,
+          "h": 100,
+          "size": 82,
+          "face": "Bebas Neue",
+          "fill": "#90c141",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          },
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.3,
+              "dur": 0.6,
+              "ease": "power3.out",
+              "distance": 24
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "hero",
+          "x": 230,
+          "y": 640,
+          "w": 620,
+          "h": 803,
+          "fit": "contain",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.15,
+              "dur": 0.8,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 10,
+              "period": 5
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "diya",
+          "x": 95,
+          "y": 1200,
+          "w": 184,
+          "h": 179
+        },
+        {
+          "type": "image",
+          "src": "marigold",
+          "x": 780,
+          "y": 1420,
+          "w": 234,
+          "h": 159
+        }
+      ]
+    },
+    {
+      "id": "brand-box",
+      "from": 2.7,
+      "duration": 3.3,
+      "fadeIn": 0.35,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "image",
+          "src": "toran",
+          "x": 130,
+          "y": 280,
+          "w": 820,
+          "h": 465,
+          "fit": "contain"
+        },
+        {
+          "type": "rrect",
+          "x": 80,
+          "y": 760,
+          "w": 920,
+          "h": 190,
+          "radius": 32,
+          "fill": "#10211f"
+        },
+        {
+          "type": "text",
+          "text": "Shiv Sweet Marts",
+          "x": 120,
+          "y": 805,
+          "w": 840,
+          "h": 100,
+          "size": 88,
+          "face": "Bebas Neue",
+          "fill": "#ffffff",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        },
+        {
+          "type": "image",
+          "src": "giftbox",
+          "x": 250,
+          "y": 1020,
+          "w": 580,
+          "h": 423,
+          "fit": "contain",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.3,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 9,
+              "period": 4.5
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "marigold",
+          "x": 90,
+          "y": 1370,
+          "w": 234,
+          "h": 159
+        }
+      ]
+    },
+    {
+      "id": "pedha-offer",
+      "from": 5.5,
+      "duration": 3.5,
+      "fadeIn": 0.35,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "rrect",
+          "x": 80,
+          "y": 340,
+          "w": 920,
+          "h": 520,
+          "radius": 38,
+          "fill": "#10211f"
+        },
+        {
+          "type": "text",
+          "text": "₹199",
+          "x": 130,
+          "y": 390,
+          "w": 820,
+          "h": 190,
+          "size": 176,
+          "face": "Bebas Neue",
+          "fill": "#90c141",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 80
+          },
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.15,
+              "dur": 0.65,
+              "ease": "back.out"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "6 PEDHE",
+          "x": 140,
+          "y": 600,
+          "w": 800,
+          "h": 120,
+          "size": 104,
+          "face": "Bebas Neue",
+          "fill": "#ffffff",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        },
+        {
+          "type": "image",
+          "src": "pedhas6",
+          "x": 250,
+          "y": 990,
+          "w": 580,
+          "h": 356,
+          "fit": "contain",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.45,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 8,
+              "period": 4.2
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "diya",
+          "x": 90,
+          "y": 1310,
+          "w": 184,
+          "h": 179
+        }
+      ]
+    },
+    {
+      "id": "barfi-offer",
+      "from": 8.5,
+      "duration": 3.5,
+      "fadeIn": 0.35,
+      "fadeOut": 0.35,
+      "blocks": [
+        {
+          "type": "rrect",
+          "x": 80,
+          "y": 340,
+          "w": 920,
+          "h": 520,
+          "radius": 38,
+          "fill": "#10211f"
+        },
+        {
+          "type": "text",
+          "text": "₹299",
+          "x": 130,
+          "y": 390,
+          "w": 820,
+          "h": 190,
+          "size": 176,
+          "face": "Bebas Neue",
+          "fill": "#00bdcc",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 80
+          },
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.15,
+              "dur": 0.65,
+              "ease": "back.out"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "3 BARFI",
+          "x": 140,
+          "y": 600,
+          "w": 800,
+          "h": 120,
+          "size": 104,
+          "face": "Bebas Neue",
+          "fill": "#ffffff",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        },
+        {
+          "type": "image",
+          "src": "barfi3",
+          "x": 250,
+          "y": 990,
+          "w": 580,
+          "h": 366,
+          "fit": "contain",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.45,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 8,
+              "period": 4.2
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "diyas2",
+          "x": 710,
+          "y": 1320,
+          "w": 255,
+          "h": 151
+        }
+      ]
+    },
+    {
+      "id": "cta-close",
+      "from": 11.5,
+      "duration": 6.5,
+      "fadeIn": 0.4,
+      "fadeOut": 0.45,
+      "blocks": [
+        {
+          "type": "image",
+          "src": "hero",
+          "x": 210,
+          "y": 270,
+          "w": 660,
+          "h": 855,
+          "fit": "contain",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.2,
+              "dur": 0.8,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 8,
+              "period": 5
+            }
+          }
+        },
+        {
+          "type": "image",
+          "src": "marigoldCorner",
+          "x": 90,
+          "y": 950,
+          "w": 255,
+          "h": 157
+        },
+        {
+          "type": "rrect",
+          "x": 70,
+          "y": 1180,
+          "w": 940,
+          "h": 490,
+          "radius": 38,
+          "fill": "#10211f"
+        },
+        {
+          "type": "text",
+          "text": "This week, visit our shop",
+          "x": 115,
+          "y": 1235,
+          "w": 850,
+          "h": 110,
+          "size": 76,
+          "face": "Bebas Neue",
+          "fill": "#ffffff",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        },
+        {
+          "type": "text",
+          "text": "VISIT SHOP NOW",
+          "x": 120,
+          "y": 1375,
+          "w": 840,
+          "h": 115,
+          "size": 100,
+          "face": "Bebas Neue",
+          "fill": "#90c141",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        },
+        {
+          "type": "text",
+          "text": "SHIV SWEET MARTS",
+          "x": 120,
+          "y": 1510,
+          "w": 840,
+          "h": 90,
+          "size": 72,
+          "face": "Bebas Neue",
+          "fill": "#00bdcc",
+          "fit": {
+            "maxLines": 1,
+            "minSize": 64
+          }
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "wipe",
+      "at": 5.8,
+      "duration": 0.6,
+      "color": "accent",
+      "skew": -8
+    },
+    {
+      "type": "wipe",
+      "at": 8.8,
+      "duration": 0.6,
+      "color": "accent2",
+      "skew": 8
+    },
+    {
+      "type": "dip",
+      "at": 11.8,
+      "duration": 0.45,
+      "color": "bg"
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "SHIV SWEET MARTS",
+        "x": 64,
+        "y": 50,
+        "w": 760,
+        "h": 80,
+        "size": 64,
+        "face": "Bebas Neue",
+        "weight": 700,
+        "letterSpacing": 2,
+        "fill": "#ffffff",
+        "fit": {
+          "maxLines": 1,
+          "minSize": 64
+        }
+      },
+      {
+        "type": "rule",
+        "x": 64,
+        "y": 142,
+        "w": 952,
+        "h": 3,
+        "fill": "#90c141"
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1825,
+        "w": 1080,
+        "h": 70,
+        "fill": "#90c141",
+        "textFill": "#10211f",
+        "items": [
+          "DIWALI SWEET BOXES",
+          "6 PEDHE • ₹199",
+          "3 BARFI • ₹299",
+          "VISIT SHOP NOW"
+        ]
+      },
+      {
+        "type": "progress",
+        "h": 6,
+        "fill": "#00bdcc"
+      }
+    ]
+  }
+}
