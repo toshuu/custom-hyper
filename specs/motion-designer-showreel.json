@@ -80,6 +80,81 @@
           "face": "IBM Plex Mono",
           "fill": "muted",
           "letterSpacing": 1.4
+        },
+        {
+          "type": "track",
+          "child": {
+            "type": "circle",
+            "r": 24,
+            "fill": "accent",
+            "opacity": 0.95
+          },
+          "poses": [
+            {
+              "at": 0,
+              "x": 1010,
+              "y": 160,
+              "scale": 0.8
+            },
+            {
+              "at": 2.7,
+              "x": 1010,
+              "y": 160,
+              "scale": 0.8
+            },
+            {
+              "at": 3.2,
+              "x": 940,
+              "y": 330,
+              "scale": 1.25,
+              "ease": "power3.inOut"
+            },
+            {
+              "at": 5.3,
+              "x": 940,
+              "y": 330,
+              "scale": 1.25
+            },
+            {
+              "at": 5.8,
+              "x": 120,
+              "y": 1110,
+              "scale": 1.4,
+              "ease": "power3.inOut"
+            },
+            {
+              "at": 8,
+              "x": 120,
+              "y": 1110,
+              "scale": 1.4
+            },
+            {
+              "at": 8.5,
+              "x": 970,
+              "y": 1500,
+              "scale": 0.9,
+              "ease": "power3.inOut"
+            },
+            {
+              "at": 10.7,
+              "x": 970,
+              "y": 1500,
+              "scale": 0.9
+            },
+            {
+              "at": 11.2,
+              "x": 540,
+              "y": 1700,
+              "scale": 1.2,
+              "ease": "power3.inOut"
+            },
+            {
+              "at": 15,
+              "x": 540,
+              "y": 1700,
+              "scale": 1.2
+            }
+          ]
         }
       ]
     },
@@ -219,6 +294,35 @@
             },
             "out": false
           }
+        },
+        {
+          "type": "cardStack",
+          "x": 560,
+          "y": 960,
+          "w": 450,
+          "h": 330,
+          "at": 0.55,
+          "step": 0.42,
+          "items": [
+            {
+              "title": "IDEA",
+              "sub": "Find the spark",
+              "fill": "#22283B",
+              "ink": "#F5F4EF"
+            },
+            {
+              "title": "ENERGY",
+              "sub": "Build the rhythm",
+              "fill": "#7C5CFF",
+              "ink": "#FFFFFF"
+            },
+            {
+              "title": "IMPACT",
+              "sub": "Make it land",
+              "fill": "#C6FF3D",
+              "ink": "#080A12"
+            }
+          ]
         }
       ]
     },
@@ -354,6 +458,26 @@
           "size": 24,
           "face": "IBM Plex Mono",
           "fill": "muted"
+        },
+        {
+          "type": "calendarFlip",
+          "x": 610,
+          "y": 1040,
+          "w": 360,
+          "h": 340,
+          "labels": [
+            "IDEA",
+            "FORM",
+            "MOTION",
+            "FEEL"
+          ],
+          "rowH": 88,
+          "size": 52,
+          "at": 0.35,
+          "dur": 1.45,
+          "paper": "#F1EFE8",
+          "ink": "#080A12",
+          "headerFill": "#C6FF3D"
         }
       ]
     },
@@ -473,6 +597,29 @@
           "size": 24,
           "face": "IBM Plex Mono",
           "fill": "muted"
+        },
+        {
+          "type": "cardStack",
+          "x": 560,
+          "y": 1040,
+          "w": 440,
+          "h": 320,
+          "at": 0.48,
+          "step": 0.4,
+          "items": [
+            {
+              "title": "SHAPE",
+              "sub": "Create tension"
+            },
+            {
+              "title": "DEPTH",
+              "sub": "Add dimension"
+            },
+            {
+              "title": "FLOW",
+              "sub": "Guide the eye"
+            }
+          ]
         }
       ]
     },
@@ -587,6 +734,29 @@
           "size": 24,
           "face": "IBM Plex Mono",
           "fill": "muted"
+        },
+        {
+          "type": "cardStack",
+          "x": 570,
+          "y": 1120,
+          "w": 430,
+          "h": 320,
+          "at": 0.52,
+          "step": 0.42,
+          "items": [
+            {
+              "title": "CONCEPT",
+              "sub": "One clear idea"
+            },
+            {
+              "title": "SYSTEM",
+              "sub": "Rules with purpose"
+            },
+            {
+              "title": "FEELING",
+              "sub": "A lasting response"
+            }
+          ]
         }
       ]
     },
