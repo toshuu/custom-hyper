@@ -37,6 +37,7 @@ jobs:
           node-version: 22.20.0
           cache: npm
       - run: npm ci
+      - run: python -m pip install --quiet pillow
       - name: Prepare Pexels photo assets
         if: env.SPEC == 'specs/spotify-every-mood.json'
         run: |
