@@ -640,7 +640,7 @@
         },
         {
           "type": "text",
-          "text": "IDEA →",
+          "text": "IDEA / 01",
           "x": 58,
           "y": 490,
           "w": 760,
@@ -659,7 +659,7 @@
         },
         {
           "type": "text",
-          "text": "SYSTEM →",
+          "text": "SYSTEM / 02",
           "x": 220,
           "y": 690,
           "w": 800,
@@ -946,13 +946,14 @@
       {
         "type": "text",
         "text": "SELECTED WORK  —  2026",
-        "x": 1020,
+        "x": 760,
         "y": 1810,
         "size": 20,
         "face": "IBM Plex Mono",
         "fill": "muted",
         "align": "right",
-        "letterSpacing": 1.2
+        "letterSpacing": 1.2,
+        "w": 260
       },
       {
         "type": "progress",
