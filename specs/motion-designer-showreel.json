@@ -1,0 +1,812 @@
+{
+  "id": "motion-designer-showreel-15s",
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "duration": 15,
+  "palette": {
+    "bg": "#080A12",
+    "ink": "#F5F4EF",
+    "accent": "#C6FF3D",
+    "accent2": "#7C5CFF",
+    "muted": "rgba(245,244,239,0.58)",
+    "paper": "#F1EFE8"
+  },
+  "faces": {
+    "display": "Bebas Neue",
+    "body": "Inter",
+    "mono": "IBM Plex Mono"
+  },
+  "grain": {
+    "opacity": 0.055,
+    "seed": 41,
+    "cell": 2
+  },
+  "layers": [
+    {
+      "id": "foundation",
+      "from": 0,
+      "duration": 15,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "bg",
+          "top": "#111629",
+          "bottom": "#07080D"
+        },
+        {
+          "type": "atmosphere",
+          "blobs": [
+            {
+              "color": "accent2",
+              "x": 850,
+              "y": 340,
+              "r": 330,
+              "blur": 150,
+              "opacity": 0.28,
+              "float": 36,
+              "period": 7
+            },
+            {
+              "color": "accent",
+              "x": 150,
+              "y": 1320,
+              "r": 270,
+              "blur": 130,
+              "opacity": 0.12,
+              "float": 28,
+              "period": 9
+            }
+          ]
+        },
+        {
+          "type": "rule",
+          "x": 52,
+          "y": 132,
+          "w": 976,
+          "h": 2,
+          "fill": "rgba(245,244,239,0.24)"
+        },
+        {
+          "type": "text",
+          "text": "INDEPENDENT MOTION DESIGNER  /  SELECTED WORK",
+          "x": 54,
+          "y": 76,
+          "w": 970,
+          "size": 22,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "letterSpacing": 1.4
+        }
+      ]
+    },
+    {
+      "id": "hook",
+      "from": 0.15,
+      "duration": 3.25,
+      "fadeIn": 0.12,
+      "fadeOut": 0.55,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "DESIGN THAT MOVES",
+          "x": 58,
+          "y": 300,
+          "size": 25,
+          "fill": "accent",
+          "rule": true
+        },
+        {
+          "type": "text",
+          "text": "MAKE IT",
+          "x": 48,
+          "y": 460,
+          "w": 980,
+          "size": 190,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.82,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.12,
+              "dur": 0.72,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "MOVE.",
+          "x": 48,
+          "y": 650,
+          "w": 980,
+          "size": 260,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.8,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.34,
+              "dur": 0.78,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "circle",
+          "x": 825,
+          "y": 1040,
+          "r": 170,
+          "fill": "accent2",
+          "opacity": 0.95,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.25,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "spin",
+              "amp": 0,
+              "period": 5
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "x": 825,
+          "y": 1040,
+          "r": 116,
+          "fill": "bg",
+          "opacity": 1
+        },
+        {
+          "type": "circle",
+          "x": 825,
+          "y": 1040,
+          "r": 64,
+          "fill": "accent",
+          "motion": {
+            "loop": {
+              "type": "pulse",
+              "amp": 9,
+              "period": 1.4
+            }
+          }
+        },
+        {
+          "type": "rule",
+          "x": 58,
+          "y": 1190,
+          "w": 700,
+          "h": 5,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.55,
+              "dur": 0.6,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "01 / IMPACT",
+          "x": 58,
+          "y": 1240,
+          "w": 500,
+          "size": 25,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.65,
+              "dur": 0.5,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "type-lab",
+      "from": 2.65,
+      "duration": 3.25,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "TYPE IS A MATERIAL",
+          "x": 58,
+          "y": 300,
+          "size": 24,
+          "fill": "accent"
+        },
+        {
+          "type": "text",
+          "text": "TYPE",
+          "x": 54,
+          "y": 500,
+          "w": 650,
+          "size": 280,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.78,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.15,
+              "dur": 0.65,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "IN\nMOTION",
+          "x": 500,
+          "y": 650,
+          "w": 520,
+          "size": 138,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "lineHeight": 0.78,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.42,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 80,
+          "y": 1110,
+          "w": 920,
+          "h": 310,
+          "radius": 24,
+          "fill": "#171C2C",
+          "stroke": "rgba(245,244,239,0.25)",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.25,
+              "dur": 0.65,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "Aa",
+          "x": 125,
+          "y": 1115,
+          "w": 360,
+          "size": 230,
+          "face": "Bebas Neue",
+          "fill": "accent2",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.38,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 500,
+          "y": 1180,
+          "w": 390,
+          "h": 3,
+          "fill": "ink"
+        },
+        {
+          "type": "text",
+          "text": "WEIGHT  /  RHYTHM\nSCALE  /  CONTRAST",
+          "x": 500,
+          "y": 1230,
+          "w": 420,
+          "size": 31,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.5,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.58,
+              "dur": 0.55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "02 / TYPOGRAPHY",
+          "x": 58,
+          "y": 1510,
+          "w": 650,
+          "size": 24,
+          "face": "IBM Plex Mono",
+          "fill": "muted"
+        }
+      ]
+    },
+    {
+      "id": "shape-play",
+      "from": 5.25,
+      "duration": 3.2,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "FORM / FORCE / FLOW",
+          "x": 58,
+          "y": 300,
+          "size": 24,
+          "fill": "accent"
+        },
+        {
+          "type": "circle",
+          "x": 300,
+          "y": 760,
+          "r": 205,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.12,
+              "dur": 0.8,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "float",
+              "amp": 28,
+              "period": 2.8
+            }
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 450,
+          "y": 560,
+          "w": 420,
+          "h": 420,
+          "radius": 38,
+          "fill": "accent2",
+          "rotation": 17,
+          "motion": {
+            "in": {
+              "type": "slideLeft",
+              "at": 0.3,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "sway",
+              "amp": 8,
+              "period": 3.4
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "x": 770,
+          "y": 990,
+          "r": 150,
+          "fill": "#F5F4EF",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.52,
+              "dur": 0.65,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "pulse",
+              "amp": 7,
+              "period": 1.8
+            }
+          }
+        },
+        {
+          "type": "rule",
+          "x": 58,
+          "y": 1190,
+          "w": 960,
+          "h": 4,
+          "fill": "rgba(245,244,239,0.45)"
+        },
+        {
+          "type": "text",
+          "text": "SHAPE THE\nIMPOSSIBLE.",
+          "x": 58,
+          "y": 1260,
+          "w": 940,
+          "size": 116,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.84,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.35,
+              "dur": 0.7,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "03 / ART DIRECTION",
+          "x": 58,
+          "y": 1550,
+          "w": 650,
+          "size": 24,
+          "face": "IBM Plex Mono",
+          "fill": "muted"
+        }
+      ]
+    },
+    {
+      "id": "systems",
+      "from": 7.8,
+      "duration": 3.2,
+      "fadeIn": 0.45,
+      "fadeOut": 0.5,
+      "blocks": [
+        {
+          "type": "kicker",
+          "text": "BUILT WITH INTENTION",
+          "x": 58,
+          "y": 300,
+          "size": 24,
+          "fill": "accent"
+        },
+        {
+          "type": "text",
+          "text": "IDEA →",
+          "x": 58,
+          "y": 490,
+          "w": 760,
+          "size": 112,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.15,
+              "dur": 0.55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "SYSTEM →",
+          "x": 220,
+          "y": 690,
+          "w": 800,
+          "size": 112,
+          "face": "Bebas Neue",
+          "fill": "accent2",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.38,
+              "dur": 0.6,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "FEELING.",
+          "x": 58,
+          "y": 890,
+          "w": 930,
+          "size": 156,
+          "face": "Bebas Neue",
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.62,
+              "dur": 0.65,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rrect",
+          "x": 60,
+          "y": 1190,
+          "w": 960,
+          "h": 250,
+          "radius": 18,
+          "fill": "#171C2C",
+          "stroke": "rgba(245,244,239,0.25)"
+        },
+        {
+          "type": "text",
+          "text": "CONCEPT   /   STORY   /   MOTION\nDESIGN     /   DETAIL  /   DELIVERY",
+          "x": 100,
+          "y": 1240,
+          "w": 870,
+          "size": 31,
+          "face": "IBM Plex Mono",
+          "fill": "ink",
+          "lineHeight": 1.65,
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.75,
+              "dur": 0.55,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "04 / CREATIVE SYSTEMS",
+          "x": 58,
+          "y": 1530,
+          "w": 800,
+          "size": 24,
+          "face": "IBM Plex Mono",
+          "fill": "muted"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "from": 10.35,
+      "duration": 4.65,
+      "fadeIn": 0.4,
+      "fadeOut": 0,
+      "blocks": [
+        {
+          "type": "circle",
+          "x": 540,
+          "y": 650,
+          "r": 310,
+          "fill": "accent2",
+          "opacity": 0.18,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.05,
+              "dur": 0.8,
+              "ease": "power3.out"
+            },
+            "loop": {
+              "type": "pulse",
+              "amp": 8,
+              "period": 2.5
+            }
+          }
+        },
+        {
+          "type": "circle",
+          "x": 540,
+          "y": 650,
+          "r": 230,
+          "fill": "transparent",
+          "stroke": "accent",
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 0.18,
+              "dur": 0.7,
+              "ease": "back.out"
+            },
+            "loop": {
+              "type": "spin",
+              "amp": 0,
+              "period": 7
+            }
+          }
+        },
+        {
+          "type": "kicker",
+          "text": "THE NEXT FRAME IS YOURS",
+          "x": 58,
+          "y": 300,
+          "size": 24,
+          "fill": "accent"
+        },
+        {
+          "type": "text",
+          "text": "MAKE\nAN IMPACT.",
+          "x": 54,
+          "y": 760,
+          "w": 970,
+          "size": 178,
+          "face": "Bebas Neue",
+          "fill": "ink",
+          "lineHeight": 0.8,
+          "mask": true,
+          "motion": {
+            "in": {
+              "type": "maskUp",
+              "at": 0.35,
+              "dur": 0.85,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "rule",
+          "x": 58,
+          "y": 1260,
+          "w": 960,
+          "h": 4,
+          "fill": "accent",
+          "motion": {
+            "in": {
+              "type": "slideRight",
+              "at": 0.6,
+              "dur": 0.7,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "text",
+          "text": "MOTION DESIGN  /  VISUAL STORYTELLING",
+          "x": 58,
+          "y": 1320,
+          "w": 940,
+          "size": 27,
+          "face": "IBM Plex Mono",
+          "fill": "muted",
+          "motion": {
+            "in": {
+              "type": "rise",
+              "at": 0.8,
+              "dur": 0.5,
+              "ease": "power3.out"
+            },
+            "out": false
+          }
+        },
+        {
+          "type": "stamp",
+          "text": "AVAILABLE FOR\nWHAT'S NEXT",
+          "x": 700,
+          "y": 1480,
+          "w": 280,
+          "h": 180,
+          "stroke": "accent",
+          "rotation": -8,
+          "motion": {
+            "in": {
+              "type": "scale",
+              "at": 1,
+              "dur": 0.65,
+              "ease": "back.out"
+            },
+            "out": false
+          }
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "type": "flash",
+      "at": 0.08,
+      "duration": 0.16,
+      "color": "ink"
+    },
+    {
+      "type": "wipe",
+      "at": 2.55,
+      "duration": 0.65,
+      "color": "accent",
+      "skew": -11
+    },
+    {
+      "type": "wipe",
+      "at": 5.1,
+      "duration": 0.62,
+      "color": "accent2",
+      "skew": 9
+    },
+    {
+      "type": "flash",
+      "at": 7.65,
+      "duration": 0.22,
+      "color": "accent"
+    },
+    {
+      "type": "wipe",
+      "at": 10.15,
+      "duration": 0.7,
+      "color": "ink",
+      "skew": -8
+    }
+  ],
+  "chrome": {
+    "blocks": [
+      {
+        "type": "text",
+        "text": "MOTION / DESIGN",
+        "x": 58,
+        "y": 1810,
+        "size": 20,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "letterSpacing": 1.8
+      },
+      {
+        "type": "text",
+        "text": "SELECTED WORK  —  2026",
+        "x": 1020,
+        "y": 1810,
+        "size": 20,
+        "face": "IBM Plex Mono",
+        "fill": "muted",
+        "align": "right",
+        "letterSpacing": 1.2
+      },
+      {
+        "type": "progress",
+        "h": 7,
+        "fill": "accent"
+      },
+      {
+        "type": "ticker",
+        "x": 0,
+        "y": 1850,
+        "w": 1080,
+        "h": 58,
+        "fill": "accent",
+        "textFill": "bg",
+        "size": 22,
+        "speed": 110,
+        "items": [
+          "MOTION DESIGN",
+          "KINETIC TYPE",
+          "ART DIRECTION",
+          "VISUAL SYSTEMS",
+          "STORYTELLING"
+        ]
+      }
+    ]
+  }
+}
