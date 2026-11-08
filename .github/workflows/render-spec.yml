@@ -27,7 +27,7 @@ jobs:
   render:
     runs-on: ubuntu-24.04
     env:
-      SPEC: ${{ inputs.spec || 'specs/shiv-sweet-marts-diwali.json' }}
+      SPEC: ${{ inputs.spec || (contains(github.event.head_commit.message, 'motion designer showreel') && 'specs/motion-designer-showreel.json') || 'specs/shiv-sweet-marts-diwali.json' }}
       STILLS_AT: ${{ inputs.stills_at || '1.0,2.8,5.8,8.8,11.8,14.8,17.2' }}
     timeout-minutes: 30
     steps:
