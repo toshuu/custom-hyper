@@ -1,0 +1,29 @@
+# StageSet configuration for Custom Hyper.
+# The plan and evidence folders stay at the repository root.
+version: 2
+timezone: Asia/Kolkata
+
+workspace:
+  root: "."
+  code_dir: "."
+  ideas_dir: "Ideas"
+  skeletons_dir: "Skeletons"
+
+tracking:
+  sessions_dir: ".stageset/sessions"
+  sessions_tracker: ".stageset/sessions-tracker.md"
+  event_id_format: "YYYYMMDD-HHMMSS-TYPE"
+  pending_time_source: "git-commit-time"
+
+runs:
+  reports_dir: ".stageset/runs"
+  escalation_dir: ".stageset/escalations"
+  facts_file: ".stageset/facts.md"
+  digest_file: ".stageset/DIGEST.md"
+  max_attempts_per_check: 3
+
+living_docs:
+  runs_dir: "LivingDocs"
+  template: ".stageset/templates/ss-living-doc.md"
+  format: ".stageset/ss-living-doc-format.md"
+  report_file: ".stageset/report.json"

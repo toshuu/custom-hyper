@@ -1,6 +1,6 @@
 {
   "schema": "stageset-report/1",
-  "generated_at": "2026-11-14T08:12:49Z",
+  "generated_at": "2026-11-14T08:41:24Z",
   "project": {
     "name": "Custom Hyper",
     "repo": "toshuu/custom-hyper",
@@ -12,14 +12,47 @@
     "waiting": 0,
     "draft": 0,
     "sessions": 0,
-    "runs": 0,
+    "runs": 1,
     "runs_active": 0
   },
   "skeletons": [],
-  "runs": [],
+  "runs": [
+    {
+      "id": "SSLD-001",
+      "path": "LivingDocs/SSLD-001-stageset-adoption.md",
+      "title": "Add ss-living-doc to Custom Hyper",
+      "status": "DONE",
+      "current_task": "T003",
+      "skeleton": "-",
+      "tasks_total": 3,
+      "tasks_done": 3,
+      "tasks": [
+        {
+          "id": "T001",
+          "title": "Add the ss-living-doc system",
+          "status": "DONE"
+        },
+        {
+          "id": "T002",
+          "title": "Write the first ss-living-doc",
+          "status": "DONE"
+        },
+        {
+          "id": "T003",
+          "title": "Generate the viewer report",
+          "status": "DONE"
+        }
+      ]
+    }
+  ],
   "ideas": [],
   "sessions": [],
   "commits": [
+    {
+      "sha": "fdf2250",
+      "date": "2026-11-14T08:12:53+00:00",
+      "subject": "Add StageSet status report"
+    },
     {
       "sha": "7775dd0",
       "date": "2026-11-08T17:26:25+05:30",
@@ -214,11 +247,6 @@
       "sha": "4e5a12f",
       "date": "2026-11-06T21:21:31+05:30",
       "subject": "Keep the animated playback marker above photo scenes"
-    },
-    {
-      "sha": "032ed29",
-      "date": "2026-11-06T21:21:00+05:30",
-      "subject": "Rebuild Spotify reel with real photo assets and camera motion"
     }
   ]
 }
