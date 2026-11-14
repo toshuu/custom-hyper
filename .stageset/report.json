@@ -1,0 +1,224 @@
+{
+  "schema": "stageset-report/1",
+  "generated_at": "2026-11-14T08:12:49Z",
+  "project": {
+    "name": "Custom Hyper",
+    "repo": "toshuu/custom-hyper",
+    "branch": "main"
+  },
+  "totals": {
+    "skeletons": 0,
+    "done": 0,
+    "waiting": 0,
+    "draft": 0,
+    "sessions": 0,
+    "runs": 0,
+    "runs_active": 0
+  },
+  "skeletons": [],
+  "runs": [],
+  "ideas": [],
+  "sessions": [],
+  "commits": [
+    {
+      "sha": "7775dd0",
+      "date": "2026-11-08T17:26:25+05:30",
+      "subject": "polish showreel typography and footer alignment"
+    },
+    {
+      "sha": "591b700",
+      "date": "2026-11-08T17:24:57+05:30",
+      "subject": "fix showreel contact sheet dependency"
+    },
+    {
+      "sha": "b576f58",
+      "date": "2026-11-08T17:23:50+05:30",
+      "subject": "fix showreel workflow push detection"
+    },
+    {
+      "sha": "c1d0867",
+      "date": "2026-11-08T17:23:11+05:30",
+      "subject": "fix showreel review still timestamps"
+    },
+    {
+      "sha": "9d1faf1",
+      "date": "2026-11-08T17:23:08+05:30",
+      "subject": "improve showreel motion mechanics and continuity"
+    },
+    {
+      "sha": "2f89b4d",
+      "date": "2026-11-08T17:22:17+05:30",
+      "subject": "fix workflow spec selection for motion designer showreel"
+    },
+    {
+      "sha": "09fd8ea",
+      "date": "2026-11-08T17:21:47+05:30",
+      "subject": "video: add 15s motion designer showreel spec"
+    },
+    {
+      "sha": "844b7f1",
+      "date": "2026-11-08T17:21:45+05:30",
+      "subject": "ci: enable motion designer showreel render"
+    },
+    {
+      "sha": "c9f9cb3",
+      "date": "2026-11-07T12:01:05+05:30",
+      "subject": "Remove substitute Diwali asset generator"
+    },
+    {
+      "sha": "bed5528",
+      "date": "2026-11-07T12:01:02+05:30",
+      "subject": "Add strict preflight for original Diwali PNG assets"
+    },
+    {
+      "sha": "80fe34f",
+      "date": "2026-11-07T12:01:00+05:30",
+      "subject": "Stop generating substitute Diwali artwork; require original image assets"
+    },
+    {
+      "sha": "1eb64eb",
+      "date": "2026-11-07T11:53:59+05:30",
+      "subject": "Fix render workflow to use one consistent selected spec"
+    },
+    {
+      "sha": "9186867",
+      "date": "2026-11-07T11:49:51+05:30",
+      "subject": "Add receipt mechanics and persistent continuity track"
+    },
+    {
+      "sha": "ffdcacc",
+      "date": "2026-11-07T11:48:50+05:30",
+      "subject": "Enable automatic Shiv Sweet Marts Diwali render in Actions"
+    },
+    {
+      "sha": "280a235",
+      "date": "2026-11-07T11:48:00+05:30",
+      "subject": "Add Shiv Sweet Marts Diwali reel HyperSpec"
+    },
+    {
+      "sha": "98ebf8b",
+      "date": "2026-11-07T11:47:58+05:30",
+      "subject": "Add deterministic Diwali paper-cut asset generator"
+    },
+    {
+      "sha": "4b28a6c",
+      "date": "2026-11-07T11:36:33+05:30",
+      "subject": "Tighten Shiv Sweet Marts reel voice script"
+    },
+    {
+      "sha": "0fd518c",
+      "date": "2026-11-07T11:36:24+05:30",
+      "subject": "Add Shiv Sweet Marts Diwali asset atlas"
+    },
+    {
+      "sha": "db415b4",
+      "date": "2026-11-07T11:36:22+05:30",
+      "subject": "Add Shiv Sweet Marts Diwali reel plan"
+    },
+    {
+      "sha": "a3d6edc",
+      "date": "2026-11-07T11:30:15+05:30",
+      "subject": "Add reel-wizard.html"
+    },
+    {
+      "sha": "433cab6",
+      "date": "2026-11-07T11:30:12+05:30",
+      "subject": "Add master-prompt.md"
+    },
+    {
+      "sha": "67b742a",
+      "date": "2026-11-07T11:30:10+05:30",
+      "subject": "Add slice_atlas.py"
+    },
+    {
+      "sha": "10acd36",
+      "date": "2026-11-07T01:24:47+05:30",
+      "subject": "docs: record project status dashboard"
+    },
+    {
+      "sha": "e497915",
+      "date": "2026-11-07T01:24:40+05:30",
+      "subject": "feat: add project status dashboard"
+    },
+    {
+      "sha": "19b648c",
+      "date": "2026-11-06T22:16:42+05:30",
+      "subject": "Add manifest-first asset generation pipeline"
+    },
+    {
+      "sha": "fd89238",
+      "date": "2026-11-06T21:44:35+05:30",
+      "subject": "Fix slideshow continuity with persistent animated record track"
+    },
+    {
+      "sha": "90eb1da",
+      "date": "2026-11-06T21:41:39+05:30",
+      "subject": "Build fresh Spotify mood reel with on-screen script and animated visual metaphors"
+    },
+    {
+      "sha": "d360413",
+      "date": "2026-11-06T21:35:12+05:30",
+      "subject": "Record final Spotify reel render verification"
+    },
+    {
+      "sha": "2925232",
+      "date": "2026-11-06T21:31:48+05:30",
+      "subject": "Simplify the Spotify end-card soundwave mark for clean rendering"
+    },
+    {
+      "sha": "05eeed4",
+      "date": "2026-11-06T21:29:21+05:30",
+      "subject": "Align Spotify mark bars within its circular field"
+    },
+    {
+      "sha": "0e3b8ef",
+      "date": "2026-11-06T21:27:27+05:30",
+      "subject": "Move motion stamps off faces for cleaner photo composition"
+    },
+    {
+      "sha": "bb33f14",
+      "date": "2026-11-06T21:26:16+05:30",
+      "subject": "Fix wipe edge leakage and correct Spotify mark"
+    },
+    {
+      "sha": "cdcf539",
+      "date": "2026-11-06T21:24:02+05:30",
+      "subject": "Log Spotify photo-led reel production"
+    },
+    {
+      "sha": "f314699",
+      "date": "2026-11-06T21:22:48+05:30",
+      "subject": "Vary photo-scene compositions and motion treatments"
+    },
+    {
+      "sha": "e5bdc0e",
+      "date": "2026-11-06T21:22:21+05:30",
+      "subject": "Add custom mood artwork to the Spotify playlist reveal"
+    },
+    {
+      "sha": "bea9de9",
+      "date": "2026-11-06T21:22:18+05:30",
+      "subject": "Generate custom Spotify mood cover art assets during preparation"
+    },
+    {
+      "sha": "cc4f174",
+      "date": "2026-11-06T21:21:43+05:30",
+      "subject": "Use prepared PNG photo assets in Spotify reel"
+    },
+    {
+      "sha": "90ca890",
+      "date": "2026-11-06T21:21:40+05:30",
+      "subject": "Export downloaded photo assets as PNG"
+    },
+    {
+      "sha": "4e5a12f",
+      "date": "2026-11-06T21:21:31+05:30",
+      "subject": "Keep the animated playback marker above photo scenes"
+    },
+    {
+      "sha": "032ed29",
+      "date": "2026-11-06T21:21:00+05:30",
+      "subject": "Rebuild Spotify reel with real photo assets and camera motion"
+    }
+  ]
+}
